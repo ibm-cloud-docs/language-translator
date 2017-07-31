@@ -6,6 +6,7 @@ Language Translator
 
     {: .navgroup id="learn"}
     getting-started.md
+    index.md
     [Demo: Translate text](http://language-translator-demo.mybluemix.net/)
 
     {: .topicgroup}
@@ -16,10 +17,8 @@ Language Translator
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    {: .topicgroup}
-    External docs
-        [About](https://www.ibm.com/watson/developercloud/doc/language-translator/index.html)
-        [Customizing your model](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html)
+    customizing.md
+    migrating.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -38,7 +37,7 @@ Language Translator
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Release notes](https://www.ibm.com/watson/developercloud/doc/language-translator/release-notes.html)
+    release-notes.md
 
     {: .topicgroup}
     Developer community
