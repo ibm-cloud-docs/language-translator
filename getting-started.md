@@ -30,7 +30,7 @@ lastupdated: "2017-06-19"
 If you already created a service instance, you're all set with these prerequisites. Move on to Step 1.
 {: tip}
 
-1.  Go to the [{{site.data.keyword.languagetranslatorshort}} service](https://console.{DomainName}/catalog/services/language-translator/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+1.  Go to the [{{site.data.keyword.languagetranslatorshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
 1.  After you log in, type `language-tutorial` in the **Service name** field of the {{site.data.keyword.languagetranslatorshort}} page. Click **Create**.
 
 ## Step 1: Copy your credentials
@@ -173,13 +173,13 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 {:python}
 {:codeblock} -->
 
-You can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/?python#list-models){: new_window} method to view the available models for your service instance.
+You can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/#list-models){: new_window} method to view the available models for your service instance.
 {:tip}
 
 ## Next steps
 {: #next-steps}
 
-- Learn how to [customize ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case{: new_window}.
-- Read about the API in the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/){:new_window}.
+- Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case.
+- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/){:new_window}.
 - Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/language-translator-v2){:new_window}.
-- Look at the [Node.js sample app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/language-translator-nodejs){:new_window} for an example web app.
+- Try the [Node.js sample app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/language-translator-nodejs){:new_window}.
