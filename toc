@@ -6,6 +6,7 @@ Language Translator
 
     {: .navgroup id="learn"}
     getting-started.md
+    index.md
     [Demo: Translate text](http://language-translator-demo.mybluemix.net/)
 
     {: .topicgroup}
@@ -16,10 +17,8 @@ Language Translator
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
-    {: .topicgroup}
-    External docs
-        [About](https://www.ibm.com/watson/developercloud/doc/language-translator/index.html)
-        [Customizing your model](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html)
+    customizing.md
+    migrating.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -28,9 +27,12 @@ Language Translator
     
     {: .topicgroup}
     Watson SDKs
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
         [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
         [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [PHP SDK](https://github.com/ThomasIBM/php-sdk)
         [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
         [Swift SDK](https://github.com/watson-developer-cloud/ios-sdk)
         [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
 
@@ -38,7 +40,7 @@ Language Translator
     {: .navgroup-end}
 
     {: .navgroup id="help"}
-    [Release notes](https://www.ibm.com/watson/developercloud/doc/language-translator/release-notes.html)
+    release-notes.md
 
     {: .topicgroup}
     Developer community
