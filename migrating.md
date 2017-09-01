@@ -31,7 +31,7 @@ Follow this process to migrate your application to use an instance of the {{site
 
 1. Go to the [{{site.data.keyword.languagetranslatorshort}} catalog page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/language-translator){: new-window} in Bluemix, and log in.
 1.  Select a pricing plan that has at least the same level of support as the plan that is associated with the Language Translation instance that your application is currently using, then click **Create**.
-1.  Go to your [Bluemix dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/){: new-window}
+1.  Go to your [Bluemix dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/){: new-window}.
 1.  Select the application that currently uses the Language Translation service from the list that is displayed under **Cloud Foundry Apps**.
 1.  Click **Connections** in the navigation menu.
 1.  Find the card for your Language Translation service instance, right-click on the menu icon, and select **Unbind service**.
