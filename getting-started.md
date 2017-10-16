@@ -118,7 +118,7 @@ The following example translates "Hey world, whats up?" with the English-to-Span
 curl -X POST --user "{username}":"{password}" \
 --header "Content-Type: application/json" \
 --header "Accept: application/json" \
---data '{"text":"Hey world, whats up?","model_id":"en-es-conversational"}' \
+--data "{\"text\":\"Hey world, whats up?\",\"model_id\":\"en-es-conversational\"}" \
 "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
 ```
 {:codeblock}
