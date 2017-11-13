@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-31"
+lastupdated: "2017-11-13"
 
 ---
 <!-- Attribute definitions -->
@@ -17,6 +17,7 @@ lastupdated: "2017-08-31"
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
+{:download: .download}
 
 # Getting started tutorial
 {: #gettingstarted}
@@ -27,22 +28,27 @@ lastupdated: "2017-08-31"
 ## Before you begin
 {: #prerequisites}
 
-If you already created a service instance, you're all set with these prerequisites. Move on to Step 1.
-{: tip}
+- Create an instance of the service:
+    - {: download} If you're seeing this, you created your service instance. Now get your credentials.
+    - Create a project from a service:
+        1.  Go to the {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window} page.
+        1.  Select {{site.data.keyword.languagetranslatorshort}}, click **Add Services**, and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+        1.  Type `language-tutorial` as the project name and click **Create Project**.
+- Copy the credentials to authenticate to your service instance:
+    - {: download} From the service dashboard (what you're looking at):
+        1.  Click the **Service credentials** tab.
+        1.  Click **View credentials** under **Actions**.
+        1.  Copy the `username`, `password`, and `url` values.
+        {: download}
+    - From your **language-tutorial** project in the Developer Console, copy the `username`,  `password`, and `url` values for `"language_translator"` from the  **Credentials** section.
 
-1.  Go to the [{{site.data.keyword.languagetranslatorshort}} service ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/) and either sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-1.  After you log in, type `language-tutorial` in the **Service name** field of the {{site.data.keyword.languagetranslatorshort}} page. Click **Create**.
+<!-- Remove this text after dedicated instances have the Developer Console: begin -->
 
-## Step 1: Copy your credentials
-{: #copy-credentials}
+If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service instance from the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/){: new_window} page in the Catalog. For details about how to find your service credentials, see [Service credentials for Watson services ![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-credentials.html#getting-credentials-manually){: new_window}.
 
-After you create the service instance, you'll land on the dashboard for the instance. Here you can find the credentials to authenticate to your service instance.
+<!-- Remove this text after dedicated instances have the Developer Console: end -->
 
-1.  Click **Service credentials**.
-1.  Click **View credentials** under **Actions**.
-1.  Copy the `username` and `password` values.
-
-## Step 2: Translate text
+## Step 1: Translate text
 {: #translate-text}
 
 Use the following example to translate "Hello, world!" from English to Spanish. Replace `{username}` and `{password}` with the service credentials you copied in the previous step.
@@ -107,7 +113,7 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 {:codeblock} -->
 
 
-## Step 3: Try a domain-specific model
+## Step 2: Try a domain-specific model
 {: #specify-model}
 
 {{site.data.keyword.languagetranslatorshort}} has specialized models for news, conversational, and patent domains. When you specify `source` and `target` languages as in Step 2, the service usually defaults to the news domain model for that translation path. To use a domain-specific model, specify the `model_id` instead of the `source` and `target` languages. You can also use a [custom model](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html){: new_window} if you created one.
