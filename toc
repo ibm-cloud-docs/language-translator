@@ -7,7 +7,7 @@ Language Translator
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo: Translate text](http://language-translator-demo.mybluemix.net/)
+    [Demo: Translate text](https://language-translator-demo.ng.bluemix.net/)
 
     {: .topicgroup}
     Additional resources
