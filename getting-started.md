@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-13"
+lastupdated: "2017-11-20"
 
 ---
 <!-- Attribute definitions -->
@@ -54,11 +54,7 @@ If you use {{site.data.keyword.Bluemix_dedicated_notm}}, create your service ins
 Use the following example to translate "Hello, world!" from English to Spanish. Replace `{username}` and `{password}` with the service credentials you copied in the previous step.
 
 ```bash
-curl -X POST --user "{username}":"{password}" \
---header "Content-Type: application/json" \
---header "Accept: application/json" \
---data '{"text":"Hello, world!","source":"en","target":"es"}' \
-"https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+curl -X POST --user {username}:{password} --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"text\":\"Hello, world\",\"source\":\"en\",\"target\":\"es\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate
 ```
 {:codeblock}
 
@@ -121,11 +117,7 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 The following example translates "Hey world, whats up?" with the English-to-Spanish conversational model. Replace `{username}` and `{password}` with your information:
 
 ```bash
-curl -X POST --user "{username}":"{password}" \
---header "Content-Type: application/json" \
---header "Accept: application/json" \
---data '{"text":"Hey world, whats up?","model_id":"en-es-conversational"}' \
-"https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+curl -X POST --user {username}:{password} --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"text\":\"Hey world, whats up?\",\"model_id\":\"en-es-conversational\"}" "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
 ```
 {:codeblock}
 
