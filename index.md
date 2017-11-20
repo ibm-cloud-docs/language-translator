@@ -39,7 +39,7 @@ To teach the service to perform domain-specific translations, you can make the f
 
 ## Quick links
 
-- Try out a working [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.mybluemix.net/){: new_window}.
+- Try out a working [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
 - View the list of [SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/developer-tools.html){: new_window}.
 - Interact with the API through the [API Explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/language-translator-v2){: new_window}.
 
