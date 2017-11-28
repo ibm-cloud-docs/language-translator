@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -47,14 +47,14 @@ Support for additional languages was added: English to and from Italian, and Spa
 ## 3 December 2015
 {: #3-december-2015}
 
-As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with a Bluemix&reg; application that uses an earlier instance of the service, complete the following steps:
+As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with a {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
-1.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.Bluemix_notm}}.
+1.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
 1.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/services/language-translator/customizing.html#structure).
 1.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/services/language-translator/customizing.html#training).
 1.  In your app, point the "ModelID" field to the new customized models.
-1.  Unbind the earlier service from your app in {{site.data.keyword.Bluemix_notm}}, and then delete it.
+1.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
 
 ## 6 November 2015
 {: #6-november-2015}
