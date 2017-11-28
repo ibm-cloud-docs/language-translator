@@ -47,7 +47,7 @@ Support for additional languages was added: English to and from Italian, and Spa
 ## 3 December 2015
 {: #3-december-2015}
 
-As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with a {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
+As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with an {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
 1.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
