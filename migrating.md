@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-08-31"
+lastupdated: "2017-11-28"
 
 ---
 
@@ -29,7 +29,7 @@ Custom models that you created with the Language Translation service will work w
 
 Follow this process to migrate your application to use an instance of the {{site.data.keyword.languagetranslatorshort}} service:
 
-1. Go to the [{{site.data.keyword.languagetranslatorshort}} catalog page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/language-translator){: new-window} in Bluemix, and log in.
+1. Go to the [{{site.data.keyword.languagetranslatorshort}} catalog page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/catalog/services/language-translator){: new-window} in {{site.data.keyword.cloud}}, and log in.
 1.  Select a pricing plan that has at least the same level of support as the plan that is associated with the Language Translation instance that your application is currently using, then click **Create**.
 1.  Go to your [Bluemix dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/){: new-window}.
 1.  Select the application that currently uses the Language Translation service from the list that is displayed under **Cloud Foundry Apps**.
@@ -37,7 +37,7 @@ Follow this process to migrate your application to use an instance of the {{site
 1.  Find the card for your Language Translation service instance, right-click on the menu icon, and select **Unbind service**.
 1.  Click **OK** in the confirmation window to delete the instance of the Language Translation service. Close the "Delete Service" window. A "Restage app" window is displayed.
 
-    When you delete a service that is associated with a {{site.data.keyword.Bluemix_notm}} application, you need to restart that application in {{site.data.keyword.Bluemix_notm}} with its new configuration.
+    When you delete a service that is associated with an {{site.data.keyword.cloud_notm}} application, you need to restart that application in {{site.data.keyword.cloud_notm}} with its new configuration.
 
     You will restage your application after you add the instance of the {{site.data.keyword.languagetranslatorshort}} service that you created earlier in this process. For now, click **Cancel**.
 
