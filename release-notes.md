@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2017
-lastupdated: "2017-11-28"
+lastupdated: "2018-01-12"
 
 ---
 
@@ -21,6 +21,30 @@ lastupdated: "2017-11-28"
 
 The following new features and changes to the service are available.
 {: shortdesc}
+
+## 12 January 2018
+{: #12-january-2018}
+
+New Neural Machine Translation (NMT) models are available to preview. You can try NMT models for the following language pairs. 
+
+- English to and from: Arabic, Chinese, Dutch, French, German, Italian, Japanese, Korean, Portuguese (Brazilian), and Spanish 
+- French to and from: German, Spanish
+- German to and from: Italian
+
+*These models and the syntax for using them are subject to change during the preview period.*
+
+To use an NMT preview model in your API request, specify the header `X-Watson-Technology-Preview:2017-07-01` along with the character codes for the source and target languages of the model you want to use. The following example shows how to translate English to Spanish with an NMT preview model.
+
+```bash
+curl -u username:password \
+-X POST \
+-H "Accept: application/json" \
+-H "X-Watson-Technology-Preview:2017-07-01" \
+-d '{"text":"Hello!","source":"en","target":"es"}' \
+"https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+```
+{: codeblock}
+
 
 ## 15 December 2016
 {: #15-december-2016}
@@ -47,7 +71,7 @@ Support for additional languages was added: English to and from Italian, and Spa
 ## 3 December 2015
 {: #3-december-2015}
 
-As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with an {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
+As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with a {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
 1.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
