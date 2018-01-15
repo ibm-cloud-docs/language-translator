@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-28"
+  years: 2015, 2018
+lastupdated: "2018-01-12"
 
 ---
 
@@ -21,6 +21,30 @@ lastupdated: "2017-11-28"
 
 The following new features and changes to the service are available.
 {: shortdesc}
+
+## 12 January 2018
+{: #12-january-2018}
+
+New Neural Machine Translation (NMT) models are available to preview. You can try NMT models for the following language pairs. 
+
+- English to and from: Arabic, Chinese, Dutch, French, German, Italian, Japanese, Korean, Portuguese (Brazilian), and Spanish 
+- French to and from: German, Spanish
+- German to and from: Italian
+
+*These models and the syntax for using them are subject to change during the preview period.*
+
+To use an NMT preview model in your API request, specify the header `X-Watson-Technology-Preview:2017-07-01` along with the character codes for the source and target languages of the model you want to use. The following example shows how to translate English to Spanish with an NMT preview model.
+
+```bash
+curl -u username:password \
+-X POST \
+-H "Accept: application/json" \
+-H "X-Watson-Technology-Preview:2017-07-01" \
+-d '{"text":"Hello!","source":"en","target":"es"}' \
+"https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+```
+{: codeblock}
+
 
 ## 15 December 2016
 {: #15-december-2016}
