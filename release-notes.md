@@ -31,7 +31,7 @@ New Neural Machine Translation (NMT) models are available to preview. You can tr
 - French to and from: German, Spanish
 - German to and from: Italian
 
-*The NMT models and the syntax for using them are subject to change during the preview period. Currently, NMT early access does not support corpus customization. Only forced glossary customization is supported.*
+*The NMT models and the syntax for using them are subject to change during the preview period. Currently, NMT models do not support corpus customization. Only forced glossary customization is supported.*
 
 To use an NMT preview model to translate, specify the header `X-Watson-Technology-Preview:2017-07-01` along with the character codes for the source and target languages of the model you want to use. The following example shows how to translate English to Spanish with an NMT preview model.
 
