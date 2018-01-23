@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-20"
+  years: 2015, 2018
+lastupdated: "2018-01-23"
 
 ---
 <!-- Attribute definitions -->
@@ -57,6 +57,8 @@ Use the following example to translate "Hello, world!" from English to Spanish. 
 curl -X POST --user {username}:{password} --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"text\":\"Hello, world\",\"source\":\"en\",\"target\":\"es\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate
 ```
 {:codeblock}
+
+A preview of new Neural Machine Translation models that offer improved translations is now available. For more details, see the [release notes](release-notes.html#12-january-2018).
 
 <!-- ```
 var watson = require('watson-developer-cloud');

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-12"
+lastupdated: "2018-01-23"
 
 ---
 
@@ -54,14 +54,14 @@ Additional News translation models were added: English to and from Japanese
 ## 15 November 2016
 {: #15-november-2016}
 
-The tooling that was previously available for the Language {{site.data.keyword.languagetranslatorshort}} service is no longer available or supported. 
+The tooling that was previously available for the {{site.data.keyword.languagetranslatorshort}} service is no longer available or supported. 
 
 Contact your sales representative or customer support for information about how to use the {{site.data.keyword.languagetranslatorshort}} API to accomplish the tasks supported by the {{site.data.keyword.languagetranslatorshort}} tool.
 
 ## 1 September 2016
 {: #1-september-2016}
 
-The IBM Watson&trade; Language Translation service was rebranded as the {{site.data.keyword.languagetranslatorshort}} service. For information about migrating applications from the Language Translation service to the {{site.data.keyword.languagetranslatorshort}} service, see the [Migrating from Language Translation](/docs/services/language-translator/migrating.html) documentation.
+The IBM Watson&trade; Language Translation service was rebranded as the {{site.data.keyword.languagetranslatorshort}} service.
 
 ## 22 March 2016
 {: #22-march-2016}

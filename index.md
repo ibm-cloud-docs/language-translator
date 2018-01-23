@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2017
-lastupdated: "2017-11-20"
+  years: 2015, 2018
+lastupdated: "2018-01-23"
 
 ---
 
@@ -23,8 +23,6 @@ With the {{site.data.keyword.languagetranslatorfull}} service, you can create an
 {: shortdesc}
 
 To translate industry-specific jargon or other types of specialized terminology, you can customize the linguistic model to optimize it for your needs.
-
-**Note:** The IBM Watson&trade; Language Translation service was rebranded as the {{site.data.keyword.languagetranslatorshort}} service. The {{site.data.keyword.languagetranslatorshort}} service provides the same capabilities as the Language Translation service, but with simpler pricing. For information about migrating applications from the Language Translation service to the {{site.data.keyword.languagetranslatorshort}} service, see the [Migrating from Language Translation](/docs/services/language-translator/migrating.html) documentation.
 
 ## How to use the service
 
