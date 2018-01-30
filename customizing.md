@@ -62,7 +62,7 @@ To provide a glossary or corpus of terms for training the {{site.data.keyword.la
         <seg>patent</seg>
       </tuv>
       <tuv xml:lang="fr">
-        <seg>brevent</seg>
+        <seg>brevet</seg>
       </tuv>
     </tu>
   </body>
