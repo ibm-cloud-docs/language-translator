@@ -57,7 +57,7 @@ Use the following example to translate "Hello, world!" from English to Spanish. 
 curl -u username:password \
 -X POST \
 -H "Accept: application/json" \
--d '{"text":"Hello, world","source":"en", "target":"es"}' \
+-d '{"text":"Hello, world", "source":"en", "target":"es"}' \
 https://gateway.watsonplatform.net/language-translator/api/v2/translate
 ```
 {:codeblock}
