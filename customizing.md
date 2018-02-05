@@ -187,7 +187,7 @@ After you train a custom translation model, specify the model\_id of that transl
 The following example invokes the English to French model that was customized in the [Training a custom translation model](#training) section.
 
 ```curl
-curl -u "{username}":"{password}" --header "Content-Type: application/json" -X POST --data {"model_id": "3e7dfdbe-f757-4150-afee-458e71eb93fb","text": ["Hello, my name is Watson, and I work for International Business Machines. How can I help you today?"]}
+curl -u "{username}":"{password}" --header "Content-Type: application/json" -X POST --data "{\"model_id\": \"3e7dfdbe-f757-4150-afee-458e71eb93fb\",\"text\": \"Hello, my name is Watson, and I work for International Business Machines. How can I help you today?\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate 
 ```
 {: codeblock}
 
