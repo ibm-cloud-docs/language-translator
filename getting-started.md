@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-02-13"
 
 ---
 <!-- Attribute definitions -->
@@ -59,6 +59,7 @@ curl -X POST --user {username}:{password} --header "Accept: application/json" --
 {:codeblock}
 
 A preview of new Neural Machine Translation models that offer improved translations is now available. For more details, see the [release notes](release-notes.html#12-january-2018).
+{: tip}
 
 <!-- ```
 var watson = require('watson-developer-cloud');
@@ -114,7 +115,9 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 ## Step 2: Try a domain-specific model
 {: #specify-model}
 
-{{site.data.keyword.languagetranslatorshort}} has specialized models for news, conversational, and patent domains. When you specify `source` and `target` languages as in Step 2, the service usually defaults to the news domain model for that translation path. To use a domain-specific model, specify the `model_id` instead of the `source` and `target` languages. You can also use a [custom model](https://www.ibm.com/watson/developercloud/doc/language-translator/customizing.html){: new_window} if you created one.
+{{site.data.keyword.languagetranslatorshort}} has specialized models for news, conversational, and patent domains. When you specify `source` and `target` languages as in Step 2, the service usually defaults to the news domain model for that translation path. To use a domain-specific model, specify the `model_id` instead of the `source` and `target` languages. You can also use a [custom model](customizing.html) if you created one.
+
+_Domain-specific models are not supported in requests that contain the [NMT preview header](release-notes.html#12-january-2018)._
 
 The following example translates "Hey world, whats up?" with the English-to-Spanish conversational model. Replace `{username}` and `{password}` with your information:
 
