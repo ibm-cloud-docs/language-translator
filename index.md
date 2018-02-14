@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-01-23"
+lastupdated: "2018-02-13"
 
 ---
 
@@ -19,98 +19,25 @@ lastupdated: "2018-01-23"
 
 # About
 
-With the {{site.data.keyword.languagetranslatorfull}} service, you can create an application that identifies the language of input text and uses a domain-specific linguistic model to translate the text into another language.
+{{site.data.keyword.languagetranslatorfull}} is a translation API that uses domain-specific models to translate text from one language to another.
 {: shortdesc}
 
-To translate industry-specific jargon or other types of specialized terminology, you can customize the linguistic model to optimize it for your needs.
+The service provides translation models for the following domains. 
+- **News:** targeted at news articles and transcripts.
+- **Conversational:** targeted at conversations and colloquial phrases.
+- **Patent:** targeted at technical and legal terminology.
 
-## How to use the service
+In addition to using the provided translation models, you can build upon the news models to create your own [custom models](customizing.html) for your use case.
 
-Use the service to identify the language of text, and to translate text from one language to another. For example, pass an English word, such as *Hello*, and the service can identify it as English. Or translate the English greeting into its Spanish equivalent, *Hola*.
-
-To teach the service to perform domain-specific translations, you can make the following enhancements to one of the linguistic models that is provided with the service:
-
-- Add your own glossary of terms or phrases in a source and target language. The glossary can supplement standard translations or be identified as the only terms to use.
-- Upload a large body of text in your target language to serve as a language sample. The service can evaluate the sample and use what it learns to improve the quality of its translation.
-
-    For more information about customization, see [Customizing your model](/docs/services/language-translator/customizing.html).
+A preview of new Neural Machine Translation (NMT) models that offer improved translations is now available. For more details, view the [release notes](release-notes.html#12-january-2018). 
+{: tip}
 
 ## Quick links
 
-- Try out a working [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
-- View the list of [SDKs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/developer-tools.html){: new_window}.
-- Interact with the API through the [API Explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/language-translator-v2){: new_window}.
-
-## Supported languages
-
-The linguistic models that are provided with the service can perform translations between the following languages:
-
-- **News**: Targeted at news articles and transcripts.  Translate English to and from Arabic, Brazilian Portuguese, French, German, Italian, Japanese, Korean, and Spanish. You can also translate Spanish to and from French.
-- **Conversational**: Targeted at conversational colloquialisms. Translate English to and from Arabic, Brazilian Portuguese, French, Italian, and Spanish.
-- **Patents**: Targeted at technical and legal terminology. Translate Brazilian Portuguese, Chinese, Korean, and Spanish to English.
-
-The `/identify` endpoint can recognize the following languages:
-
-- Afrikaans
-- Albanian
-- Arabic
-- Armenian
-- Azerbaijani
-- Bashkir
-- Basque
-- Belarusian
-- Bengali
-- Bosnian
-- Bulgarian
-- Central Khmer
-- Chinese
-- Chuvash
-- Czech
-- Danish
-- Dutch
-- English
-- Esperanto
-- Estonian
-- Finnish
-- French
-- Georgian
-- German
-- Greek
-- Gujarati
-- Haitian
-- Hebrew
-- Hindi
-- Hungarian
-- Icelandic
-- Indonesian
-- Italian
-- Japanese
-- Kazakh
-- Kirghiz
-- Korean
-- Kurdish
-- Latvian
-- Lithuanian
-- Malayalam
-- Mongolian
-- Norwegian Bokmal
-- Norwegian Nynorsk
-- Panjabi
-- Persian
-- Polish
-- Portuguese
-- Pushto
-- Romanian
-- Russian
-- Slovakian
-- Somali
-- Spanish
-- Swedish
-- Tamil
-- Telugu
-- Traditional Chinese
-- Turkish
-- Ukrainian
-- Urdu
-- Vietnamese
+- [Get started](getting-started.html).
+- Try the live [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
+- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/index.html){: new_window}.
+- View language support information:
+  - [Translation models](translation-models.html)
+  - [Identifiable languages](identifiable-languages.html)
 
