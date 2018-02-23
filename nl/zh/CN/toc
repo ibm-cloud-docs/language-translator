@@ -1,0 +1,56 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="language-translator" audience="service" href="/docs/services/language-translator/getting-started.html"}
+Language Translator
+
+    {: .navgroup id="learn"}
+    getting-started.md
+    index.md
+    [演示：翻译文本](https://language-translator-demo.ng.bluemix.net/)
+
+    {: .topicgroup}
+    其他资源
+        [博客](https://developer.ibm.com/watson/blog/)
+        [网络研讨会](http://www.ibm.com/watson/building-with-watson-webinar.html)
+        [Watson 视频](https://www.youtube.com/user/IBMWatsonSolutions)
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    customizing.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [API 参考](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
+
+    {: .topicgroup}
+    语言支持
+        [翻译模型](translation-models.html)
+        [可识别语言](identifiable-languages.html)
+
+    [样本应用程序：Watson Language Translator](https://github.com/watson-developer-cloud/language-translator-nodejs)
+
+    {: .topicgroup}
+    Watson SDK
+        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
+        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
+        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
+        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
+        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
+        [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk)
+        [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
+        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
+        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
+
+    [Watson GitHub 存储库](https://github.com/watson-developer-cloud/)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    release-notes.md
+
+    {: .topicgroup}
+    开发者社区
+        [StackOverflow](http://stackoverflow.com/questions/tagged/language-translation+ibm-watson-cognitive)
+        [developerWorks Answers](https://developer.ibm.com/answers/topics/language-translator/)
+        [WDC Slack 频道](http://wdc-slack-inviter.mybluemix.net/)
+    {: .navgroup-end}
