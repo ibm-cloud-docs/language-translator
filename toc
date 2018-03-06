@@ -28,7 +28,7 @@ Language Translator
         [Translation models](translation-models.html)
         [Identifiable languages](identifiable-languages.html)
 
-    [Sample app: Watson Language Translator](https://github.com/watson-developer-cloud/language-translator-nodejs)
+    sample-applications.md
 
     {: .topicgroup}
     Watson SDKs
