@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-07"
+lastupdated: "2018-03-20"
 
 ---
 
@@ -44,6 +44,8 @@ curl -u username:password \
 "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
 ```
 {: codeblock}
+
+You can watch a [video walkthrough on YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/L6ZC0QaUZ2k) that explains how to set up {{site.data.keyword.languagetranslatorshort}} with the NMT preview.
 
 
 ## 15 December 2016
