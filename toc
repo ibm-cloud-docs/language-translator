@@ -8,6 +8,7 @@ Language Translator
     getting-started.md
     index.md
     [Demo: Translate text](https://language-translator-demo.ng.bluemix.net/)
+    [Video: Neural Machine Translation preview](https://youtu.be/L6ZC0QaUZ2k)
 
     {: .topicgroup}
     Additional resources
