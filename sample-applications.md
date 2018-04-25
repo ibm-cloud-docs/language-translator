@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-06"
+lastupdated: "2018-04-25"
 
 ---
 
@@ -21,6 +21,14 @@ lastupdated: "2018-03-06"
 
 Check out the following sample applications to see what you can build with {{site.data.keyword.languagetranslatorshort}}.
 {: shortdesc}
+
+## Multi-lingual Chatbot demo (Node.js, Python)
+{: #language-translator-demo}
+
+This application uses cloud functions to pair Watson Assistant and Watson Language Translator. See how you can create a multilingual chatbot. Switch between languages with this automotive driver assistant.
+
+- [View on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/with-watson/multilingual-chatbot)
+- [Live demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://multilingual-chatbot-demo.mybluemix.net/)
 
 ## Language Translator demo (Node.js)
 {: #language-translator-demo}
