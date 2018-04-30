@@ -29,6 +29,7 @@ This application uses cloud functions to pair Watson Assistant and Watson Langua
 
 - [View on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/with-watson/multilingual-chatbot)
 - [Live demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://multilingual-chatbot-demo.mybluemix.net/)
+- [Read More ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://medium.com/ibm-watson/build-multilingual-chatbots-with-watson-language-translator-watson-assistant-8c38247e8af1)
 
 ## Language Translator demo (Node.js)
 {: #language-translator-demo}
