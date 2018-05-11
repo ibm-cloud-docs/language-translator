@@ -30,7 +30,8 @@ Language Translator
         [Identifiable languages](identifiable-languages.html)
 
     sample-applications.md
-
+    information-security.md
+    
     {: .topicgroup}
     Watson SDKs
         [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
