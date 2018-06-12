@@ -20,7 +20,7 @@ lastupdated: "2018-06-12"
 # Migrating to {{site.data.keyword.languagetranslatorshort}} API v3 with Neural Machine Translation
 {: #migrating-to-v3}
 
-{{site.data.keyword.languagetranslatorshort}} API v2 is now retired in favor of API v3. Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, please migrate your application to {{site.data.keyword.languagetranslatorshort}} v3.
+Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, please migrate your application to {{site.data.keyword.languagetranslatorshort}} v3.
 {: shortdesc}
 
 ## What's new in v3
