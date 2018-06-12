@@ -13,7 +13,7 @@ lastupdated: "2018-06-12"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Translation models
+# v3 Translation models
 {: #translation-models}
 
 This page lists translation models for the v3 API. The translation models for the v2 API are listed in [Translation models (v2)](translation-models-v2.html). 
