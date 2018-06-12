@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-02-13"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2018-02-13"
 # Identifiable languages
 
 The following languages can be identified by the service with the `/identify` endpoint. 
+
+You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
+
+```bash
+curl --user {username}:{password} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -124,10 +131,18 @@ The following languages can be identified by the service with the `/identify` en
    </tr>
    <tr>
     <td>
-     Chinese
+     Chinese (Simplified)
     </td>
     <td>
      zh
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Chinese (Traditional)
+    </td>
+    <td>
+     zh-TW
     </td>
    </tr>
    <tr>
@@ -480,14 +495,6 @@ The following languages can be identified by the service with the `/identify` en
     </td>
     <td>
      te
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Traditional Chinese
-    </td>
-    <td>
-     zh-TW
     </td>
    </tr>
    <tr>
