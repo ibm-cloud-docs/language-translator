@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-20"
+lastupdated: "2018-06-12"
 
 ---
 
@@ -21,6 +21,45 @@ lastupdated: "2018-03-20"
 
 The following new features and changes to the service are available.
 {: shortdesc}
+
+## Service API Versioning
+{: shortdesc}
+
+API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a version parameter that takes a date in the format `version=YYYY-MM-DD`. Whenever we change the API in a backwards-incompatible way, we release a new minor version of the API.
+
+Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
+
+The current version is `2018-05-01`.
+
+## 12 June 2018
+{: #12-june-2018}
+
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
+
+### What's new in v3
+{: #whats-new}
+
+-  {{site.data.keyword.languagetranslatorshort}} API v3 comes with **Neural Machine Translation** (NMT) models that offer significantly improved translation results. All NMT models are now available for customization.
+-  Use custom models as base models for forced glossary customization.
+-  API v3 is a simplified, all-JSON subset of the retired API v2.
+-  Introduces API version dates to give developers the freedom to adopt future API changes at their own pace.
+
+### Breaking changes
+{: #breaking-changes}
+
+- Mandatory version date for all API endpoints: API v3 requests require a version date query parameter of the form `version=YYYY-MM-DD`. The latest API version is `version=2018-05-01`.
+- Simplified API:
+  - The **Translate** and **Identify** methods do not offer the option to return plain text responses in v3. The methods return only JSON responses.
+  - `GET /translate` and `GET /identify` methods are not supported in v3. Use the `POST /translate` and `POST /identify` methods instead. 
+- Monolingual corpus customization is not supported in v3.
+- Creating custom models with both a parallel corpus and forced glossary now needs to be done in two API calls. First, customize the model with a parallel corpus. After the custom model has finished training, customize it again with the forced glossary. This change allows you to use a custom model trained with a parallel corpus as a base for forced glossary customization.
+- Specialized patent and conversation domain models are not available in the v3 API. The translation quality provided by the NMT models in the patent and conversation domains is generally improved compared to the older specialized models.
+- Error object keys have been renamed so that they are consistent with other Watson APIs. `error_code` has been renamed to `code`, and `error_message` has been renamed to `error`.
+
+### IAM authentication
+
+{{site.data.keyword.languagetranslatorshort}} supports [Identity and Access Management (IAM)](/docs/services/watson/getting-started-iam.html) authentication for service instances created in Sydney (au-syd) and Washington D.C. (us-east) as of June 12, 2018. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than username and password credentials to authenticate with a service. IAM authentication will be available for {{site.data.keyword.languagetranslatorshort}} service instances in other regions soon.
+
 
 ## 12 January 2018
 {: #12-january-2018}
@@ -98,4 +137,3 @@ The beta Machine Translator and beta Language Identification APIs have been upgr
 - **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
 - **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
 - **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
-
