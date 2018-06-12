@@ -13,7 +13,7 @@ lastupdated: "2018-06-12"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Translation models (v2)
+# v2 Translation models
 {: #translation-models-v2}
 
 {{site.data.keyword.languagetranslatorshort}} can translate the following languages.
