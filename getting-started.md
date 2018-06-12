@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-04-27"
+lastupdated: "2018-06-12"
 
 ---
 <!-- Attribute definitions -->
@@ -22,7 +22,7 @@ lastupdated: "2018-04-27"
 # Getting started tutorial
 {: #gettingstarted}
 
-{{site.data.keyword.languagetranslatorfull}} allows you to programmatically translate text in news, conversational, and patent domains. This tutorial walks you through the commands to translate some sample content from English to Spanish and to choose the domain.
+{{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language. This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
 {:shortdesc}
 
 ## Before you begin
@@ -32,25 +32,31 @@ lastupdated: "2018-04-27"
 - Create an instance of the service:
     1.  Go to the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    1.  Select a service plan, e.g. select the free lite plan for testing the service.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
     1.  On the service dashboard, click the **Service credentials** tab.
     1.  Click **View credentials** under **Actions**.
     1.  Copy the `username`, `password`, and `url` values.
+    
+    **Important:** The tutorial uses Basic Authentication credentials. In some regions, new service instances also allow for {{site.data.keyword.cloud}} [Identity and Access Management (IAM)](/docs/services/watson/getting-started-iam.html) tokens for authentication. Authenticate by using the approach that is right for your region and service instance.
+
 - Make sure you have cURL:
     - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+ 
 
 ## Step 1: Translate text
 {: #translate-text}
 
-Use the following example to translate "Hello, world!" from English to Spanish. Replace `{username}` and `{password}` with the service credentials you copied in the previous step.
+Use the following example to translate two phrases, "Hello, world!" and "How are you?", from English to Spanish. Replace `{username}` and `{password}` with the service credentials you copied in the previous step, or use [IAM authentication](/docs/services/watson/getting-started-iam.html) if it is appropriate for your service instance.
 
 ```bash
-curl -X POST --user {username}:{password} --header "Accept: application/json" --data "{\"text\":\"Hello, world\",\"source\":\"en\",\"target\":\"es\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate
+curl --user {username}:{password} --request POST --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world!\", \"How are you?\"], \"model_id\":\"en-es\"}" https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01
 ```
-{:codeblock}
+{: pre}
 
-A preview of new Neural Machine Translation models that offer improved translations is now available. For more details, see the [release notes](release-notes.html#12-january-2018).
+
+The host in the example URL is `gateway.watsonplatform.net`. Your host might be different depending on your {{site.data.keyword.cloud_notm}} region or dedicated deployment. You can view the URL for your service instance from the **Service credentials** tab in your service dashboard. 
 {: tip}
 
 <!-- ```
@@ -103,78 +109,23 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 {:python}
 {:codeblock} -->
 
+## Step 2: Identify language
 
-## Step 2: Try a domain-specific model
-{: #specify-model}
-
-{{site.data.keyword.languagetranslatorshort}} has specialized models for news, conversational, and patent domains. When you specify `source` and `target` languages as in Step 2, the service usually defaults to the news domain model for that translation path. To use a domain-specific model, specify the `model_id` instead of the `source` and `target` languages. You can also use a [custom model](customizing.html) if you created one.
-
-_Domain-specific models are not supported in requests that contain the [NMT preview header](release-notes.html#12-january-2018)._
-
-The following example translates "Hey world, whats up?" with the English-to-Spanish conversational model. Replace `{username}` and `{password}` with your information:
+Use the following example to identify the language of text. Replace `{username}` and `{password}` with your service credentials, or use [IAM authentication](/docs/services/watson/getting-started-iam.html) if it is appropriate for your service instance.
 
 ```bash
-curl -X POST --user {username}:{password} --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"text\":\"Hey world, whats up?\",\"model_id\":\"en-es-conversational\"}" "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+curl --user {username}:{password} --request POST --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" https://gateway.watsonplatform.net/language-translator/api/v3/identify?version=2018-05-01
 ```
-{:codeblock}
+{: pre}
 
-<!-- ```
-var watson = require('watson-developer-cloud');
-var language_translator = watson.language_translator({
-  username: 'username',
-  password: 'password',
-  url: 'https://gateway.watsonplatform.net/language-translator/api'
-  version: 'v2',
-});
-language_translator.translate({
-    text: 'Hey, world! What's up?',
-    model_id: 'en-es-conversational'
-  },
-  function(err, translation) {
-    if (err)
-      console.log(err)
-    else
-      console.log(translation);
-});
-```
-{:node}
-{:codeblock} -->
-
-<!-- ```java
-LanguageTranslator service = new LanguageTranslator();
-service.setUsernameAndPassword("username","password");
-
-TranslationResult result = service.translate("Hey, world! What's up?", "en-es-conversational");
-System.out.println(result);
-```
-{:java}
-{:codeblock} -->
-
-<!-- ```python
-import json
-from watson_developer_cloud import LanguageTranslatorV2 as LanguageTranslator
-
-language_translator = LanguageTranslator(
-  username="username",
-  password="password"
-)
-
-translation = language_translator.translate(
-  text="Hey, world! What's up?",
-  model_id="en-es-conversational"
-)
-print(json.dumps(translation, indent=2, ensure_ascii=False))
-```
-{:python}
-{:codeblock} -->
-
-You can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/#list-models){: new_window} method to view the available models for your service instance.
-{:tip}
 
 ## Next steps
 {: #next-steps}
 
 - Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case.
-- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/){:new_window}.
-- Interact with the API in the [API explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/language-translator-v2){:new_window}.
-- Try the [Node.js sample app ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/language-translator-nodejs){:new_window}.
+- View the [API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v3/).
+- Interact with the API in the [API Explorer](https://watson-api-explorer.mybluemix.net/apis/language-translator-v3).
+- Explore [sample applications](sample-applications.html).
+- View language support information:
+  - [Translation models](translation-models.html)
+  - [Identifiable languages](identifiable-languages.html)
