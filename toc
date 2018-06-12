@@ -27,9 +27,9 @@ Language Translator
 
     {: .topicgroup}
     Language support
-        [v3 Translation models](translation-models.html)
-        [v2 Translation models](translation-models-v2.html)
-        [Identifiable languages](identifiable-languages.html)
+        translation-models.md
+        translation-models-v2.md
+        identifiable-languages.md
 
     sample-applications.md
     information-security.md
