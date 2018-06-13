@@ -44,10 +44,12 @@ After you have created your [Translation Memory Exchange (TMX) files](#creating-
 ## Step 2: Train your model
 {: #train-your-model}
 
-Use the [Create model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#create-model) method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters. 
+Use the [Create model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#create-model) method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
 
 ### Example request
-The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. See the [Forced glossary customization](#forced-glossary) section for an example forced glossary TMX file. 
+{: #train-model-example-request}
+
+The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. See the [Forced glossary customization](#forced-glossary) section for an example forced glossary TMX file.
 
 ```bash
 curl --user "{username}":"{password}" -X POST --form forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
@@ -95,6 +97,8 @@ When the model status is `available`, your model is ready to use with your servi
 - `error`
 
 ### Example request
+{: #check-model-example-request}
+
 The following example gets information for the model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```bash
@@ -108,6 +112,8 @@ curl --user "{username}":"{password}" "https://gateway.watsonplatform.net/langua
 To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#translate) method.
 
 ### Example request
+{: #translate-text-example-request}
+
 The following example translates text with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```bash
@@ -119,7 +125,7 @@ curl --user "{username}":"{password}" --request POST --header "Content-Type: app
 ## Forced glossary customization
 {: #forced-glossary-customization}
 
-Use a **forced glossary** to set mandatory translations for specific terms and phrases. If you want specific control over translation behavior, use a forced glossary. 
+Use a **forced glossary** to set mandatory translations for specific terms and phrases. If you want specific control over translation behavior, use a forced glossary.
 
 - Training data format: [TMX](#creating-tmx-files) (UTF-8 encoded)
 - Maximum file size: 10 MB
@@ -170,7 +176,7 @@ Use a **parallel corpus** to provide additional translations for the base model 
 
 - Training data format: [TMX](#creating-tmx-files) (UTF-8 encoded)
 - Minimum number of translation pairs: 5,000
-- Maximum file size: 250 MB 
+- Maximum file size: 250 MB
 - You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of the files doesn't exceed 250 MB.
 
 ### Parallel corpus example
@@ -336,5 +342,3 @@ The following command deletes the translation model with model ID `3e7dfdbe-f757
 curl --user "{username}":"{password}" --request DELETE "https://gateway.watsonplatform.net/language-translator/api/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
 {: codeblock}
-
-
