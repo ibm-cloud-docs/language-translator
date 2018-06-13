@@ -8,7 +8,6 @@ Language Translator
     getting-started.md
     index.md
     [Demo: Translate text](https://language-translator-demo.ng.bluemix.net/)
-    [Video: Neural Machine Translation preview](https://youtu.be/L6ZC0QaUZ2k)
 
     {: .topicgroup}
     Additional resources
@@ -19,19 +18,22 @@ Language Translator
 
     {: .navgroup id="howto"}
     customizing.md
+    migrating.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
+    [v3 API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v3/)
+    [v2 API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
 
     {: .topicgroup}
     Language support
-        [Translation models](translation-models.html)
-        [Identifiable languages](identifiable-languages.html)
+        translation-models.md
+        translation-models-v2.md
+        identifiable-languages.md
 
     sample-applications.md
     information-security.md
-    
+
     {: .topicgroup}
     Watson SDKs
         [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
