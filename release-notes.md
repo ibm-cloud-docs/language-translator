@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -22,6 +22,27 @@ lastupdated: "2018-06-12"
 The following new features and changes to the service are available.
 {: shortdesc}
 
+## New API authentication process
+{: #iam-auth-process }
+
+The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following regions and dates:
+
+- Sydney as of June 12, 2018
+- US East as of June 12, 2018
+- Germany as of June 15, 2018
+- US South as of June 15, 2018
+
+{{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
+
+- For _new_ service instances in the regions and dates indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
+
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see See [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html?curl#authentication){: new_window} in the API reference.
+- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources/instance_migration.html).
+
+To find out which authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+
+All new and existing service instances in other regions continue to use service credentials (`{username}:{password}`) for authentication. IAM access tokens will be enabled for applications that are hosted in other regions soon.
+
 ## Service API Versioning
 {: shortdesc}
 
@@ -30,6 +51,13 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 15 June 2018
+{: #15-june-2018}
+
+As of 15 June 2018, new service instances created in the Germany and US South regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
+
+New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](migrating.html).
 
 ## 12 June 2018
 {: #12-june-2018}
@@ -58,8 +86,7 @@ The current version is `2018-05-01`.
 
 ### IAM authentication
 
-{{site.data.keyword.languagetranslatorshort}} supports [Identity and Access Management (IAM)](/docs/services/watson/getting-started-iam.html) authentication for service instances created in Sydney (au-syd) and Washington D.C. (us-east) as of June 12, 2018. {{site.data.keyword.Bluemix}} is in the process of migrating to token-based Identity and Access Management (IAM) authentication. IAM uses access tokens rather than username and password credentials to authenticate with a service. IAM authentication will be available for {{site.data.keyword.languagetranslatorshort}} service instances in other regions soon.
-
+As of 12 June 2018, new service instances created in the Sydney and US East regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
 
 ## 12 January 2018
 {: #12-january-2018}
@@ -137,3 +164,4 @@ The beta Machine Translator and beta Language Identification APIs have been upgr
 - **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
 - **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
 - **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
+

@@ -52,7 +52,7 @@ Use the [Create model ![External link icon](../../icons/launch-glyph.svg "Extern
 The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. See the [Forced glossary customization](#forced-glossary) section for an example forced glossary TMX file.
 
 ```bash
-curl --user "{username}":"{password}" -X POST --form forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
+curl --user apikey:{apikey} -X POST --form forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
 ```
 {: pre}
 
@@ -102,7 +102,7 @@ When the model status is `available`, your model is ready to use with your servi
 The following example gets information for the model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```bash
-curl --user "{username}":"{password}" "https://gateway.watsonplatform.net/language-translator/api/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
+curl --user apikey:{apikey_value} "https://gateway.watsonplatform.net/language-translator/api/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
 ```
 {: pre}
 
@@ -117,7 +117,7 @@ To use your custom model, specify the text that you want to translate and the cu
 The following example translates text with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```bash
-curl --user "{username}":"{password}" --request POST --header "Content-Type: application/json" --data '{"text":"Hello","model_id":"96221b69-8e46-42e4-a3c1-808e17c787ca"}' https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01
+curl --user apikey:{apikey_value} --request POST --header "Content-Type: application/json" --data '{"text":"Hello","model_id":"96221b69-8e46-42e4-a3c1-808e17c787ca"}' https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01
 ```
 {: pre}
 
@@ -339,6 +339,6 @@ To delete a custom translation model, use the [Delete model ![External link icon
 The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 
 ```curl
-curl --user "{username}":"{password}" --request DELETE "https://gateway.watsonplatform.net/language-translator/api/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
+curl --user apikey:{apikey_value} --request DELETE "https://gateway.watsonplatform.net/language-translator/api/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
 {: codeblock}

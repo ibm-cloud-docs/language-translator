@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-15"
 
 ---
 
@@ -20,7 +20,7 @@ The following languages can be identified by the service with the `/identify` en
 You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
 
 ```bash
-curl --user {username}:{password} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
 ```
 {: pre}
 
