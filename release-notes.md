@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-06-20"
 
 ---
 
@@ -51,6 +51,13 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 20 June 2018
+{: #20-june-2018}
+
+IBM Watson Document Translator is now available as a technical preview. The Document Translator allows you to translate documents from one language to another language while preserving file formatting. Translate 12 different file formats, including MS Office, Open Office, and PDF file types.
+  
+For preview limits and instructions, see the [IBM Watson Document Translator](doc-translator.html) page.
 
 ## 15 June 2018
 {: #15-june-2018}
