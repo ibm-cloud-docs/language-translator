@@ -27,7 +27,7 @@ The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate 
 
 **Important**: The Document Translator is a preview app that has some limitations:
 - The maximum file size in this release is 100 MB 
-- The initial supported languages are: English, Brazilian Portuguese, French, German, Italian, and Spanish.
+- The initial supported languages are English, Brazilian Portuguese, French, German, Italian, and Spanish.
 
 With future releases, we hope to offer technical support, additional languages, and API support. 
 
