@@ -31,7 +31,6 @@ The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate 
 You need your {{site.data.keyword.languagetranslatorshort}} service credentials to log in. Either create a service instance or use your existing service credentials.
 
 - Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
     1.  Select a service plan, e.g. select the free lite plan for testing the service.
     1.  Click **Create**.
