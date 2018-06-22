@@ -32,13 +32,13 @@ You need your {{site.data.keyword.languagetranslatorshort}} service credentials 
 
 - Create an instance of the service:
     1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-    1.  Select a service plan, e.g. select the free lite plan for testing the service.
+    1.  Select a service plan. For example, select the free lite plan for testing the service.
     1.  Click **Create**.
     
 - Copy the credentials to authenticate to your service instance:
     1.  On the service dashboard, click the **Service credentials** tab.
     1.  Click **View credentials** under **Actions**.
-    2.  Copy the `apikey`, and `url` values.
+    1.  Copy the `apikey` value.
     
     With some service instances you authenticate by providing a username and password. If you see `username` and `password` in the credentials, use those values instead of `apikey` and `{apikey_value}` in the examples in this tutorial.
 
