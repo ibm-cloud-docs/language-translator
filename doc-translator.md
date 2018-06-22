@@ -25,7 +25,7 @@ lastupdated: "2018-06-20"
 The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate documents from one language to another while preserving the formatting. Translate 12 different file formats, including MS Office, Open Office, and PDF files. In this tutorial, you learn how to translate a document with the tool.
 {:shortdesc}
 
-**IMPORTANT**: The Document Translator is a preview app that has some limitations:
+**Important**: The Document Translator is a preview app that has some limitations:
 - The maximum file size in this release is 100 MB 
 - The initial supported languages are: English, Brazilian Portuguese, French, German, Italian, and Spanish.
 
