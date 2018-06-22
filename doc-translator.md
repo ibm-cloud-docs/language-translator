@@ -22,7 +22,7 @@ lastupdated: "2018-06-20"
 # Using the Document Translator
 {: #doc-translator-tutorial}
 
-The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate documents from one language to another while it preserves the formatting in the file. Translate 12 different file formats, including MS Office, Open Office, and PDF files. In this tutorial, you learn how to translate a document with the tool.
+The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate documents from one language to another while preserving the formatting. Translate 12 different file formats, including MS Office, Open Office, and PDF files. In this tutorial, you learn how to translate a document with the tool.
 {:shortdesc}
 
 **Note: This sample application is a technology preview and is presented with some initial limitations:**
