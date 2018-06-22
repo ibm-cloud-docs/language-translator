@@ -28,9 +28,20 @@ The {{site.data.keyword.ibmwatson}} Document Translator allows you to translate 
 ## Before you begin
 {: #prerequisites}
 
-You need either your {{site.data.keyword.languagetranslatorshort}} service credentials or your {{site.data.keyword.Bluemix_notm}} account credentials to log into the Document Translator.
+- {: download} If you're seeing this, you created your service instance. Now get your credentials.
 
-To find out which authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/dashboard/apps?watson){: new_window}.
+- Create an instance of the service:
+    1.  Go to the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    1.  Select a service plan, e.g. select the free lite plan for testing the service.
+    1.  Click **Create**.
+    
+- Copy the credentials to authenticate to your service instance:
+    1.  On the service dashboard, click the **Service credentials** tab.
+    1.  Click **View credentials** under **Actions**.
+    2.  Copy the `apikey`, and `url` values.
+    
+    With some service instances, you authenticate by providing a username and password. If you see `username` and `password` in the credentials, use those values instead of `apikey` and `{apikey_value}` in the examples in this tutorial.
 
 ## Step 1: Log into Document Translator
 
