@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-06-12"
 # Migrating to {{site.data.keyword.languagetranslatorshort}} API v3 with Neural Machine Translation
 {: #migrating-to-v3}
 
-Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, please migrate your application to {{site.data.keyword.languagetranslatorshort}} v3.
+**The {{site.data.keyword.languagetranslatorshort}} v2 API will no longer be available on July 31, 2018.** Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, and to continue using {{site.data.keyword.languagetranslatorshort}}, please migrate your application to {{site.data.keyword.languagetranslatorshort}} v3.
 {: shortdesc}
 
 ## What's new in v3
@@ -59,6 +59,7 @@ Custom models that you have trained with {{site.data.keyword.languagetranslators
 
 In v3, you will not be able to customize a model with a parallel corpus and forced glossary in a single API call. To customize a model with both a parallel corpus and a forced glossary, you need to do it in two steps. First, customize a base model with a parallel corpus. After the model is available, use the model ID of the available custom model as the base model for forced glossary customization.
 {: tip}
+
 
 
 

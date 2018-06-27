@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -13,7 +13,7 @@ lastupdated: "2018-06-15"
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# v3 Translation models
+# Translation models
 {: #translation-models}
 
 This page lists translation models for the v3 API. The translation models for the v2 API are listed in [Translation models (v2)](translation-models-v2.html). 
@@ -30,12 +30,17 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
 {: pre}
 
   - [Arabic](#arabic)
+  - [Catalan](#catalan)
   - [Chinese (Simplified)](#chinese-simplified)
   - [Chinese (Traditional)](#chinese-traditional)
+  - [Czech](#czech)
+  - [Danish](#danish)
   - [Dutch](#dutch)
   - [English](#english)
+  - [Finnish](#finnish)
   - [French](#french)
   - [German](#german)
+  - [Hindi](#hindi)
   - [Italian](#italian)
   - [Japanese](#japanese)
   - [Korean](#korean)
@@ -43,6 +48,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Portuguese](#portuguese)
   - [Russian](#russian)
   - [Spanish](#spanish)
+  - [Swedish](#swedish)
   - [Turkish](#turkish)
 
 ## Arabic
@@ -77,6 +83,50 @@ The following models can translate Arabic text.
     </td>
     <td>
      English (en)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Catalan
+{: #catalan}
+
+The following models can translate Catalan text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     ca-es
+    </td>
+    <td>
+     Catalan (ca)
+    </td>
+    <td>
+     Spanish (es)
     </td>
     <td>
      general
@@ -160,6 +210,94 @@ The following models can translate Chinese (Simplified) text.
     </td>
     <td>
      Traditional Chinese (zh-TW)
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Czech
+{: #czech}
+
+The following models can translate Czech text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     cs-en
+    </td>
+    <td>
+     Czech (cs)
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Danish
+{: #danish}
+
+The following models can translate Danish text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     da-en
+    </td>
+    <td>
+     Danish (da)
     </td>
     <td>
      English (en)
@@ -261,6 +399,40 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     en-cs
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Czech (cs)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
+     en-da
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Danish (da)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
      en-de
     </td>
     <td>
@@ -295,6 +467,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     en-fi
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Finnish (fi)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
      en-fr
     </td>
     <td>
@@ -302,6 +491,23 @@ The following models can translate English text.
     </td>
     <td>
      French (fr)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
+     en-hi
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Hindi (hi)
     </td>
     <td>
      general
@@ -431,6 +637,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     en-sv
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Swedish (sv)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
      en-tr
     </td>
     <td>
@@ -472,6 +695,48 @@ The following models can translate English text.
     </td>
     <td>
      Traditional Chinese (zh-TW)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Finnish
+{: #finnish}
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     fi-en
+    </td>
+    <td>
+     Finnish (fi)
+    </td>
+    <td>
+     English (en)
     </td>
     <td>
      general
@@ -640,6 +905,48 @@ The following models can translate German text.
  </thead>
 </table>
 
+## Hindi
+{: #hindi}
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     hi-en
+    </td>
+    <td>
+     Hindi (hi)
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 ## Italian
 {: #italian}
 
@@ -744,7 +1051,6 @@ The following models can translate Japanese text.
   </tbody>
  </thead>
 </table>
-
 
 ## Korean
 {: #korean}
@@ -947,6 +1253,23 @@ The following models can translate Spanish text.
   <tbody>
    <tr>
     <td>
+     es-ca
+    </td>
+    <td>
+     Spanish (es)
+    </td>
+    <td>
+     Catalan (ca)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
      es-en
     </td>
     <td>
@@ -971,6 +1294,48 @@ The following models can translate Spanish text.
     </td>
     <td>
      French (fr)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Swedish
+{: #swedish}
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     sv-en
+    </td>
+    <td>
+     Swedish (sv)
+    </td>
+    <td>
+     English (en)
     </td>
     <td>
      general
@@ -1026,4 +1391,3 @@ The following models can translate Turkish text.
   </tbody>
  </thead>
 </table>
-

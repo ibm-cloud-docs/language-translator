@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -24,7 +24,7 @@ lastupdated: "2018-06-12"
 
 In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](customizing.html) for your use case.
 
-{{site.data.keyword.languagetranslatorshort}} v3 is now available. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. **The v2 Language Translator API will no longer be available after July 31, 2018.** To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
 {: tip}
 
 ## Quick links
@@ -35,3 +35,4 @@ In addition to using the provided translation models, you can build upon the bas
 - View language support information:
   - [Translation models](translation-models.html)
   - [Identifiable languages](identifiable-languages.html)
+
