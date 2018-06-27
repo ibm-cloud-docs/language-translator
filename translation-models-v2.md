@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-12"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -15,6 +15,9 @@ lastupdated: "2018-06-12"
 
 # v2 Translation models
 {: #translation-models-v2}
+
+Language Translator v3 is now available. **The v2 Language Translator API will no longer be available after July 31, 2018.** To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
+{: tip}
 
 {{site.data.keyword.languagetranslatorshort}} can translate the following languages.
 Click a language in the list below to view a list of compatible translation models. 

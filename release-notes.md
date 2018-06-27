@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-20"
+lastupdated: "2018-06-27"
 
 ---
 
@@ -52,12 +52,37 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 27 June 2018
+{: #27-june-2018}
+
+New [translation models](translation-models.html) that feature six new languages are now available:
+  - Catalan
+    - Catalan to Spanish (ca-es)
+    - Spanish to Catalan (es-ca)
+  - Czech
+    - Czech to English (cs-en)
+    - English to Czech (en-cs)
+  - Danish
+    - Danish to English (da-en)
+    - English to Danish (en-da)
+  - Finnish
+    - Finnish to English (fi-en)
+    - English to Finnish (en-fi)
+  - Hindi
+    - Hindi to English (hi-en)
+    - English to Hindi (en-hi)
+  - Swedish
+    - Swedish to English (sv-en)
+    - English to Swedish (en-sv)
+
+
 ## 20 June 2018
 {: #20-june-2018}
 
 IBM Watson Document Translator is now available as a technical preview. The Document Translator allows you to translate documents from one language to another language while preserving file formatting. Translate 12 different file formats, including MS Office, Open Office, and PDF file types.
   
 For preview limits and instructions, see the [IBM Watson Document Translator](doc-translator.html) page.
+  
 
 ## 15 June 2018
 {: #15-june-2018}
@@ -69,7 +94,7 @@ New service instances that you create in Germany and US South will not be compat
 ## 12 June 2018
 {: #12-june-2018}
 
-{{site.data.keyword.languagetranslatorshort}} v3 is now available. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
 
 ### What's new in v3
 {: #whats-new}
