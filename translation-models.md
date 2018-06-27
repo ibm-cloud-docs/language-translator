@@ -186,6 +186,8 @@ The following models can translate Chinese (Simplified) text.
 ## Chinese (Traditional)
 {: #chinese-traditional}
 
+The following models can translate Chinese (Traditional) text.
+
 <table>
  <thead>
   <th>
@@ -710,6 +712,8 @@ The following models can translate English text.
 ## Finnish
 {: #finnish}
 
+The following models can translate Finnish text.
+
 <table>
  <thead>
   <th>
@@ -907,6 +911,8 @@ The following models can translate German text.
 
 ## Hindi
 {: #hindi}
+
+The following models can translate Hindi text.
 
 <table>
  <thead>
@@ -1308,6 +1314,8 @@ The following models can translate Spanish text.
 
 ## Swedish
 {: #swedish}
+
+The following models can translate Swedish text.
 
 <table>
  <thead>
