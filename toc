@@ -19,7 +19,6 @@ Language Translator
     {: .navgroup id="howto"}
     customizing.md
     migrating.md
-    doc-translator.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
