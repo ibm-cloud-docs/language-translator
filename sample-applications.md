@@ -24,14 +24,6 @@ Check out the following sample applications to see what you can build with {{sit
 
 These systems are for demonstration purposes only and are not intended to process Personal Data. No Personal Data is to be entered into these systems as they may not have the necessary controls in place to meet the requirements of the General Data Protection Regulation (EU) 2016/679.
 
-## IBM Watson Document Translator
-{: #IBM-Watson-Document-Translator}
-
-The IBM Watson Document Translator allows you to translate documents from one language to another language while preserving file formatting. Translate 12 different file formats including MS Office, Open Office, PDF file types. **Note: This is a preview of Watson Document Translator. For preview limits and instructions see the links below.**
-
-- [Instructions ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/docs/services/language-translator/doc-translator.html)
-- [Try it out ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://ibm.biz/doc-translator)
-
 ## Multilingual Chatbot (Node.js, Python)
 {: #multilingual-chatbot}
 
