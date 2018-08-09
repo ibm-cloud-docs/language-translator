@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="language-translator" audience="service" href="/docs/services/language-translator/getting-started.html"}
+{: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html"}
 Language Translator
 
     {: .navgroup id="learn"}
