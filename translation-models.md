@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -44,6 +44,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Italian](#italian)
   - [Japanese](#japanese)
   - [Korean](#korean)
+  - [Norwegian Bokmål](#norwegian-bokmål)
   - [Polish](#polish)
   - [Portuguese](#portuguese)
   - [Russian](#russian)
@@ -571,6 +572,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     en-nb
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     Norwegian Bokmal (nb)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+   <tr>
+    <td>
      en-nl
     </td>
     <td>
@@ -1087,6 +1105,50 @@ The following models can translate Korean text.
     </td>
     <td>
      Korean (ko)
+    </td>
+    <td>
+     English (en)
+    </td>
+    <td>
+     general
+    </td>
+    <td>
+     true
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Norwegian Bokmål
+{: #norwegian-bokmål}
+
+The following models can translate Norwegian Bokmål text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     nb-en
+    </td>
+    <td>
+     Norwegian Bokmal (nb)
     </td>
     <td>
      English (en)
