@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -52,6 +52,13 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 9 August 2018
+{: #9-august-2018}
+
+New [translation models](translation-models.html) for Norwegian Bokmål are now available:
+  - Norwegian Bokmål to English (nb-en)
+  - English to Norwegian Bokmål (en-nb)
+
 ## 27 June 2018
 {: #27-june-2018}
 
@@ -74,6 +81,7 @@ New [translation models](translation-models.html) that feature six new languages
   - Swedish
     - Swedish to English (sv-en)
     - English to Swedish (en-sv)
+  
 
 ## 15 June 2018
 {: #15-june-2018}
@@ -187,4 +195,3 @@ The beta Machine Translator and beta Language Identification APIs have been upgr
 - **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
 - **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
 - **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
-
