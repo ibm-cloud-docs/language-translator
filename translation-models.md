@@ -44,7 +44,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Italian](#italian)
   - [Japanese](#japanese)
   - [Korean](#korean)
-  - [Norwegian Bokmål](#norwegian-bokmål)
+  - [Norwegian Bokmål](#norwegian-bokmal)
   - [Polish](#polish)
   - [Portuguese](#portuguese)
   - [Russian](#russian)
@@ -1121,7 +1121,7 @@ The following models can translate Korean text.
 </table>
 
 ## Norwegian Bokmål
-{: #norwegian-bokmål}
+{: #norwegian-bokmal}
 
 The following models can translate Norwegian Bokmål text.
 
