@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-09-06"
 
 ---
 <!-- Attribute definitions -->
@@ -38,7 +38,7 @@ lastupdated: "2018-06-15"
     1.  On the service dashboard, click the **Service credentials** tab.
     1.  Click **View credentials** under **Actions**.
     2.  Copy the `apikey`, and `url` values.
-    
+
     With some service instances, you authenticate by providing a username and password. If you see `username` and `password` in the credentials, use those values instead of `apikey` and `{apikey_value}` in the examples in this tutorial.
 
 - Make sure you have cURL:
@@ -119,13 +119,11 @@ curl --user apikey:{apikey_value} --request POST --header "Content-Type: text/pl
 ```
 {: pre}
 
-
 ## Next steps
 {: #next-steps}
 
 - Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case.
 - View the [API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v3/).
-- Interact with the API in the [API Explorer](https://watson-api-explorer.mybluemix.net/apis/language-translator-v3).
 - Explore [sample applications](sample-applications.html).
 - View language support information:
   - [Translation models](translation-models.html)
