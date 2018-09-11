@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-09-11"
 
 ---
 
@@ -20,7 +20,7 @@ lastupdated: "2018-06-27"
 # Migrating to {{site.data.keyword.languagetranslatorshort}} API v3 with Neural Machine Translation
 {: #migrating-to-v3}
 
-**The {{site.data.keyword.languagetranslatorshort}} v2 API will no longer be available after July 31, 2018.** Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, and to continue using {{site.data.keyword.languagetranslatorshort}}, please migrate your application to {{site.data.keyword.languagetranslatorshort}} v3.
+**The {{site.data.keyword.languagetranslatorshort}} v2 API will no longer be available after October 4, 2018.** Service enhancements will no longer be made to the v2 API. To take advantage of new features and updates, and to continue using {{site.data.keyword.languagetranslatorshort}}, **please migrate your applications to {{site.data.keyword.languagetranslatorshort}} v3 by October 4, 2018**.
 {: shortdesc}
 
 ## What's new in v3
