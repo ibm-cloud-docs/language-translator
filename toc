@@ -18,17 +18,14 @@ Language Translator
 
     {: .navgroup id="howto"}
     customizing.md
-    migrating.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [v3 API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v3/)
-    [v2 API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
 
     {: .topicgroup}
     Language support
         translation-models.md
-        translation-models-v2.md
         identifiable-languages.md
 
     sample-applications.md
