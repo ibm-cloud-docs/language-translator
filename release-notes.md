@@ -25,12 +25,13 @@ The following new features and changes to the service are available.
 ## New API authentication process
 {: #iam-auth-process }
 
-The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following locations and dates:
+The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following locations:
 
-- Sydney as of June 12, 2018
-- Washington, DC as of June 12, 2018
-- Frankfurt as of June 15, 2018
 - Dallas as of June 15, 2018
+- Frankfurt as of June 15, 2018
+- Sydney as of June 12, 2018
+- Tokyo
+- Washington, DC as of June 12, 2018
 
 {{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
 
@@ -49,6 +50,11 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 8 November 2018
+{: #8-november-2018}
+
+- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the IBM Cloud Tokyo location.
 
 ## 9 August 2018
 {: #9-august-2018}
