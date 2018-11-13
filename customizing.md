@@ -237,17 +237,6 @@ When the same input sentence is translated by a custom model trained with the ex
 
 In some cases it might seem that a custom model trained with a parallel corpus is ignoring a specific example that you provided. In these cases, try searching your training data for other sentences that might be influencing the translation behavior, or consider using a forced glossary if you want to control a specific translation.
 
-## Monolingual corpus customization
-{: #monolingual-corpus-customization}
-
-Monolingual corpus customization is deprecated and available only through the v2 API. Monolingual corpus customization is not supported in the v3 API.
-{: tip}
-
-Use a **monolingual corpus** to improve the general translation style of your model. Provide a plain text file in the target language, and the service will supplement the base model with general patterns and style that it learns from the text.
-
-- Training data format: plain text (UTF-8 encoded)
-- Minimum number of sentences: 1,000
-
 ## Creating TMX files
 {: #creating-tmx-files}
 
