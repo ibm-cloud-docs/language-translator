@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-10-04"
+lastupdated: "2018-11-13"
 
 ---
 
@@ -17,7 +17,7 @@ lastupdated: "2018-10-04"
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
 
-# Sample apps
+# Sample applications
 
 Check out the following sample applications to see what you can build with {{site.data.keyword.languagetranslatorshort}}.
 {: shortdesc}
@@ -69,3 +69,11 @@ This mobile application uses TensorFlow and {{site.data.keyword.languagetranslat
 
 - [View on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/IBM/tensorflow-hangul-recognition)
 - [Video walkthrough ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=Ynusw4RcyRY)
+
+
+## Create a browser extension using Watson APIs
+{: #browser-extension}
+
+Create a browser extension that uses Watson Language Translator and Watson Tone Analyzer on e-mail, calendar, and any other web portals.
+
+- [Follow the tutorial ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/tutorials/how-to-create-a-browser-extension-that-leverages-ibm-watson-cognitive-api/)
