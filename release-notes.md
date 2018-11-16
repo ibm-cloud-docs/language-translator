@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-09"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -50,6 +50,16 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 16 November 2018
+{: #16-november-2018}
+
+- [Translating documents (Beta)](translating-documents.html) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+  - [Supported file formats](translating-documents.html#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
+
+- New [translation models](translation-models.html) for Hungarian are now available:
+  - Hunagarian to English (hu-en)
+  - English to Hungarian (en-hu)
 
 ## 8 November 2018
 {: #8-november-2018}
