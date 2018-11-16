@@ -133,7 +133,7 @@ Example response:
   "document_id": "a0ge2746-ad38-7d5c-7025-4cd3g9f451ab"
 }
 ```
-{: code}
+{: codeblock}
 
 The response contains a new `document_id`. Repeat steps two and three with your new `document_id` to check the status of the translation, and to download the translated file once it is available.
 
