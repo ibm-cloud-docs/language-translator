@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html"}
+{: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html" path="services/language-translator"}
 Language Translator
 
     {: .navgroup id="learn"}
@@ -18,6 +18,7 @@ Language Translator
 
     {: .navgroup id="howto"}
     customizing.md
+    translating-documents.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
