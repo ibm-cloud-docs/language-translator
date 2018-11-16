@@ -65,7 +65,7 @@ Example response:
   "created": "2018-10-11T03:31:25"
 }
 ```
-{: code}
+{: codeblock}
 
 ## Step 2: Check the translation status
 {: #check-translation-status}
@@ -93,7 +93,7 @@ Example response:
   "completed": "2018-10-11T03:31:38"
 }
 ```
-{: code}
+{: codeblock}
 
 When the `status` in the response is `available`, the translated document is ready to download.
 
