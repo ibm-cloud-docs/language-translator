@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-11-19"
 
 ---
 
@@ -45,12 +45,16 @@ Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and 
 
 The {{site.data.keyword.languagetranslatorshort}} service temporarily caches translation data from translation requests and stores training data that is used to create custom models.
 
-### Translation data
+### Translation data and documents
 
 When you send text to {{site.data.keyword.languagetranslatorshort}} in the **Translate** method, the service caches the source text and the translation result to improve performance when it receives the same text in subsequent **Translate** requests. Cached translation text is deleted only after it is not used for a period of 15 days.
 
+Documents that are submitted to the service for translation through the **Translate document** method are stored internally to provide the translated file, and to support additional **Translate document** requests by reference to the original uploaded document. The original document and any associated translated documents are deleted only after they are not used in subsequent **Translate document** requests for a period of 15 days. The **Delete document** method can be used to delete documents before the deletion deadline. 
+
+Translation data and documents are encrypted at rest and on wire when stored and in transit.
+
 ### Custom model training data
 
-When you train a custom model, the training data that you use to create the model is stored to provide you with the custom model. The training data persists in storage until the model is deleted with the **Delete model** method.
+When you train a custom model, the training data that you use to create the model is stored to provide you with the custom model. When stored, custom models and training data are encrypted at rest. The training data persists in storage until the model is deleted with the **Delete model** method.
 
-Custom models can only be deleted at the model level. Component data used to create a custom model cannot be deleted. If you use personal data when creating a custom model, a separate custom model must be created for each customer and the model `name` labeled to identify the customer so it can be deleted if requested.
+Custom models can only be deleted at the model level. Component data used to create a custom model cannot be deleted. If you use personal data when creating a custom model, a separate custom model must be created for each customer and the model `name` labeled to identify the customer so it can be deleted if requested. 
