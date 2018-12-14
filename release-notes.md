@@ -55,7 +55,7 @@ The current version is `2018-05-01`.
 ## 14 December 2018
 {: #14-december-2018}
 
-- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the IBM Cloud London location.
+- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} London location.
 
 ## 16 November 2018
 {: #16-november-2018}
@@ -70,7 +70,7 @@ The current version is `2018-05-01`.
 ## 8 November 2018
 {: #8-november-2018}
 
-- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the IBM Cloud Tokyo location.
+- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} Tokyo location.
 
 ## 9 August 2018
 {: #9-august-2018}
