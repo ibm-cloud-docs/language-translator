@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -29,6 +29,7 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 
 - Dallas as of June 15, 2018
 - Frankfurt as of June 15, 2018
+- London
 - Sydney as of June 12, 2018
 - Tokyo
 - Washington, DC as of June 12, 2018
@@ -51,6 +52,11 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 14 December 2018
+{: #14-december-2018}
+
+- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} London location.
+
 ## 16 November 2018
 {: #16-november-2018}
 
@@ -64,7 +70,7 @@ The current version is `2018-05-01`.
 ## 8 November 2018
 {: #8-november-2018}
 
-- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the IBM Cloud Tokyo location.
+- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} Tokyo location.
 
 ## 9 August 2018
 {: #9-august-2018}
