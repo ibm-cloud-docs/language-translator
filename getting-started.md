@@ -58,7 +58,7 @@ This tutorial uses an API key to authenticate. For production uses, make sure th
 Use the following example to translate two phrases, "Hello, world!" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world!\", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"{: url}
+curl -X POST -u "apikey:{apikey}" --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world!\", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
 
@@ -117,7 +117,7 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"{: url}
+curl -X POST -u "apikey:{apikey}" --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"
 ```
 {: pre}
 
