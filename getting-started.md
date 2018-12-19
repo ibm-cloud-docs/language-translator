@@ -2,45 +2,52 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-19"
 
 ---
 <!-- Attribute definitions -->
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:curl: .ph data-hd-programlang='curl'}
+{:go: .ph data-hd-programlang='go'}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
+{:hide-dashboard: .hide-dashboard}
 
 # Getting started tutorial
 {: #gettingstarted}
 
-{{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language. This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
+{{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language.
 {:shortdesc}
+{: hide-dashboard}
+
+This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
 
 ## Before you begin
 {: #prerequisites}
 
-- {: download} If you're seeing this, you created your service instance. Now get your credentials.
-- Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
-    1.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
-    1.  Select a service plan, e.g. select the free lite plan for testing the service.
-    1.  Click **Create**.
+- {: hide-dashboard} Create an instance of the service:
+    1.  {: hide-dashboard} Go to the [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/catalog/services/language-translator){: new_window} page in the {{site.data.keyword.Bluemix_notm}} Catalog.
+    2.  Sign up for a free {{site.data.keyword.Bluemix_notm}} account or log in.
+    3.  Click **Create**.
 - Copy the credentials to authenticate to your service instance:
-    1.  On the service dashboard, click the **Service credentials** tab.
-    1.  Click **View credentials** under **Actions**.
-    2.  Copy the `apikey`, and `url` values.
-
-- Make sure you have cURL:
-    - The examples use cURL to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
+    1.  On the **Manage** page, click **Show** to view your credentials.
+    2.  Copy the `API Key` and `URL` values.
+- Make sure that you have the `curl` command:
+    - The examples use `curl` command to call methods of the HTTP interface. Install the version for your operating system from [curl.haxx.se ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://curl.haxx.se/){: new_window}. Install the version that supports the Secure Sockets Layer (SSL) protocol. Make sure to include the installed binary file on your `PATH` environment variable.
 
 This tutorial uses an API key to authenticate. For production uses, make sure that you review the API key [best practices](/docs/services/watson/apikey-bp.html#api-bp).
 {: tip}
@@ -48,13 +55,12 @@ This tutorial uses an API key to authenticate. For production uses, make sure th
 ## Step 1: Translate text
 {: #translate-text}
 
-Use the following example to translate two phrases, "Hello, world!" and "How are you?", from English to Spanish. Replace `{apikey}` and `{url}` with your service credentials.
+Use the following example to translate two phrases, "Hello, world!" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl --user apikey:{apikey} --request POST --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world!\", \"How are you?\"], \"model_id\":\"en-es\"}" {url}/v3/translate?version=2018-05-01
+curl -X POST -u "apikey:{apikey}" --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world!\", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
-
 
 <!-- ```
 var watson = require('watson-developer-cloud');
@@ -108,20 +114,20 @@ print(json.dumps(translation, indent=2, ensure_ascii=False))
 
 ## Step 2: Identify language
 
-Use the following example to identify the language of text. Replace `{apikey_value}` with the API key that you copied in the previous step.
+Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl --user apikey:{apikey} --request POST --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" {url}/v3/identify?version=2018-05-01
+curl -X POST -u "apikey:{apikey}" --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"
 ```
 {: pre}
 
 ## Next steps
 {: #next-steps}
 
-- Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case.
-- Try [translating documents (Beta)](translating-documents.html).
-- View the [API reference](https://www.ibm.com/watson/developercloud/language-translator/api/v3/).
-- Explore [sample applications](sample-applications.html).
+- Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case
+- Try [translating documents (Beta)](translating-documents.html)
+- View the [API reference](https://{DomainName}/apidocs/language-translator)
+- Explore [sample applications](/docs/services/language-translator/sample-applications.html)
 - View language support information:
-  - [Translation models](translation-models.html)
-  - [Identifiable languages](identifiable-languages.html)
+    - [Translation models](/docs/services/language-translator/translation-models.html)
+    - [Identifiable languages](/docs/services/language-translator/identifiable-languages.html)
