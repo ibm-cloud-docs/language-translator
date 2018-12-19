@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-19"
 
 ---
 <!-- Attribute definitions -->
@@ -21,6 +21,7 @@ lastupdated: "2018-11-16"
 
 # Translating documents (Beta)
 {: #document-translator-tutorial}
+
 
 Translate files from one language to another while preserving the original format. More than 12 different file formats can be translated, including MS Office, Open Office, and PDF.
 {:shortdesc}
@@ -50,6 +51,19 @@ curl -X POST \
 ```
 {: pre}
 
+To translate a document with a [custom model](customizing.html), use the `model_id` parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
+
+Example request:
+```bash
+curl -X POST \
+--user "apikey:{apikey}" \
+--form "file=@curriculum.pdf" \
+--form "model_id=96221b69-8e46-42e4-a3c1-808e17c787ca" \
+{url}/v3/documents?version=2018-05-01
+```
+{: pre}
+
+
 A successful request will return a `document_id` in the response.
 
 
@@ -65,7 +79,7 @@ Example response:
   "created": "2018-10-11T03:31:25"
 }
 ```
-{: codeblock}
+{: code}
 
 ## Step 2: Check the translation status
 {: #check-translation-status}
@@ -93,7 +107,7 @@ Example response:
   "completed": "2018-10-11T03:31:38"
 }
 ```
-{: codeblock}
+{: code}
 
 When the `status` in the response is `available`, the translated document is ready to download.
 
@@ -133,7 +147,7 @@ Example response:
   "document_id": "a0ge2746-ad38-7d5c-7025-4cd3g9f451ab"
 }
 ```
-{: codeblock}
+{: code}
 
 The response contains a new `document_id`. Repeat steps two and three with your new `document_id` to check the status of the translation, and to download the translated file once it is available.
 
