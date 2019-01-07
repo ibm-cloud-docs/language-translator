@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-11-16"
+lastupdated: "2018-12-19"
 
 ---
 <!-- Attribute definitions -->
@@ -21,6 +21,7 @@ lastupdated: "2018-11-16"
 
 # Translating documents (Beta)
 {: #document-translator-tutorial}
+
 
 Translate files from one language to another while preserving the original format. More than 12 different file formats can be translated, including MS Office, Open Office, and PDF.
 {:shortdesc}
@@ -49,6 +50,19 @@ curl -X POST \
 {url}/v3/documents?version=2018-05-01
 ```
 {: pre}
+
+To translate a document with a [custom model](customizing.html), use the `model_id` parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
+
+Example request:
+```bash
+curl -X POST \
+--user "apikey:{apikey}" \
+--form "file=@curriculum.pdf" \
+--form "model_id=96221b69-8e46-42e4-a3c1-808e17c787ca" \
+{url}/v3/documents?version=2018-05-01
+```
+{: pre}
+
 
 A successful request will return a `document_id` in the response.
 
