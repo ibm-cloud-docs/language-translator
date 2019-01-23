@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-19"
+  years: 2015, 2019
+lastupdated: "2019-01-23"
 
 ---
 <!-- Attribute definitions -->
@@ -58,66 +58,16 @@ This tutorial uses an API key to authenticate. For production uses, make sure th
 Use the following example to translate two phrases, "Hello, world!" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl -X POST -u "apikey:{apikey}" --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world! \", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"
+curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world! \", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"{: url}
 ```
 {: pre}
-
-<!-- ```
-var watson = require('watson-developer-cloud');
-var language_translator = watson.language_translator({
-  username: 'username',
-  password: 'password',
-  version: 'v2',
-  url: 'https://gateway.watsonplatform.net/language-translator/api'
-});
-language_translator.translate({
-    text: 'Hello, world!',
-    source: 'en',
-    target: 'es'
-  },
-  function(err, translation) {
-    if (err)
-      console.log(err)
-    else
-      console.log(translation);
-});
-```
-{:node}
-{:codeblock} -->
-
-<!-- ```java
-LanguageTranslator service = new LanguageTranslator();
-service.setUsernameAndPassword("username","password");
-
-TranslationResult result = service.translate("Hello, world!", "en", "es");
-System.out.println(result);
-```
-{:java}
-{:codeblock} -->
-
-<!-- ```
-import json
-from watson_developer_cloud import LanguageTranslatorV2 as LanguageTranslator
-
-language_translator = LanguageTranslator(
-    username="username",
-    password="password")
-
-translation = language_translator.translate(
-    text="Hello, world!",
-    source="en",
-    target="es"
-print(json.dumps(translation, indent=2, ensure_ascii=False))
-```
-{:python}
-{:codeblock} -->
 
 ## Step 2: Identify language
 
 Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```bash
-curl -X POST -u "apikey:{apikey}" --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"
+curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"{: url}
 ```
 {: pre}
 
