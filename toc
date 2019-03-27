@@ -19,6 +19,7 @@ Language Translator
     {: .navgroup id="howto"}
     customizing.md
     translating-documents.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
