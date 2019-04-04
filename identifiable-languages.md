@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-06-15"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -38,7 +38,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Afrikaans
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -46,7 +46,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Albanian
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -54,7 +54,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Arabic
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -62,7 +62,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Armenian
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -70,7 +70,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Azerbaijani
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -78,7 +78,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Bashkir
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -86,7 +86,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Basque
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -94,7 +94,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Belarusian
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -102,7 +102,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Bengali
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -110,7 +110,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Bosnian
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -118,7 +118,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Bulgarian
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -126,7 +126,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Central Khmer
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
@@ -134,7 +134,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Chinese (Simplified)
     </td>
     <td>
-     zh
+     <code>zh</code>
     </td>
    </tr>
    <tr>
@@ -142,7 +142,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Chinese (Traditional)
     </td>
     <td>
-     zh-TW
+     <code>zh-TW</code>
     </td>
    </tr>
    <tr>
@@ -150,7 +150,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Chuvash
     </td>
     <td>
-     cv
+     <code>cv</code>
     </td>
    </tr>
    <tr>
@@ -158,7 +158,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Czech
     </td>
     <td>
-     cs
+     <code>cs</code>
     </td>
    </tr>
    <tr>
@@ -166,7 +166,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Danish
     </td>
     <td>
-     da
+     <code>da</code>
     </td>
    </tr>
    <tr>
@@ -174,7 +174,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Dutch
     </td>
     <td>
-     nl
+     <code>nl</code>
     </td>
    </tr>
    <tr>
@@ -182,7 +182,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      English
     </td>
     <td>
-     en
+     <code>en</code>
     </td>
    </tr>
    <tr>
@@ -190,7 +190,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Esperanto
     </td>
     <td>
-     eo
+     <code>eo</code>
     </td>
    </tr>
    <tr>
@@ -198,7 +198,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Estonian
     </td>
     <td>
-     et
+     <code>et</code>
     </td>
    </tr>
    <tr>
@@ -206,7 +206,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Finnish
     </td>
     <td>
-     fi
+     <code>fi</code>
     </td>
    </tr>
    <tr>
@@ -214,7 +214,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      French
     </td>
     <td>
-     fr
+     <code>fr</code>
     </td>
    </tr>
    <tr>
@@ -222,7 +222,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Georgian
     </td>
     <td>
-     ka
+     <code>ka</code>
     </td>
    </tr>
    <tr>
@@ -230,7 +230,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      German
     </td>
     <td>
-     de
+     <code>de</code>
     </td>
    </tr>
    <tr>
@@ -238,7 +238,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Greek
     </td>
     <td>
-     el
+     <code>el</code>
     </td>
    </tr>
    <tr>
@@ -246,7 +246,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Gujarati
     </td>
     <td>
-     gu
+     <code>gu</code>
     </td>
    </tr>
    <tr>
@@ -254,7 +254,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Haitian
     </td>
     <td>
-     ht
+     <code>ht</code>
     </td>
    </tr>
    <tr>
@@ -262,7 +262,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Hebrew
     </td>
     <td>
-     he
+     <code>he</code>
     </td>
    </tr>
    <tr>
@@ -270,7 +270,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Hindi
     </td>
     <td>
-     hi
+     <code>hi</code>
     </td>
    </tr>
    <tr>
@@ -278,7 +278,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Hungarian
     </td>
     <td>
-     hu
+     <code>hu</code>
     </td>
    </tr>
    <tr>
@@ -286,7 +286,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Icelandic
     </td>
     <td>
-     is
+     <code>is</code>
     </td>
    </tr>
    <tr>
@@ -294,7 +294,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Indonesian
     </td>
     <td>
-     id
+     <code>id</code>
     </td>
    </tr>
    <tr>
@@ -302,7 +302,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Italian
     </td>
     <td>
-     it
+     <code>it</code>
     </td>
    </tr>
    <tr>
@@ -310,7 +310,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Japanese
     </td>
     <td>
-     ja
+     <code>ja</code>
     </td>
    </tr>
    <tr>
@@ -318,7 +318,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Kazakh
     </td>
     <td>
-     kk
+     <code>kk</code>
     </td>
    </tr>
    <tr>
@@ -326,7 +326,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Kirghiz
     </td>
     <td>
-     ky
+     <code>ky</code>
     </td>
    </tr>
    <tr>
@@ -334,7 +334,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Korean
     </td>
     <td>
-     ko
+     <code>ko</code>
     </td>
    </tr>
    <tr>
@@ -342,7 +342,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Kurdish
     </td>
     <td>
-     ku
+     <code>ku</code>
     </td>
    </tr>
    <tr>
@@ -350,7 +350,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Latvian
     </td>
     <td>
-     lv
+     <code>lv</code>
     </td>
    </tr>
    <tr>
@@ -358,7 +358,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Lithuanian
     </td>
     <td>
-     lt
+     <code>lt</code>
     </td>
    </tr>
    <tr>
@@ -366,7 +366,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Malayalam
     </td>
     <td>
-     ml
+     <code>ml</code>
     </td>
    </tr>
    <tr>
@@ -374,7 +374,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Mongolian
     </td>
     <td>
-     mn
+     <code>mn</code>
     </td>
    </tr>
    <tr>
@@ -382,7 +382,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Norwegian Bokmal
     </td>
     <td>
-     nb
+     <code>nb</code>
     </td>
    </tr>
    <tr>
@@ -390,7 +390,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Norwegian Nynorsk
     </td>
     <td>
-     nn
+     <code>nn</code>
     </td>
    </tr>
    <tr>
@@ -398,7 +398,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Panjabi
     </td>
     <td>
-     pa
+     <code>pa</code>
     </td>
    </tr>
    <tr>
@@ -406,7 +406,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Persian
     </td>
     <td>
-     fa
+     <code>fa</code>
     </td>
    </tr>
    <tr>
@@ -414,7 +414,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Polish
     </td>
     <td>
-     pl
+     <code>pl</code>
     </td>
    </tr>
    <tr>
@@ -422,7 +422,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Portuguese
     </td>
     <td>
-     pt
+     <code>pt</code>
     </td>
    </tr>
    <tr>
@@ -430,7 +430,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Pushto
     </td>
     <td>
-     ps
+     <code>ps</code>
     </td>
    </tr>
    <tr>
@@ -438,7 +438,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Romanian
     </td>
     <td>
-     ro
+     <code>ro</code>
     </td>
    </tr>
    <tr>
@@ -446,7 +446,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Russian
     </td>
     <td>
-     ru
+     <code>ru</code>
     </td>
    </tr>
    <tr>
@@ -454,7 +454,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Slovakian
     </td>
     <td>
-     sk
+     <code>sk</code>
     </td>
    </tr>
    <tr>
@@ -462,7 +462,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Somali
     </td>
     <td>
-     so
+     <code>so</code>
     </td>
    </tr>
    <tr>
@@ -470,7 +470,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Spanish
     </td>
     <td>
-     es
+     <code>es</code>
     </td>
    </tr>
    <tr>
@@ -478,7 +478,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Swedish
     </td>
     <td>
-     sv
+     <code>sv</code>
     </td>
    </tr>
    <tr>
@@ -486,7 +486,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Tamil
     </td>
     <td>
-     ta
+     <code>ta</code>
     </td>
    </tr>
    <tr>
@@ -494,7 +494,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Telugu
     </td>
     <td>
-     te
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -502,7 +502,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Turkish
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -510,7 +510,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Ukrainian
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -518,7 +518,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Urdu
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -526,7 +526,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
      Vietnamese
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

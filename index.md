@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-16"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -18,20 +18,23 @@ lastupdated: "2018-11-16"
 {:swift: .ph data-hd-programlang='swift'}
 
 # About
+{: #about}
 
 {{site.data.keyword.languagetranslatorfull}} can identify the language of text and translate it into different languages programmatically.
 {: shortdesc}
 
-In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](customizing.html) for your use case.
+In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](/docs/services/language-translator?topic=language-translator-customizing) for your use case.
 
-[Translating documents (Beta)](translating-documents.html) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a [supported file format](translating-documents.html#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+[Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a [supported file format](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
 {: tip}
 
 ## Quick links
+{: #quick-links}
 
-- [Get started](getting-started.html).
+- [Get started](/docs/services/language-translator?topic=language-translator-getting-started).
 - Try the live [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
-- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/index.html){: new_window}.
+- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName/apidocs/language-translator){: new_window}.
 - View language support information:
-  - [Translation models](translation-models.html)
-  - [Identifiable languages](identifiable-languages.html)
+  - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
+  - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
+
