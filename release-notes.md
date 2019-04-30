@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-03-21"
+  years: 2015, 2018
+lastupdated: "2018-12-14"
 
 ---
 
@@ -38,10 +38,10 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 
 - For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see See [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html?curl#authentication){: new_window} in the API reference.
-- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources/instance_migration.html).
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see See [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#authentication){: new_window} in the API reference.
+- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
 
-To find out which authentication to use, view the service credentials by clicking the service instance on the [Dashboard ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/dashboard/apps?watson){: new_window}.
+To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources){: new_window}.
 
 ## Service API Versioning
 {: shortdesc}
@@ -69,10 +69,10 @@ For more information about service keys and user roles, see [IAM service API key
 ## 16 November 2018
 {: #16-november-2018}
 
-- [Translating documents (Beta)](translating-documents.html) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
-  - [Supported file formats](translating-documents.html#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
+- [Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+  - [Supported file formats](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
 
-- New [translation models](translation-models.html) for Hungarian are now available:
+- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
   - Hunagarian to English (hu-en)
   - English to Hungarian (en-hu)
 
@@ -84,14 +84,14 @@ For more information about service keys and user roles, see [IAM service API key
 ## 9 August 2018
 {: #9-august-2018}
 
-New [translation models](translation-models.html) for Norwegian Bokmål are now available:
+New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) for Norwegian Bokmål are now available:
   - Norwegian Bokmål to English (nb-en)
   - English to Norwegian Bokmål (en-nb)
 
 ## 27 June 2018
 {: #27-june-2018}
 
-New [translation models](translation-models.html) that feature six new languages are now available:
+New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) that feature six new languages are now available:
   - Catalan
     - Catalan to Spanish (ca-es)
     - Spanish to Catalan (es-ca)
@@ -117,12 +117,12 @@ New [translation models](translation-models.html) that feature six new languages
 
 As of 15 June 2018, new service instances created in the Germany and US South regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
 
-New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](migrating.html).
+New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](/docs/services/language-translator?topic=language-translator-migrating).
 
 ## 12 June 2018
 {: #12-june-2018}
 
-{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](migrating.html) page for more information.
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](/docs/services/language-translator?topic=language-translator-migrating) page for more information.
 
 ### What's new in v3
 {: #whats-new}
@@ -202,11 +202,11 @@ Support for additional languages was added: English to and from Italian, and Spa
 As of January 15, 2016, all customization capabilities within the Standard Plan are discontinued. Applications that do not use customization features do not need to change, as the Standard Plan remains active for all API calls unrelated to customization or customized models. To use the GA customization features (the Trainable plan) of the {{site.data.keyword.languagetranslatorshort}} service with an {{site.data.keyword.cloud}} application that uses an earlier instance of the service, complete the following steps:
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
-1.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
-1.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/services/language-translator/customizing.html#structure).
-1.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/services/language-translator/customizing.html#training).
-1.  In your app, point the "ModelID" field to the new customized models.
-1.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
+2.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
+3.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/services/language-translator?topic=language-translator-customizing#structure).
+4.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/services/language-translator?topic=language-translator-customizing#training).
+5.  In your app, point the "ModelID" field to the new customized models.
+6.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
 
 ## 6 November 2015
 {: #6-november-2015}

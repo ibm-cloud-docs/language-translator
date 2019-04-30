@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-13"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -28,8 +28,8 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 
 1. Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
 1. Find a customizable base model for your language pair. You will need the model ID of the base model in order to train your custom model.
-    - Search the models listed on the [Translation models](translation-models.html) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
-    - Alternatively, you can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/#list-models) API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
+    - Search the models listed on the [Translation models](/docs/services/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
+    - Alternatively, you can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
 
 ## Step 1: Create your training data
 {: #create-your-training-data}
@@ -44,7 +44,7 @@ After you have created your [Translation Memory Exchange (TMX) files](#creating-
 ## Step 2: Train your model
 {: #train-your-model}
 
-Use the [Create model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#create-model) method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
+Use the [Create model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#create-model) method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
 
 ### Example request
 {: #train-model-example-request}
@@ -78,7 +78,7 @@ The API response will contain details about your custom model, including its mod
 ## Step 3: Check the status of your model
 {: #check-model-status}
 
-Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#get-model) method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#list-models) method.
+Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#get-model-details) method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) method.
 
 The `status` response attribute describes the state of the model in the training process:
 
@@ -109,7 +109,7 @@ curl --user apikey:{apikey_value} "https://gateway.watsonplatform.net/language-t
 ## Step 4: Translate text with your custom model
 {: #translate-text}
 
-To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#translate) method.
+To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#translate) method.
 
 ### Example request
 {: #translate-text-example-request}
@@ -136,6 +136,7 @@ Forced glossary examples are sensitive to capitalization, so make sure that your
 {: tip}
 
 ### Forced glossary example
+{: #forced-glossary-example}
 
 The following example shows a TMX file with two translation pairs. The first pair forces "international business machines" to be preserved in English during translation. This type of forced translation might be useful if you want to preserve improperly capitalized company names in informal communications. The second pair forces the model to always use "brevet" when translating "patent".
 
@@ -175,11 +176,13 @@ The following example shows a TMX file with two translation pairs. The first pai
 Use a **parallel corpus** to provide additional translations for the base model to learn from. This helps to adapt the base model to a specific domain. How the resulting custom model translates text depends on the model's combined understanding of the parallel corpus and the base model.
 
 - Training data format: [TMX](#creating-tmx-files) (UTF-8 encoded)
+- Maximum length of translation pairs: 80 source words
 - Minimum number of translation pairs: 5,000
 - Maximum file size: 250 MB
 - You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of the files doesn't exceed 250 MB.
 
 ### Parallel corpus example
+{: #parallel-corpus-example}
 
 The following is a small piece of an English to French parallel corpus that was downloaded from the [MultiUN collection ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus.nlpl.eu/MultiUN.php) available on the OPUS open parallel corpus website. You can download a compressed version of the entire TMX file [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz).
 
@@ -237,6 +240,7 @@ When the same input sentence is translated by a custom model trained with the ex
 
 In some cases it might seem that a custom model trained with a parallel corpus is ignoring a specific example that you provided. In these cases, try searching your training data for other sentences that might be influencing the translation behavior, or consider using a forced glossary if you want to control a specific translation.
 
+
 ## Creating TMX files
 {: #creating-tmx-files}
 
@@ -291,18 +295,20 @@ The {{site.data.keyword.languagetranslatorshort}} service uses only the `<tu>`, 
 
 
 ### Using the example as a template
+{: #using-the-example-template}
 
 To use the provided example as a template for your own glossary or corpus, complete the following steps:
 
 1. Copy and paste the example into a text editor.
 
-1. Change the `srclang` attribute of the `<header>` tag to the [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} of the source language that your glossary or parallel corpus uses.
+2. Change the `srclang` attribute of the `<header>` tag to the [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} of the source language that your glossary or parallel corpus uses.
 
-1. Change the `xml:lang` attribute of the `<tuv>` tags to the correct [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} for each term or translation.
+3. Change the `xml:lang` attribute of the `<tuv>` tags to the correct [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} for each term or translation.
 
-1. Save the document with the extension `.tmx` and UTF-8 encoding.
+4. Save the document with the extension `.tmx` and UTF-8 encoding.
 
 ### Changing a TMX file to UTF-8 encoding
+{: #changing-tmx-file-to-utf-8}
 
 You can use a number of tools to create or generate TMX files. Often, generated TMX files are UTF-16 encoded by default. The {{site.data.keyword.languagetranslatorshort}} service accepts only UTF-8 encoded TMX files. To change the encoding of a TMX file, complete the following steps:
 
@@ -323,7 +329,7 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ## Deleting a custom translation model
 {: #deleting-a-custom-model}
 
-To delete a custom translation model, use the [Delete model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v3/curl.html#delete-model) method.
+To delete a custom translation model, use the [Delete model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#delete-model) method.
 
 The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 

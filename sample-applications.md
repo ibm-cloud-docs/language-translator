@@ -18,6 +18,7 @@ lastupdated: "2018-10-04"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Sample apps
+{: #sample-apps}
 
 Check out the following sample applications to see what you can build with {{site.data.keyword.languagetranslatorshort}}.
 {: shortdesc}

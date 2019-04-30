@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-01-23"
+lastupdated: "2019-04-04"
 
 ---
 <!-- Attribute definitions -->
@@ -63,6 +63,7 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: application/
 {: pre}
 
 ## Step 2: Identify language
+{: #identify-language}
 
 Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
@@ -74,10 +75,10 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" 
 ## Next steps
 {: #next-steps}
 
-- Learn how to [customize](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} to work for your use case
-- Try [translating documents (Beta)](translating-documents.html)
+- Learn how to [customize](/docs/services/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
+- Try [translating documents (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents)
 - View the [API reference](https://{DomainName}/apidocs/language-translator)
-- Explore [sample applications](/docs/services/language-translator/sample-applications.html)
+- Explore [sample applications](/docs/services/language-translator?topic=language-translator-sample-applications)
 - View language support information:
-    - [Translation models](/docs/services/language-translator/translation-models.html)
-    - [Identifiable languages](/docs/services/language-translator/identifiable-languages.html)
+    - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
+    - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
