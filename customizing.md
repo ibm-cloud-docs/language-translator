@@ -78,7 +78,7 @@ The API response will contain details about your custom model, including its mod
 ## Step 3: Check the status of your model
 {: #check-model-status}
 
-Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/language-translator#get-model-details) method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) method.
+Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#get-model-details) method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) method.
 
 The `status` response attribute describes the state of the model in the training process:
 
@@ -329,7 +329,7 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ## Deleting a custom translation model
 {: #deleting-a-custom-model}
 
-To delete a custom translation model, use the [Delete model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/language-translator#delete-model) method.
+To delete a custom translation model, use the [Delete model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#delete-model) method.
 
 The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 
