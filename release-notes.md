@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-14"
+  years: 2015, 2019
+lastupdated: "2019-06-13"
 
 ---
 
@@ -52,6 +52,13 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 13 June 2019
+{: #13-june-2019}
+
+New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available for English and Hebrew.
+- English to Hebrew (en-he)
+- Hebrew to English (he-en)
+
 ## 21 March 2019
 {: #21-march-2019}
 
@@ -73,7 +80,7 @@ For more information about service keys and user roles, see [IAM service API key
   - [Supported file formats](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
 
 - New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
-  - Hunagarian to English (hu-en)
+  - Hungarian to English (hu-en)
   - English to Hungarian (en-hu)
 
 ## 8 November 2018
