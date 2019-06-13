@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-16"
+  years: 2015, 2019
+lastupdated: "2019-06-13"
 
 ---
 
@@ -37,6 +37,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Finnish](#finnish)
   - [French](#french)
   - [German](#german)
+  - [Hebrew](#hebrew)
   - [Hindi](#hindi)
   - [Hungarian](#hungarian)
   - [Italian](#italian)
@@ -502,6 +503,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-he</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Hebrew (<code>he</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-hi</code>
     </td>
     <td>
@@ -924,6 +942,51 @@ The following models can translate German text.
   </tbody>
  </thead>
 </table>
+
+## Hebrew
+{: #hebrew}
+
+The following models can translate Hebrew text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>he-en</code>
+    </td>
+    <td>
+     Hebrew (<code>he</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 
 ## Hindi
 {: #hindi}

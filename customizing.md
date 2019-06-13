@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-06-13"
 
 ---
 
@@ -34,7 +34,7 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 ## Step 1: Create your training data
 {: #create-your-training-data}
 
-The service requires training data to be provided in the [Translation Memory Exchange (TMX) file format](#creating-tmx-files). You can store up to 10 customizations per service instance. The service supports two types of customization requests. You can either customize a model with a forced glossary or with a corpus that contains parallel sentences.
+The service requires training data to be provided in the [Translation Memory Exchange (TMX) file format](#creating-tmx-files). You can store up to 10 customizations for each language pair in a service instance. The service supports two types of customization requests. You can either customize a model with a forced glossary or with a corpus that contains parallel sentences.
 
 - Use a [forced glossary](#forced-glossary-customization) to force certain terms and phrases to be translated in a specific way.
 - Use a [parallel corpus](#parallel-corpus-customization) when you want your custom model to learn from general translation patterns in your samples. What your model learns from a parallel corpus can improve translation results for input text that the model hasn't been trained on.
