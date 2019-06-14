@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-14"
 
 ---
 
@@ -37,6 +37,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Finnish](#finnish)
   - [French](#french)
   - [German](#german)
+  - [Greek](#greek)
   - [Hebrew](#hebrew)
   - [Hindi](#hindi)
   - [Hungarian](#hungarian)
@@ -442,6 +443,23 @@ The following models can translate English text.
     </td>
     <td>
      German (<code>de</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-el</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Greek (<code>el</code>)
     </td>
     <td>
      <code>general</code>
@@ -931,6 +949,50 @@ The following models can translate German text.
     </td>
     <td>
      Italian (<code>it</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Greek
+{: #greek}
+
+The following models can translate Greek text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>el-en</code>
+    </td>
+    <td>
+     Greek (<code>el</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
     </td>
     <td>
      <code>general</code>
