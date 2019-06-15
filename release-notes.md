@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-13"
+lastupdated: "2019-06-14"
 
 ---
 
@@ -51,6 +51,13 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 14 June 2019
+{: #14-june-2019}
+
+New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available for English and Greek.
+- English to Greek (en-el)
+- Greek to English (el-en)
 
 ## 13 June 2019
 {: #13-june-2019}
