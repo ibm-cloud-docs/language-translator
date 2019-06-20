@@ -78,7 +78,7 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" 
 - Learn how to [customize](/docs/services/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
 - Try [translating documents (Beta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial)
 - View the [API reference](https://{DomainName}/apidocs/language-translator)
-- Explore [sample applications](/docs/services/language-translator?topic=language-translator-sample-applications)
+- Explore [sample applications](/docs/services/language-translator?topic=language-translator-sample-apps)
 - View language support information:
     - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
     - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
