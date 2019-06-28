@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -18,26 +18,23 @@ lastupdated: "2018-02-23"
 {:swift: .ph data-hd-programlang='swift'}
 
 # A propos de
+{: #about}
 
-{{site.data.keyword.languagetranslatorfull}} est une API de traduction qui utilise des modèles propres à des domaines pour traduire un texte d'une langue vers une autre.
+{{site.data.keyword.languagetranslatorfull}} peut identifier la langue du texte et traduire ce dernier dans différentes langues à l'aide d'un programme.
 {: shortdesc}
 
-Ce service fournit des modèles de traduction pour les domaines suivants :  
-- **Actualités :** concerne les articles et les retranscriptions liés aux actualités. 
-- **Conversationnel :** concerne les conversations et les expressions familières.
-- **Brevet :** concerne la terminologie technique et juridique.
+Outre l'utilisation des modèles de traduction proposés, vous pouvez employer les modèles de traduction de base pour créer vos propres [modèles personnalisés](/docs/services/language-translator?topic=language-translator-customizing) adaptés à votre cas d'utilisation. 
 
-Outre l'utilisation des modèles de traduction proposés, vous pouvez employer les modèles liés aux actualités pour créer vos propres [modèles personnalisés](customizing.html) adaptés à votre cas d'utilisation. 
-
-Une prévisualisation des nouveaux modèles NMT (Neural Machine Translation) qui améliorent la qualité des traductions est désormais disponible. Pour plus de détails, consultez les [notes sur l'édition](release-notes.html#12-january-2018).
+[Traduction de documents (Bêta)](/docs/services/language-translator?topic=language-translator-translating-documents) est désormais disponible par l'intermédiaire de nouveaux noeuds finaux d'API. Soumettez un document Microsoft Office, un PDF ou un autre document dont le [format de fichier est pris en charge](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-formats) ; {{site.data.keyword.languagetranslatorshort}} vous proposera une traduction qui respecte le formatage d'origine.
 {: tip}
 
 ## Liens rapides
+{: #quick-links}
 
-- [Initiation](getting-started.html)
-- Essayez la [démonstration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window} en direct.
-- Affichez la [référence d'API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/index.html){: new_window}.
+- [Initiation](/docs/services/language-translator?topic=language-translator-getting-started)
+- Essayez la [démonstration ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://language-translator-demo.ng.bluemix.net/){: new_window} en direct.
+- Affichez la [référence d'API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName/apidocs/language-translator){: new_window}.
 - Consultez les informations de support de langue :
-  - [Modèles de traduction](translation-models.html)
-  - [Langues identifiables](identifiable-languages.html)
+  - [Modèles de traduction](/docs/services/language-translator?topic=language-translator-translation-models)
+  - [Langues identifiables](/docs/services/language-translator?topic=language-translator-identifiable-languages)
 

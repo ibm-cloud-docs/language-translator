@@ -1,190 +1,84 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 <!-- Attribute definitions -->
 {:shortdesc: .shortdesc}
 {:new_window: target="_blank"}
 {:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
 {:curl: .ph data-hd-programlang='curl'}
+{:go: .ph data-hd-programlang='go'}
 {:javascript: .ph data-hd-programlang='javascript'}
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
+{:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
 {:download: .download}
+{:apikey: data-credential-placeholder='apikey'}
+{:url: data-credential-placeholder='url'}
+{:hide-dashboard: .hide-dashboard}
 
 # Tutoriel d'initiation
 {: #gettingstarted}
 
-{{site.data.keyword.languagetranslatorfull}} vous permet de traduire à l'aide d'un programme un texte dans un contexte lié à l'actualité, des conversations ou des brevets. Ce tutoriel vous guide lors de l'utilisation des commandes permettant de traduire un exemple de contenu de l'anglais vers l'espagnol et lors du choix du domaine.
+{{site.data.keyword.languagetranslatorfull}} vous permet de traduire un texte, à l'aide d'un programme, d'une langue vers une autre.
 {:shortdesc}
+{: hide-dashboard}
 
-## Avant de commencer 
+Ce tutoriel vous guide lors de l'utilisation des commandes permettant de traduire de l'anglais vers l'espagnol et d'identifier la langue d'un échantillon de texte. 
+
+## Avant de commencer
 {: #prerequisites}
 
-- Créez une instance du service :
-    - {: download} Si vous lisez ceci, vous avez créé votre instance de service. Il vous faut maintenant obtenir vos données d'identification.
-    - Créez un projet à partir d'un service :
-        1.  Accédez à la page {{site.data.keyword.watson}} Developer Console [Services ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/developer/watson/services){: new_window}.
-        1.  Sélectionnez {{site.data.keyword.languagetranslatorshort}}, cliquez sur **Add Services**, puis inscrivez-vous afin de recevoir un compte {{site.data.keyword.Bluemix_notm}} gratuit ou connectez-vous. 
-        1.  Entrez `language-tutorial` comme nom de projet et cliquez sur **Créer un projet**.
-- Copiez les données d'identification afin de vous authentifier auprès de votre instance de service : 
-    - {: download} Depuis le tableau de bord du service (affiché) :
-        1.  Cliquez sur l'onglet **Données d'identification pour le service**. 
-        1.  Cliquez sur **Afficher les données d'identification** sous **Actions**.
-        1.  Copiez les valeurs `username`, `password` et `url`.
-        {: download}
-    - Depuis votre projet **language-tutorial** dans Developer Console, copiez les valeurs `username`, `password` et `url` de `"language_translator"` à partir de la section **Credentials**.
+- {: hide-dashboard} Créez une instance du service :
+    1.  {: hide-dashboard} Accédez à la page [{{site.data.keyword.languagetranslatorshort}} ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://{DomainName}/catalog/services/language-translator){: new_window} du catalogue {{site.data.keyword.Bluemix_notm}}.
+    2.  Inscrivez-vous pour un compte {{site.data.keyword.Bluemix_notm}} gratuit ou connectez-vous.
+    3.  Cliquez sur **Créer**.
+- Copiez les données d'identification afin de vous authentifier auprès de votre instance de service :
+    1.  Dans la page **Gérer**, cliquez sur **Afficher** pour afficher vos données d'identification.
+    2.  Copiez les valeurs des zones `Clé d'API` et `URL`. 
+- Assurez-vous que la commande `curl` est disponible :
+    - Les exemples utilisent la commande `curl` pour appeler les méthodes de l'interface HTTP. Installez la version de votre système d'exploitation à partir du site [curl.haxx.se ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://curl.haxx.se/){: new_window}. Installez la version compatible avec le protocole SSL (Secure Sockets Layer). Veillez à inclure le fichier binaire installé indiqué dans votre variable d'environnement `PATH`.
 
-<!-- Remove this text after dedicated instances have the Developer Console: begin -->
-
-Si vous utilisez {{site.data.keyword.Bluemix_dedicated_notm}}, créez votre instance de service à partir de la page [{{site.data.keyword.languagetranslatorshort}} ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.{DomainName}/catalog/services/language-translator/){: new_window} du catalogue. Pour savoir comment trouver vos données d'identification du service, voir
-[Données d'identification de service pour les services Watson![External link icon](../../icons/launch-glyph.svg "External link icon")](/docs/services/watson/getting-started-credentials.html#getting-credentials-manually){: new_window}.
-
-<!-- Remove this text after dedicated instances have the Developer Console: end -->
+Ce tutoriel utilise une clé d'interface de programmation (API) pour l'authentification. Pour une utilisation en production, veillez à étudier les [pratiques recommandées](/docs/services/watson/apikey-bp.html#api-bp) en matière de clé d'API.
+{: tip}
 
 ## Etape 1 : Traduisez le texte
 {: #translate-text}
 
-Utilisez l'exemple suivant pour traduire "Hello, world!" de l'anglais vers l'espagnol. Remplacez `{username}` et `{password}` par les données d'identification du service que vous avez copiées à l'étape précédente.
+Utilisez l'exemple suivant pour traduire deux phrases, "Hello, world!" et "How are you?" de l'anglais vers l'espagnol. <span class="hide-dashboard">Remplacez `{apikey}` et `{url}` par vos données d'identification de service.</span>
 
 ```bash
-curl -X POST --user {username}:{password} --header "Accept: application/json" --data "{\"text\":\"Hello, world\",\"source\":\"en\",\"target\":\"es\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate
+curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: application/json" --data "{\"text\": [\"Hello, world! \", \"How are you?\"], \"model_id\":\"en-es\"}" "{url}/v3/translate?version=2018-05-01"{: url}
 ```
-{:codeblock}
+{: pre}
 
-Une prévisualisation des nouveaux modèles NMT (Neural Machine Translation) qui améliorent la qualité des traductions est désormais disponible. Pour plus de détails, consultez les [notes sur l'édition](release-notes.html#12-january-2018).
-{: tip}
+## Etape 2 : Identifiez la langue
+{: #identify-language}
 
-<!-- ```
-var watson = require('watson-developer-cloud');
-var language_translator = watson.language_translator({
-  username: 'username',
-  password: 'password',
-  version: 'v2',
-  url: 'https://gateway.watsonplatform.net/language-translator/api'
-});
-language_translator.translate({
-    text: 'Hello, world!',
-    source: 'en',
-    target: 'es'
-  },
-  function(err, translation) {
-    if (err)
-      console.log(err)
-    else
-      console.log(translation);
-});
-```
-{:node}
-{:codeblock} -->
-
-<!-- ```java
-LanguageTranslator service = new LanguageTranslator();
-service.setUsernameAndPassword("username","password");
-
-TranslationResult result = service.translate("Hello, world!", "en", "es");
-System.out.println(result);
-```
-{:java}
-{:codeblock} -->
-
-<!-- ```
-import json
-from watson_developer_cloud import LanguageTranslatorV2 as LanguageTranslator
-
-language_translator = LanguageTranslator(
-    username="username",
-    password="password")
-
-translation = language_translator.translate(
-    text="Hello, world!",
-    source="en",
-    target="es"
-print(json.dumps(translation, indent=2, ensure_ascii=False))
-```
-{:python}
-{:codeblock} -->
-
-
-## Etape 2 : Essayez un modèle spécifique du domaine
-{: #specify-model}
-
-{{site.data.keyword.languagetranslatorshort}} est doté de modèles spécialisés dans les domaines des actualités, des conversations et des brevets. Lorsque vous indiquez les langues `source` et `target` à l'étape 2, le service utilise par défaut le modèle du domaine des actualités pour ce chemin de traduction. Si vous souhaitez utiliser un modèle propre à un domaine, indiquez le `model_id` des langues `source` et `target`. Vous pouvez également faire appel à un [modèle personnalisé](customizing.html) si vous en avez créé un. 
-
-_Les modèles spécifiques d'un domaine ne sont pas pris en charge dans les demandes contenant l'[en-tête de prévisualisation NMT](release-notes.html#12-january-2018)._
-
-Dans l'exemple suivant, "Hey world, whats up?" est traduit à l'aide du modèle conversationnel de l'anglais vers l'espagnol. Remplacez `{username}` et `{password}` par vos informations :
+Utilisez l'exemple suivant pour identifier la langue du texte. <span class="hide-dashboard">Remplacez `{apikey}` et `{url}` par vos données d'identification de service.</span>
 
 ```bash
-curl -X POST --user {username}:{password} --header "Content-Type: application/json" --header "Accept: application/json" --data "{\"text\":\"Hey world, whats up?\",\"model_id\":\"en-es-conversational\"}" "https://gateway.watsonplatform.net/language-translator/api/v2/translate"
+curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" --data "Language Translator translates text from one language to another" "{url}/v3/identify?version=2018-05-01"{: url}
 ```
-{:codeblock}
-
-<!-- ```
-var watson = require('watson-developer-cloud');
-var language_translator = watson.language_translator({
-  username: 'username',
-  password: 'password',
-  url: 'https://gateway.watsonplatform.net/language-translator/api'
-  version: 'v2',
-});
-language_translator.translate({
-    text: 'Hey, world! What's up?',
-    model_id: 'en-es-conversational'
-  },
-  function(err, translation) {
-    if (err)
-      console.log(err)
-    else
-      console.log(translation);
-});
-```
-{:node}
-{:codeblock} -->
-
-<!-- ```java
-LanguageTranslator service = new LanguageTranslator();
-service.setUsernameAndPassword("username","password");
-
-TranslationResult result = service.translate("Hey, world! What's up?", "en-es-conversational");
-System.out.println(result);
-```
-{:java}
-{:codeblock} -->
-
-<!-- ```python
-import json
-from watson_developer_cloud import LanguageTranslatorV2 as LanguageTranslator
-
-language_translator = LanguageTranslator(
-  username="username",
-  password="password"
-)
-
-translation = language_translator.translate(
-  text="Hey, world! What's up?",
-  model_id="en-es-conversational"
-)
-print(json.dumps(translation, indent=2, ensure_ascii=False))
-```
-{:python}
-{:codeblock} -->
-
-Vous pouvez utiliser la méthode [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/#list-models){: new_window} afin d'afficher les modèles disponibles pour votre instance de service.
-{:tip}
+{: pre}
 
 ## Etapes suivantes
 {: #next-steps}
 
-- Apprenez à [personnaliser](/docs/services/language-translator/customizing.html) {{site.data.keyword.languagetranslatorshort}} afin de l'adapter à votre cas d'utilisation. 
-- Affichez la
-[référence d'API ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/){:new_window}.
-- Interagissez avec l'API dans [API Explorer ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://watson-api-explorer.mybluemix.net/apis/language-translator-v2){:new_window}.
-- Essayez le [modèle d'application Node.js ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/watson-developer-cloud/language-translator-nodejs){:new_window}.
+- Apprenez à [personnaliser](/docs/services/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} afin de l'adapter à votre cas d'utilisation
+- Essayez [Traduction de documents (Bêta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial)
+- Affichez la [référence d'API](https://{DomainName}/apidocs/language-translator)
+- Explorez les [exemples d'application](/docs/services/language-translator?topic=language-translator-sample-applications)
+- Consultez les informations de support de langue :
+    - [Modèles de traduction](/docs/services/language-translator?topic=language-translator-translation-models)
+    - [Langues identifiables](/docs/services/language-translator?topic=language-translator-identifiable-languages)

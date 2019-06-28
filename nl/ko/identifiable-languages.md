@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -15,7 +15,14 @@ lastupdated: "2018-02-23"
 
 # 식별 가능한 언어
 
-다음 언어를 `/identify` 엔드포인트의 서비스에서 식별할 수 있습니다.  
+다음 언어를 `/identify` 엔드포인트의 서비스에서 식별할 수 있습니다. 
+
+**식별 가능한 언어 나열** API 메소드를 사용하여 프로그래밍 방식으로 식별 가능한 언어도 가져올 수 있습니다.
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -31,7 +38,7 @@ lastupdated: "2018-02-23"
      아프리칸스어
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -39,7 +46,7 @@ lastupdated: "2018-02-23"
      알바니아어
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -47,7 +54,7 @@ lastupdated: "2018-02-23"
      아랍어
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -55,7 +62,7 @@ lastupdated: "2018-02-23"
      아르메니아어
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -63,7 +70,7 @@ lastupdated: "2018-02-23"
      아제르바이잔어
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -71,7 +78,7 @@ lastupdated: "2018-02-23"
      바슈키르어
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -79,7 +86,7 @@ lastupdated: "2018-02-23"
      바스크어
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -87,7 +94,7 @@ lastupdated: "2018-02-23"
      벨라루시아어
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -95,7 +102,7 @@ lastupdated: "2018-02-23"
      벵골어
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -103,7 +110,7 @@ lastupdated: "2018-02-23"
      보스니아어
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -111,7 +118,7 @@ lastupdated: "2018-02-23"
      불가리아어
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -119,15 +126,21 @@ lastupdated: "2018-02-23"
      중앙 크메르어
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
     <td>
-     중국어
-    </td>
+중국어</td>
     <td>
-     zh
+     <code>zh</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+대만어</td>
+    <td>
+     <code>zh-TW</code>
     </td>
    </tr>
    <tr>
@@ -135,7 +148,7 @@ lastupdated: "2018-02-23"
      츄바시어
     </td>
     <td>
-     cv
+     <code>cv</code>
     </td>
    </tr>
    <tr>
@@ -143,7 +156,7 @@ lastupdated: "2018-02-23"
      체코어
     </td>
     <td>
-     cs
+     <code>cs</code>
     </td>
    </tr>
    <tr>
@@ -151,7 +164,7 @@ lastupdated: "2018-02-23"
      덴마크어
     </td>
     <td>
-     da
+     <code>da</code>
     </td>
    </tr>
    <tr>
@@ -159,7 +172,7 @@ lastupdated: "2018-02-23"
      네덜란드어
     </td>
     <td>
-     nl
+     <code>nl</code>
     </td>
    </tr>
    <tr>
@@ -167,7 +180,7 @@ lastupdated: "2018-02-23"
      영어
     </td>
     <td>
-     en
+     <code>en</code>
     </td>
    </tr>
    <tr>
@@ -175,7 +188,7 @@ lastupdated: "2018-02-23"
      에스페란토어
     </td>
     <td>
-     eo
+     <code>eo</code>
     </td>
    </tr>
    <tr>
@@ -183,7 +196,7 @@ lastupdated: "2018-02-23"
      에스토니아어
     </td>
     <td>
-     et
+     <code>et</code>
     </td>
    </tr>
    <tr>
@@ -191,7 +204,7 @@ lastupdated: "2018-02-23"
      핀란드어
     </td>
     <td>
-     fi
+     <code>fi</code>
     </td>
    </tr>
    <tr>
@@ -199,7 +212,7 @@ lastupdated: "2018-02-23"
      프랑스어
     </td>
     <td>
-     fr
+     <code>fr</code>
     </td>
    </tr>
    <tr>
@@ -207,7 +220,7 @@ lastupdated: "2018-02-23"
      그루지야어
     </td>
     <td>
-     ka
+     <code>ka</code>
     </td>
    </tr>
    <tr>
@@ -215,7 +228,7 @@ lastupdated: "2018-02-23"
      독일어
     </td>
     <td>
-     de
+     <code>de</code>
     </td>
    </tr>
    <tr>
@@ -223,7 +236,7 @@ lastupdated: "2018-02-23"
      그리스어
     </td>
     <td>
-     el
+     <code>el</code>
     </td>
    </tr>
    <tr>
@@ -231,7 +244,7 @@ lastupdated: "2018-02-23"
      구자라트어
     </td>
     <td>
-     gu
+     <code>gu</code>
     </td>
    </tr>
    <tr>
@@ -239,7 +252,7 @@ lastupdated: "2018-02-23"
      아이티어
     </td>
     <td>
-     ht
+     <code>ht</code>
     </td>
    </tr>
    <tr>
@@ -247,7 +260,7 @@ lastupdated: "2018-02-23"
      히브리어
     </td>
     <td>
-     he
+     <code>he</code>
     </td>
    </tr>
    <tr>
@@ -255,7 +268,7 @@ lastupdated: "2018-02-23"
      힌디어
     </td>
     <td>
-     hi
+     <code>hi</code>
     </td>
    </tr>
    <tr>
@@ -263,7 +276,7 @@ lastupdated: "2018-02-23"
      헝가리어
     </td>
     <td>
-     hu
+     <code>hu</code>
     </td>
    </tr>
    <tr>
@@ -271,7 +284,7 @@ lastupdated: "2018-02-23"
      아이슬랜드어
     </td>
     <td>
-     is
+     <code>is</code>
     </td>
    </tr>
    <tr>
@@ -279,7 +292,7 @@ lastupdated: "2018-02-23"
      인도네시아어
     </td>
     <td>
-     id
+     <code>id</code>
     </td>
    </tr>
    <tr>
@@ -287,7 +300,7 @@ lastupdated: "2018-02-23"
      이탈리아어
     </td>
     <td>
-     it
+     <code>it</code>
     </td>
    </tr>
    <tr>
@@ -295,7 +308,7 @@ lastupdated: "2018-02-23"
      일본어
     </td>
     <td>
-     ja
+     <code>ja</code>
     </td>
    </tr>
    <tr>
@@ -303,7 +316,7 @@ lastupdated: "2018-02-23"
      카자흐어
     </td>
     <td>
-     kk
+     <code>kk</code>
     </td>
    </tr>
    <tr>
@@ -311,7 +324,7 @@ lastupdated: "2018-02-23"
      키르기스어
     </td>
     <td>
-     ky
+     <code>ky</code>
     </td>
    </tr>
    <tr>
@@ -319,7 +332,7 @@ lastupdated: "2018-02-23"
      한국어
     </td>
     <td>
-     ko
+     <code>ko</code>
     </td>
    </tr>
    <tr>
@@ -327,7 +340,7 @@ lastupdated: "2018-02-23"
      쿠르드어
     </td>
     <td>
-     ku
+     <code>ku</code>
     </td>
    </tr>
    <tr>
@@ -335,7 +348,7 @@ lastupdated: "2018-02-23"
      라트비아어
     </td>
     <td>
-     lv
+     <code>lv</code>
     </td>
    </tr>
    <tr>
@@ -343,7 +356,7 @@ lastupdated: "2018-02-23"
      리투아니아어
     </td>
     <td>
-     lt
+     <code>lt</code>
     </td>
    </tr>
    <tr>
@@ -351,7 +364,7 @@ lastupdated: "2018-02-23"
      말라얄람어
     </td>
     <td>
-     ml
+     <code>ml</code>
     </td>
    </tr>
    <tr>
@@ -359,7 +372,7 @@ lastupdated: "2018-02-23"
      몽골어
     </td>
     <td>
-     mn
+     <code>mn</code>
     </td>
    </tr>
    <tr>
@@ -367,7 +380,7 @@ lastupdated: "2018-02-23"
      노르웨이 부크몰어
     </td>
     <td>
-     nb
+     <code>nb</code>
     </td>
    </tr>
    <tr>
@@ -375,7 +388,7 @@ lastupdated: "2018-02-23"
      노르웨이 뉘노르스크어
     </td>
     <td>
-     nn
+     <code>nn</code>
     </td>
    </tr>
    <tr>
@@ -383,7 +396,7 @@ lastupdated: "2018-02-23"
      펀자브어
     </td>
     <td>
-     pa
+     <code>pa</code>
     </td>
    </tr>
    <tr>
@@ -391,7 +404,7 @@ lastupdated: "2018-02-23"
      페르시아어
     </td>
     <td>
-     fa
+     <code>fa</code>
     </td>
    </tr>
    <tr>
@@ -399,7 +412,7 @@ lastupdated: "2018-02-23"
      폴란드어
     </td>
     <td>
-     pl
+     <code>pl</code>
     </td>
    </tr>
    <tr>
@@ -407,7 +420,7 @@ lastupdated: "2018-02-23"
      포르투갈어
     </td>
     <td>
-     pt
+     <code>pt</code>
     </td>
    </tr>
    <tr>
@@ -415,7 +428,7 @@ lastupdated: "2018-02-23"
      파슈토어
     </td>
     <td>
-     ps
+     <code>ps</code>
     </td>
    </tr>
    <tr>
@@ -423,7 +436,7 @@ lastupdated: "2018-02-23"
      루마니아어
     </td>
     <td>
-     ro
+     <code>ro</code>
     </td>
    </tr>
    <tr>
@@ -431,7 +444,7 @@ lastupdated: "2018-02-23"
      러시아어
     </td>
     <td>
-     ru
+     <code>ru</code>
     </td>
    </tr>
    <tr>
@@ -439,7 +452,7 @@ lastupdated: "2018-02-23"
      슬로바키아어
     </td>
     <td>
-     sk
+     <code>sk</code>
     </td>
    </tr>
    <tr>
@@ -447,7 +460,7 @@ lastupdated: "2018-02-23"
      소말리아어
     </td>
     <td>
-     so
+     <code>so</code>
     </td>
    </tr>
    <tr>
@@ -455,7 +468,7 @@ lastupdated: "2018-02-23"
      스페인어
     </td>
     <td>
-     es
+     <code>es</code>
     </td>
    </tr>
    <tr>
@@ -463,7 +476,7 @@ lastupdated: "2018-02-23"
      스웨덴어
     </td>
     <td>
-     sv
+     <code>sv</code>
     </td>
    </tr>
    <tr>
@@ -471,7 +484,7 @@ lastupdated: "2018-02-23"
      타밀어
     </td>
     <td>
-     ta
+     <code>ta</code>
     </td>
    </tr>
    <tr>
@@ -479,15 +492,7 @@ lastupdated: "2018-02-23"
      텔루구어
     </td>
     <td>
-     te
-    </td>
-   </tr>
-   <tr>
-    <td>
-     대만어
-    </td>
-    <td>
-     zh-TW
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -495,7 +500,7 @@ lastupdated: "2018-02-23"
      터키어
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -503,7 +508,7 @@ lastupdated: "2018-02-23"
      우크라이나어
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -511,7 +516,7 @@ lastupdated: "2018-02-23"
      우르두어
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -519,7 +524,7 @@ lastupdated: "2018-02-23"
      베트남어
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

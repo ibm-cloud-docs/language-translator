@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-06-14"
 
 ---
 
@@ -17,24 +17,58 @@ lastupdated: "2018-02-23"
 {: #translation-models}
 
 {{site.data.keyword.languagetranslatorshort}} 可以翻譯下列語言。
-按一下底下清單中的語言，即可檢視相容翻譯模型的清單。 
+按一下底下清單中的語言，即可檢視相容翻譯模型的清單。
 
-- [阿拉伯文](#arabic)
-- [中文](#chinese)
-- [埃及阿拉伯文](#egyptian-arabic)
-- [英文](#english)
-- [法文](#french)
-- [德文](#german)
-- [義大利文](#italian)
-- [日文](#japanese)
-- [韓文](#korean)
-- [葡萄牙文](#portuguese)
-- [西班牙文](#spanish)
+您也可以使用**列出模型** API 方法來檢視可用的翻譯模型，包括您的自訂模型。您可以使用 `source` 和 `target` 參數，依語言過濾結果。下列範例列出可將英文翻譯為西班牙文的模型。
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/models?source=en&target=es&version=2018-05-01
+```
+{: pre}
+
+  - [阿拉伯文](#arabic)
+  - [加泰蘭文](#catalan)
+  - [簡體中文](#chinese-simplified)
+  - [繁體中文](#chinese-traditional)
+  - [     捷克文
+    ](#czech)
+  - [     丹麥文
+    ](#danish)
+  - [     荷蘭文
+    ](#dutch)
+  - [英文](#english)
+  - [     芬蘭文
+    ](#finnish)
+  - [法文](#french)
+  - [德文](#german)
+  - [     希臘文
+    ](#greek)
+  - [     希伯來文
+    ](#hebrew)
+  - [     北印度文
+    ](#hindi)
+  - [     匈牙利文
+    ](#hungarian)
+  - [義大利文](#italian)
+  - [日文](#japanese)
+  - [韓文](#korean)
+  - [巴克摩挪威文](#norwegian-bokmal)
+  - [     波蘭文
+    ](#polish)
+  - [葡萄牙文](#portuguese)
+  - [     俄文
+    ](#russian)
+  - [西班牙文](#spanish)
+  - [     瑞典文
+    ](#swedish)
+  - [     土耳其文
+    ](#turkish)
 
 ## 阿拉伯文
 {: #arabic}
 
 下列模型可以翻譯阿拉伯文字。
+
 <table>
  <thead>
   <th>
@@ -49,43 +83,35 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     ar-en
+     <code>ar-en</code>
     </td>
     <td>
-     阿拉伯文 (ar)
+     阿拉伯文 (<code>ar</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ar-en-conversational
+     <code>general</code>
     </td>
     <td>
-     阿拉伯文 (ar)
-    </td>
-    <td>
-     英文 (en)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
-## 中文
-{: #chinese}
+## 加泰蘭文
+{: #catalan}
 
-下列模型可以翻譯中文字。
+下列模型可以翻譯加泰蘭文文字。
 
 <table>
  <thead>
@@ -101,29 +127,35 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     zh-en-patent
+     <code>ca-es</code>
     </td>
     <td>
-     中文 (zh)
+     加泰蘭文 (<code>ca</code>)
     </td>
     <td>
-     英文 (en)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     專利
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
-## 埃及阿拉伯文
-{: #egyptian-arabic}
+## 簡體中文
+{: #chinese-simplified}
 
-下列模型可以翻譯埃及阿拉伯文字。
+下列模型可以翻譯簡體中文文字。
 
 <table>
  <thead>
@@ -139,19 +171,204 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     arz-en
+     <code>zh-en</code>
     </td>
     <td>
-     埃及阿拉伯文 (arz)
+     簡體中文 (<code>zh</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## 繁體中文
+{: #chinese-traditional}
+
+下列模型可以翻譯繁體中文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>zh-TW</code>-en
+    </td>
+    <td>
+     繁體中文 (<code>zh-TW</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      捷克文
+    
+{: #czech}
+
+下列模型可以翻譯捷克文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>cs-en</code>
+    </td>
+    <td>
+     捷克文 (<code>cs</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      丹麥文
+    
+{: #danish}
+
+下列模型可以翻譯丹麥文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>da-en</code>
+    </td>
+    <td>
+     丹麥文 (<code>da</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      荷蘭文
+    
+{: #dutch}
+
+下列模型可以翻譯荷蘭文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>nl-en</code>
+    </td>
+    <td>
+     荷蘭文 (<code>nl</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -161,7 +378,7 @@ lastupdated: "2018-02-23"
 ## 英文
 {: #english}
 
-下列模型可以翻譯英文字。
+下列模型可以翻譯英文文字。
 
 <table>
  <thead>
@@ -177,198 +394,393 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     en-ar
+     <code>en-ar</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     阿拉伯文 (ar)
+     阿拉伯文 (<code>ar</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-ar-conversational
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     阿拉伯文 (ar)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-arz
+     <code>en-cs</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     埃及阿拉伯文 (arz)
+     捷克文 (<code>cs</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-de
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     德文 (de)
-    </td>
-    <td>
-     新聞
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-es
+     <code>en-da</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     西班牙文 (es)
+     丹麥文 (<code>da</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-es-conversational
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     西班牙文 (es)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-fr
+     <code>en-de</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     法文 (fr)
+     德文 (<code>de</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-fr-conversational
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     法文 (fr)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-it
+     <code>en-el</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     義大利文 (it)
+     希臘文 (<code>el</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-ja
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     日文 (ja)
-    </td>
-    <td>
-     新聞
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-ko
+     <code>en-es</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     韓文 (ko)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-pt
+     <code>general</code>
     </td>
     <td>
-     英文 (en)
-    </td>
-    <td>
-     葡萄牙文 (pt)
-    </td>
-    <td>
-     新聞
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-pt-conversational
+     <code>en-fi</code>
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     葡萄牙文 (pt)
+     芬蘭文 (<code>fi</code>)
     </td>
     <td>
-     交談式
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-fr</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     法文 (<code>fr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-he</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     希伯來文 (<code>he</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-hi</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     北印度文 (<code>hi</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-it</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     義大利文 (<code>it</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ja</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     日文 (<code>ja</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ko</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     韓文 (<code>ko</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-nb</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     巴克摩挪威文 (<code>nb</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-nl</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     荷蘭文 (<code>nl</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-pl</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     波蘭文 (<code>pl</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-pt</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     葡萄牙文 (<code>pt</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ru</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     俄文 (<code>ru</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sv</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     瑞典文 (<code>sv</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-tr</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     土耳其文 (<code>tr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-zh</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     簡體中文 (<code>zh</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-zh-TW</code>
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     繁體中文 (<code>zh-TW</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
+##      芬蘭文
+    
+{: #finnish}
 
-## 法文
-{: #french}
-
-下列模型可以翻譯法文字。
+下列模型可以翻譯芬蘭文文字。
 
 <table>
  <thead>
@@ -384,47 +796,103 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     fr-en
+     <code>fi-en</code>
     </td>
     <td>
-     法文 (fr)
+     芬蘭文 (<code>fi</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## 法文
+{: #french}
+
+下列模型可以翻譯法文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>fr-de</code>
+    </td>
+    <td>
+     法文 (<code>fr</code>)
+    </td>
+    <td>
+     德文 (<code>de</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     fr-en-conversational
+     <code>fr-en</code>
     </td>
     <td>
-     法文 (fr)
+     法文 (<code>fr</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     交談式
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     fr-es
+     <code>fr-es</code>
     </td>
     <td>
-     法文 (fr)
+     法文 (<code>fr</code>)
     </td>
     <td>
-     西班牙文 (es)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -450,19 +918,240 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     de-en
+     <code>de-en</code>
     </td>
     <td>
-     德文 (de)
+     德文 (<code>de</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>de-fr</code>
+    </td>
+    <td>
+     德文 (<code>de</code>)
+    </td>
+    <td>
+     法文 (<code>fr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>de-it</code>
+    </td>
+    <td>
+     德文 (<code>de</code>)
+    </td>
+    <td>
+     義大利文 (<code>it</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      希臘文
+    
+{: #greek}
+
+下列模型可以翻譯希臘文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>el-en</code>
+    </td>
+    <td>
+     希臘文 (<code>el</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      希伯來文
+    
+{: #hebrew}
+
+下列模型可以翻譯希伯來文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>he-en</code>
+    </td>
+    <td>
+     希伯來文 (<code>he</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+
+##      北印度文
+    
+{: #hindi}
+
+下列模型可以翻譯北印度文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>hi-en</code>
+    </td>
+    <td>
+     北印度文 (<code>hi</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      匈牙利文
+    
+{: #hungarian}
+
+下列模型可以翻譯匈牙利文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>hu-en</code>
+    </td>
+    <td>
+     匈牙利文 (<code>hu</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -488,19 +1177,42 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     it-en
+     <code>it-de</code>
     </td>
     <td>
-     義大利文 (it)
+     義大利文 (<code>it</code>)
     </td>
     <td>
-     英文 (en)
+     德文 (<code>de</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>it-en</code>
+    </td>
+    <td>
+     義大利文 (<code>it</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -526,25 +1238,30 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     ja-en
+     <code>ja-en</code>
     </td>
     <td>
-     日文 (ja)
+     日文 (<code>ja</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
-
 
 ## 韓文
 {: #korean}
@@ -565,33 +1282,114 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     ko-en
+     <code>ko-en</code>
     </td>
     <td>
-     韓文 (ko)
+     韓文 (<code>ko</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
+  </tbody>
+ </thead>
+</table>
+
+## 巴克摩挪威文
+{: #norwegian-bokmal}
+
+下列模型可以翻譯巴克摩挪威文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
    <tr>
     <td>
-     ko-en-patent
+     <code>nb-en</code>
     </td>
     <td>
-     韓文 (ko)
+     巴克摩挪威文 (<code>nb</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     專利
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      波蘭文
+    
+{: #polish}
+
+下列模型可以翻譯波蘭文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>pl-en</code>
+    </td>
+    <td>
+     波蘭文 (<code>pl</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -617,47 +1415,70 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     pt-en
+     <code>pt-en</code>
     </td>
     <td>
-     葡萄牙文 (pt)
+     葡萄牙文 (<code>pt</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     pt-en-conversational
+     <code>general</code>
     </td>
     <td>
-     葡萄牙文 (pt)
-    </td>
-    <td>
-     英文 (en)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      俄文
+    
+{: #russian}
+
+下列模型可以翻譯俄文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
    <tr>
     <td>
-     pt-en-patent
+     <code>ru-en</code>
     </td>
     <td>
-     葡萄牙文 (pt)
+     俄文 (<code>ru</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     專利
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -683,61 +1504,149 @@ lastupdated: "2018-02-23"
   <th>
    領域
   </th>
+  <th>
+   可自訂
+  </th>
   <tbody>
    <tr>
     <td>
-     es-en
+     <code>es-ca</code>
     </td>
     <td>
-     西班牙文 (es)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     英文 (en)
+     加泰蘭文 (<code>ca</code>)
     </td>
     <td>
-     新聞
-    </td>
-   </tr>
-   <tr>
-    <td>
-     es-en-conversational
+     <code>general</code>
     </td>
     <td>
-     西班牙文 (es)
-    </td>
-    <td>
-     英文 (en)
-    </td>
-    <td>
-     交談式
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     es-en-patent
+     <code>es-en</code>
     </td>
     <td>
-     西班牙文 (es)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     英文 (en)
+     英文 (<code>en</code>)
     </td>
     <td>
-     專利
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     es-fr
+     <code>es-fr</code>
     </td>
     <td>
-     西班牙文 (es)
+     西班牙文 (<code>es</code>)
     </td>
     <td>
-     法文 (fr)
+     法文 (<code>fr</code>)
     </td>
     <td>
-     新聞
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      瑞典文
+    
+{: #swedish}
+
+下列模型可以翻譯瑞典文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>sv-en</code>
+    </td>
+    <td>
+     瑞典文 (<code>sv</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+##      土耳其文
+    
+{: #turkish}
+
+下列模型可以翻譯土耳其文文字。
+
+<table>
+ <thead>
+  <th>
+   模型 ID
+  </th>
+  <th>
+   來源
+  </th>
+  <th>
+   目標
+  </th>
+  <th>
+   領域
+  </th>
+  <th>
+   可自訂
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>tr-en</code>
+    </td>
+    <td>
+     土耳其文 (<code>tr</code>)
+    </td>
+    <td>
+     英文 (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>

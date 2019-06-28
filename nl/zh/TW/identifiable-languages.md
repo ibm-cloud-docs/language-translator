@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2018-02-23"
 # 可識別語言
 
 服務可以使用 `/identify` 端點識別下列語言。 
+
+您也可以使用**列出可識別的語言** API 方法，以程式設計方式取得可識別的語言：
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -31,7 +38,7 @@ lastupdated: "2018-02-23"
      南非荷蘭文
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -39,7 +46,7 @@ lastupdated: "2018-02-23"
      阿爾巴尼亞文
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -47,7 +54,7 @@ lastupdated: "2018-02-23"
      阿拉伯文
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -55,7 +62,7 @@ lastupdated: "2018-02-23"
      亞美尼亞文
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -63,7 +70,7 @@ lastupdated: "2018-02-23"
      亞塞拜然文
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -71,7 +78,7 @@ lastupdated: "2018-02-23"
      巴什基爾文
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -79,7 +86,7 @@ lastupdated: "2018-02-23"
      巴斯克文
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -87,7 +94,7 @@ lastupdated: "2018-02-23"
      白俄羅斯文
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -95,7 +102,7 @@ lastupdated: "2018-02-23"
      孟加拉文
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -103,7 +110,7 @@ lastupdated: "2018-02-23"
      波士尼亞文
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -111,7 +118,7 @@ lastupdated: "2018-02-23"
      保加利亞文
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -119,15 +126,22 @@ lastupdated: "2018-02-23"
      中高棉文
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
     <td>
-     中文
+     簡體中文
     </td>
     <td>
-     zh
+     <code>zh</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+繁體中文</td>
+    <td>
+     <code>zh-TW</code>
     </td>
    </tr>
    <tr>
@@ -135,7 +149,7 @@ lastupdated: "2018-02-23"
      楚瓦什文
     </td>
     <td>
-     cv
+     <code>cv</code>
     </td>
    </tr>
    <tr>
@@ -143,7 +157,7 @@ lastupdated: "2018-02-23"
      捷克文
     </td>
     <td>
-     cs
+     <code>cs</code>
     </td>
    </tr>
    <tr>
@@ -151,7 +165,7 @@ lastupdated: "2018-02-23"
      丹麥文
     </td>
     <td>
-     da
+     <code>da</code>
     </td>
    </tr>
    <tr>
@@ -159,7 +173,7 @@ lastupdated: "2018-02-23"
      荷蘭文
     </td>
     <td>
-     nl
+     <code>nl</code>
     </td>
    </tr>
    <tr>
@@ -167,7 +181,7 @@ lastupdated: "2018-02-23"
      英文
     </td>
     <td>
-     en
+     <code>en</code>
     </td>
    </tr>
    <tr>
@@ -175,7 +189,7 @@ lastupdated: "2018-02-23"
      世界語
     </td>
     <td>
-     eo
+     <code>eo</code>
     </td>
    </tr>
    <tr>
@@ -183,7 +197,7 @@ lastupdated: "2018-02-23"
      愛沙尼亞文
     </td>
     <td>
-     et
+     <code>et</code>
     </td>
    </tr>
    <tr>
@@ -191,7 +205,7 @@ lastupdated: "2018-02-23"
      芬蘭文
     </td>
     <td>
-     fi
+     <code>fi</code>
     </td>
    </tr>
    <tr>
@@ -199,7 +213,7 @@ lastupdated: "2018-02-23"
      法文
     </td>
     <td>
-     fr
+     <code>fr</code>
     </td>
    </tr>
    <tr>
@@ -207,7 +221,7 @@ lastupdated: "2018-02-23"
      喬治亞文
     </td>
     <td>
-     ka
+     <code>ka</code>
     </td>
    </tr>
    <tr>
@@ -215,7 +229,7 @@ lastupdated: "2018-02-23"
      德文
     </td>
     <td>
-     de
+     <code>de</code>
     </td>
    </tr>
    <tr>
@@ -223,7 +237,7 @@ lastupdated: "2018-02-23"
      希臘文
     </td>
     <td>
-     el
+     <code>el</code>
     </td>
    </tr>
    <tr>
@@ -231,7 +245,7 @@ lastupdated: "2018-02-23"
      古吉拉特文
     </td>
     <td>
-     gu
+     <code>gu</code>
     </td>
    </tr>
    <tr>
@@ -239,7 +253,7 @@ lastupdated: "2018-02-23"
      海地文
     </td>
     <td>
-     ht
+     <code>ht</code>
     </td>
    </tr>
    <tr>
@@ -247,7 +261,7 @@ lastupdated: "2018-02-23"
      希伯來文
     </td>
     <td>
-     he
+     <code>he</code>
     </td>
    </tr>
    <tr>
@@ -255,7 +269,7 @@ lastupdated: "2018-02-23"
      北印度文
     </td>
     <td>
-     hi
+     <code>hi</code>
     </td>
    </tr>
    <tr>
@@ -263,7 +277,7 @@ lastupdated: "2018-02-23"
      匈牙利文
     </td>
     <td>
-     hu
+     <code>hu</code>
     </td>
    </tr>
    <tr>
@@ -271,7 +285,7 @@ lastupdated: "2018-02-23"
      冰島文
     </td>
     <td>
-     is
+     <code>is</code>
     </td>
    </tr>
    <tr>
@@ -279,7 +293,7 @@ lastupdated: "2018-02-23"
      印尼文
     </td>
     <td>
-     id
+     <code>id</code>
     </td>
    </tr>
    <tr>
@@ -287,7 +301,7 @@ lastupdated: "2018-02-23"
      義大利文
     </td>
     <td>
-     it
+     <code>it</code>
     </td>
    </tr>
    <tr>
@@ -295,7 +309,7 @@ lastupdated: "2018-02-23"
      日文
     </td>
     <td>
-     ja
+     <code>ja</code>
     </td>
    </tr>
    <tr>
@@ -303,7 +317,7 @@ lastupdated: "2018-02-23"
      哈薩克文
     </td>
     <td>
-     kk
+     <code>kk</code>
     </td>
    </tr>
    <tr>
@@ -311,7 +325,7 @@ lastupdated: "2018-02-23"
      吉爾吉斯文
     </td>
     <td>
-     ky
+     <code>ky</code>
     </td>
    </tr>
    <tr>
@@ -319,7 +333,7 @@ lastupdated: "2018-02-23"
      韓文
     </td>
     <td>
-     ko
+     <code>ko</code>
     </td>
    </tr>
    <tr>
@@ -327,7 +341,7 @@ lastupdated: "2018-02-23"
      庫爾德文
     </td>
     <td>
-     ku
+     <code>ku</code>
     </td>
    </tr>
    <tr>
@@ -335,7 +349,7 @@ lastupdated: "2018-02-23"
      拉脫維亞文
     </td>
     <td>
-     lv
+     <code>lv</code>
     </td>
    </tr>
    <tr>
@@ -343,7 +357,7 @@ lastupdated: "2018-02-23"
      立陶宛文
     </td>
     <td>
-     lt
+     <code>lt</code>
     </td>
    </tr>
    <tr>
@@ -351,7 +365,7 @@ lastupdated: "2018-02-23"
      馬來亞拉姆文
     </td>
     <td>
-     ml
+     <code>ml</code>
     </td>
    </tr>
    <tr>
@@ -359,7 +373,7 @@ lastupdated: "2018-02-23"
      蒙古文
     </td>
     <td>
-     mn
+     <code>mn</code>
     </td>
    </tr>
    <tr>
@@ -367,7 +381,7 @@ lastupdated: "2018-02-23"
      巴克摩挪威文
     </td>
     <td>
-     nb
+     <code>nb</code>
     </td>
    </tr>
    <tr>
@@ -375,7 +389,7 @@ lastupdated: "2018-02-23"
      耐諾斯克挪威文
     </td>
     <td>
-     nn
+     <code>nn</code>
     </td>
    </tr>
    <tr>
@@ -383,7 +397,7 @@ lastupdated: "2018-02-23"
      旁遮普文
     </td>
     <td>
-     pa
+     <code>pa</code>
     </td>
    </tr>
    <tr>
@@ -391,7 +405,7 @@ lastupdated: "2018-02-23"
      波斯文
     </td>
     <td>
-     fa
+     <code>fa</code>
     </td>
    </tr>
    <tr>
@@ -399,7 +413,7 @@ lastupdated: "2018-02-23"
      波蘭文
     </td>
     <td>
-     pl
+     <code>pl</code>
     </td>
    </tr>
    <tr>
@@ -407,7 +421,7 @@ lastupdated: "2018-02-23"
      葡萄牙文
     </td>
     <td>
-     pt
+     <code>pt</code>
     </td>
    </tr>
    <tr>
@@ -415,7 +429,7 @@ lastupdated: "2018-02-23"
      普什圖文
     </td>
     <td>
-     ps
+     <code>ps</code>
     </td>
    </tr>
    <tr>
@@ -423,7 +437,7 @@ lastupdated: "2018-02-23"
      羅馬尼亞文
     </td>
     <td>
-     ro
+     <code>ro</code>
     </td>
    </tr>
    <tr>
@@ -431,7 +445,7 @@ lastupdated: "2018-02-23"
      俄文
     </td>
     <td>
-     ru
+     <code>ru</code>
     </td>
    </tr>
    <tr>
@@ -439,7 +453,7 @@ lastupdated: "2018-02-23"
      斯洛伐克文
     </td>
     <td>
-     sk
+     <code>sk</code>
     </td>
    </tr>
    <tr>
@@ -447,7 +461,7 @@ lastupdated: "2018-02-23"
      索馬利文
     </td>
     <td>
-     so
+     <code>so</code>
     </td>
    </tr>
    <tr>
@@ -455,7 +469,7 @@ lastupdated: "2018-02-23"
      西班牙文
     </td>
     <td>
-     es
+     <code>es</code>
     </td>
    </tr>
    <tr>
@@ -463,7 +477,7 @@ lastupdated: "2018-02-23"
      瑞典文
     </td>
     <td>
-     sv
+     <code>sv</code>
     </td>
    </tr>
    <tr>
@@ -471,7 +485,7 @@ lastupdated: "2018-02-23"
      泰米爾文
     </td>
     <td>
-     ta
+     <code>ta</code>
     </td>
    </tr>
    <tr>
@@ -479,15 +493,7 @@ lastupdated: "2018-02-23"
      特拉古文
     </td>
     <td>
-     te
-    </td>
-   </tr>
-   <tr>
-    <td>
-     繁體中文
-    </td>
-    <td>
-     zh-TW
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -495,7 +501,7 @@ lastupdated: "2018-02-23"
      土耳其文
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -503,7 +509,7 @@ lastupdated: "2018-02-23"
      烏克蘭文
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -511,7 +517,7 @@ lastupdated: "2018-02-23"
      烏都文
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -519,7 +525,7 @@ lastupdated: "2018-02-23"
      越南文
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

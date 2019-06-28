@@ -1,13 +1,13 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="language-translator" audience="service" href="/docs/services/language-translator/getting-started.html"}
+{: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html" path="services/language-translator"}
 Language Translator
 
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [데모: 텍스트 변환](https://language-translator-demo.ng.bluemix.net/)
+    [데모: 텍스트 번역](https://language-translator-demo.ng.bluemix.net/)
 
     {: .topicgroup}
     추가 자원
@@ -18,31 +18,23 @@ Language Translator
 
     {: .navgroup id="howto"}
     customizing.md
+    translating-documents.md
+    ha-dr.md
+    /watson/watson-migrate
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API 참조서](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
+    [API 참조서](https://cloud.ibm.com/apidocs/language-translator/)
 
     {: .topicgroup}
     언어 지원
-        [변환 모델](translation-models.html)
-        [식별 가능한 언어](identifiable-languages.html)
+        translation-models.md
+        identifiable-languages.md
 
-    [샘플 앱: Watson Language Translator](https://github.com/watson-developer-cloud/language-translator-nodejs)
-
-    {: .topicgroup}
-    Watson SDK
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
-        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
-        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
-        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
-        [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk)
-        [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
-        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
-        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
-
-    [Watson GitHub 저장소](https://github.com/watson-developer-cloud/)
+    sample-applications.md
+    information-security.md
+    /watson/watson-using-sdks
+    [Watson GitHub repos](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
     {: .navgroup id="help"}
@@ -51,6 +43,6 @@ Language Translator
     {: .topicgroup}
     개발자 커뮤니티
         [StackOverflow](http://stackoverflow.com/questions/tagged/language-translation+ibm-watson-cognitive)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/language-translator/)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/language-translator/)
         [WDC Slack 채널](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}
