@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2018-02-23"
 # 可识别语言
 
 以下语言可由服务通过 `/identify` 端点进行识别。 
+
+您还可以使用**列出可识别语言** API 方法以编程方式获取可识别的语言：
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -31,7 +38,7 @@ lastupdated: "2018-02-23"
      南非荷兰语
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -39,7 +46,7 @@ lastupdated: "2018-02-23"
      阿尔巴尼亚语
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -47,7 +54,7 @@ lastupdated: "2018-02-23"
      阿位伯语
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -55,7 +62,7 @@ lastupdated: "2018-02-23"
      亚美尼亚语
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -63,7 +70,7 @@ lastupdated: "2018-02-23"
      阿塞拜疆语
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -71,7 +78,7 @@ lastupdated: "2018-02-23"
      巴什基尔语
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -79,7 +86,7 @@ lastupdated: "2018-02-23"
      巴斯克语
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -87,7 +94,7 @@ lastupdated: "2018-02-23"
      白俄罗斯语
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -95,7 +102,7 @@ lastupdated: "2018-02-23"
      孟加拉语
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -103,7 +110,7 @@ lastupdated: "2018-02-23"
      波斯尼亚语
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -111,7 +118,7 @@ lastupdated: "2018-02-23"
      保加利亚语
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -119,367 +126,15 @@ lastupdated: "2018-02-23"
      中高棉语
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
     <td>
-     中文
+     简体中文
     </td>
     <td>
-     zh
-    </td>
-   </tr>
-   <tr>
-    <td>
-     楚瓦什语
-    </td>
-    <td>
-     cv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     捷克语
-    </td>
-    <td>
-     cs
-    </td>
-   </tr>
-   <tr>
-    <td>
-     丹麦语
-    </td>
-    <td>
-     da
-    </td>
-   </tr>
-   <tr>
-    <td>
-     荷兰语
-    </td>
-    <td>
-     nl
-    </td>
-   </tr>
-   <tr>
-    <td>
-     英语
-    </td>
-    <td>
-     en
-    </td>
-   </tr>
-   <tr>
-    <td>
-     世界语
-    </td>
-    <td>
-     eo
-    </td>
-   </tr>
-   <tr>
-    <td>
-     爱沙尼亚语
-    </td>
-    <td>
-     et
-    </td>
-   </tr>
-   <tr>
-    <td>
-     芬兰语
-    </td>
-    <td>
-     fi
-    </td>
-   </tr>
-   <tr>
-    <td>
-     法语
-    </td>
-    <td>
-     fr
-    </td>
-   </tr>
-   <tr>
-    <td>
-     格鲁吉亚语
-    </td>
-    <td>
-     ka
-    </td>
-   </tr>
-   <tr>
-    <td>
-     德语
-    </td>
-    <td>
-     de
-    </td>
-   </tr>
-   <tr>
-    <td>
-     希腊语
-    </td>
-    <td>
-     el
-    </td>
-   </tr>
-   <tr>
-    <td>
-     古吉拉特语
-    </td>
-    <td>
-     gu
-    </td>
-   </tr>
-   <tr>
-    <td>
-     海地语
-    </td>
-    <td>
-     ht
-    </td>
-   </tr>
-   <tr>
-    <td>
-     希伯来语
-    </td>
-    <td>
-     he
-    </td>
-   </tr>
-   <tr>
-    <td>
-     印地语
-    </td>
-    <td>
-     hi
-    </td>
-   </tr>
-   <tr>
-    <td>
-     匈牙利语
-    </td>
-    <td>
-     hu
-    </td>
-   </tr>
-   <tr>
-    <td>
-     冰岛语
-    </td>
-    <td>
-     is
-    </td>
-   </tr>
-   <tr>
-    <td>
-     印度尼西亚语
-    </td>
-    <td>
-     id
-    </td>
-   </tr>
-   <tr>
-    <td>
-     意大利语
-    </td>
-    <td>
-     it
-    </td>
-   </tr>
-   <tr>
-    <td>
-     日语
-    </td>
-    <td>
-     ja
-    </td>
-   </tr>
-   <tr>
-    <td>
-     哈萨克语
-    </td>
-    <td>
-     kk
-    </td>
-   </tr>
-   <tr>
-    <td>
-     吉尔吉斯语
-    </td>
-    <td>
-     ky
-    </td>
-   </tr>
-   <tr>
-    <td>
-     韩语
-    </td>
-    <td>
-     ko
-    </td>
-   </tr>
-   <tr>
-    <td>
-     库尔德语
-    </td>
-    <td>
-     ku
-    </td>
-   </tr>
-   <tr>
-    <td>
-     拉脱维亚语
-    </td>
-    <td>
-     lv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     立陶宛语
-    </td>
-    <td>
-     lt
-    </td>
-   </tr>
-   <tr>
-    <td>
-     马拉维拉姆语
-    </td>
-    <td>
-     ml
-    </td>
-   </tr>
-   <tr>
-    <td>
-     蒙古语
-    </td>
-    <td>
-     mn
-    </td>
-   </tr>
-   <tr>
-    <td>
-     挪威博克马尔语
-    </td>
-    <td>
-     nb
-    </td>
-   </tr>
-   <tr>
-    <td>
-     挪威尼诺斯克语
-    </td>
-    <td>
-     nn
-    </td>
-   </tr>
-   <tr>
-    <td>
-     旁遮普语
-    </td>
-    <td>
-     pa
-    </td>
-   </tr>
-   <tr>
-    <td>
-     波斯语
-    </td>
-    <td>
-     fa
-    </td>
-   </tr>
-   <tr>
-    <td>
-     波兰语
-    </td>
-    <td>
-     pl
-    </td>
-   </tr>
-   <tr>
-    <td>
-     葡萄牙语
-    </td>
-    <td>
-     pt
-    </td>
-   </tr>
-   <tr>
-    <td>
-     普什图语
-    </td>
-    <td>
-     ps
-    </td>
-   </tr>
-   <tr>
-    <td>
-     罗马尼亚语
-    </td>
-    <td>
-     ro
-    </td>
-   </tr>
-   <tr>
-    <td>
-     俄语
-    </td>
-    <td>
-     ru
-    </td>
-   </tr>
-   <tr>
-    <td>
-     斯洛伐克语
-    </td>
-    <td>
-     sk
-    </td>
-   </tr>
-   <tr>
-    <td>
-     索马里语
-    </td>
-    <td>
-     so
-    </td>
-   </tr>
-   <tr>
-    <td>
-     西班牙语
-    </td>
-    <td>
-     es
-    </td>
-   </tr>
-   <tr>
-    <td>
-     瑞典语
-    </td>
-    <td>
-     sv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     泰米尔语
-    </td>
-    <td>
-     ta
-    </td>
-   </tr>
-   <tr>
-    <td>
-     泰卢固语
-    </td>
-    <td>
-     te
+     <code>zh</code>
     </td>
    </tr>
    <tr>
@@ -487,7 +142,359 @@ lastupdated: "2018-02-23"
      繁体中文
     </td>
     <td>
-     zh-TW
+     <code>zh-TW</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     楚瓦什语
+    </td>
+    <td>
+     <code>cv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     捷克语
+    </td>
+    <td>
+     <code>cs</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     丹麦语
+    </td>
+    <td>
+     <code>da</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     荷兰语
+    </td>
+    <td>
+     <code>nl</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     英语
+    </td>
+    <td>
+     <code>en</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     世界语
+    </td>
+    <td>
+     <code>eo</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     爱沙尼亚语
+    </td>
+    <td>
+     <code>et</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     芬兰语
+    </td>
+    <td>
+     <code>fi</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     法语
+    </td>
+    <td>
+     <code>fr</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     格鲁吉亚语
+    </td>
+    <td>
+     <code>ka</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     德语
+    </td>
+    <td>
+     <code>de</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     希腊语
+    </td>
+    <td>
+     <code>el</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     古吉拉特语
+    </td>
+    <td>
+     <code>gu</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     海地语
+    </td>
+    <td>
+     <code>ht</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     希伯来语
+    </td>
+    <td>
+     <code>he</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     印地语
+    </td>
+    <td>
+     <code>hi</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     匈牙利语
+    </td>
+    <td>
+     <code>hu</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     冰岛语
+    </td>
+    <td>
+     <code>is</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     印度尼西亚语
+    </td>
+    <td>
+     <code>id</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     意大利语
+    </td>
+    <td>
+     <code>it</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     日语
+    </td>
+    <td>
+     <code>ja</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     哈萨克语
+    </td>
+    <td>
+     <code>kk</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     吉尔吉斯语
+    </td>
+    <td>
+     <code>ky</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     韩语
+    </td>
+    <td>
+     <code>ko</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     库尔德语
+    </td>
+    <td>
+     <code>ku</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     拉脱维亚语
+    </td>
+    <td>
+     <code>lv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     立陶宛语
+    </td>
+    <td>
+     <code>lt</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     马拉维拉姆语
+    </td>
+    <td>
+     <code>ml</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     蒙古语
+    </td>
+    <td>
+     <code>mn</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     挪威博克马尔语
+    </td>
+    <td>
+     <code>nb</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     挪威尼诺斯克语
+    </td>
+    <td>
+     <code>nn</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     旁遮普语
+    </td>
+    <td>
+     <code>pa</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     波斯语
+    </td>
+    <td>
+     <code>fa</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     波兰语
+    </td>
+    <td>
+     <code>pl</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     葡萄牙语
+    </td>
+    <td>
+     <code>pt</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     普什图语
+    </td>
+    <td>
+     <code>ps</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     罗马尼亚语
+    </td>
+    <td>
+     <code>ro</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     俄语
+    </td>
+    <td>
+     <code>ru</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     斯洛伐克语
+    </td>
+    <td>
+     <code>sk</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     索马里语
+    </td>
+    <td>
+     <code>so</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     西班牙语
+    </td>
+    <td>
+     <code>es</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     瑞典语
+    </td>
+    <td>
+     <code>sv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     泰米尔语
+    </td>
+    <td>
+     <code>ta</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     泰卢固语
+    </td>
+    <td>
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -495,7 +502,7 @@ lastupdated: "2018-02-23"
      土耳其语
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -503,7 +510,7 @@ lastupdated: "2018-02-23"
      乌克兰语
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -511,7 +518,7 @@ lastupdated: "2018-02-23"
      乌尔都语
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -519,7 +526,7 @@ lastupdated: "2018-02-23"
      越南语
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

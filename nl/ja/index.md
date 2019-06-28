@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -18,26 +18,23 @@ lastupdated: "2018-02-23"
 {:swift: .ph data-hd-programlang='swift'}
 
 # 製品情報
+{: #about}
 
-{{site.data.keyword.languagetranslatorfull}} は、ドメイン固有のモデルを使用して、ある言語のテキストを別の言語に翻訳する翻訳 API です。
+{{site.data.keyword.languagetranslatorfull}} は、テキストの言語を識別し、それをプログラマチックに別の言語に翻訳することができます。
 {: shortdesc}
 
-このサービスには、以下のドメインの翻訳モデルが用意されています。 
-- **ニュース:** ニュースの記事とトランスクリプトをターゲットとしています。
-- **会話:** 会話と口語表現をターゲットとしています。
-- **特許:** 技術用語と法律用語をターゲットとしています。
+用意されている翻訳モデルを使用するほかに、基本翻訳モデルに基づき、実際のユース・ケースに合わせて独自の[カスタム・モデル](/docs/services/language-translator?topic=language-translator-customizing)を作成することもできます。
 
-用意されている翻訳モデルを使用するほかに、ニュース・モデルを基にして、ユース・ケースに合わせた独自の[カスタム・モデル](customizing.html)を作成することもできます。
-
-現在、優れた翻訳品質の新しいニューラル機械翻訳 (Neural Machine Translation (NMT)) モデルのプレビュー版が提供されています。詳しくは、[リリース・ノート](release-notes.html#12-january-2018)を参照してください。
+[文書の翻訳 (ベータ)](/docs/services/language-translator?topic=language-translator-translating-documents) が、新規 API エンドポイントを通じて利用可能になりました。Microsoft Office 文書、PDF、または他の[サポートされるファイル形式](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-formats)の文書を送信すると、{{site.data.keyword.languagetranslatorshort}} は、元の形式を維持した翻訳済みコピーを提示します。
 {: tip}
 
 ## クイック・リンク
+{: #quick-links}
 
-- [始める](getting-started.html)。
+- [始める](/docs/services/language-translator?topic=language-translator-getting-started)。
 - ライブ・[デモ ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://language-translator-demo.ng.bluemix.net/){: new_window} を視聴する。
-- [API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/index.html){: new_window} を参照する。
+- [API リファレンス ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://{DomainName/apidocs/language-translator){: new_window} を参照する。
 - 言語サポート情報を参照する。
-  - [翻訳モデル](translation-models.html)
-  - [識別可能な言語](identifiable-languages.html)
+  - [翻訳モデル](/docs/services/language-translator?topic=language-translator-translation-models)
+  - [識別可能な言語](/docs/services/language-translator?topic=language-translator-identifiable-languages)
 

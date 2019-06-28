@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2018-02-23"
 # Idiomas identificáveis
 
 Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/identify`. 
+
+Também é possível usar o método de API **Listar idiomas identificáveis** para obter os idiomas identificáveis programaticamente:
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -31,7 +38,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Africâner
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -39,7 +46,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Albanês
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -47,7 +54,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Árabe
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -55,7 +62,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Armênio
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -63,7 +70,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Azerbaijano
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -71,7 +78,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Basquir
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -79,7 +86,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Basco
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -87,7 +94,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Bielo-russo
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -95,7 +102,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Bengalês
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -103,7 +110,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Bósnio
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -111,7 +118,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Búlgaro
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -119,15 +126,23 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Khmer Central
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
     <td>
-     Chinês
+     Chinês (Simplificado)
     </td>
     <td>
-     zh
+     <code>zh</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Chinês (Tradicional)
+    </td>
+    <td>
+     <code>zh-TW</code>
     </td>
    </tr>
    <tr>
@@ -135,7 +150,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Chuvache
     </td>
     <td>
-     cv
+     <code>cv</code>
     </td>
    </tr>
    <tr>
@@ -143,7 +158,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Tcheco
     </td>
     <td>
-     cs
+     <code>cs</code>
     </td>
    </tr>
    <tr>
@@ -151,7 +166,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Dinamarquês
     </td>
     <td>
-     da
+     <code>da</code>
     </td>
    </tr>
    <tr>
@@ -159,7 +174,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Holandês
     </td>
     <td>
-     nl
+     <code>nl</code>
     </td>
    </tr>
    <tr>
@@ -167,7 +182,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Inglês
     </td>
     <td>
-     en
+     <code>en</code>
     </td>
    </tr>
    <tr>
@@ -175,7 +190,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Esperanto
     </td>
     <td>
-     eo
+     <code>eo</code>
     </td>
    </tr>
    <tr>
@@ -183,7 +198,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Estoniano
     </td>
     <td>
-     et
+     <code>et</code>
     </td>
    </tr>
    <tr>
@@ -191,7 +206,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Finlandês
     </td>
     <td>
-     fi
+     <code>fi</code>
     </td>
    </tr>
    <tr>
@@ -199,7 +214,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Francês
     </td>
     <td>
-     fr
+     <code>fr</code>
     </td>
    </tr>
    <tr>
@@ -207,7 +222,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Georgiano
     </td>
     <td>
-     ka
+     <code>ka</code>
     </td>
    </tr>
    <tr>
@@ -215,7 +230,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Alemão
     </td>
     <td>
-     de
+     <code>de</code>
     </td>
    </tr>
    <tr>
@@ -223,7 +238,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Grego
     </td>
     <td>
-     el
+     <code>el</code>
     </td>
    </tr>
    <tr>
@@ -231,7 +246,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Guzerate
     </td>
     <td>
-     gu
+     <code>gu</code>
     </td>
    </tr>
    <tr>
@@ -239,7 +254,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Haitiano
     </td>
     <td>
-     ht
+     <code>ht</code>
     </td>
    </tr>
    <tr>
@@ -247,7 +262,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Hebraico
     </td>
     <td>
-     he
+     <code>he</code>
     </td>
    </tr>
    <tr>
@@ -255,7 +270,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Hindi
     </td>
     <td>
-     hi
+     <code>hi</code>
     </td>
    </tr>
    <tr>
@@ -263,7 +278,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Húngaro
     </td>
     <td>
-     hu
+     <code>hu</code>
     </td>
    </tr>
    <tr>
@@ -271,7 +286,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Islandês
     </td>
     <td>
-     É
+     <code>is</code>
     </td>
    </tr>
    <tr>
@@ -279,7 +294,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Indonésio
     </td>
     <td>
-     id
+     <code>id</code>
     </td>
    </tr>
    <tr>
@@ -287,7 +302,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Italiano
     </td>
     <td>
-     it
+     <code>it</code>
     </td>
    </tr>
    <tr>
@@ -295,7 +310,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Japonês
     </td>
     <td>
-     ja
+     <code>ja</code>
     </td>
    </tr>
    <tr>
@@ -303,7 +318,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Cazaque
     </td>
     <td>
-     kk
+     <code>kk</code>
     </td>
    </tr>
    <tr>
@@ -311,7 +326,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Quirguiz
     </td>
     <td>
-     ky
+     <code>ky</code>
     </td>
    </tr>
    <tr>
@@ -319,7 +334,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Coreano
     </td>
     <td>
-     ko
+     <code>ko</code>
     </td>
    </tr>
    <tr>
@@ -327,7 +342,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Curdo
     </td>
     <td>
-     ku
+     <code>ku</code>
     </td>
    </tr>
    <tr>
@@ -335,7 +350,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Letão
     </td>
     <td>
-     lv
+     <code>lv</code>
     </td>
    </tr>
    <tr>
@@ -343,7 +358,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Lituano
     </td>
     <td>
-     lt
+     <code>lt</code>
     </td>
    </tr>
    <tr>
@@ -351,7 +366,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Malaiala
     </td>
     <td>
-     ml
+     <code>ml</code>
     </td>
    </tr>
    <tr>
@@ -359,7 +374,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Mongol
     </td>
     <td>
-     mn
+     <code>mn</code>
     </td>
    </tr>
    <tr>
@@ -367,7 +382,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Bokmal Norueguês
     </td>
     <td>
-     nb
+     <code>nb</code>
     </td>
    </tr>
    <tr>
@@ -375,7 +390,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Novo Norueguês
     </td>
     <td>
-     nn
+     <code>nn</code>
     </td>
    </tr>
    <tr>
@@ -383,7 +398,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Panjabi
     </td>
     <td>
-     pa
+     <code>pa</code>
     </td>
    </tr>
    <tr>
@@ -391,7 +406,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Persa
     </td>
     <td>
-     fa
+     <code>fa</code>
     </td>
    </tr>
    <tr>
@@ -399,7 +414,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Polonês
     </td>
     <td>
-     pl
+     <code>pl</code>
     </td>
    </tr>
    <tr>
@@ -407,7 +422,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Português
     </td>
     <td>
-     pt
+     <code>pt</code>
     </td>
    </tr>
    <tr>
@@ -415,7 +430,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Pushto
     </td>
     <td>
-     ps
+     <code>ps</code>
     </td>
    </tr>
    <tr>
@@ -423,7 +438,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Romeno
     </td>
     <td>
-     ro
+     <code>ro</code>
     </td>
    </tr>
    <tr>
@@ -431,7 +446,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Russo
     </td>
     <td>
-     ru
+     <code>ru</code>
     </td>
    </tr>
    <tr>
@@ -439,7 +454,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Eslovaco
     </td>
     <td>
-     sk
+     <code>sk</code>
     </td>
    </tr>
    <tr>
@@ -447,7 +462,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Somali
     </td>
     <td>
-     so
+     <code>so</code>
     </td>
    </tr>
    <tr>
@@ -455,7 +470,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Espanhol
     </td>
     <td>
-     es
+     <code>es</code>
     </td>
    </tr>
    <tr>
@@ -463,7 +478,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Sueco
     </td>
     <td>
-     sv
+     <code>sv</code>
     </td>
    </tr>
    <tr>
@@ -471,7 +486,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Tâmil
     </td>
     <td>
-     ta
+     <code>ta</code>
     </td>
    </tr>
    <tr>
@@ -479,15 +494,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Telugo
     </td>
     <td>
-     te
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Chinês Tradicional
-    </td>
-    <td>
-     zh-TW
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -495,7 +502,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Turco
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -503,7 +510,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Ucraniano
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -511,7 +518,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Urdu
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -519,7 +526,7 @@ Os idiomas a seguir podem ser identificados pelo serviço com o terminal `/ident
      Vietnamita
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="language-translator" audience="service" href="/docs/services/language-translator/getting-started.html"}
+{: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html" path="services/language-translator"}
 Language Translator
 
     {: .navgroup id="learn"}
@@ -18,30 +18,22 @@ Language Translator
 
     {: .navgroup id="howto"}
     customizing.md
+    translating-documents.md
+    ha-dr.md
+    /watson/watson-migrate
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API 參考資料](https://www.ibm.com/watson/developercloud/language-translator/api/v2/)
+    [API 參考資料](https://cloud.ibm.com/apidocs/language-translator/)
 
     {: .topicgroup}
     語言支援
-        [翻譯模型](translation-models.html)
-        [可識別語言](identifiable-languages.html)
+        translation-models.md
+        identifiable-languages.md
 
-    [範例應用程式：Watson Language Translator](https://github.com/watson-developer-cloud/language-translator-nodejs)
-
-    {: .topicgroup}
-    Watson SDK
-        [Android SDK](https://github.com/watson-developer-cloud/android-sdk)
-        [Java SDK](https://github.com/watson-developer-cloud/java-sdk)
-        [Node.js SDK](https://github.com/watson-developer-cloud/node-sdk)
-        [Python SDK](https://github.com/watson-developer-cloud/python-sdk)
-        [.NET SDK](https://github.com/watson-developer-cloud/dotnet-standard-sdk)
-        [OpenWhisk SDK](https://github.com/watson-developer-cloud/openwhisk-sdk)
-        [Salesforce SDK](https://github.com/watson-developer-cloud/salesforce-sdk)
-        [Swift SDK](https://github.com/watson-developer-cloud/swift-sdk)
-        [Unity SDK](https://github.com/watson-developer-cloud/unity-sdk)
-
+    sample-applications.md
+    information-security.md
+    /watson/watson-using-sdks
     [Watson GitHub 儲存庫](https://github.com/watson-developer-cloud/)
     {: .navgroup-end}
 
@@ -49,8 +41,8 @@ Language Translator
     release-notes.md
 
     {: .topicgroup}
-    開發人員社群
+開發人員社群
         [StackOverflow](http://stackoverflow.com/questions/tagged/language-translation+ibm-watson-cognitive)
-        [developerWorks Answers](https://developer.ibm.com/answers/topics/language-translator/)
+        [IBM Developer Answers](https://developer.ibm.com/answers/topics/language-translator/)
         [WDC Slack 頻道](http://wdc-slack-inviter.mybluemix.net/)
     {: .navgroup-end}

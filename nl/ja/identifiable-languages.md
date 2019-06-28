@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -16,6 +16,13 @@ lastupdated: "2018-02-23"
 # 識別可能な言語
 
 サービスでは、`/identify` エンドポイントを使用して以下の言語を識別できます。 
+
+また、**「識別可能な言語のリスト (List identifiable languages)」** API メソッドを使用して、識別可能な言語をプログラマチックに取得することができます。
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```
+{: pre}
 
 <table>
  <thead>
@@ -31,7 +38,7 @@ lastupdated: "2018-02-23"
      アフリカーンス語
     </td>
     <td>
-     af
+     <code>af</code>
     </td>
    </tr>
    <tr>
@@ -39,7 +46,7 @@ lastupdated: "2018-02-23"
      アルバニア語
     </td>
     <td>
-     sq
+     <code>sq</code>
     </td>
    </tr>
    <tr>
@@ -47,7 +54,7 @@ lastupdated: "2018-02-23"
      アラビア語
     </td>
     <td>
-     ar
+     <code>ar</code>
     </td>
    </tr>
    <tr>
@@ -55,7 +62,7 @@ lastupdated: "2018-02-23"
      アルメニア語
     </td>
     <td>
-     hy
+     <code>hy</code>
     </td>
    </tr>
    <tr>
@@ -63,7 +70,7 @@ lastupdated: "2018-02-23"
      アゼルバイジャン語
     </td>
     <td>
-     az
+     <code>az</code>
     </td>
    </tr>
    <tr>
@@ -71,7 +78,7 @@ lastupdated: "2018-02-23"
      バシキール語
     </td>
     <td>
-     ba
+     <code>ba</code>
     </td>
    </tr>
    <tr>
@@ -79,7 +86,7 @@ lastupdated: "2018-02-23"
      バスク語
     </td>
     <td>
-     eu
+     <code>eu</code>
     </td>
    </tr>
    <tr>
@@ -87,7 +94,7 @@ lastupdated: "2018-02-23"
      ベラルーシ語
     </td>
     <td>
-     be
+     <code>be</code>
     </td>
    </tr>
    <tr>
@@ -95,7 +102,7 @@ lastupdated: "2018-02-23"
      ベンガル語
     </td>
     <td>
-     bn
+     <code>bn</code>
     </td>
    </tr>
    <tr>
@@ -103,7 +110,7 @@ lastupdated: "2018-02-23"
      ボスニア語
     </td>
     <td>
-     bs
+     <code>bs</code>
     </td>
    </tr>
    <tr>
@@ -111,7 +118,7 @@ lastupdated: "2018-02-23"
      ブルガリア語
     </td>
     <td>
-     bg
+     <code>bg</code>
     </td>
    </tr>
    <tr>
@@ -119,367 +126,15 @@ lastupdated: "2018-02-23"
      中央クメール語
     </td>
     <td>
-     km
+     <code>km</code>
     </td>
    </tr>
    <tr>
     <td>
-     中国語
+     中国語 (簡体字)
     </td>
     <td>
-     zh
-    </td>
-   </tr>
-   <tr>
-    <td>
-     チュバシュ語
-    </td>
-    <td>
-     cv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     チェコ語
-    </td>
-    <td>
-     cs
-    </td>
-   </tr>
-   <tr>
-    <td>
-     デンマーク語
-    </td>
-    <td>
-     da
-    </td>
-   </tr>
-   <tr>
-    <td>
-     オランダ語
-    </td>
-    <td>
-     nl
-    </td>
-   </tr>
-   <tr>
-    <td>
-     英語
-    </td>
-    <td>
-     en
-    </td>
-   </tr>
-   <tr>
-    <td>
-     エスペラント語
-    </td>
-    <td>
-     eo
-    </td>
-   </tr>
-   <tr>
-    <td>
-     エストニア語
-    </td>
-    <td>
-     et
-    </td>
-   </tr>
-   <tr>
-    <td>
-     フィンランド語
-    </td>
-    <td>
-     fi
-    </td>
-   </tr>
-   <tr>
-    <td>
-     フランス語
-    </td>
-    <td>
-     fr
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ジョージア語
-    </td>
-    <td>
-     ka
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ドイツ語
-    </td>
-    <td>
-     de
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ギリシャ語
-    </td>
-    <td>
-     el
-    </td>
-   </tr>
-   <tr>
-    <td>
-     グジャラート語
-    </td>
-    <td>
-     gu
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ハイチ語
-    </td>
-    <td>
-     ht
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ヘブライ語
-    </td>
-    <td>
-     he
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ヒンディ語
-    </td>
-    <td>
-     hi
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ハンガリー語
-    </td>
-    <td>
-     hu
-    </td>
-   </tr>
-   <tr>
-    <td>
-     アイスランド語
-    </td>
-    <td>
-     is
-    </td>
-   </tr>
-   <tr>
-    <td>
-     インドネシア語
-    </td>
-    <td>
-     id
-    </td>
-   </tr>
-   <tr>
-    <td>
-     イタリア語
-    </td>
-    <td>
-     it
-    </td>
-   </tr>
-   <tr>
-    <td>
-     日本語
-    </td>
-    <td>
-     ja
-    </td>
-   </tr>
-   <tr>
-    <td>
-     カザフ語
-    </td>
-    <td>
-     kk
-    </td>
-   </tr>
-   <tr>
-    <td>
-     キルギス語
-    </td>
-    <td>
-     ky
-    </td>
-   </tr>
-   <tr>
-    <td>
-     韓国語
-    </td>
-    <td>
-     ko
-    </td>
-   </tr>
-   <tr>
-    <td>
-     クルド語
-    </td>
-    <td>
-     ku
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ラトビア語
-    </td>
-    <td>
-     lv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     リトアニア語
-    </td>
-    <td>
-     lt
-    </td>
-   </tr>
-   <tr>
-    <td>
-     マラヤーラム語
-    </td>
-    <td>
-     ml
-    </td>
-   </tr>
-   <tr>
-    <td>
-     モンゴル語
-    </td>
-    <td>
-     mn
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ノルウェー語ブークモール
-    </td>
-    <td>
-     nb
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ノルウェー語ニーノシュク
-    </td>
-    <td>
-     nn
-    </td>
-   </tr>
-   <tr>
-    <td>
-     パンジャブ語
-    </td>
-    <td>
-     pa
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ペルシア語
-    </td>
-    <td>
-     fa
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ポーランド語
-    </td>
-    <td>
-     pl
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ポルトガル語
-    </td>
-    <td>
-     pt
-    </td>
-   </tr>
-   <tr>
-    <td>
-     パシュトー語
-    </td>
-    <td>
-     ps
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ルーマニア語
-    </td>
-    <td>
-     ro
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ロシア語
-    </td>
-    <td>
-     ru
-    </td>
-   </tr>
-   <tr>
-    <td>
-     スロバキア語
-    </td>
-    <td>
-     sk
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ソマリ語
-    </td>
-    <td>
-     so
-    </td>
-   </tr>
-   <tr>
-    <td>
-     スペイン語
-    </td>
-    <td>
-     es
-    </td>
-   </tr>
-   <tr>
-    <td>
-     スウェーデン語
-    </td>
-    <td>
-     sv
-    </td>
-   </tr>
-   <tr>
-    <td>
-     タミール語
-    </td>
-    <td>
-     ta
-    </td>
-   </tr>
-   <tr>
-    <td>
-     テルグ語
-    </td>
-    <td>
-     te
+     <code>zh</code>
     </td>
    </tr>
    <tr>
@@ -487,7 +142,359 @@ lastupdated: "2018-02-23"
      中国語 (繁体字)
     </td>
     <td>
-     zh-TW
+     <code>zh-TW</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     チュバシュ語
+    </td>
+    <td>
+     <code>cv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     チェコ語
+    </td>
+    <td>
+     <code>cs</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     デンマーク語
+    </td>
+    <td>
+     <code>da</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     オランダ語
+    </td>
+    <td>
+     <code>nl</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     英語
+    </td>
+    <td>
+     <code>en</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     エスペラント語
+    </td>
+    <td>
+     <code>eo</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     エストニア語
+    </td>
+    <td>
+     <code>et</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     フィンランド語
+    </td>
+    <td>
+     <code>fi</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     フランス語
+    </td>
+    <td>
+     <code>fr</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ジョージア語
+    </td>
+    <td>
+     <code>ka</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ドイツ語
+    </td>
+    <td>
+     <code>de</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ギリシャ語
+    </td>
+    <td>
+     <code>el</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     グジャラート語
+    </td>
+    <td>
+     <code>gu</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ハイチ語
+    </td>
+    <td>
+     <code>ht</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ヘブライ語
+    </td>
+    <td>
+     <code>he</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ヒンディ語
+    </td>
+    <td>
+     <code>hi</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ハンガリー語
+    </td>
+    <td>
+     <code>hu</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     アイスランド語
+    </td>
+    <td>
+     <code>is</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     インドネシア語
+    </td>
+    <td>
+     <code>id</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     イタリア語
+    </td>
+    <td>
+     <code>it</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     日本語
+    </td>
+    <td>
+     <code>ja</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     カザフ語
+    </td>
+    <td>
+     <code>kk</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     キルギス語
+    </td>
+    <td>
+     <code>ky</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     韓国語
+    </td>
+    <td>
+     <code>ko</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     クルド語
+    </td>
+    <td>
+     <code>ku</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ラトビア語
+    </td>
+    <td>
+     <code>lv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     リトアニア語
+    </td>
+    <td>
+     <code>lt</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     マラヤーラム語
+    </td>
+    <td>
+     <code>ml</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     モンゴル語
+    </td>
+    <td>
+     <code>mn</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ノルウェー語ブークモール
+    </td>
+    <td>
+     <code>nb</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ノルウェー語ニーノシュク
+    </td>
+    <td>
+     <code>nn</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     パンジャブ語
+    </td>
+    <td>
+     <code>pa</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ペルシア語
+    </td>
+    <td>
+     <code>fa</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ポーランド語
+    </td>
+    <td>
+     <code>pl</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ポルトガル語
+    </td>
+    <td>
+     <code>pt</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     パシュトー語
+    </td>
+    <td>
+     <code>ps</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ルーマニア語
+    </td>
+    <td>
+     <code>ro</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ロシア語
+    </td>
+    <td>
+     <code>ru</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     スロバキア語
+    </td>
+    <td>
+     <code>sk</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     ソマリ語
+    </td>
+    <td>
+     <code>so</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     スペイン語
+    </td>
+    <td>
+     <code>es</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     スウェーデン語
+    </td>
+    <td>
+     <code>sv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     タミール語
+    </td>
+    <td>
+     <code>ta</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     テルグ語
+    </td>
+    <td>
+     <code>te</code>
     </td>
    </tr>
    <tr>
@@ -495,7 +502,7 @@ lastupdated: "2018-02-23"
      トルコ語
     </td>
     <td>
-     tr
+     <code>tr</code>
     </td>
    </tr>
    <tr>
@@ -503,7 +510,7 @@ lastupdated: "2018-02-23"
      ウクライナ語
     </td>
     <td>
-     uk
+     <code>uk</code>
     </td>
    </tr>
    <tr>
@@ -511,7 +518,7 @@ lastupdated: "2018-02-23"
      ウルドゥー語
     </td>
     <td>
-     ur
+     <code>ur</code>
     </td>
    </tr>
    <tr>
@@ -519,7 +526,7 @@ lastupdated: "2018-02-23"
      ベトナム語
     </td>
     <td>
-     vi
+     <code>vi</code>
     </td>
    </tr>
   </tbody>

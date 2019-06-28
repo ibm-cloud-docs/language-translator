@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-06-14"
 
 ---
 
@@ -17,24 +17,46 @@ lastupdated: "2018-02-23"
 {: #translation-models}
 
 {{site.data.keyword.languagetranslatorshort}} puede traducir los siguientes idiomas.
-Pulse un idioma en la lista siguiente para ver una lista de modelos de traducción compatibles. 
+Pulse un idioma en la lista siguiente para ver una lista de modelos de traducción compatibles.
 
-- [Árabe](#arabic)
-- [Chino](#chinese)
-- [Árabe de Egipto](#egyptian-arabic)
-- [Inglés](#english)
-- [Francés](#french)
-- [Alemán](#german)
-- [Italiano](#italian)
-- [Japonés](#japanese)
-- [Coreano](#korean)
-- [Portugués](#portuguese)
-- [Español](#spanish)
+También puede utilizar el método de la API **Listar modelos** para ver los modelos de traducción que están disponibles, incluidos los modelos personalizados. Puede filtrar los resultados por idioma con los parámetros `source` y `target`. En el ejemplo siguiente se muestran los modelos que pueden traducir de inglés a español.
+
+```bash
+curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/models?source=en&target=es&version=2018-05-01
+```
+{: pre}
+
+  - [Árabe](#arabic)
+  - [Catalán](#catalan)
+  - [Chino (simplificado)](#chinese-simplified)
+  - [Chino (tradicional)](#chinese-traditional)
+  - [Checo](#czech)
+  - [Danés](#danish)
+  - [Holandés](#dutch)
+  - [Inglés](#english)
+  - [Finés](#finnish)
+  - [Francés](#french)
+  - [Alemán](#german)
+  - [Griego](#greek)
+  - [Hebreo](#hebrew)
+  - [Hindi](#hindi)
+  - [Húngaro](#hungarian)
+  - [Italiano](#italian)
+  - [Japonés](#japanese)
+  - [Coreano](#korean)
+  - [Noruego bokmål](#norwegian-bokmal)
+  - [Polaco](#polish)
+  - [Portugués](#portuguese)
+  - [Ruso](#russian)
+  - [Español](#spanish)
+  - [Sueco](#swedish)
+  - [Turco](#turkish)
 
 ## Árabe
 {: #arabic}
 
 Los siguientes modelos pueden traducir texto en árabe.
+
 <table>
  <thead>
   <th>
@@ -49,43 +71,35 @@ Los siguientes modelos pueden traducir texto en árabe.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     ar-en
+     <code>ar-en</code>
     </td>
     <td>
-     Árabe (ar)
+     Árabe (<code>ar</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     ar-en-conversational
+     <code>general</code>
     </td>
     <td>
-     Árabe (ar)
-    </td>
-    <td>
-     Inglés (en)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
-## Chino
-{: #chinese}
+## Catalán
+{: #catalan}
 
-Los siguientes modelos pueden traducir texto en chino.
+Los siguientes modelos pueden traducir texto en catalán.
 
 <table>
  <thead>
@@ -101,29 +115,35 @@ Los siguientes modelos pueden traducir texto en chino.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     zh-en-patent
+     <code>ca-es</code>
     </td>
     <td>
-     Chino (zh)
+     Catalán (<code>ca</code>)
     </td>
     <td>
-     Inglés (en)
+     Español (<code>es</code>)
     </td>
     <td>
-     patentes
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
-## Árabe de Egipto
-{: #egyptian-arabic}
+## Chino (simplificado)
+{: #chinese-simplified}
 
-Los siguientes modelos pueden traducir texto en árabe de Egipto.
+Los siguientes modelos pueden traducir texto en chino (simplificado).
 
 <table>
  <thead>
@@ -139,19 +159,201 @@ Los siguientes modelos pueden traducir texto en árabe de Egipto.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     arz-en
+     <code>zh-en</code>
     </td>
     <td>
-     Árabe de Egipto (arz)
+     Chino simplificado (<code>zh</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Chino (tradicional)
+{: #chinese-traditional}
+
+Los siguientes modelos pueden traducir texto en chino (tradicional).
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>zh-TW</code>-en
+    </td>
+    <td>
+     Chino tradicional (<code>zh-TW</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Checo
+{: #czech}
+
+Los siguientes modelos pueden traducir texto en checo.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>cs-en</code>
+    </td>
+    <td>
+     Checo (<code>cs</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Danés
+{: #danish}
+
+Los siguientes modelos pueden traducir texto en danés.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>da-en</code>
+    </td>
+    <td>
+     Danés (<code>da</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Holandés
+{: #dutch}
+
+Los siguientes modelos pueden traducir texto en holandés.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>nl-en</code>
+    </td>
+    <td>
+     Holandés (<code>nl</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -177,193 +379,431 @@ Los siguientes modelos pueden traducir texto en inglés.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     en-ar
+     <code>en-ar</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Árabe (ar)
+     Árabe (<code>ar</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-ar-conversational
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Árabe (ar)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-arz
+     <code>en-cs</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Árabe de Egipto (arz)
+     Checo (<code>cs</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-de
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Alemán (de)
-    </td>
-    <td>
-     noticias
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-es
+     <code>en-da</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Español (es)
+     Danés (<code>da</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-es-conversational
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Español (es)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-fr
+     <code>en-de</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Francés (fr)
+     Alemán (<code>de</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-fr-conversational
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Francés (fr)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-it
+     <code>en-el</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Italiano (it)
+     Griego (<code>el</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-ja
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Japonés (ja)
-    </td>
-    <td>
-     noticias
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-ko
+     <code>en-es</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Coreano (ko)
+     Español (<code>es</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     en-pt
+     <code>general</code>
     </td>
     <td>
-     Inglés (en)
-    </td>
-    <td>
-     Portugués (pt)
-    </td>
-    <td>
-     noticias
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     en-pt-conversational
+     <code>en-fi</code>
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     Portugués (pt)
+     Finés (<code>fi</code>)
     </td>
     <td>
-     conversacional
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-fr</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Francés (<code>fr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-he</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Hebreo (<code>he</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-hi</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Hindi (<code>hi</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-it</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Italiano (<code>it</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ja</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Japonés (<code>ja</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ko</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Coreano (<code>ko</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-nb</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Noruego bokmål (<code>nb</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-nl</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Holandés (<code>nl</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-pl</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Polaco (<code>pl</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-pt</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Portugués (<code>pt</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ru</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Ruso (<code>ru</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sv</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Sueco (<code>sv</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-tr</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Turco (<code>tr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-zh</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Chino simplificado (<code>zh</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-zh-TW</code>
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     Chino tradicional (<code>zh-TW</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
 
+## Finés
+{: #finnish}
+
+Los siguientes modelos pueden traducir texto en finés.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>fi-en</code>
+    </td>
+    <td>
+     Finés (<code>fi</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
 
 ## Francés
 {: #french}
@@ -384,47 +824,59 @@ Los siguientes modelos pueden traducir texto en francés.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     fr-en
+     <code>fr-de</code>
     </td>
     <td>
-     Francés (fr)
+     Francés (<code>fr</code>)
     </td>
     <td>
-     Inglés (en)
+     Alemán (<code>de</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     fr-en-conversational
+     <code>general</code>
     </td>
     <td>
-     Francés (fr)
-    </td>
-    <td>
-     Inglés (en)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     fr-es
+     <code>fr-en</code>
     </td>
     <td>
-     Francés (fr)
+     Francés (<code>fr</code>)
     </td>
     <td>
-     Español (es)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>fr-es</code>
+    </td>
+    <td>
+     Francés (<code>fr</code>)
+    </td>
+    <td>
+     Español (<code>es</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -450,19 +902,236 @@ Los siguientes modelos pueden traducir texto en alemán.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     de-en
+     <code>de-en</code>
     </td>
     <td>
-     Alemán (de)
+     Alemán (<code>de</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>de-fr</code>
+    </td>
+    <td>
+     Alemán (<code>de</code>)
+    </td>
+    <td>
+     Francés (<code>fr</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>de-it</code>
+    </td>
+    <td>
+     Alemán (<code>de</code>)
+    </td>
+    <td>
+     Italiano (<code>it</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Griego
+{: #greek}
+
+Los siguientes modelos pueden traducir texto en griego.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>el-en</code>
+    </td>
+    <td>
+     Griego (<code>el</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Hebreo
+{: #hebrew}
+
+Los siguientes modelos pueden traducir texto en hebreo.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>he-en</code>
+    </td>
+    <td>
+     Hebreo (<code>he</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+
+## Hindi
+{: #hindi}
+
+Los siguientes modelos pueden traducir texto en hindi.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>hi-en</code>
+    </td>
+    <td>
+     Hindi (<code>hi</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Húngaro
+{: #hungarian}
+
+Los siguientes modelos pueden traducir texto en húngaro.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>hu-en</code>
+    </td>
+    <td>
+     Húngaro (<code>hu</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -488,19 +1157,42 @@ Los siguientes modelos pueden traducir texto en italiano.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     it-en
+     <code>it-de</code>
     </td>
     <td>
-     Italiano (it)
+     Italiano (<code>it</code>)
     </td>
     <td>
-     Inglés (en)
+     Alemán (<code>de</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>it-en</code>
+    </td>
+    <td>
+     Italiano (<code>it</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -526,25 +1218,30 @@ Los siguientes modelos pueden traducir texto en japonés.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     ja-en
+     <code>ja-en</code>
     </td>
     <td>
-     Japonés (ja)
+     Japonés (<code>ja</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
  </thead>
 </table>
-
 
 ## Coreano
 {: #korean}
@@ -565,33 +1262,113 @@ Los siguientes modelos pueden traducir texto en coreano.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     ko-en
+     <code>ko-en</code>
     </td>
     <td>
-     Coreano (ko)
+     Coreano (<code>ko</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Noruego bokmål
+{: #norwegian-bokmal}
+
+Los siguientes modelos pueden traducir texto en noruego bokmål.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
    <tr>
     <td>
-     ko-en-patent
+     <code>nb-en</code>
     </td>
     <td>
-     Coreano (ko)
+     Noruego bokmål (<code>nb</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     patentes
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Polaco
+{: #polish}
+
+Los siguientes modelos pueden traducir texto en polaco.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>pl-en</code>
+    </td>
+    <td>
+     Polaco (<code>pl</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -617,47 +1394,69 @@ Los siguientes modelos pueden traducir texto en portugués.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     pt-en
+     <code>pt-en</code>
     </td>
     <td>
-     Portugués (pt)
+     Portugués (<code>pt</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     pt-en-conversational
+     <code>general</code>
     </td>
     <td>
-     Portugués (pt)
-    </td>
-    <td>
-     Inglés (en)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Ruso
+{: #russian}
+
+Los siguientes modelos pueden traducir texto en ruso.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
    <tr>
     <td>
-     pt-en-patent
+     <code>ru-en</code>
     </td>
     <td>
-     Portugués (pt)
+     Ruso (<code>ru</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     patentes
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
@@ -683,61 +1482,147 @@ Los siguientes modelos pueden traducir texto en español.
   <th>
    Dominio
   </th>
+  <th>
+   Personalizable
+  </th>
   <tbody>
    <tr>
     <td>
-     es-en
+     <code>es-ca</code>
     </td>
     <td>
-     Español (es)
+     Español (<code>es</code>)
     </td>
     <td>
-     Inglés (en)
+     Catalán (<code>ca</code>)
     </td>
     <td>
-     noticias
-    </td>
-   </tr>
-   <tr>
-    <td>
-     es-en-conversational
+     <code>general</code>
     </td>
     <td>
-     Español (es)
-    </td>
-    <td>
-     Inglés (en)
-    </td>
-    <td>
-     conversacional
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     es-en-patent
+     <code>es-en</code>
     </td>
     <td>
-     Español (es)
+     Español (<code>es</code>)
     </td>
     <td>
-     Inglés (en)
+     Inglés (<code>en</code>)
     </td>
     <td>
-     patentes
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
    <tr>
     <td>
-     es-fr
+     <code>es-fr</code>
     </td>
     <td>
-     Español (es)
+     Español (<code>es</code>)
     </td>
     <td>
-     Francés (fr)
+     Francés (<code>fr</code>)
     </td>
     <td>
-     noticias
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Sueco
+{: #swedish}
+
+Los siguientes modelos pueden traducir texto en sueco.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>sv-en</code>
+    </td>
+    <td>
+     Sueco (<code>sv</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Turco
+{: #turkish}
+
+Los siguientes modelos pueden traducir texto en turco.
+
+<table>
+ <thead>
+  <th>
+   ID de modelo
+  </th>
+  <th>
+   Origen
+  </th>
+  <th>
+   Destino
+  </th>
+  <th>
+   Dominio
+  </th>
+  <th>
+   Personalizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>tr-en</code>
+    </td>
+    <td>
+     Turco (<code>tr</code>)
+    </td>
+    <td>
+     Inglés (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
     </td>
    </tr>
   </tbody>
