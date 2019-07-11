@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-06-13"
 
 ---
 
@@ -20,27 +20,231 @@ lastupdated: "2018-02-23"
 # Modell anpassen
 {: #customizing}
 
-Möchten Sie eine Übersetzungsfunktion erstellen, die von der Kundenunterstützung genutzt wird? Gibt es unternehmensspezifische Begriffe, die in Dialogen auf bestimmte Weise gehandhabt werden sollen? Möchten Sie es Ihren Entwicklern in einem bestimmten Land ermöglichen, Patentdaten in einer anderen Sprache zu suchen? Melden Sie häufig Patente zu einer bestimmten Technologie an? Verwenden Sie eigene Daten zur Erstellung eines angepassten Wörterverzeichnisses und eines angepassten Übersetzungsmodells in der {{site.data.keyword.languagetranslatorshort}}-API.
+Die meisten der in {{site.data.keyword.languagetranslatorshort}} bereitgestellten Übersetzungsmodelle können erweitert werden, sodass sie sich angepasste Begriffe und Ausdrücke oder einen allgemeinen Stil aneignen, der aus Ihren Übersetzungsdaten abgeleitet wird. Befolgen Sie die folgenden Anweisungen, um ein eigenes angepasstes Übersetzungsmodell zu erstellen.
 {: shortdesc}
 
-Für die Anpassung des {{site.data.keyword.languagetranslatorshort}}-Modells stehen verschiedene Möglichkeiten zur Verfügung:
+## Vorbereitungen
+{: #before-you-begin}
 
-- Sie können Training für den Service durchführen, das Paare entsprechender Begriffe oder Ausdrücke in einer Quellen- und einer Zielsprache umfasst. Implementieren Sie ein *Vorgabewörterbuch* mit obligatorischen Paaren entsprechender Begriffe oder Ausdrücke und definitiven Begriffen, die vom Übersetzungsservice verbindlich zu verwenden sind. Oder geben Sie ein *paralleles Korpus* an, das Paare entsprechender Begriffe oder Ausdrücke enthält, die als alternative Übersetzungsvorschläge vom Übersetzungsservice verwendet werden sollen.
-- Sie können einen umfangreichen Text in einer Zielsprache hochladen (als *monolinguales Korpus* bezeichnet), der als Sprachbeispiel dient, das der Service auswerten und zur Verbesserung der allgemeinen Übersetzungsqualität nutzen kann.
+1. Stellen Sie sicher, dass Ihre {{site.data.keyword.languagetranslatorshort}}-Serviceinstanz auf dem Advanced- oder Premium-Preisstrukturplan basiert. Die Pläne 'Lite' und 'Standard' unterstützen die Anpassung nicht.
+1. Suchen Sie nach einem anpassbaren Basismodell für Ihr Sprachpaar. Sie benötigen die Modell-ID des Basismodells, um Ihr angepasstes Modell zu trainieren.
+    - Durchsuchen Sie die Modelle, die auf der Seite [Übersetzungsmodelle](/docs/services/language-translator?topic=language-translator-translation-models) aufgeführt sind. Suchen Sie in der Spalte **Anpassungsfähigkeit** nach dem Wert "**true**" und stellen Sie sicher, dass die Sprachen **Quelle** und **Ziel** des Modells mit Ihrem Sprachpaar übereinstimmen.
+    - Alternativ dazu können Sie die API-Methode zum [Auflisten von Modellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#list-models) verwenden, um Modelle programmgestützt zu durchsuchen. Sie können die Ergebnisse mit den Parametern `source` und `target` nach der Sprache filtern.
 
-Verwenden Sie zum Anzeigen der Liste mit anpassbaren Modellen die Methode `GET /v2/models` und suchen Sie nach dem Antwortparameter `customizable=true` in der Antwort des jeweiligen Sprachmodells.
+## Schritt 1: Eigene Trainingsdaten erstellen
+{: #create-your-training-data}
 
-```curl
-curl -u "{username}":"{password}" "https://gateway.watsonplatform.net/language-translator/api/v2/models"
+Für den Service sind Trainingsdaten erforderlich, die im [TMX-Dateiformat (Translation Memory Exchange)](#creating-tmx-files) bereitgestellt werden müssen. Sie können bis zu zehn Anpassungen für jedes Sprachpaar in einer Serviceinstanz speichern. Der Service unterstützt zwei Arten von Anpassungsanforderungen. Sie können ein Modell entweder mit einem Vorgabewörterbuch (Forced Glossary) oder mit einem Textkorpus, der sich aus zweisprachigen Satzpaaren zusammensetzt, anpassen.
+
+- Verwenden Sie ein [Vorgabewörterbuch](#forced-glossary-customization), um Begriffe und Ausdrücke auf bestimmte Art und Weise zu übersetzen.
+- Verwenden Sie ein [paralleles Korpus](#parallel-corpus-customization), wenn Sie möchten, dass sich Ihr angepasstes Modell an allgemeinen Übersetzungsmustern in Ihren Beispielen orientiert und dadurch dazulernt. Was Ihr Modell aus einem parallelen Korpus lernt, kann die Übersetzungsergebnisse für eingegebenen Text verbessern, für den das Modell noch nicht trainiert wurde.
+
+Wenn Sie Ihre [TMX-Dateien (Translation Memory Exchange)](#creating-tmx-files) erstellt haben, sind Sie bereit, Ihr Modell zu trainieren.
+
+## Schritt 2: Modell trainieren
+{: #train-your-model}
+
+Verwenden Sie die Methode zum [Erstellen von Modellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#create-model), um Ihr Modell zu trainieren. Geben Sie in Ihrer Anforderung die Modell-ID eines anpassbaren Basismodells sowie Trainingsdaten im Parameter `forced_glossary` oder `parallel_corpus` an.
+
+### Beispielanforderung
+{: #train-model-example-request}
+
+Die folgende Beispielanforderung verwendet eine Vorgabewörterbuchdatei _glossary.tmx_, um das Basismodell `en-es` anzupassen. Ein Beispiel für eine TMX-Datei mit Vorgabewörterbuch finden Sie unter [Anpassung eines Vorgabewörterbuchs](#forced-glossary).
+
+```bash
+curl --user apikey:{apikey} -X POST --form forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
+```
+{: pre}
+
+Die API-Antwort enthält Details zu Ihrem angepassten Modell, einschließlich der zugehörigen Modell-ID. Verwenden Sie die Modell-ID, um den Status Ihres Modells zu überprüfen und um Sätze zu übersetzen, sobald der Status des Modells "available" wird.
+
+```json
+{
+  "model_id": "96221b69-8e46-42e4-a3c1-808e17c787ca",
+  "source": "en",
+  "target": "es",
+  "base_model_id": "en-es",
+  "domain": "general",
+  "customizable": false,
+  "default_model": false,
+  "owner": "4937aab7-0f3a-4a75-bee1-0b7a12b6b8",
+  "status": "uploaded",
+  "name": "custom-english-to-spanish",
+  "train_log": null
+}
 ```
 {: codeblock}
 
-Für jedes anpassbare Modell können bis zu 10 Anpassungen pro Serviceinstanz gespeichert werden.
+## Schritt 3: Modellstatus überprüfen
+{: #check-model-status}
 
-## Struktur der Trainingsdaten
-{: #structure}
+Das Trainieren des Modells kann von einigen Minuten (bei Verwendung von Vorgabewörterbüchern) bis zu mehreren Stunden (bei Verwendung großer paralleler Korpora) dauern, je nachdem, wie viel Trainingsdaten vorhanden sind. Um zu ermitteln, ob Ihr Modell verfügbar ist, verwenden Sie die Methode zum [Abrufen von Modellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#get-model-details) und geben Sie die Modell-ID an, die Sie in der Serviceantwort in Schritt 2 erhalten haben. Außerdem können Sie den Status aller Ihrer Modelle mit der Methode zum [Auflisten von Modellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#list-models) verwenden.
 
-Zur Bereitstellung eines Wörterbuchs oder Korpus mit Begriffen für das Training des {{site.data.keyword.languagetranslatorshort}}-Service erstellen Sie ein gültiges Dokument im UTF-8-Format, das der Spezifikation von Translation Memory Exchange (TMX) [Version 1.4 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ttt.org/oscarstandards/tmx/tmx14.dtd){: new_window} entspricht. TMX ist eine XML-Spezifikation, die für Maschinenübersetzungstools konzipiert ist. Im folgenden Beispiel ist eine mit TMX formatierte Wörterbuchdatei dargestellt, die zwei jeweils aus Begriff und Übersetzung bestehende Paare enthält:
+Das Antwortattribut `status` beschreibt den Status des Modells im Trainingsprozess:
+
+- `uploading`
+- `uploaded`
+- `dispatching`
+- `queued`
+- `training`
+- `trained`
+- `publishing`
+- `available`
+
+Wenn der Modellstatus `available` lautet, ist das Modell zur Verwendung mit Ihrer Serviceinstanz bereit. Wenn das Modell gelöscht wurde oder wenn beim Trainingsprozess ein Fehler aufgetreten ist, wird möglicherweise einer der folgenden Statuszustände angezeigt:
+
+- `deleted`
+- `error`
+
+### Beispielanforderung
+{: #check-model-example-request}
+
+Im folgenden Beispiel werden Informationen für das Modell mit der Modell-ID `96221b69-8e46-42e4-a3c1-808e17c787ca` abgerufen.
+
+```bash
+curl --user apikey:{apikey_value} "https://gateway.watsonplatform.net/language-translator/api/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
+```
+{: pre}
+
+## Schritt 4: Text mit angepasstem Modell übersetzen
+{: #translate-text}
+
+Um Ihr angepasstes Modell zu verwenden, geben Sie den zu übersetzenden Text und die Modell-ID des angepassten Modells in der Methode zum [Übersetzen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#translate) an.
+
+### Beispielanforderung
+{: #translate-text-example-request}
+
+Im folgenden Beispiel wird Text mit dem angepassten Modell mit der Modell-ID `96221b69-8e46-42e4-a3c1-808e17c787ca` übersetzt.
+
+```bash
+curl --user apikey:{apikey_value} --request POST --header "Content-Type: application/json" --data '{"text":"Hello","model_id":"96221b69-8e46-42e4-a3c1-808e17c787ca"}' https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01
+```
+{: pre}
+
+
+## Anpassung eines Vorgabewörterbuchs
+{: #forced-glossary-customization}
+
+Sie können ein **Vorgabewörterbuch** (Forced Glossary) verwenden, um obligatorische Übersetzungen für bestimmte Begriffe und Ausdrücke festzulegen. Wenn Sie das Übersetzungsverhalten gezielt steuern wollen, verwenden Sie ein Vorgabewörterbuch. 
+
+- Format der Trainingsdaten: [TMX](#creating-tmx-files) (UTF-8-codiert)
+- Maximale Dateigröße: 10 MB
+- Sie können ein Vorgabewörterbuch auf ein Basismodell anwenden oder auf ein Modell, das mit einem parallelen Korpus angepasst wurde.
+- Begrenzung auf ein Vorgabewörterbuch pro Modell.
+
+Bei Beispielen mit Vorgabewörterbüchern ist die Groß-/Kleinschreibung zu beachten. Stellen Sie daher sicher, dass Ihre Trainingsdaten die Groß-/Kleinschreibung der Inhalte berücksichtigen, die Ihre Anwendung verarbeiten wird.
+{: tip}
+
+### Beispiel für die Verwendung eines Vorgabewörterbuchs
+{: #forced-glossary-example}
+
+Das folgende Beispiel zeigt eine TMX-Datei mit zwei Übersetzungspaaren. Das erste Paar sorgt dafür, dass "international business machines" bei der Übersetzung als Anglizismus erhalten bleibt. Diese Vorgabe einer Übersetzung kann nützlich sein, wenn z. B. Firmennamen nicht übersetzt werden sollen (auch wenn Sie im englischen Ausgangstext unrichtigerweise kleingeschrieben wurden). Das zweite Paar zwingt das Modell, immer die französische Übersetzung "brevet" zu verwenden, wenn im Englischen der Begriff "patent" vorkommt.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+  <header creationtool="" creationtoolversion=""
+    segtype="phrase" o-tmf="" adminlang="en"
+    srclang="en" datatype="PlainText" o-encoding="UTF-8" />
+  <body>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>international business machines</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>International Business Machines</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en">
+        <seg>patent</seg>
+      </tuv>
+      <tuv xml:lang="fr">
+        <seg>brevet</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
+```
+{: codeblock}
+
+
+
+## Anpassung eines parallelen Korpus
+{: #parallel-corpus-customization}
+
+Sie können ein **paralleles Korpus** verwenden, um zusätzliche Übersetzungen bereitzustellen, anhand derer das Basismodell dazulernen kann. Dies ermöglicht es, das Basismodell an ein bestimmtes Fachgebiet (Domäne) anzupassen. Wie das resultierende angepasste Modell Text übersetzt, hängt davon ab, wie das Modell die Kombination aus parallelem Korpus und Basismodell interpretiert.
+
+- Format der Trainingsdaten: [TMX](#creating-tmx-files) (UTF-8-codiert)
+- Maximale Länge der Übersetzungspaare: 80 Wörter im Quellentext
+- Minimale Anzahl von Übersetzungspaaren: 5.000
+- Maximale Dateigröße: 250 MB
+- Sie können mehrere Dateien mit parallelem Korpus zur Verarbeitung übergeben, indem Sie den mehrteiligen Formularparameter `parallel_corpus` wiederholen, solange die kumulative Größe der Dateien das Limit von 250 MB nicht überschreitet.
+
+### Beispiel für ein paralleles Korpus
+{: #parallel-corpus-example}
+
+Im Folgenden finden Sie einen kleinen Teil eines parallelen Korpus für die Sprachrichtung Englisch/Französisch, das von der [MultiUN-Dokumentsammlung![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://opus.nlpl.eu/MultiUN.php) heruntergeladen wurde, die auf der OPUS-Website mit einem offenen parallelen Korpus verfügbar ist. Sie können eine komprimierte Version der gesamten TMX-Datei [hier ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz) herunterladen.
+
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+<header creationdate="Tue Jan 29 12:49:40 2013"
+          srclang="en"
+          adminlang="en"
+          o-tmf="unknown"
+          segtype="sentence"
+          creationtool="Uplug"
+          creationtoolversion="unknown"
+          datatype="PlainText" />
+  <body>
+    <tu>
+      <tuv xml:lang="en"><seg>RESOLUTION 55/100</seg></tuv>
+      <tuv xml:lang="fr"><seg>RÉSOLUTION 55/100</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Adopted at the 81st plenary meeting, on 4 December 2000, on the recommendation of the Committee (A/55/602/Add.2 and Corr.1, para. 94),The draft resolution recommended in the report was sponsored in the Committee by: Bolivia, Cuba, El Salvador, Ghana and Honduras. by a recorded vote of 106 to 1, with 67 abstentions, as follows:</seg></tuv>
+      <tuv xml:lang="fr"><seg>Adoptée à la 81e séance plénière, le 4 décembre 2000, sur la recommandation de la Commission (A/55/602/Add.2, par. 94)Le projet de résolution recommandé dans le rapport de la Commission avait pour auteurs les pays suivants: Bolivie, Cuba, El Salvador, Ghana et Honduras., par 106 voix contre une, avec 67 abstentions, à la suite d'un vote enregistré, les voix s'étant réparties comme suit:</seg></tuv>
+    </tu>
+    ...
+```
+{: codeblock}
+
+Die Verbesserungen durch die Anpassung des parallelen Korpus sind im Allgemeinen weniger vorhersehbar als die Ergebnisse, die sich durch die Anpassung eines Vorgabewörterbuchs erzielen lassen. Betrachten Sie zum Beispiel die folgende Übersetzungseinheit (Translation Unit) aus dem parallelen Korpus (Zeilen 172-175).
+
+```xml
+<tu>
+  <tuv xml:lang="en"><seg>55/102. Globalization and its impact on the full enjoyment of all human rights</seg></tuv>
+  <tuv xml:lang="fr"><seg>55/102. La mondialisation et ses effets sur le plein exercice des droits de l'homme</seg></tuv>
+</tu>
+```
+{: codeblock}
+
+Wenn Sie den englischen Text "55/102. Globalization and its impact on the full enjoyment of all human rights" mit dem Basismodell `en-fr` übersetzen, erhalten Sie die folgende französische Übersetzung.
+
+```
+55/102. La mondialisation et ses effets sur la pleine jouissance de tous les droits de l'homme
+```
+{: codeblock}
+
+Wenn derselbe Eingabesatz von einem angepassten Modell, das mit dem Beispielkorpus trainiert wurde, übersetzt wird, erhalten Sie eine andere Übersetzung, die nicht mit der Beispielübersetzung identisch ist, die in den Trainingsdaten bereitgestellt wird.
+
+```
+55/102. La mondialisation et ses effets sur le plein exercice de tous les droits de l'homme
+```
+{: codeblock}
+
+- Das angepasste Modell übersetzt "the full enjoyment" mit "le plein exercice" anstelle von "la pleine jouissance". Der Grund für diesen Unterschied gegenüber dem Basismodellverhalten ist wahrscheinlich, dass es viele Beispiele im Korpus gibt, in denen "enjoyment" mit "exercice" übersetzt wird.
+- Das angepasste Modell übersetzt "of all human rights" mit "de tous les droits de l'homme", anstatt das Ergebnis aus der Übersetzungseinheit ("des droits de l'homme") zu reproduzieren. Dieses Verhalten zeigt das Verständnis des Basismodells durch das trainierte Modell sowie aller Übersetzungsbeispiele, die sich auf "of all human rights" im parallelen Korpus beziehen.
+
+In einigen Fällen kann es so aussehen, als würde ein angepasstes Modell, das mit einem parallelen Korpus trainiert wurde, ein bestimmtes Beispiel ignorieren, das Sie bereitgestellt haben. In diesen Fällen sollten Sie versuchen, Ihre Trainingsdaten nach anderen Sätzen zu durchsuchen, die das Übersetzungsverhalten beeinflussen könnten, oder Sie können ein Vorgabewörterbuch verwenden, wenn Sie eine ganz bestimmte Übersetzung erhalten möchten.
+
+
+## TMX-Dateien erstellen
+{: #creating-tmx-files}
+
+Zur Bereitstellung eines Wörterbuchs oder Korpus mit Begriffen für das Training des {{site.data.keyword.languagetranslatorshort}}-Service erstellen Sie ein gültiges Dokument im UTF-8-Format, das der Spezifikation von Translation Memory Exchange (TMX) [Version 1.4 ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www.ttt.org/oscarStandards/tmx/){: new_window} entspricht. TMX ist eine XML-Spezifikation, die für Maschinenübersetzungstools konzipiert ist. Im folgenden Beispiel ist eine mit TMX formatierte Wörterbuchdatei mit zwei Übersetzungseinheiten (Translation Units, `<tu>`-Elemente) dargestellt:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -51,7 +255,7 @@ Zur Bereitstellung eines Wörterbuchs oder Korpus mit Begriffen für das Trainin
   <body>
     <tu>
       <tuv xml:lang="en">
-        <seg>International Business Machines</seg>
+        <seg>international business machines</seg>
       </tuv>
       <tuv xml:lang="fr">
         <seg>International Business Machines</seg>
@@ -75,7 +279,7 @@ Jedes aus Begriff und Übersetzung bestehende Paar muss in die Tags `<tu>` einge
 ```xml
 <tu>
   <tuv xml:lang="en">
-    <seg>International Business Machines</seg>
+    <seg>international business machines</seg>
   </tuv>
   <tuv xml:lang="fr">
     <seg>International Business Machines</seg>
@@ -88,31 +292,31 @@ Das Attribut `xml:lang` im Tag `<tuv>` identifiziert die Sprache eines Begriffs,
 
 Der {{site.data.keyword.languagetranslatorshort}}-Service verwendet nur die Elemente `<tu>`, `<tuv>` und `<seg>`. Alle anderen Elemente im Beispiel sind für eine gültige TMX-Datei erforderlich oder dienen nur zu Informationszwecken, werden jedoch vom Service nicht verwendet.
 
-Das vorherige Beispiel veranschaulicht, wie die Übersetzung eines technischen Begriffs wie 'patent' verbindlich standardisiert wird und wie die Übersetzung eines Firmennamens wie 'International Business Machines' angepasst wird. Mit dem Standardmodell wird 'International Business Machines' möglicherweise mit 'Machines Commerciales Internationales' übersetzt, tatsächlich darf der Begriff jedoch nicht übersetzt werden, da es sich um einen Firmennamen handelt.
 
-## Beispiel als Vorlage verwenden
+
+### Beispiel als Vorlage verwenden
+{: #using-the-example-template}
 
 Führen Sie die folgenden Schritte aus, um das bereitgestellte Beispiel als Vorlage für ein eigenes Wörterbuch oder Korpus zu verwenden:
 
-1.  Kopieren Sie das Beispiel und fügen Sie es in einen Texteditor ein.
+1. Kopieren Sie das Beispiel und fügen Sie es in einen Texteditor ein.
 
-1.  Ändern Sie das Attribut `srclang` des Tags `<header>` in den [Sprachencode ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} der Quellensprache, die das Wörterbuch bzw. das parallele Korpus verwenden soll.
+2. Ändern Sie das Attribut `srclang` des Tags `<header>` in den [Sprachencode ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} der Quellensprache, die das Wörterbuch bzw. das parallele Korpus verwenden soll.
 
-1.  Ändern Sie das Attribut `xml:lang` des Tags `<tuv>` in den korrekten [Sprachencode ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} für die einzelnen Begriffe bzw. Übersetzungen.
+3. Ändern Sie das Attribut `xml:lang` des Tags `<tuv>` in den korrekten [Sprachencode ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} für die einzelnen Begriffe bzw. Übersetzungen.
 
-    Der {{site.data.keyword.languagetranslatorshort}}-Service verwendet ISO 639-1-Sprachencodes für alle Sprachen; eine Ausnahme bildet ägyptisches Arabisch, für das der ISO 639-3-Code verwendet wird.
-
-1.  Speichern Sie das Dokument mit der Erweiterung `.tmx` und UTF-8-Codierung.
+4. Speichern Sie das Dokument mit der Erweiterung `.tmx` und UTF-8-Codierung.
 
 ### TMX-Datei in UTF-8-Codierung ändern
+{: #changing-tmx-file-to-utf-8}
 
 Für die Erstellung oder Generierung von TMX-Dateien können eine Reihe von Tools verwendet werden. Häufig sind generierte TMX-Dateien standardmäßig mit UTF-16 codiert. Der {{site.data.keyword.languagetranslatorshort}}-Service akzeptiert ausschließlich TMX-Dateien mit UTF-8-Codierung. Führen Sie die folgenden Schritte aus, um die Codierung einer TMX-Datei zu ändern:
 
-1.  Öffnen Sie die TMX-Datei in einem Texteditor.
+1. Öffnen Sie die TMX-Datei in einem Texteditor.
 
-1.  Ändern Sie den XML-Header (falls vorhanden) von `<?xml ... encoding="utf-16"?>` in `<?xml ... encoding="utf-8"?>`.
+1. Ändern Sie den XML-Header (falls vorhanden) von `<?xml ... encoding="utf-16"?>` in `<?xml ... encoding="utf-8"?>`.
 
-1.  Speichern Sie die Datei mit einem neuen Namen und mit UTF-8-Codierung für die Ausgabe.
+1. Speichern Sie die Datei mit einem neuen Namen und mit UTF-8-Codierung für die Ausgabe.
 
 Mac-Benutzer können die Dateicodierung auch ändern, indem sie den XML-Header des Dokuments wie in Schritt 2 beschrieben aktualisieren und dann den folgenden Befehl auf dem Terminal ausführen:
 
@@ -121,86 +325,15 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ```
 {: pre}
 
-## Training für ein angepasstes Übersetzungsmodell durchführen
-{: #training}
-
-Verwenden Sie die Methode `POST /v2/models`, um die TMX-Datei hochzuladen und Training für das Übersetzungsmodell durchzuführen. Geben Sie mindestens eine der folgenden Dateioptionen an, um Training für das angepasste Modell durchzuführen:
-
-- `forced_glossary`: Ein Vorgabewörterbuch ist eine mit UTF-8 codierte TMX-Datei. Sie enthält Paare entsprechender Begriffe in der Quellen- und Zielsprache, die vom System als absolut gültige Vorgabe verwendet werden. Diese Datei überschreibt die ursprünglichen Domänendaten vollständig.
-
-    Für Vorgabewörterbücher gilt eine maximale Dateigröße von 10 MB. Zum gegenwärtigen Zeitpunkt kann nur eine einzelne Vorgabewörterbuchdatei pro Übersetzungsmodell hochgeladen werden.
-    
-- `parallel_corpus`: Ein paralleles Korpus ist eine mit UTF-8 codierte TMX-Datei. Sie enthält entsprechende Ausdrücke in der Quellen- und Zielsprache, die als Beispiele für Watson dienen. Ein paralleles Korpus unterscheidet sich von einem Vorgabewörterbuch dahingehend, dass es die ursprünglichen Domänendaten nicht überschreibt.
-
-    Damit ein erfolgreiches Training für ein angepasstes Modell durchgeführt werden kann, muss ein Dokument für ein paralleles Korpus mindestens 5000 Paare aus Begriff und Übersetzung enthalten.
-    
-- `monolingual_corpus`: Ein monolinguales Korpus ist eine mit UTF-8 codierte einfache Textdatei. Sie enthält einen Text in der Zielsprache, der thematisch zur Übersetzung passt. Durch die Bereitstellung eines monolingualen Korpus können wörtliche Übersetzungen verbessert werden, indem sie flüssiger und natürlicher gemacht werden.
-
-    Damit ein erfolgreiches Training für ein angepasstes Modell durchgeführt werden kann, muss ein Dokument für ein monolinguales Korpus mindestens 1000 Sätze enthalten.
-
-Die kumulative Dateigröße aller hochgeladenen Wörterbuch- und Korpusdateien ist auf 250 MB begrenzt. Abhängig von der Größe der hochgeladenen Dateien kann das Training einige Minuten, z. B. bei einem Wörterbuch, oder mehrere Stunden, z. B. bei einem großen Korpus, in Anspruch nehmen.
-
-Im folgenden curl-Beispiel wird die Dateioption `forced_glossary` verwendet.
-1. Laden Sie das TMX-Dateibeispiel im Abschnitt [Struktur der Trainingsdaten](#structure) herunter.
-1. Verwenden Sie die Domäne 'News' für die französische Sprache (en-fr) als Basismodell. Alle Angaben in der TMX-Datei überschreiben die ursprünglichen Domänendaten vollständig.
-
-    Verwenden Sie die Methode `GET v2/models`, um alle Modelldomänen, die der {{site.data.keyword.languagetranslatorshort}}-Service unterstützt, zu suchen:
-
-```curl
-curl -u "{username}":"{password}" -X POST -F base_model_id=en-fr -F name="test_glossary" -F forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v2/models"
-```
-{: codeblock}
-
-Die Antwort der Methode `POST /v2/models` besteht aus dem Code `200` und einer neuen `model_id`. Verwenden Sie die `model_id` bei der Übersetzung von Text mithilfe dieses neu angepassten Modells.
-
-## Training überwachen
-
-Die Größe der TMX-Trainingsdatei wirkt sich auf die Trainingszeit einer `POST /v2/models`-Anforderung aus. Verwenden Sie die Methode `GET /v2/models/<model_id>` und überprüfen Sie den Wert des Parameters `status` in der Antwort, um den Fortschritt des Trainings zu überwachen und zu prüfen, ob das Training erfolgreich abgeschlossen wurde.
-
-Dieser Beispielbefehl liefert Informationen zum Modell und überprüft den Status des Trainings, das im Abschnitt [Training für ein angepasstes Übersetzungsmodell durchführen](#training) gestartet wurde. In diesem Befehl wird ein leerer Anforderungshauptteil verwendet.
-
-```curl
-curl -u "{username}":"{password}" "https://gateway.watsonplatform.net/language-translator/api/v2/models/3e7dfdbe-f757-4150-afee-458e71eb93fb"
-```
-{: codeblock}
-
-Der Antwortparameter `STATUS` beschreibt den Status des Modells im Trainingsprozess:
-
-- `uploading`
-- `uploaded`
-- `dispatching`
-- `queued@<#>`
-- `training`
-- `trained`
-- `publishing`
-- `available`
-
-Wenn der Modellstatus `available` lautet, ist das Modell zur Verwendung mit Ihrer Serviceinstanz bereit. Wenn das Modell gelöscht wurde oder beim Trainingsprozess ein Fehler aufgetreten ist, wird möglicherweise einer der folgenden Fehler angezeigt:
-
-- `deleted`
-- `error`
-
-## Angepasstes Übersetzungsmodell verwenden
-
-Geben Sie nach dem Training eines angepassten Übersetzungsmodells die Modell-ID (model\_id) dieses Übersetzungsmodells zur Verwendung in der Methode `POST /v2/translate` oder `GET /v2/translate` an.
-
-Mit dem folgenden Beispiel wird das Modell für die Übersetzung aus der englischen in die französische Sprache, das im Abschnitt [Training für ein angepasstes Übersetzungsmodell durchführen](#training) angepasst wurde, aufgerufen.
-
-```curl
-curl -u "{username}":"{password}" --header "Content-Type: application/json" -X POST --data "{\"model_id\": \"3e7dfdbe-f757-4150-afee-458e71eb93fb\",\"text\": \"Hello, my name is Watson, and I work for International Business Machines. How can I help you today?\"}" https://gateway.watsonplatform.net/language-translator/api/v2/translate 
-```
-{: codeblock}
-
-Der {{site.data.keyword.languagetranslatorshort}}-Service wertet die Qualität der Übersetzung aus, indem er die BLEU-Standards (Bilingual Evaluation Understudy) und die von IBM entwickelten Standards verwendet. Die Ergebnisse können abhängig von der Sprachkombination, der verwendeten regions- oder landestypischen Sprache oder der Domäne der Daten variieren.
 
 ## Angepasstes Übersetzungsmodell löschen
+{: #deleting-a-custom-model}
 
-Wenn ein Übersetzungsmodell veraltet ist, können Sie es löschen. Verwenden Sie zum Löschen eines angepassten Übersetzungsmodells die Methode `DELETE /v2/models/<model_id>`. Verwenden Sie zum Abrufen der Modell-IDs aller Übersetzungsmodelle - sowohl angepasster als auch Standardmodelle - die Methode `GET /v2/models`.
+Verwenden Sie zum Löschen eines angepassten Übersetzungsmodells die Methode zum [Löschen von Modellen ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://cloud.ibm.com/apidocs/language-translator#delete-model).
 
-Mit dem folgenden Befehl wird das Übersetzungsmodell gelöscht, das in den hier beschriebenen Beispielen erstellt wurde.
+Mit dem folgenden Befehl wird das Übersetzungsmodell mit der Modell-ID `3e7dfdbe-f757-4150-afee-458e71eb93fb` gelöscht.
 
 ```curl
-curl -u "{username}":"{password}" -X DELETE "https://gateway.watsonplatform.net/language-translator/api/v2/models/3e7dfdbe-f757-4150-afee-458e71eb93fb"
+curl --user apikey:{apikey_value} --request DELETE "https://gateway.watsonplatform.net/language-translator/api/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
 {: codeblock}
-
