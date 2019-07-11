@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-02-23"
+  years: 2015, 2019
+lastupdated: "2019-04-04"
 
 ---
 
@@ -18,26 +18,23 @@ lastupdated: "2018-02-23"
 {:swift: .ph data-hd-programlang='swift'}
 
 # Produktinformationen
+{: #about}
 
-Bei {{site.data.keyword.languagetranslatorfull}} handelt es sich um eine Übersetzungs-API, die domänenspezifische Modelle verwendet, um Text von einer Sprache in eine andere zu übersetzen.
+{{site.data.keyword.languagetranslatorfull}} kann die Sprache eines Textes erkennen und den Text programmgestützt in verschiedene Sprachen übersetzen.
 {: shortdesc}
 
-Der Service bietet Übersetzungsmodelle für die folgenden Domänen. 
-- **News:** Für Nachrichtenartikel und Mitschriften.
-- **Dialog:** Für Dialoge und umgangssprachliche Ausdrücke.
-- **Patent:** Für Technik- und Rechtsterminologie.
+Zusätzlich zur Verwendung der bereitgestellten Übersetzungsmodelle können Sie auf der Grundlage der Basisübersetzungsmodelle eigene [angepasste Modelle](/docs/services/language-translator?topic=language-translator-customizing) für spezifische Anwendungsfälle erstellen.
 
-Zusätzlich zur Verwendung der bereitgestellten Übersetzungsmodelle können Sie auf der Basis der News-Modelle eigene [angepasste Modelle](customizing.html) für spezifische Anwendungsfälle erstellen.
-
-Eine Vorschau neuer NMT-Modelle (Neural Machine Translation) für noch bessere Übersetzungen ist nun verfügbar. Weitere Details finden Sie in den [Releaseinformationen](release-notes.html#12-january-2018).
+[Dokumente übersetzen (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents) ist jetzt über neue API-Endpunkte verfügbar. Sie übergeben ein Microsoft Office-Dokument, ein PDF-Dokument oder ein anderes Dokument mit einem [unterstützten Dateiformat](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-formats) zur Verarbeitung und {{site.data.keyword.languagetranslatorshort}} stellt eine übersetzte Kopie zur Verfügung, die die ursprüngliche Formatierung beibehält.
 {: tip}
 
 ## Quick Links
+{: #quick-links}
 
-- [Einführung](getting-started.html).
+- [Einführung](/docs/services/language-translator?topic=language-translator-getting-started).
 - [Livedemo![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
-- [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://www.ibm.com/watson/developercloud/language-translator/api/v2/index.html){: new_window}.
+- [API-Referenz![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://{DomainName/apidocs/language-translator){: new_window}.
 - Sprachunterstützungsinformationen:
-  - [Übersetzungsmodelle](translation-models.html)
-  - [Sprachen, für die eine Erkennung möglich ist](identifiable-languages.html)
+  - [Übersetzungsmodelle](/docs/services/language-translator?topic=language-translator-translation-models)
+  - [Sprachen, für die eine Erkennung möglich ist](/docs/services/language-translator?topic=language-translator-identifiable-languages)
 
