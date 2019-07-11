@@ -20,15 +20,15 @@ lastupdated: "2019-06-13"
 # モデルのカスタマイズ
 {: #customizing}
 
-{{site.data.keyword.languagetranslatorshort}} に備わっているほとんどの翻訳モデルを拡張して、カスタムの用語や句、または翻訳データから取得した一般スタイルを学習させることができます。独自のカスタム翻訳モデルを作成するには、以下の指示に従ってください。
+{{site.data.keyword.languagetranslatorshort}} に備わっているほとんどの翻訳モデルは、カスタムの用語や句、または翻訳データから取得した一般スタイルを学習させるように拡張することができます。独自のカスタム翻訳モデルを作成するには、以下の指示に従ってください。
 {: shortdesc}
 
 ## 始めに
 {: #before-you-begin}
 
-1. ご使用の {{site.data.keyword.languagetranslatorshort}} サービス・インスタンスが拡張またはプレミアム価格プランに存在することを確認します。ライト・プランおよび標準プランではカスタマイズがサポートされていません。
+1. ご使用の {{site.data.keyword.languagetranslatorshort}} サービス・インスタンスが拡張またはプレミアムの価格プランに存在することを確認します。ライト・プランおよび標準プランではカスタマイズがサポートされていません。
 1. ご使用の言語ペアのカスタマイズ可能な基本モデルを見つけます。カスタム・モデルをトレーニングするには、基本モデルのモデル ID が必要です。
-    - [翻訳モデル](/docs/services/language-translator?topic=language-translator-translation-models)・ページにリストされているモデルを検索します。**「カスタマイズ可能」**列で値**「true」**を探し、モデルの**「ソース」**および**「ターゲット」**言語が目的の言語ペアと一致することを確認します。
+    - [翻訳モデル](/docs/services/language-translator?topic=language-translator-translation-models)・ページにリストされているモデルを検索します。**「カスタマイズ可能」**列で値**「true」**を探し、モデルの**「ソース」**言語および**「ターゲット」**言語が目的の言語ペアと一致することを確認します。
     - あるいは、[モデルのリスト (List models)![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://cloud.ibm.com/apidocs/language-translator#list-models) API メソッドを使用してモデルをプログラマチックに検索することもできます。`source` および `target` パラメーターを使用して、言語を基準に結果をフィルター操作できます。
 
 ## ステップ 1: トレーニング・データを作成する
@@ -236,7 +236,7 @@ curl --user apikey:{apikey_value} --request POST --header "Content-Type: applica
 {: codeblock}
 
 - カスタム・モデルは、「the full enjoyment」を「la pleine jouissance」ではなく「le plein exercice」と翻訳します。基本モデルの動作でこうした逸脱が起きてしまう原因として、コーパスに「enjoyment」が「exercice」に翻訳される例が多数存在する可能性があります。
-- カスタム・モデルは、翻訳単位「des droits de l'homme」からの結果を再生せずに、「of all human rights」を「de tous les droits de l'homme」に変換します。この動作は、トレーニングされたモデルでの基本モデルの総合的な理解と、「of all human rights」に関連するすべての翻訳サンプルをパラレル・コーパスから反映したことによるものです。
+- カスタム・モデルは、翻訳単位「des droits de l'homme」からの結果を複製せずに、「of all human rights」を「de tous les droits de l'homme」に翻訳します。この動作は、トレーニングされたモデルでの基本モデルの総合的な理解と、「of all human rights」に関連するすべての翻訳サンプルをパラレル・コーパスから反映したことによるものです。
 
 場合によっては、パラレル・コーパスを使ってトレーニングされたカスタム・モデルが、ユーザーが提供した特定の例を無視しているように見えることもあります。この場合、トレーニング・データの中でそのような翻訳動作に影響を与えている可能性がある他の文を探します。または、翻訳を具体的に制御する必要がある場合には強制グロッサリーの使用を検討してください。
 

@@ -105,7 +105,7 @@ API 要求のたびに version パラメーターを送信してください。 
 ## 2018 年 6 月 27 日
 {: #27-june-2018}
 
-以下の 6 言語をフィーチャーした新しい[翻訳モデル](/docs/services/language-translator?topic=language-translator-translation-models)が使用可能になりました。
+以下の 6 言語をサポートする新しい[翻訳モデル](/docs/services/language-translator?topic=language-translator-translation-models)が使用可能になりました。
   - カタロニア語
     - カタロニア語からスペイン語 (ca-es)
     - スペイン語からカタロニア語 (es-ca)

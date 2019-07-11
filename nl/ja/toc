@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="language-translator" audience="service" arm="344" href="/docs/services/language-translator/getting-started.html" path="services/language-translator"}
-言語翻訳プログラム
+Language Translator
 
     {: .navgroup id="learn"}
     getting-started.md
