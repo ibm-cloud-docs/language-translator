@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-08-06"
 
 ---
 
@@ -27,6 +27,8 @@ In addition to using the provided translation models, you can build upon the bas
 
 [Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a [supported file format](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
 {: tip}
+
+US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
 
 ## Quick links
 {: #quick-links}
