@@ -40,7 +40,7 @@ This sample app explains how to create a hybrid mobile app leveraging Watson Lan
 This chatbot built with Watson Assistant and Cloud Functions adds support for multiple languages with Language Translator.
 
 - [View on GitHub ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://github.com/with-watson/multilingual-chatbot)
-- [Try the demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://multilingual-chatbot-demo.mybluemix.net/)
+- [Try the demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://multilingual-chatbot.mybluemix.net/)
 - [YouTube video ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.youtube.com/watch?v=d7DXydORTME)
 - [Read more ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://medium.com/ibm-watson/build-multilingual-chatbots-with-watson-language-translator-watson-assistant-8c38247e8af1)
 
