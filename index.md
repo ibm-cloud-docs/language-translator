@@ -25,7 +25,7 @@ lastupdated: "2019-08-06"
 
 In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](/docs/services/language-translator?topic=language-translator-customizing) for your use case.
 
-[Translating documents (Beta)](https://cloud.ibm.com/docs/services/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a [supported file format](https://cloud.ibm.com/docs/services/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+[Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a [supported file format](/docs/services/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
 {: tip}
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
