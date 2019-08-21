@@ -496,6 +496,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-bg</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Bulgarian (<code>bg</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-cs</code>
     </td>
     <td>
@@ -581,6 +598,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-et</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Estonian (<code>et</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-fi</code>
     </td>
     <td>
@@ -639,6 +673,23 @@ The following models can translate English text.
     </td>
     <td>
      Hindi (<code>hi</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-hr</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Croatian (<code>hr</code>)
     </td>
     <td>
      <code>general</code>
@@ -768,6 +819,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-ro</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Romanian (<code>ro</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-ru</code>
     </td>
     <td>
@@ -775,6 +843,40 @@ The following models can translate English text.
     </td>
     <td>
      Russian (<code>ru</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sk</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Slovak (<code>sk</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sl</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Slovenian (<code>sl</code>)
     </td>
     <td>
      <code>general</code>
