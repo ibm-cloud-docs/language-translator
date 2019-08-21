@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-08-21"
 
 ---
 
@@ -51,6 +51,26 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 21 August 2019
+{: #21-august-2019}
+
+- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+  - English to and from Bulgarian (`en-bg` and `bg-en`)
+  - English to and from Croatian (`en-hr` and `hr-en`)
+  - English to and from Estonian (`en-et` and `et-en`)
+  - English to and from Romanian (`en-ro` and `ro-en`)
+  - English to and from Slovak (`en-sk` and `sk-en`)
+  - English to and from Slovenian (`en-sl` and `sl-en`)
+- The following languages can now be identified by the service.
+  - Catalan (`ca`)
+  - Croatian (`hr`)
+  - Irish (`ga`)
+  - Malay (`ms`)
+  - Maltese (`mt`)
+  - Serbian (`sr`)
+  - Slovenian (`sl`)
+  - Thai (`th`)
 
 ## 14 June 2019
 {: #14-june-2019}
