@@ -52,8 +52,8 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
-## 21 August 2019
-{: #21-august-2019}
+## 22 August 2019
+{: #22-august-2019}
 
 - New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Bulgarian (`en-bg` and `bg-en`)
