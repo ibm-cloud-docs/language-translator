@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-08-22"
 
 ---
 
@@ -123,6 +123,14 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
    </tr>
    <tr>
     <td>
+     Catalan
+    </td>
+    <td>
+     <code>ca</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Central Khmer
     </td>
     <td>
@@ -151,6 +159,14 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
     </td>
     <td>
      <code>cv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Croatian
+    </td>
+    <td>
+     <code>hr</code>
     </td>
    </tr>
    <tr>
@@ -299,6 +315,14 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
    </tr>
    <tr>
     <td>
+     Irish
+    </td>
+    <td>
+     <code>ga</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Italian
     </td>
     <td>
@@ -363,10 +387,26 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
    </tr>
    <tr>
     <td>
+     Malay
+    </td>
+    <td>
+     <code>ms</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Malayalam
     </td>
     <td>
      <code>ml</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Maltese
+    </td>
+    <td>
+     <code>mt</code>
     </td>
    </tr>
    <tr>
@@ -451,10 +491,26 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
    </tr>
    <tr>
     <td>
+     Serbian
+    </td>
+    <td>
+     <code>sr</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Slovakian
     </td>
     <td>
      <code>sk</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Slovenian
+    </td>
+    <td>
+     <code>sl</code>
     </td>
    </tr>
    <tr>
@@ -495,6 +551,14 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
     </td>
     <td>
      <code>te</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Thai
+    </td>
+    <td>
+     <code>th</code>
     </td>
    </tr>
    <tr>

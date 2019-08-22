@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-06-14"
+lastupdated: "2019-08-22"
 
 ---
 
@@ -27,13 +27,16 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
 {: pre}
 
   - [Arabic](#arabic)
+  - [Bulgarian](#bulgarian)
   - [Catalan](#catalan)
   - [Chinese (Simplified)](#chinese-simplified)
   - [Chinese (Traditional)](#chinese-traditional)
+  - [Croatian](#croatian)
   - [Czech](#czech)
   - [Danish](#danish)
   - [Dutch](#dutch)
   - [English](#english)
+  - [Estonian](#estonian)
   - [Finnish](#finnish)
   - [French](#french)
   - [German](#german)
@@ -47,7 +50,10 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Norwegian Bokmål](#norwegian-bokmal)
   - [Polish](#polish)
   - [Portuguese](#portuguese)
+  - [Romanian](#romanian)
   - [Russian](#russian)
+  - [Slovak](#slovak)
+  - [Slovenian](#slovenian)
   - [Spanish](#spanish)
   - [Swedish](#swedish)
   - [Turkish](#turkish)
@@ -81,6 +87,50 @@ The following models can translate Arabic text.
     </td>
     <td>
      Arabic (<code>ar</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Bulgarian
+{: #bulgarian}
+
+The following models can translate Bulgarian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>bg-en</code>
+    </td>
+    <td>
+     Bulgarian (<code>bg</code>)
     </td>
     <td>
      English (<code>en</code>)
@@ -213,6 +263,50 @@ The following models can translate Chinese (Traditional) text.
     </td>
     <td>
      Traditional Chinese (<code>zh-TW</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Croatian
+{: #croatian}
+
+The following models can translate Croatian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>hr-en</code>
+    </td>
+    <td>
+     Croatian (<code>hr</code>)
     </td>
     <td>
      English (<code>en</code>)
@@ -402,6 +496,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-bg</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Bulgarian (<code>bg</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-cs</code>
     </td>
     <td>
@@ -487,6 +598,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-et</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Estonian (<code>et</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-fi</code>
     </td>
     <td>
@@ -545,6 +673,23 @@ The following models can translate English text.
     </td>
     <td>
      Hindi (<code>hi</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-hr</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Croatian (<code>hr</code>)
     </td>
     <td>
      <code>general</code>
@@ -674,6 +819,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-ro</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Romanian (<code>ro</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-ru</code>
     </td>
     <td>
@@ -681,6 +843,40 @@ The following models can translate English text.
     </td>
     <td>
      Russian (<code>ru</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sk</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Slovak (<code>sk</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-sl</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Slovenian (<code>sl</code>)
     </td>
     <td>
      <code>general</code>
@@ -749,6 +945,50 @@ The following models can translate English text.
     </td>
     <td>
      Traditional Chinese (<code>zh-TW</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Estonian
+{: #estonian}
+
+The following models can translate Estonian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>et-en</code>
+    </td>
+    <td>
+     Estonian (<code>et</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
     </td>
     <td>
      <code>general</code>
@@ -1419,6 +1659,50 @@ The following models can translate Portuguese text.
  </thead>
 </table>
 
+## Romanian
+{: #romanian}
+
+The following models can translate Romanian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ro-en</code>
+    </td>
+    <td>
+     Romanian (<code>ro</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 ## Russian
 {: #russian}
 
@@ -1448,6 +1732,94 @@ The following models can translate Russian text.
     </td>
     <td>
      Russian (<code>ru</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Slovak
+{: #slovak}
+
+The following models can translate Slovak text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>sk-en</code>
+    </td>
+    <td>
+     Slovak (<code>sk</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Slovenian
+{: #slovenian}
+
+The following models can translate Slovenian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>sl-en</code>
+    </td>
+    <td>
+     Slovenian (<code>sl</code>)
     </td>
     <td>
      English (<code>en</code>)
