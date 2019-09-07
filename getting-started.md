@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-04-04"
+lastupdated: "2019-09-07"
 
 ---
 <!-- Attribute definitions -->
@@ -72,11 +72,15 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" 
 ```
 {: pre}
 
+## Step 3: Translate a document (Beta)
+{: #translate-a-document}
+
+{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as PDFs and Microsoft Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial).
+
 ## Next steps
 {: #next-steps}
 
 - Learn how to [customize](/docs/services/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
-- Try [translating documents (Beta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial)
 - View the [API reference](https://{DomainName}/apidocs/language-translator)
 - Explore [sample applications](/docs/services/language-translator?topic=language-translator-sample-apps)
 - View language support information:
