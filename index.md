@@ -35,7 +35,7 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 
 - [Get started](/docs/services/language-translator?topic=language-translator-getting-started).
 - Try the live [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
-- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName/apidocs/language-translator){: new_window}.
+- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator){: new_window}.
 - View language support information:
   - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
   - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
