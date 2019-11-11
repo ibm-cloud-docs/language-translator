@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-11-11"
 
 ---
 
@@ -44,9 +44,13 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Hebrew](#hebrew)
   - [Hindi](#hindi)
   - [Hungarian](#hungarian)
+  - [Irish](#irish)
+  - [Indonesian](#indonesian)
   - [Italian](#italian)
   - [Japanese](#japanese)
   - [Korean](#korean)
+  - [Lithuanian](#lithuanian)
+  - [Malay](#malay)
   - [Norwegian Bokmål](#norwegian-bokmal)
   - [Polish](#polish)
   - [Portuguese](#portuguese)
@@ -56,6 +60,7 @@ curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-tr
   - [Slovenian](#slovenian)
   - [Spanish](#spanish)
   - [Swedish](#swedish)
+  - [Thai](#thai)
   - [Turkish](#turkish)
 
 ## Arabic
@@ -649,6 +654,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-ga</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Irish (<code>ga</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-he</code>
     </td>
     <td>
@@ -700,6 +722,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-id</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Indonesian (<code>id</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-it</code>
     </td>
     <td>
@@ -741,6 +780,40 @@ The following models can translate English text.
     </td>
     <td>
      Korean (<code>ko</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-lt</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Lithuanian (<code>lt</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ms</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Malay (<code>ms</code>)
     </td>
     <td>
      <code>general</code>
@@ -894,6 +967,23 @@ The following models can translate English text.
     </td>
     <td>
      Swedish (<code>sv</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-th</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Thai (<code>th</code>)
     </td>
     <td>
      <code>general</code>
@@ -1378,6 +1468,94 @@ The following models can translate Hungarian text.
  </thead>
 </table>
 
+## Indonesian
+{: #indonesian}
+
+The following models can translate Indonesian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>id-en</code>
+    </td>
+    <td>
+     Indonesian (<code>id</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Irish
+{: #irish}
+
+The following models can translate Irish text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ga-en</code>
+    </td>
+    <td>
+     Irish (<code>ga</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 ## Italian
 {: #italian}
 
@@ -1512,6 +1690,94 @@ The following models can translate Korean text.
     </td>
     <td>
      Korean (<code>ko</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Lithuanian
+{: #lithuanian}
+
+The following models can translate Lithuanian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>lt-en</code>
+    </td>
+    <td>
+     Lithuanian (<code>lt</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Malay
+{: #malay}
+
+The following models can translate Malay text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ms-en</code>
+    </td>
+    <td>
+     Malay (<code>ms</code>)
     </td>
     <td>
      English (<code>en</code>)
@@ -1942,6 +2208,50 @@ The following models can translate Swedish text.
     </td>
     <td>
      Swedish (<code>sv</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Thai
+{: #thai}
+
+The following models can translate Thai text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>th-en</code>
+    </td>
+    <td>
+     Thai (<code>th</code>)
     </td>
     <td>
      English (<code>en</code>)
