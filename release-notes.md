@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-11-11"
 
 ---
 
@@ -51,6 +51,19 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 11 November 2019
+{: #11-november-2019}
+
+- Improved custom model training time.
+- Improved language identification accuracy for English text and for text with more than 100 words.
+- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+  - English to and from Indonesian (`en-id` and `id-en`)
+  - English to and from Irish (`en-ga` and `ga-en`)
+  - English to and from Lithuanian (`en-lt` and `lt-en`)
+  - English to and from Malay (`en-ms` and `ms-en`)
+  - English to and from Thai (`en-th` and `th-en`)
+
 
 ## 22 August 2019
 {: #22-august-2019}
