@@ -52,6 +52,11 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 13 November 2019
+{: #13-november-2019}
+
+- **New South Korea location**: You can now create {{site.data.keyword.languagetranslatorshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
+
 ## 11 November 2019
 {: #11-november-2019}
 
