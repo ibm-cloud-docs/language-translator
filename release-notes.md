@@ -52,6 +52,29 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 12 December 2019
+{: #12-december-2019}
+
+- **Full support for IBM Cloud IAM**
+
+    - {{site.data.keyword.languagetranslatorshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
+    - To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
+
+        Example URL for an instance hosted in the Dallas location: `api.us-south.language-translator.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
+
+        The previous public endpoint domain was `watsonplatform.net`.
+
+        For more information about the URLs, see the [API reference](https://cloud.ibm.com/apidocs/language-translator/language-translator#service-endpoint){: external}.
+
+        These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+- **New network and data security features**
+    - **Support for data encryption with customer-managed keys**
+        - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+    - **Support for private network endpoints**
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
+
+
 ## 13 November 2019
 {: #13-november-2019}
 
