@@ -33,7 +33,7 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 ## Quick links
 {: #quick-links}
 
-- [Get started](/docs/services/language-translator?topic=language-translator-getting-started).
+- [Get started](/docs/services/language-translator?topic=language-translator-gettingstarted).
 - Try the live [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
 - View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/language-translator){: new_window}.
 - View language support information:
