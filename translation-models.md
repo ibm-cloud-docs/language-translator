@@ -1,13 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-11-11"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+keywords: translation models,list translation models,customizable models
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -16,13 +20,12 @@ lastupdated: "2019-11-11"
 # Translation models
 {: #translation-models}
 
-{{site.data.keyword.languagetranslatorshort}} can translate the following languages.
-Click a language in the list below to view a list of compatible translation models.
+{{site.data.keyword.languagetranslatorshort}} can translate the following languages. Click a language in the list below to view a list of compatible translation models.
 
 You can also use the **List models** API method to view the translation models that are available, including your custom models. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate English to Spanish.
 
-```bash
-curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/models?source=en&target=es&version=2018-05-01
+```sh
+curl --user "apikey:{apikey}" "https://{url}/v3/models?source=en&target=es&version=2018-05-01"
 ```
 {: pre}
 

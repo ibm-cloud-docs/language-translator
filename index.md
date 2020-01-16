@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-08-06"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -34,9 +36,8 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 {: #quick-links}
 
 - [Get started](/docs/services/language-translator?topic=language-translator-gettingstarted).
-- Try the live [demo ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://language-translator-demo.ng.bluemix.net/){: new_window}.
-- View the [API reference ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://{DomainName}/apidocs/language-translator){: new_window}.
+- Try the live [demo](https://language-translator-demo.ng.bluemix.net/){: external}.
+- View the [API reference](https://{DomainName}/apidocs/language-translator){: external}.
 - View language support information:
-  - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
-  - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
-
+    - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
+    - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)

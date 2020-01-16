@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-08-06"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -38,7 +40,7 @@ If you need to request GDPR support for {{site.data.keyword.cloud}} {{site.data.
 
 IBM is committed to providing our clients and partners with innovative data privacy, security and governance solutions to assist them on their journey to GDPR compliance.
 
-Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](../../icons/launch-glyph.svg "External link icon")](http://www.ibm.com/gdpr){: new_window}.
+Learn more about IBM's own GDPR readiness journey and our GDPR capabilities and offerings to support your compliance journey [here](http://www.ibm.com/gdpr){: external}.
 
 ## Health Insurance Portability and Accountability Act (HIPAA)
 {: #hipaa}
@@ -55,7 +57,7 @@ The {{site.data.keyword.languagetranslatorshort}} service temporarily caches tra
 
 When you send text to {{site.data.keyword.languagetranslatorshort}} in the **Translate** method, the service caches the source text and the translation result to improve performance when it receives the same text in subsequent **Translate** requests. Cached translation text is deleted only after it is not used for a period of 15 days.
 
-Documents that are submitted to the service for translation through the **Translate document** method are stored internally to provide the translated file, and to support additional **Translate document** requests by reference to the original uploaded document. The original document and any associated translated documents are deleted only after they are not used in subsequent **Translate document** requests for a period of 15 days. The **Delete document** method can be used to delete documents before the deletion deadline. 
+Documents that are submitted to the service for translation through the **Translate document** method are stored internally to provide the translated file, and to support additional **Translate document** requests by reference to the original uploaded document. The original document and any associated translated documents are deleted only after they are not used in subsequent **Translate document** requests for a period of 15 days. The **Delete document** method can be used to delete documents before the deletion deadline.
 
 Translation data and documents are encrypted in flight and at rest.
 
@@ -64,4 +66,4 @@ Translation data and documents are encrypted in flight and at rest.
 
 When you train a custom model, the training data that you use to create the model is stored to provide you with the custom model. Custom models and training data are encrypted in flight and at rest. The encrypted training data persists in storage until the model is deleted with the **Delete model** method.
 
-Custom models can only be deleted at the model level. Component data used to create a custom model cannot be deleted. If you use personal data when creating a custom model, a separate custom model must be created for each customer and the model `name` labeled to identify the customer so it can be deleted if requested. 
+Custom models can only be deleted at the model level. Component data used to create a custom model cannot be deleted. If you use personal data when creating a custom model, a separate custom model must be created for each customer and the model `name` labeled to identify the customer so it can be deleted if requested.

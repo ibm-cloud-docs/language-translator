@@ -1,26 +1,31 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-08-22"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+keywords: identify language,identifiable languages
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
 
 # Identifiable languages
+{: #identifiable-languages}
 
-The following languages can be identified by the service with the `/identify` endpoint. 
+The following languages can be identified by the service with the **Identify language** method.
 
 You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
 
-```bash
-curl --user apikey:{apikey_value} https://gateway.watsonplatform.net/language-translator/api/v3/identifiable_languages?version=2018-05-01
+```sh
+curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2018-05-01"
 ```
 {: pre}
 
