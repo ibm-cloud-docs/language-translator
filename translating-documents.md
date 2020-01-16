@@ -1,14 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-12-19"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+subcollection: language-translator
 
 ---
-<!-- Attribute definitions -->
+
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
+{:note: .note}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,7 +24,6 @@ lastupdated: "2018-12-19"
 
 # Translating documents (Beta)
 {: #document-translator-tutorial}
-
 
 Translate files from one language to another while preserving the original format. More than 12 different file formats can be translated, including MS Office, Open Office, and PDF.
 {:shortdesc}
@@ -41,31 +43,32 @@ Translate files from one language to another while preserving the original forma
 The following example request submits an example file *curriculum.pdf* to the service and translates it from English to French. Replace `{apikey}` and `{url}` with your service credentials, and replace `curriculum.pdf` with a relative path to your file.
 
 Example request:
-```bash
+```sh
 curl -X POST \
 --user "apikey:{apikey}" \
 --form "file=@curriculum.pdf" \
 --form "source=en" \
 --form "target=fr" \
-{url}/v3/documents?version=2018-05-01
+"{url}/v3/documents?version=2018-05-01"
 ```
 {: pre}
+
+Windows users: Replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure that there are no trailing spaces.
+{: tip}
 
 To translate a document with a [custom model](/docs/services/language-translator?topic=language-translator-customizing), use the **model_id** parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 Example request:
-```bash
+```sh
 curl -X POST \
 --user "apikey:{apikey}" \
 --form "file=@curriculum.pdf" \
 --form "model_id=96221b69-8e46-42e4-a3c1-808e17c787ca" \
-{url}/v3/documents?version=2018-05-01
+"{url}/v3/documents?version=2018-05-01"
 ```
 {: pre}
 
-
 A successful request will return a `document_id` in the response.
-
 
 Example response:
 ```json
@@ -84,13 +87,13 @@ Example response:
 ## Step 2: Check the translation status
 {: #check-translation-status}
 
-After you have submitted a document for translation, you can check the translation status to find out when the translated document is available to download. The following example request checks the translation status of the document with document ID  `bae02796-0d28-435c-9115-888359fdde62`. 
+After you have submitted a document for translation, you can check the translation status to find out when the translated document is available to download. The following example request checks the translation status of the document with document ID  `bae02796-0d28-435c-9115-888359fdde62`.
 
 Example request:
-```bash
+```sh
 curl -X GET \
 --user "apikey:{apikey}" \
-{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01
+"{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01"
 ```
 {: pre}
 
@@ -114,14 +117,14 @@ When the `status` in the response is `available`, the translated document is rea
 ## Step 3: Download the translated document
 {: #download-translated-document}
 
-The following example request saves the translated document with document ID `bae02796-0d28-435c-9115-888359fdde62` to the file *curriculum-fr.pdf*. 
+The following example request saves the translated document with document ID `bae02796-0d28-435c-9115-888359fdde62` to the file *curriculum-fr.pdf*.
 
 Example request:
-```bash
+```sh
 curl -X GET \
 --user "apikey:{apikey}" \
 --output "curriculum-fr.pdf" \
-{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62/translated_document?version=2018-05-01
+"{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62/translated_document?version=2018-05-01"
 ```
 {: pre}
 
@@ -131,13 +134,13 @@ curl -X GET \
 The following example request references the original English *curriculum.pdf* file with the `document_id` `bae02796-0d28-435c-9115-888359fdde62` and translates it to Portuguese.
 
 Example request:
-```bash
+```sh
 curl -X POST \
 --user "apikey:{apikey}" \
 --form "document_id=bae02796-0d28-435c-9115-888359fdde62" \
 --form "source=en" \
 --form "target=pt" \
-{url}/v3/documents?version=2018-05-01
+"{url}/v3/documents?version=2018-05-01"
 ```
 {: pre}
 
@@ -160,25 +163,25 @@ Original documents and any associated translated documents are deleted automatic
 To delete documents manually, use the **Delete document** method. In this tutorial, the English *curriculum.pdf* file was involved with two translations, so two requests are required to delete all copies of the original document.
 
 Delete the original submission of *curriculum.pdf* and the French translation:
-```bash
+```sh
 curl -X DELETE \
 --user "apikey:{apikey}" \
-{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01
+"{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01"
 ```
 {: pre}
 
 Delete the duplicate of the original *curriculum.pdf* file and the Portuguese translation:
-```bash
+```sh
 curl -X DELETE \
 --user "apikey:{apikey}" \
-{url}/v3/documents/a0ge2746-ad38-7d5c-7025-4cd3g9f451ab?version=2018-05-01
+"{url}/v3/documents/a0ge2746-ad38-7d5c-7025-4cd3g9f451ab?version=2018-05-01"
 ```
 {: pre}
 
 ## Supported file formats
 {: #supported-file-formats}
 
--  Microsoft Office
+- Microsoft Office
     - Word: `.doc`, `.docx`
     - PowerPoint: `.ppt`, `.pptx`
     - Excel: `.xls`, `.xlsx`

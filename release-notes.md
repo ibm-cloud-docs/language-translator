@@ -1,13 +1,15 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-12-12"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -30,6 +32,7 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 - Dallas as of June 15, 2018
 - Frankfurt as of June 15, 2018
 - London
+- Seoul
 - Sydney as of June 12, 2018
 - Tokyo
 - Washington, DC as of June 12, 2018
@@ -38,10 +41,10 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 
 - For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see See [Authentication ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#authentication){: new_window} in the API reference.
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://cloud.ibm.com/apidocs/language-translator#authentication){: external} in the API reference.
 - For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
 
-To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/resources){: new_window}.
+To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.
 
 ## Service API Versioning
 {: shortdesc}
@@ -70,12 +73,11 @@ The current version is `2018-05-01`.
     - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
 - **New network and data security features**
     - **Support for data encryption with customer-managed keys**
-      
+
       Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/language-translator?topic=watson-keyservice).
     - **Support for private network endpoints**
-      
-      Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/language-translator?topic=watson-public-private-endpoints).
 
+      Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/language-translator?topic=watson-public-private-endpoints).
 
 ## 13 November 2019
 {: #13-november-2019}
@@ -93,7 +95,6 @@ The current version is `2018-05-01`.
   - English to and from Lithuanian (`en-lt` and `lt-en`)
   - English to and from Malay (`en-ms` and `ms-en`)
   - English to and from Thai (`en-th` and `th-en`)
-
 
 ## 22 August 2019
 {: #22-august-2019}
@@ -248,8 +249,7 @@ curl -u username:password \
 ```
 {: codeblock}
 
-You can watch a [video walkthrough on YouTube ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://youtu.be/L6ZC0QaUZ2k) that explains how to set up {{site.data.keyword.languagetranslatorshort}} with the NMT preview.
-
+You can watch a [video walkthrough on YouTube](https://youtu.be/L6ZC0QaUZ2k) that explains how to set up {{site.data.keyword.languagetranslatorshort}} with the NMT preview.
 
 ## 15 December 2016
 {: #15-december-2016}

@@ -1,13 +1,17 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-06-13"
+  years: 2015, 2020
+lastupdated: "2020-01-16"
+
+keywords: customize,custom models
+
+subcollection: language-translator
 
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -26,10 +30,11 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 ## Before you begin
 {: #before-you-begin}
 
-1. Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
-1. Find a customizable base model for your language pair. You will need the model ID of the base model in order to train your custom model.
+1.  Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
+    - Copy the `API Key` and `URL` values for that instance. For details about how to find the values, see the [Before you begin](/docs/language-translator?topic=language-translator-gettingstarted) section of "Getting started with {{site.data.keyword.languagetranslatorshort}}."
+1.  Find a customizable base model for your language pair. You will need the model ID of the base model in order to train your custom model.
     - Search the models listed on the [Translation models](/docs/services/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
-    - Alternatively, you can use the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
+    - Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
 
 ## Step 1: Create your training data
 {: #create-your-training-data}
@@ -44,15 +49,17 @@ After you have created your [Translation Memory Exchange (TMX) files](#creating-
 ## Step 2: Train your model
 {: #train-your-model}
 
-Use the [Create model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#create-model) method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
+Use the [Create model](https://{DomainName}/apidocs/language-translator#create-model){: external} method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
 
 ### Example request
 {: #train-model-example-request}
 
 The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. See the [Forced glossary customization](#forced-glossary) section for an example forced glossary TMX file.
 
-```bash
-curl --user apikey:{apikey} -X POST --form forced_glossary=@glossary.tmx "https://gateway.watsonplatform.net/language-translator/api/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
+Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
+
+```sh
+curl -X POST --user "apikey:{apikey}" --form forced_glossary=@glossary.tmx "{url}/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
 ```
 {: pre}
 
@@ -78,7 +85,7 @@ The API response will contain details about your custom model, including its mod
 ## Step 3: Check the status of your model
 {: #check-model-status}
 
-Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#get-model-details) method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#list-models) method.
+Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model details](https://{DomainName}/apidocs/language-translator/language-translator#get-model-details){: external} method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models](https://{DomainName}/apidocs/language-translator/language-translator#list-models){: external} method.
 
 The `status` response attribute describes the state of the model in the training process:
 
@@ -101,26 +108,25 @@ When the model status is `available`, your model is ready to use with your servi
 
 The following example gets information for the model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
-```bash
-curl --user apikey:{apikey_value} "https://gateway.watsonplatform.net/language-translator/api/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
+```sh
+curl --user "apikey:{apikey}" "{url}/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
 ```
 {: pre}
 
 ## Step 4: Translate text with your custom model
 {: #translate-text}
 
-To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#translate) method.
+To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate](https://{DomainName}/apidocs/language-translator/language-translator#translate){: external} method.
 
 ### Example request
 {: #translate-text-example-request}
 
 The following example translates text with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
-```bash
-curl --user apikey:{apikey_value} --request POST --header "Content-Type: application/json" --data '{"text":"Hello","model_id":"96221b69-8e46-42e4-a3c1-808e17c787ca"}' https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01
+```sh
+curl -X POST --user "apikey:{apikey}" --header "Content-Type: application/json" --data "{\"text\":\"Hello\",\"model_id\":\"96221b69-8e46-42e4-a3c1-808e17c787ca\"}" "{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
-
 
 ## Forced glossary customization
 {: #forced-glossary-customization}
@@ -168,8 +174,6 @@ The following example shows a TMX file with two translation pairs. The first pai
 ```
 {: codeblock}
 
-
-
 ## Parallel corpus customization
 {: #parallel-corpus-customization}
 
@@ -184,8 +188,7 @@ Use a **parallel corpus** to provide additional translations for the base model 
 ### Parallel corpus example
 {: #parallel-corpus-example}
 
-The following is a small piece of an English to French parallel corpus that was downloaded from the [MultiUN collection ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus.nlpl.eu/MultiUN.php) available on the OPUS open parallel corpus website. You can download a compressed version of the entire TMX file [here ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz).
-
+The following is a small piece of an English to French parallel corpus that was downloaded from the [MultiUN collection](http://opus.nlpl.eu/MultiUN.php){: external} available on the OPUS open parallel corpus website. You can download a compressed version of the entire TMX file [here](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz){: external}.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -240,11 +243,10 @@ When the same input sentence is translated by a custom model trained with the ex
 
 In some cases it might seem that a custom model trained with a parallel corpus is ignoring a specific example that you provided. In these cases, try searching your training data for other sentences that might be influencing the translation behavior, or consider using a forced glossary if you want to control a specific translation.
 
-
 ## Creating TMX files
 {: #creating-tmx-files}
 
-To provide a glossary or corpus of terms for training the {{site.data.keyword.languagetranslatorshort}} service, create a valid UTF-8 encoded document that conforms to the Translation Memory Exchange (TMX) [version 1.4 ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www.ttt.org/oscarStandards/tmx/){: new_window} specification. TMX is an XML specification that is designed for machine-translation tools. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
+To provide a glossary or corpus of terms for training the {{site.data.keyword.languagetranslatorshort}} service, create a valid UTF-8 encoded document that conforms to the Translation Memory Exchange (TMX) [version 1.4](http://www.ttt.org/oscarStandards/tmx/){: external} specification. TMX is an XML specification that is designed for machine-translation tools. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -301,9 +303,9 @@ To use the provided example as a template for your own glossary or corpus, compl
 
 1. Copy and paste the example into a text editor.
 
-2. Change the `srclang` attribute of the `<header>` tag to the [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} of the source language that your glossary or parallel corpus uses.
+2. Change the `srclang` attribute of the `<header>` tag to the [language code](http://www-01.sil.org/iso639-3/codes.asp){: external} of the source language that your glossary or parallel corpus uses.
 
-3. Change the `xml:lang` attribute of the `<tuv>` tags to the correct [language code ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://www-01.sil.org/iso639-3/codes.asp){: new_window} for each term or translation.
+3. Change the `xml:lang` attribute of the `<tuv>` tags to the correct [language code](http://www-01.sil.org/iso639-3/codes.asp){: external} for each term or translation.
 
 4. Save the document with the extension `.tmx` and UTF-8 encoding.
 
@@ -320,7 +322,7 @@ You can use a number of tools to create or generate TMX files. Often, generated 
 
 Mac users can also change file encoding by updating the XML header of the document as described in step 2, and then running the following command in the Terminal:
 
-```bash
+```sh
 iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ```
 {: pre}
@@ -329,11 +331,11 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ## Deleting a custom translation model
 {: #deleting-a-custom-model}
 
-To delete a custom translation model, use the [Delete model ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/language-translator#delete-model) method.
+To delete a custom translation model, use the [Delete model](https://cloud.ibm.com/language-translator#delete-model){: external} method.
 
 The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 
-```curl
-curl --user apikey:{apikey_value} --request DELETE "https://gateway.watsonplatform.net/language-translator/api/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
+```sh
+curl -X DELETE --user "apikey:{apikey}" "{url}/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
 {: codeblock}
