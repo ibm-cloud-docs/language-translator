@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-01-30"
 
 subcollection: language-translator
 
@@ -55,6 +55,15 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 30 January 2019
+{: #30-january-2019}
+
+- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+  - English to and from Latvian (`en-lv` and `lv-en`)
+  - English to and from Urdu (`en-ur` and `ur-en`)
+  - English to and from Vietnamese (`en-vi` and `vi-en`)
+- General improvements for translating PowerPoint and Word documents.
+
 ## 12 December 2019
 {: #12-december-2019}
 
@@ -73,11 +82,9 @@ The current version is `2018-05-01`.
     - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
 - **New network and data security features**
     - **Support for data encryption with customer-managed keys**
-
-      Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/language-translator?topic=watson-keyservice).
+        - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
     - **Support for private network endpoints**
-
-      Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/language-translator?topic=watson-public-private-endpoints).
+        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
 
 ## 13 November 2019
 {: #13-november-2019}
@@ -96,8 +103,9 @@ The current version is `2018-05-01`.
   - English to and from Malay (`en-ms` and `ms-en`)
   - English to and from Thai (`en-th` and `th-en`)
 
-## 22 August 2019
-{: #22-august-2019}
+
+## 21 August 2019
+{: #21-august-2019}
 
 - New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Bulgarian (`en-bg` and `bg-en`)
