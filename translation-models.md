@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-02-03"
 
 keywords: translation models,list translation models,customizable models
 
@@ -52,6 +52,7 @@ curl --user "apikey:{apikey}" "https://{url}/v3/models?source=en&target=es&versi
   - [Italian](#italian)
   - [Japanese](#japanese)
   - [Korean](#korean)
+  - [Latvian](#latvian)
   - [Lithuanian](#lithuanian)
   - [Malay](#malay)
   - [Norwegian Bokmål](#norwegian-bokmal)
@@ -65,6 +66,8 @@ curl --user "apikey:{apikey}" "https://{url}/v3/models?source=en&target=es&versi
   - [Swedish](#swedish)
   - [Thai](#thai)
   - [Turkish](#turkish)
+  - [Urdu](#urdu)
+  - [Vietnamese](#vietnamese)
 
 ## Arabic
 {: #arabic}
@@ -793,6 +796,23 @@ The following models can translate English text.
    </tr>
    <tr>
     <td>
+     <code>en-lv</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Latvian (<code>lv</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr> 
+   <tr>
+    <td>
      <code>en-lt</code>
     </td>
     <td>
@@ -1038,6 +1058,40 @@ The following models can translate English text.
     </td>
     <td>
      Traditional Chinese (<code>zh-TW</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-ur</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Urdu (<code>ur</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-vi</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Vietnamese (<code>vi</code>)
     </td>
     <td>
      <code>general</code>
@@ -1708,6 +1762,50 @@ The following models can translate Korean text.
  </thead>
 </table>
 
+## Latvian
+{: #latvian}
+
+The following models can translate Latvian text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>lv-en</code>
+    </td>
+    <td>
+     Latvian (<code>lv</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 ## Lithuanian
 {: #lithuanian}
 
@@ -2299,6 +2397,94 @@ The following models can translate Turkish text.
     </td>
     <td>
      Turkish (<code>tr</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Urdu
+{: #urdu}
+
+The following models can translate Urdu text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ur-en</code>
+    </td>
+    <td>
+     Urdu (<code>ur</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+## Vietnamese
+{: #vietnamese}
+
+The following models can translate Vietnamese text.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>vi-en</code>
+    </td>
+    <td>
+     Vietnamese (<code>vi</code>)
     </td>
     <td>
      English (<code>en</code>)
