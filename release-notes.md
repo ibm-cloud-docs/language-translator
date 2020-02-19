@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-06"
 
 subcollection: language-translator
 
@@ -58,7 +58,7 @@ The current version is `2018-05-01`.
 ## 30 January 2019
 {: #30-january-2019}
 
-- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Latvian (`en-lv` and `lv-en`)
   - English to and from Urdu (`en-ur` and `ur-en`)
   - English to and from Vietnamese (`en-vi` and `vi-en`)
@@ -79,7 +79,7 @@ The current version is `2018-05-01`.
         For more information about the URLs, see the [API reference](https://cloud.ibm.com/apidocs/language-translator/language-translator#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
-    - For more information about IAM, see [Authenticating to Watson services](/docs/services/watson?topic=watson-iam).
+    - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 - **New network and data security features**
     - **Support for data encryption with customer-managed keys**
         - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
@@ -96,7 +96,7 @@ The current version is `2018-05-01`.
 
 - Improved custom model training time.
 - Improved language identification accuracy for English text and for text with more than 100 words.
-- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Indonesian (`en-id` and `id-en`)
   - English to and from Irish (`en-ga` and `ga-en`)
   - English to and from Lithuanian (`en-lt` and `lt-en`)
@@ -107,7 +107,7 @@ The current version is `2018-05-01`.
 ## 21 August 2019
 {: #21-august-2019}
 
-- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available.
+- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Bulgarian (`en-bg` and `bg-en`)
   - English to and from Croatian (`en-hr` and `hr-en`)
   - English to and from Estonian (`en-et` and `et-en`)
@@ -127,14 +127,14 @@ The current version is `2018-05-01`.
 ## 14 June 2019
 {: #14-june-2019}
 
-New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available for English and Greek.
+New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available for English and Greek.
 - English to Greek (en-el)
 - Greek to English (el-en)
 
 ## 13 June 2019
 {: #13-june-2019}
 
-New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) are now available for English and Hebrew.
+New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available for English and Hebrew.
 - English to Hebrew (en-he)
 - Hebrew to English (he-en)
 
@@ -145,7 +145,7 @@ From March 21 2019, you will see only service credential information associated 
 
 This change does not affect API access for users or applications with existing service key credentials. Only the viewing of credentials within {{site.data.keyword.cloud_notm}} is affected.
 
-For more information about service keys and user roles, see [IAM service API keys](/docs/services/watson?topic=watson-api-key-bp#api-key-bp).
+For more information about service keys and user roles, see [IAM service API keys](/docs/watson?topic=watson-api-key-bp#api-key-bp).
 
 ## 14 December 2018
 {: #14-december-2018}
@@ -155,10 +155,10 @@ For more information about service keys and user roles, see [IAM service API key
 ## 16 November 2018
 {: #16-november-2018}
 
-- [Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
-  - [Supported file formats](/docs/services/language-translator?topic=language-translator-translating-documents#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
+- [Translating documents (Beta)](/docs/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+  - [Supported file formats](/docs/language-translator?topic=language-translator-translating-documents#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
 
-- New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
+- New [translation models](/docs/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
   - Hungarian to English (hu-en)
   - English to Hungarian (en-hu)
 
@@ -170,14 +170,14 @@ For more information about service keys and user roles, see [IAM service API key
 ## 9 August 2018
 {: #9-august-2018}
 
-New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) for Norwegian Bokmål are now available:
+New [translation models](/docs/language-translator?topic=language-translator-translation-models) for Norwegian Bokmål are now available:
   - Norwegian Bokmål to English (nb-en)
   - English to Norwegian Bokmål (en-nb)
 
 ## 27 June 2018
 {: #27-june-2018}
 
-New [translation models](/docs/services/language-translator?topic=language-translator-translation-models) that feature six new languages are now available:
+New [translation models](/docs/language-translator?topic=language-translator-translation-models) that feature six new languages are now available:
   - Catalan
     - Catalan to Spanish (ca-es)
     - Spanish to Catalan (es-ca)
@@ -203,12 +203,12 @@ New [translation models](/docs/services/language-translator?topic=language-trans
 
 As of 15 June 2018, new service instances created in the Germany and US South regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
 
-New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](/docs/services/language-translator?topic=language-translator-migrating).
+New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](/docs/language-translator?topic=language-translator-migrating).
 
 ## 12 June 2018
 {: #12-june-2018}
 
-{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](/docs/services/language-translator?topic=language-translator-migrating) page for more information.
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](/docs/language-translator?topic=language-translator-migrating) page for more information.
 
 ### What's new in v3
 {: #whats-new}
@@ -288,8 +288,8 @@ As of January 15, 2016, all customization capabilities within the Standard Plan 
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
 2.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
-3.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/services/language-translator?topic=language-translator-customizing#structure).
-4.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/services/language-translator?topic=language-translator-customizing#training).
+3.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/language-translator?topic=language-translator-customizing#structure).
+4.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/language-translator?topic=language-translator-customizing#training).
 5.  In your app, point the "ModelID" field to the new customized models.
 6.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-02-06"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -44,7 +44,7 @@ This tutorial walks you through the commands to translate text from English to S
 {: #prerequisites}
 
 - {: hide-dashboard} Create an instance of the service:
-    1.  Go to the [{{site.data.keyword.languagetranslatorshort}}](https://{DomainName}/catalog/services/language-translator){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
+    1.  Go to the [{{site.data.keyword.languagetranslatorshort}}](https://{DomainName}/catalog/language-translator){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
     1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
     1.  Click **Create**.
 - {: hide-dashboard} Copy the credentials to authenticate to your service instance:
@@ -86,14 +86,14 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" 
 ## Step 3: Translate a document (Beta)
 {: #translate-a-document}
 
-{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as PDFs and Microsoft Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/services/language-translator?topic=language-translator-document-translator-tutorial).
+{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as PDFs and Microsoft Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial).
 
 ## Next steps
 {: #next-steps}
 
-- Learn how to [customize](/docs/services/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
+- Learn how to [customize](/docs/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
 - View the [API reference](https://{DomainName}/apidocs/language-translator)
-- Explore [sample applications](/docs/services/language-translator?topic=language-translator-sample-apps)
+- Explore [sample applications](/docs/language-translator?topic=language-translator-sample-apps)
 - View language support information:
-    - [Translation models](/docs/services/language-translator?topic=language-translator-translation-models)
-    - [Identifiable languages](/docs/services/language-translator?topic=language-translator-identifiable-languages)
+    - [Translation models](/docs/language-translator?topic=language-translator-translation-models)
+    - [Identifiable languages](/docs/language-translator?topic=language-translator-identifiable-languages)

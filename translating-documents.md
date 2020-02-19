@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-02-06"
 
 subcollection: language-translator
 
@@ -31,11 +31,11 @@ Translate files from one language to another while preserving the original forma
 ## Before you begin
 {: #prerequisites}
 
-- [Get started](/docs/services/language-translator?topic=language-translator-gettingstarted) with {{site.data.keyword.languagetranslatorshort}}. You will need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`).
+- [Get started](/docs/language-translator?topic=language-translator-gettingstarted) with {{site.data.keyword.languagetranslatorshort}}. You will need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`).
 - Make sure the document you want to translate meets the following requirements:
     - Maximum file size: **20 MB**
     - [Supported file formats](#supported-file-formats)
-    - [Supported translation models](/docs/services/language-translator?topic=language-translator-translation-models)
+    - [Supported translation models](/docs/language-translator?topic=language-translator-translation-models)
 
 ## Step 1: Submit a document to translate
 {: #submit-document-to-translate}
@@ -56,7 +56,7 @@ curl -X POST \
 Windows users: Replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure that there are no trailing spaces.
 {: tip}
 
-To translate a document with a [custom model](/docs/services/language-translator?topic=language-translator-customizing), use the **model_id** parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
+To translate a document with a [custom model](/docs/language-translator?topic=language-translator-customizing), use the **model_id** parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 Example request:
 ```sh
@@ -157,7 +157,7 @@ The response contains a new `document_id`. Repeat steps two and three with your 
 ## Step 5: Delete documents
 {: #delete-documents}
 
-Original documents and any associated translated documents are deleted automatically after they have not been used for a certain period of time. See [Information security](/docs/services/language-translator?topic=language-translator-information-security) for more details.
+Original documents and any associated translated documents are deleted automatically after they have not been used for a certain period of time. See [Information security](/docs/language-translator?topic=language-translator-information-security) for more details.
 {: tip}
 
 To delete documents manually, use the **Delete document** method. In this tutorial, the English *curriculum.pdf* file was involved with two translations, so two requests are required to delete all copies of the original document.

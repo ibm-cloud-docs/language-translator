@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-02-06"
 
 subcollection: language-translator
 
@@ -40,7 +40,7 @@ In the event of a catastrophic failure in a region, complete the following steps
 
 - Create a new {{site.data.keyword.languagetranslatorshort}} service instance.
 - Adjust your application software to use the new service instance URL and credentials.
-- Create new custom models to replace any that you lost. Use the same forced glossaries and parallel corpora that you used to create your previous custom models. See [Customizing your model](/docs/services/language-translator?topic=language-translator-customizing#customizing) for more information about custom models.
+- Create new custom models to replace any that you lost. Use the same forced glossaries and parallel corpora that you used to create your previous custom models. See [Customizing your model](/docs/language-translator?topic=language-translator-customizing#customizing) for more information about custom models.
   - To prepare for a quick recovery, store backup copies of your training files whenever you create a model. You can use the `name` and `model_id` fields of your custom models along with the filenames of your training files to keep a record of the files that you use for each model. 
 - Adjust your application software to use the new custom models.
 
