@@ -55,8 +55,8 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
-## 30 January 2019
-{: #30-january-2019}
+## 30 January 2020
+{: #30-january-2020}
 
 - New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
   - English to and from Latvian (`en-lv` and `lv-en`)
