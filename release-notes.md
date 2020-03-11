@@ -55,6 +55,11 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 28 February 2020
+{: #28-february-2020}
+
+Added automatic source language detection in **Translate** requests. When you specify a target language without specifying a source language or translation model, the service attempts to identify the source language and continues with the translation. In the results, the service returns the identified language and a score indicating the confidence in the identification.
+
 ## 30 January 2020
 {: #30-january-2020}
 
