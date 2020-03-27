@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc console-page="/developer/watson" product-page="https://www.ibm.com/cloud/watson-language-translator/" subcollection="language-translator" category="ai" service-name="Language Translator" audience="service" arm="344" href="/docs/services/language-translator?topic=language-translator-gettingstarted" path="services/language-translator"}
+{: .toc console-page="/developer/watson" product-page="https://www.ibm.com/cloud/watson-language-translator/" subcollection="language-translator" category="ai" service-name="Language Translator" audience="service" href="/docs/language-translator?topic=language-translator-gettingstarted" path="language-translator"}
 Language Translator
 
     {: .navgroup id="learn"}
