@@ -47,7 +47,6 @@ Language Translator
     {: .topicgroup}
     Developer community
         [StackOverflow](http://stackoverflow.com/questions/tagged/language-translation+ibm-watson-cognitive)
-        [IBM Developer Answers](https://developer.ibm.com/answers/topics/language-translator/)
         [WDC Slack channel](http://wdc-slack-inviter.mybluemix.net/)
 
     [Accessibility](/overview/overview-accessibility-platform#features-platform)
