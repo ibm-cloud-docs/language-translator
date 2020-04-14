@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-04-14"
 
 subcollection: language-translator
 
@@ -46,15 +46,13 @@ This chatbot built with Watson Assistant and Cloud Functions adds support for mu
 - [YouTube video](https://www.youtube.com/watch?v=d7DXydORTME){: external}
 - [Read more](https://medium.com/ibm-watson/build-multilingual-chatbots-with-watson-language-translator-watson-assistant-8c38247e8af1){: external}
 
-## Serverless Multilingual Chatrooms (Node.js)
-{: #multilingual-chatrooms}
+## Real-time translation (Node.js)
+{: #real-time-translation}
 
-This sample app shows how to create serverless meeting rooms that allow clients who speak different languages to seamlessly communicate with each other. Integrate Watson Language Translator and Watson Speech Services in services such as Slack, Zoom, Sametime to allow for seamless communication.
+Using Node.js and React components, create a web app that can be your personal translator. The app uses Watson Speech to Text, Watson Language Translator, and Watson Text to Speech services to transcribe, translate, and synthesize from your microphone to your headphones.
 
-- [Read the blog](https://medium.com/kkbankol-events/the-motivation-behind-this-particular-project-comes-from-playing-one-of-my-favorite-android-games-76c92b27c8e8){: external}
-- [Code Pattern](https://developer.ibm.com/patterns/deploy-serverless-multilingual-conference-room/){: external}
-- [Try the demo](https://translation-mqtt.mybluemix.net/){: external}
-- [View on GitHub](https://github.com/IBM/serverless-language-translation){: external}
+- [Code Pattern](https://developer.ibm.com/components/watson-apis/patterns/build-a-real-time-translation-service-with-watson-api-kit){: external}
+- [View on GitHub](https://github.com/ibm/watson-speech-translator){: external}
 
 ## Language Translator demo (Node.js)
 {: #language-translator-demo}
