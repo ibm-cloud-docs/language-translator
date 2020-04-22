@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-22"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -95,5 +95,5 @@ curl -X POST -u "apikey:{apikey}"{: apikey} --header "Content-Type: text/plain" 
 - View the [API reference](https://{DomainName}/apidocs/language-translator)
 - Explore [sample applications](/docs/language-translator?topic=language-translator-sample-apps)
 - View language support information:
-    - [Translation models](/docs/language-translator?topic=language-translator-translation-models)
+    - [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models)
     - [Identifiable languages](/docs/language-translator?topic=language-translator-identifiable-languages)
