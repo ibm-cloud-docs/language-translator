@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-04-22"
 
 keywords: translation models,list translation models,customizable models
 
@@ -17,62 +17,78 @@ subcollection: language-translator
 {:codeblock: .codeblock}
 {:screen: .screen}
 
-# Translation models
+# Supported languages for translation
 {: #translation-models}
 
-{{site.data.keyword.languagetranslatorshort}} can translate the following languages. Click a language in the list below to view a list of compatible translation models.
+{{site.data.keyword.languagetranslatorshort}} can translate from the following languages to any other language in the list, with the exception of Catalan. Click a language to see the customizable translation models for that language.
 
-You can also use the **List models** API method to view the translation models that are available, including your custom models. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate English to Spanish.
+|Language|Language code|
+|---|---|
+|[Arabic](#arabic)|`ar`|
+|[Bengali](#bengali)|`bn`|
+|[Bulgarian](#bulgarian)|`bg`|
+|[Catalan](#catalan)\*|`ca`|
+|[Chinese (Simplified)](#chinese-simplified)|`zh`|
+|[Chinese (Traditional)](#chinese-traditional)|`zh-TW`|
+|[Croatian](#croatian)|`hr`|
+|[Czech](#czech)|`cs`|
+|[Danish](#danish)|`da`|
+|[Dutch](#dutch)|`nl`|
+|[English](#english)|`en`|
+|[Estonian](#estonian)|`et`|
+|[Finnish](#finnish)|`fi`|
+|[French](#french)|`fr`|
+|[German](#german)|`de`|
+|[Greek](#greek)|`el`|
+|[Gujarati](#gujarati)|`gu`|
+|[Hebrew](#hebrew)|`he`|
+|[Hindi](#hindi)|`hi`|
+|[Hungarian](#hungarian)|`hu`|
+|[Irish](#irish)|`ga`|
+|[Indonesian](#indonesian)|`id`|
+|[Italian](#italian)|`it`|
+|[Japanese](#japanese)|`ja`|
+|[Korean](#korean)|`ko`|
+|[Latvian](#latvian)|`lv`|
+|[Lithuanian](#lithuanian)|`li`|
+|[Malay](#malay)|`ms`|
+|[Malayalam](#malayalam)|`ml`|
+|[Maltese](#maltese)|`mt`|
+|[Norwegian Bokmål](#norwegian-bokmal)|`nb`|
+|[Polish](#polish)|`pl`|
+|[Portuguese](#portuguese)|`pt`|
+|[Romanian](#romanian)|`ro`|
+|[Russian](#russian)|`ru`|
+|[Slovak](#slovak)|`sk`|
+|[Slovenian](#slovenian)|`sl`|
+|[Spanish](#spanish)|`es`|
+|[Swedish](#swedish)|`sv`|
+|[Tamil](#tamil)|`ta`|
+|[Telugu](#telugu)|`te`|
+|[Thai](#thai)|`th`|
+|[Turkish](#turkish)|`tr`|
+|[Urdu](#urdu)|`ur`|
+|[Vietnamese](#Vietnamese)|`vi`|
+
+\* Catalan is supported only for translation to and from Spanish.
+
+
+## Customization support
+{: #customization-support}
+
+The following sections list the customizable translation models for each language.
+
+You can also use the **List models** API method to view the translation models that support customization and any custom models that you have created. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate English to Spanish.
 
 ```sh
 curl --user "apikey:{apikey}" "https://{url}/v3/models?source=en&target=es&version=2018-05-01"
 ```
 {: pre}
 
-  - [Arabic](#arabic)
-  - [Bulgarian](#bulgarian)
-  - [Catalan](#catalan)
-  - [Chinese (Simplified)](#chinese-simplified)
-  - [Chinese (Traditional)](#chinese-traditional)
-  - [Croatian](#croatian)
-  - [Czech](#czech)
-  - [Danish](#danish)
-  - [Dutch](#dutch)
-  - [English](#english)
-  - [Estonian](#estonian)
-  - [Finnish](#finnish)
-  - [French](#french)
-  - [German](#german)
-  - [Greek](#greek)
-  - [Hebrew](#hebrew)
-  - [Hindi](#hindi)
-  - [Hungarian](#hungarian)
-  - [Irish](#irish)
-  - [Indonesian](#indonesian)
-  - [Italian](#italian)
-  - [Japanese](#japanese)
-  - [Korean](#korean)
-  - [Latvian](#latvian)
-  - [Lithuanian](#lithuanian)
-  - [Malay](#malay)
-  - [Norwegian Bokmål](#norwegian-bokmal)
-  - [Polish](#polish)
-  - [Portuguese](#portuguese)
-  - [Romanian](#romanian)
-  - [Russian](#russian)
-  - [Slovak](#slovak)
-  - [Slovenian](#slovenian)
-  - [Spanish](#spanish)
-  - [Swedish](#swedish)
-  - [Thai](#thai)
-  - [Turkish](#turkish)
-  - [Urdu](#urdu)
-  - [Vietnamese](#vietnamese)
-
-## Arabic
+### Arabic
 {: #arabic}
 
-The following models can translate Arabic text.
+The following Arabic translation models can be customized.
 
 <table>
  <thead>
@@ -113,10 +129,55 @@ The following models can translate Arabic text.
  </thead>
 </table>
 
-## Bulgarian
+### Bengali
+{: #bengali}
+
+The following Bengali translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>bn-en</code>
+    </td>
+    <td>
+     Bengali (<code>bn</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+
+### Bulgarian
 {: #bulgarian}
 
-The following models can translate Bulgarian text.
+The following Bulgarian translation models can be customized.
 
 <table>
  <thead>
@@ -157,10 +218,10 @@ The following models can translate Bulgarian text.
  </thead>
 </table>
 
-## Catalan
+### Catalan
 {: #catalan}
 
-The following models can translate Catalan text.
+The following Catalan translation models can be customized.
 
 <table>
  <thead>
@@ -201,10 +262,10 @@ The following models can translate Catalan text.
  </thead>
 </table>
 
-## Chinese (Simplified)
+### Chinese (Simplified)
 {: #chinese-simplified}
 
-The following models can translate Chinese (Simplified) text.
+The following Chinese (Simplified) translation models can be customized.
 
 <table>
  <thead>
@@ -245,10 +306,10 @@ The following models can translate Chinese (Simplified) text.
  </thead>
 </table>
 
-## Chinese (Traditional)
+### Chinese (Traditional)
 {: #chinese-traditional}
 
-The following models can translate Chinese (Traditional) text.
+The following Chinese (Traditional) translation models can be customized.
 
 <table>
  <thead>
@@ -289,10 +350,10 @@ The following models can translate Chinese (Traditional) text.
  </thead>
 </table>
 
-## Croatian
+### Croatian
 {: #croatian}
 
-The following models can translate Croatian text.
+The following Croatian translation models can be customized.
 
 <table>
  <thead>
@@ -333,10 +394,10 @@ The following models can translate Croatian text.
  </thead>
 </table>
 
-## Czech
+### Czech
 {: #czech}
 
-The following models can translate Czech text.
+The following Czech translation models can be customized.
 
 <table>
  <thead>
@@ -377,10 +438,10 @@ The following models can translate Czech text.
  </thead>
 </table>
 
-## Danish
+### Danish
 {: #danish}
 
-The following models can translate Danish text.
+The following Danish translation models can be customized.
 
 <table>
  <thead>
@@ -421,10 +482,10 @@ The following models can translate Danish text.
  </thead>
 </table>
 
-## Dutch
+### Dutch
 {: #dutch}
 
-The following models can translate Dutch text.
+The following Dutch translation models can be customized.
 
 <table>
  <thead>
@@ -465,10 +526,10 @@ The following models can translate Dutch text.
  </thead>
 </table>
 
-## English
+### English
 {: #english}
 
-The following models can translate English text.
+The following English translation models can be customized.
 
 <table>
  <thead>
@@ -1104,10 +1165,10 @@ The following models can translate English text.
  </thead>
 </table>
 
-## Estonian
+### Estonian
 {: #estonian}
 
-The following models can translate Estonian text.
+The following Estonian translation models can be customized.
 
 <table>
  <thead>
@@ -1148,10 +1209,10 @@ The following models can translate Estonian text.
  </thead>
 </table>
 
-## Finnish
+### Finnish
 {: #finnish}
 
-The following models can translate Finnish text.
+The following Finnish translation models can be customized.
 
 <table>
  <thead>
@@ -1192,10 +1253,10 @@ The following models can translate Finnish text.
  </thead>
 </table>
 
-## French
+### French
 {: #french}
 
-The following models can translate French text.
+The following French translation models can be customized.
 
 <table>
  <thead>
@@ -1270,10 +1331,10 @@ The following models can translate French text.
  </thead>
 </table>
 
-## German
+### German
 {: #german}
 
-The following models can translate German text.
+The following German translation models can be customized.
 
 <table>
  <thead>
@@ -1348,10 +1409,10 @@ The following models can translate German text.
  </thead>
 </table>
 
-## Greek
+### Greek
 {: #greek}
 
-The following models can translate Greek text.
+The following Greek translation models can be customized.
 
 <table>
  <thead>
@@ -1392,10 +1453,55 @@ The following models can translate Greek text.
  </thead>
 </table>
 
-## Hebrew
+### Gujarati
+{: #gujarati}
+
+The following Gujarati translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>gu-en</code>
+    </td>
+    <td>
+     Gujarati (<code>gu</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+
+### Hebrew
 {: #hebrew}
 
-The following models can translate Hebrew text.
+The following Hebrew translation models can be customized.
 
 <table>
  <thead>
@@ -1437,10 +1543,10 @@ The following models can translate Hebrew text.
 </table>
 
 
-## Hindi
+### Hindi
 {: #hindi}
 
-The following models can translate Hindi text.
+The following Hindi translation models can be customized.
 
 <table>
  <thead>
@@ -1481,10 +1587,10 @@ The following models can translate Hindi text.
  </thead>
 </table>
 
-## Hungarian
+### Hungarian
 {: #hungarian}
 
-The following models can translate Hungarian text.
+The following Hungarian translation models can be customized.
 
 <table>
  <thead>
@@ -1525,10 +1631,10 @@ The following models can translate Hungarian text.
  </thead>
 </table>
 
-## Indonesian
+### Indonesian
 {: #indonesian}
 
-The following models can translate Indonesian text.
+The following Indonesian translation models can be customized.
 
 <table>
  <thead>
@@ -1569,10 +1675,10 @@ The following models can translate Indonesian text.
  </thead>
 </table>
 
-## Irish
+### Irish
 {: #irish}
 
-The following models can translate Irish text.
+The following Irish translation models can be customized.
 
 <table>
  <thead>
@@ -1613,10 +1719,10 @@ The following models can translate Irish text.
  </thead>
 </table>
 
-## Italian
+### Italian
 {: #italian}
 
-The following models can translate Italian text.
+The following Italian translation models can be customized.
 
 <table>
  <thead>
@@ -1674,10 +1780,10 @@ The following models can translate Italian text.
  </thead>
 </table>
 
-## Japanese
+### Japanese
 {: #japanese}
 
-The following models can translate Japanese text.
+The following Japanese translation models can be customized.
 
 <table>
  <thead>
@@ -1718,10 +1824,10 @@ The following models can translate Japanese text.
  </thead>
 </table>
 
-## Korean
+### Korean
 {: #korean}
 
-The following models can translate Korean text.
+The following Korean translation models can be customized.
 
 <table>
  <thead>
@@ -1762,10 +1868,10 @@ The following models can translate Korean text.
  </thead>
 </table>
 
-## Latvian
+### Latvian
 {: #latvian}
 
-The following models can translate Latvian text.
+The following Latvian translation models can be customized.
 
 <table>
  <thead>
@@ -1806,10 +1912,10 @@ The following models can translate Latvian text.
  </thead>
 </table>
 
-## Lithuanian
+### Lithuanian
 {: #lithuanian}
 
-The following models can translate Lithuanian text.
+The following Lithuanian translation models can be customized.
 
 <table>
  <thead>
@@ -1850,10 +1956,10 @@ The following models can translate Lithuanian text.
  </thead>
 </table>
 
-## Malay
+### Malay
 {: #malay}
 
-The following models can translate Malay text.
+The following Malay translation models can be customized.
 
 <table>
  <thead>
@@ -1894,10 +2000,98 @@ The following models can translate Malay text.
  </thead>
 </table>
 
-## Norwegian Bokmål
+### Malayalam
+{: #malayalam}
+
+The following Malayalam translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ml-en</code>
+    </td>
+    <td>
+     Malayalam (<code>ml</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+### Maltese
+{: #maltese}
+
+The following Maltese translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>mt-en</code>
+    </td>
+    <td>
+     Maltese (<code>mt</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+### Norwegian Bokmål
 {: #norwegian-bokmal}
 
-The following models can translate Norwegian Bokmål text.
+The following Norwegian Bokmål translation models can be customized.
 
 <table>
  <thead>
@@ -1938,10 +2132,10 @@ The following models can translate Norwegian Bokmål text.
  </thead>
 </table>
 
-## Polish
+### Polish
 {: #polish}
 
-The following models can translate Polish text.
+The following Polish translation models can be customized.
 
 <table>
  <thead>
@@ -1982,10 +2176,10 @@ The following models can translate Polish text.
  </thead>
 </table>
 
-## Portuguese
+### Portuguese
 {: #portuguese}
 
-The following models can translate Portuguese text.
+The following Portuguese translation models can be customized.
 
 <table>
  <thead>
@@ -2026,10 +2220,10 @@ The following models can translate Portuguese text.
  </thead>
 </table>
 
-## Romanian
+### Romanian
 {: #romanian}
 
-The following models can translate Romanian text.
+The following Romanian translation models can be customized.
 
 <table>
  <thead>
@@ -2070,10 +2264,10 @@ The following models can translate Romanian text.
  </thead>
 </table>
 
-## Russian
+### Russian
 {: #russian}
 
-The following models can translate Russian text.
+The following Russian translation models can be customized.
 
 <table>
  <thead>
@@ -2114,10 +2308,10 @@ The following models can translate Russian text.
  </thead>
 </table>
 
-## Slovak
+### Slovak
 {: #slovak}
 
-The following models can translate Slovak text.
+The following Slovak translation models can be customized.
 
 <table>
  <thead>
@@ -2158,10 +2352,10 @@ The following models can translate Slovak text.
  </thead>
 </table>
 
-## Slovenian
+### Slovenian
 {: #slovenian}
 
-The following models can translate Slovenian text.
+The following Slovenian translation models can be customized.
 
 <table>
  <thead>
@@ -2202,10 +2396,10 @@ The following models can translate Slovenian text.
  </thead>
 </table>
 
-## Spanish
+### Spanish
 {: #spanish}
 
-The following models can translate Spanish text.
+The following Spanish translation models can be customized.
 
 <table>
  <thead>
@@ -2280,10 +2474,10 @@ The following models can translate Spanish text.
  </thead>
 </table>
 
-## Swedish
+### Swedish
 {: #swedish}
 
-The following models can translate Swedish text.
+The following Swedish translation models can be customized.
 
 <table>
  <thead>
@@ -2324,10 +2518,98 @@ The following models can translate Swedish text.
  </thead>
 </table>
 
-## Thai
+### Tamil
+{: #tamil}
+
+The following Tamil translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ta-en</code>
+    </td>
+    <td>
+     Tamil (<code>ta</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+### Telugu
+{: #telugu}
+
+The following Telugu translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>te-en</code>
+    </td>
+    <td>
+     Telugu (<code>te</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+### Thai
 {: #thai}
 
-The following models can translate Thai text.
+The following Thai translation models can be customized.
 
 <table>
  <thead>
@@ -2368,10 +2650,10 @@ The following models can translate Thai text.
  </thead>
 </table>
 
-## Turkish
+### Turkish
 {: #turkish}
 
-The following models can translate Turkish text.
+The following Turkish translation models can be customized.
 
 <table>
  <thead>
@@ -2412,10 +2694,10 @@ The following models can translate Turkish text.
  </thead>
 </table>
 
-## Urdu
+### Urdu
 {: #urdu}
 
-The following models can translate Urdu text.
+The following Urdu translation models can be customized.
 
 <table>
  <thead>
@@ -2456,10 +2738,10 @@ The following models can translate Urdu text.
  </thead>
 </table>
 
-## Vietnamese
+### Vietnamese
 {: #vietnamese}
 
-The following models can translate Vietnamese text.
+The following Vietnamese translation models can be customized.
 
 <table>
  <thead>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-22"
 
 subcollection: language-translator
 
@@ -24,28 +24,6 @@ subcollection: language-translator
 The following new features and changes to the service are available.
 {: shortdesc}
 
-## New API authentication process
-{: #iam-auth-process }
-
-The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following locations:
-
-- Dallas as of June 15, 2018
-- Frankfurt as of June 15, 2018
-- London
-- Seoul
-- Sydney as of June 12, 2018
-- Tokyo
-- Washington, DC as of June 12, 2018
-
-{{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
-
-- For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
-
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://cloud.ibm.com/apidocs/language-translator#authentication){: external} in the API reference.
-- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
-
-To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.
-
 ## Service API Versioning
 {: shortdesc}
 
@@ -54,6 +32,21 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 22 April 2020
+{: #22-april-2020}
+
+- **Expanded language support.**
+  - The languages listed in [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) can be translated to any other language in the list, with the exception of Catalan.
+  - Support for translating the following languages is now available:
+    - Bengali (`bn`)
+    - Gujarati (`gu`)
+    - Malayalam (`ml`)
+    - Maltese (`mt`)
+    - Tamil (`ta`)
+    - Telugu (`te`)
+- Improved translation quality for translation between English and Hindi.
+- Improved document translation performance for Word, Powerpoint, and Excel documents.
 
 ## 28 February 2020
 {: #28-february-2020}
@@ -314,3 +307,25 @@ The beta Machine Translator and beta Language Identification APIs have been upgr
 - **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
 - **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
 - **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
+
+## New API authentication process
+{: #iam-auth-process }
+
+The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following locations:
+
+- Dallas as of June 15, 2018
+- Frankfurt as of June 15, 2018
+- London
+- Seoul
+- Sydney as of June 12, 2018
+- Tokyo
+- Washington, DC as of June 12, 2018
+
+{{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
+
+- For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
+
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://cloud.ibm.com/apidocs/language-translator#authentication){: external} in the API reference.
+- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
+
+To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.

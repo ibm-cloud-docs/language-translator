@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-04-22"
 
 keywords: customize,custom models
 
@@ -33,7 +33,7 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 1.  Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
     - Copy the `API Key` and `URL` values for that instance. For details about how to find the values, see the [Before you begin](/docs/language-translator?topic=language-translator-gettingstarted) section of "Getting started with {{site.data.keyword.languagetranslatorshort}}."
 1.  Find a customizable base model for your language pair. You will need the model ID of the base model in order to train your custom model.
-    - Search the models listed on the [Translation models](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
+    - Search the customizable models listed on the [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
     - Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
 
 ## Step 1: Create your training data
