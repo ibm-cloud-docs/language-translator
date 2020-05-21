@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-22"
 
 keywords: translation models,list translation models,customizable models
 
@@ -54,11 +54,13 @@ subcollection: language-translator
 |[Malay](#malay)|`ms`|
 |[Malayalam](#malayalam)|`ml`|
 |[Maltese](#maltese)|`mt`|
+|[Nepali](#nepali)|`ne`|
 |[Norwegian Bokmål](#norwegian-bokmal)|`nb`|
 |[Polish](#polish)|`pl`|
 |[Portuguese](#portuguese)|`pt`|
 |[Romanian](#romanian)|`ro`|
 |[Russian](#russian)|`ru`|
+|[Sinhala](#sinhala)|`si`|
 |[Slovak](#slovak)|`sk`|
 |[Slovenian](#slovenian)|`sl`|
 |[Spanish](#spanish)|`es`|
@@ -925,6 +927,23 @@ The following English translation models can be customized.
    </tr>
    <tr>
     <td>
+     <code>en-ne</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Nepali (<code>ne</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      <code>en-nl</code>
     </td>
     <td>
@@ -1000,6 +1019,23 @@ The following English translation models can be customized.
     </td>
     <td>
      Russian (<code>ru</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     <code>en-si</code>
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     Sinhala (<code>si</code>)
     </td>
     <td>
      <code>general</code>
@@ -2088,6 +2124,50 @@ The following Maltese translation models can be customized.
  </thead>
 </table>
 
+### Nepali
+{: #nepali}
+
+The following Nepali translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>ne-en</code>
+    </td>
+    <td>
+     Nepali (<code>ne</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
 ### Norwegian Bokmål
 {: #norwegian-bokmal}
 
@@ -2293,6 +2373,50 @@ The following Russian translation models can be customized.
     </td>
     <td>
      Russian (<code>ru</code>)
+    </td>
+    <td>
+     English (<code>en</code>)
+    </td>
+    <td>
+     <code>general</code>
+    </td>
+    <td>
+     <code>true</code>
+    </td>
+   </tr>
+  </tbody>
+ </thead>
+</table>
+
+### Sinhala
+{: #sinhala}
+
+The following Sinhala translation models can be customized.
+
+<table>
+ <thead>
+  <th>
+   Model ID
+  </th>
+  <th>
+   Source
+  </th>
+  <th>
+   Target
+  </th>
+  <th>
+   Domain
+  </th>
+  <th>
+   Customizable
+  </th>
+  <tbody>
+   <tr>
+    <td>
+     <code>si-en</code>
+    </td>
+    <td>
+     Sinhala (<code>si</code>)
     </td>
     <td>
      English (<code>en</code>)

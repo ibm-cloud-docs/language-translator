@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-05-22"
 
 keywords: identify language,identifiable languages
 
@@ -112,18 +112,18 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
-     Bosnian
-    </td>
-    <td>
-     <code>bs</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
      Bulgarian
     </td>
     <td>
      <code>bg</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Burmese
+    </td>
+    <td>
+     <code>my</code>
     </td>
    </tr>
    <tr>
@@ -312,14 +312,6 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
-     Indonesian
-    </td>
-    <td>
-     <code>id</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
      Irish
     </td>
     <td>
@@ -376,6 +368,14 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
+     Lao
+    </td>
+    <td>
+     <code>lo</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Latvian
     </td>
     <td>
@@ -416,10 +416,26 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
+     Marathi
+    </td>
+    <td>
+     <code>mr</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Mongolian
     </td>
     <td>
      <code>mn</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Nepali
+    </td>
+    <td>
+     <code>ne</code>
     </td>
    </tr>
    <tr>
@@ -440,10 +456,18 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
-     Panjabi
+     Punjabi
     </td>
     <td>
      <code>pa</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Punjabi (Shahmukhi script, Pakistan)
+    </td>
+    <td>
+     <code>pa-PK</code>
     </td>
    </tr>
    <tr>
@@ -504,6 +528,14 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
    </tr>
    <tr>
     <td>
+     Sinhala
+    </td>
+    <td>
+     <code>si</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
      Slovakian
     </td>
     <td>
@@ -540,6 +572,14 @@ curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2
     </td>
     <td>
      <code>sv</code>
+    </td>
+   </tr>
+   <tr>
+    <td>
+     Tagalog
+    </td>
+    <td>
+     <code>tl</code>
     </td>
    </tr>
    <tr>

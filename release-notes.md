@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-05-22"
 
 subcollection: language-translator
 
@@ -32,6 +32,27 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 22 May 2020
+{: #22-may-2020}
+
+- **Expanded language support.**
+  - Support for translating the following languages is now available:
+    - Nepali (`ne`)
+    - Sinhala (`si`)
+  - Support for identifying the following languages is now available:
+    - Burmese (`my`)
+    - Lao (`lo`)
+    - Marathi (`mr`)
+    - Nepali (`ne`)
+    - Punjabi (Shahmukhi script, Pakistan) (`pa-PK`)
+    - Sinhala (`si`)
+    - Tagalog (`tl`)
+- Improved results when translating to and from the following languages:
+    - Catalan (`ca`)
+    - Chinese (Simplified) (`zh`)
+- For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
+
 
 ## 22 April 2020
 {: #22-april-2020}
