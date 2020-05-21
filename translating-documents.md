@@ -34,7 +34,7 @@ Translate files from one language to another while preserving the original forma
 - [Get started](/docs/language-translator?topic=language-translator-gettingstarted) with {{site.data.keyword.languagetranslatorshort}}. You will need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`).
 - Make sure the document you want to translate meets the following requirements:
     - Maximum file size: 
-      - **20 MB** for service instances on paid plans
+      - **20 MB** for service instances on Standard, Advanced, and Premium plans
       - **2 MB** for service instances on the Lite plan
     - [Supported file formats](#supported-file-formats)
     - [Supported translation models](/docs/language-translator?topic=language-translator-translation-models)
