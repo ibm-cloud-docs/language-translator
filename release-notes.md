@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-22"
+lastupdated: "2020-05-28"
 
 subcollection: language-translator
 
@@ -33,8 +33,8 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
-## 22 May 2020
-{: #22-may-2020}
+## 28 May 2020
+{: #28-may-2020}
 
 - **Expanded language support.**
   - Support for translating the following languages is now available:
