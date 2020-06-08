@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-01-16"
+lastupdated: "2020-06-08"
 
 subcollection: language-translator
 
@@ -36,7 +36,7 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 {: #quick-links}
 
 - [Get started](/docs/language-translator?topic=language-translator-gettingstarted).
-- Try the live [demo](https://language-translator-demo.ng.bluemix.net/){: external}.
+- Try the live [demo](https://www.ibm.com/demos/live/watson-language-translator){: external}.
 - View the [API reference](https://{DomainName}/apidocs/language-translator){: external}.
 - View language support information:
     - [Translation models](/docs/language-translator?topic=language-translator-translation-models)
