@@ -54,14 +54,6 @@ Using Node.js and React components, create a web app that can be your personal t
 - [Code Pattern](https://developer.ibm.com/components/watson-apis/patterns/build-a-real-time-translation-service-with-watson-api-kit){: external}
 - [View on GitHub](https://github.com/ibm/watson-speech-translator){: external}
 
-## Language Translator demo (Node.js)
-{: #language-translator-demo}
-
-This Node.js application provides a basic translation interface that determines the language of the input text as you type.
-
-- [View on GitHub](https://github.com/watson-developer-cloud/language-translator-nodejs){: external}
-- [Try the demo](https://language-translator-demo.ng.bluemix.net/){: external}
-
 
 ## Korean Character Recognition (TensorFlow, Android)
 {: #korean-character-recognition}
