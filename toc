@@ -7,7 +7,7 @@ Language Translator
     {: .navgroup id="learn"}
     getting-started.md
     index.md
-    [Demo: Translate text](https://language-translator-demo.ng.bluemix.net/)
+    [Demo: Translate text](https://www.ibm.com/demos/live/watson-language-translator)
 
     {: .topicgroup}
     Additional resources
