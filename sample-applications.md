@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-08"
+lastupdated: "2020-06-15"
 
 subcollection: language-translator
 
@@ -30,7 +30,7 @@ These systems are for demonstration purposes only and are not intended to proces
 ## Snap and translate text in images (Node.js)
 {: #snap-and-translate}
 
-This sample app explains how to create a hybrid mobile app leveraging Watson Language Translator and Tesseract OCR. With this sample app you can capture an image, extract the text, and translate that text. 
+This sample app explains how to create a hybrid mobile app that uses Watson {{site.data.keyword.languagetranslatorshort}} and Tesseract OCR. With this sample app you can capture an image, extract the text, and translate that text.
 
 - [Read the blog](https://developer.ibm.com/announcements/snap-translate-using-tesseract-ocr-watson-language-translator/){: external}
 - [Code Pattern](https://developer.ibm.com/patterns/snap-translate-using-tesseract-ocr-watson-language-translator/){: external}
@@ -39,21 +39,20 @@ This sample app explains how to create a hybrid mobile app leveraging Watson Lan
 ## Multilingual Chatbot (Node.js, Python)
 {: #multilingual-chatbot}
 
-This chatbot built with Watson Assistant and Cloud Functions adds support for multiple languages with Language Translator.
+This chatbot that is built with {{site.data.keyword.conversationshort}} and {{site.data.keyword.openwhisk_short}} adds support for multiple languages with {{site.data.keyword.languagetranslatorshort}}.
 
 - [View on GitHub](https://github.com/with-watson/multilingual-chatbot){: external}
-- [Try the demo](https://multilingual-chatbot-demo.mybluemix.net/){: external}
+- [Try the demo](https://multilingual-chatbot.mybluemix.net/){: external}
 - [YouTube video](https://www.youtube.com/watch?v=d7DXydORTME){: external}
 - [Read more](https://medium.com/ibm-watson/build-multilingual-chatbots-with-watson-language-translator-watson-assistant-8c38247e8af1){: external}
 
 ## Real-time translation (Node.js)
 {: #real-time-translation}
 
-Using Node.js and React components, create a web app that can be your personal translator. The app uses Watson Speech to Text, Watson Language Translator, and Watson Text to Speech services to transcribe, translate, and synthesize from your microphone to your headphones.
+By using Node.js and React components, you can create a web app that can be your personal translator. The app uses Watson {{site.data.keyword.speechtotextshort}}, Watson {{site.data.keyword.languagetranslatorshort}}, and Watson {{site.data.keyword.texttospeechshort}} services to transcribe, translate, and synthesize from your microphone to your headphones.
 
 - [Code Pattern](https://developer.ibm.com/components/watson-apis/patterns/build-a-real-time-translation-service-with-watson-api-kit){: external}
 - [View on GitHub](https://github.com/ibm/watson-speech-translator){: external}
-
 
 ## Korean Character Recognition (TensorFlow, Android)
 {: #korean-character-recognition}
