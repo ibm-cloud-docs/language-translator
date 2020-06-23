@@ -9,7 +9,7 @@ keywords: language translator,getting started,translate,identify language,transl
 subcollection: language-translator
 
 ---
-<!-- Attribute definitions -->
+
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
 {:tip: .tip}

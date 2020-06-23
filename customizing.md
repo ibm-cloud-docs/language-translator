@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-04-22"
+lastupdated: "2020-06-23"
 
 keywords: customize,custom models
 
@@ -114,7 +114,7 @@ curl --user "apikey:{apikey}" "{url}/v3/models/96221b69-8e46-42e4-a3c1-808e17c78
 {: pre}
 
 ## Step 4: Translate text with your custom model
-{: #translate-text}
+{: #customize-translate-text}
 
 To use your custom model, specify the text that you want to translate and the custom model's model ID in the [Translate](https://{DomainName}/apidocs/language-translator/language-translator#translate){: external} method.
 

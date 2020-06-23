@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-28"
+lastupdated: "2020-06-23"
 
 subcollection: language-translator
 
@@ -10,7 +10,12 @@ subcollection: language-translator
 
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -33,6 +38,13 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 11 June 2020
+{: #11-june-2020}
+
+- Support for translating to and from Ukrainian (`uk`).
+- Improved results translating to and from Spanish (`es`).
+- Improved table handling with document translation for PowerPoint.
+
 ## 28 May 2020
 {: #28-may-2020}
 
@@ -53,7 +65,6 @@ The current version is `2018-05-01`.
     - Chinese (Simplified) (`zh`)
 - For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
 
-
 ## 22 April 2020
 {: #22-april-2020}
 
@@ -67,7 +78,7 @@ The current version is `2018-05-01`.
     - Tamil (`ta`)
     - Telugu (`te`)
 - Improved translation quality for translation between English and Hindi.
-- Improved document translation performance for Word, Powerpoint, and Excel documents.
+- Improved document translation performance for Word, PowerPoint, and Excel documents.
 
 ## 28 February 2020
 {: #28-february-2020}
@@ -164,7 +175,7 @@ From March 21 2019, you will see only service credential information associated 
 
 This change does not affect API access for users or applications with existing service key credentials. Only the viewing of credentials within {{site.data.keyword.cloud_notm}} is affected.
 
-For more information about service keys and user roles, see [IAM service API keys](/docs/watson?topic=watson-api-key-bp#api-key-bp).
+For more information about service keys and user roles, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 
 ## 14 December 2018
 {: #14-december-2018}
@@ -174,8 +185,8 @@ For more information about service keys and user roles, see [IAM service API key
 ## 16 November 2018
 {: #16-november-2018}
 
-- [Translating documents (Beta)](/docs/language-translator?topic=language-translator-translating-documents) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
-  - [Supported file formats](/docs/language-translator?topic=language-translator-translating-documents#supported-file-types) include `.doc`, `.ppt`, `.pdf`, and more.
+- [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+  - [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
 
 - New [translation models](/docs/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
   - Hungarian to English (hu-en)
@@ -222,12 +233,12 @@ New [translation models](/docs/language-translator?topic=language-translator-tra
 
 As of 15 June 2018, new service instances created in the Germany and US South regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
 
-New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, you will need to [migrate to the v3 API](/docs/language-translator?topic=language-translator-migrating).
+New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, migrate to the v3 API.
 
 ## 12 June 2018
 {: #12-june-2018}
 
-{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API. View the [Migrating to Language Translator v3](/docs/language-translator?topic=language-translator-migrating) page for more information.
+{{site.data.keyword.languagetranslatorshort}} v3 is now available. The v2 Language Translator API will no longer be available after July 31, 2018. To take advantage of the latest service enhancements, migrate to the v3 API.
 
 ### What's new in v3
 {: #whats-new}
@@ -307,8 +318,8 @@ As of January 15, 2016, all customization capabilities within the Standard Plan 
 
 1.  Create a new Watson {{site.data.keyword.languagetranslatorshort}} instance and specify the GA "Trainable" plan.
 2.  Bind the new "Trainable" instance of the service to your app in {{site.data.keyword.cloud_notm}}.
-3.  Gather the data that was used to initially create the customized models. For more information, see [Structure of the training data](/docs/language-translator?topic=language-translator-customizing#structure).
-4.  Upload the training data to create new customized models on the "Trainable" instance. For more information, see [Training a custom translation model](/docs/language-translator?topic=language-translator-customizing#training).
+3.  Gather the data that was used to initially create the customized models.
+4.  Upload the training data to create new customized models on the "Trainable" instance.
 5.  In your app, point the "ModelID" field to the new customized models.
 6.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
 
