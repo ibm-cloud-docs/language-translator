@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-05-28"
+lastupdated: "2020-06-23"
 
 keywords: identify language,identifiable languages
 
@@ -12,7 +12,12 @@ subcollection: language-translator
 
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
+{:deprecated: .deprecated}
+{:important: .important}
+{:note: .note}
 {:tip: .tip}
+{:preview: .preview}
+{:beta: .beta}
 {:pre: .pre}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -20,624 +25,89 @@ subcollection: language-translator
 # Identifiable languages
 {: #identifiable-languages}
 
-The following languages can be identified by the service with the **Identify language** method.
+The following languages can be identified by the service with the **Identify language** API method.
 
 You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
 
 ```sh
-curl --user "apikey:{apikey}" "https://{url}/v3/identifiable_languages?version=2018-05-01"
+curl --user "apikey:{apikey}" "{url}/v3/identifiable_languages?version=2018-05-01"
 ```
 {: pre}
 
-<table>
- <thead>
-  <th>
-   Name
-  </th>
-  <th>
-   Language code
-  </th>
-  <tbody>
-   <tr>
-    <td>
-     Afrikaans
-    </td>
-    <td>
-     <code>af</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Albanian
-    </td>
-    <td>
-     <code>sq</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Arabic
-    </td>
-    <td>
-     <code>ar</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Armenian
-    </td>
-    <td>
-     <code>hy</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Azerbaijani
-    </td>
-    <td>
-     <code>az</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Bashkir
-    </td>
-    <td>
-     <code>ba</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Basque
-    </td>
-    <td>
-     <code>eu</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Belarusian
-    </td>
-    <td>
-     <code>be</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Bengali
-    </td>
-    <td>
-     <code>bn</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Bulgarian
-    </td>
-    <td>
-     <code>bg</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Burmese
-    </td>
-    <td>
-     <code>my</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Catalan
-    </td>
-    <td>
-     <code>ca</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Central Khmer
-    </td>
-    <td>
-     <code>km</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Chinese (Simplified)
-    </td>
-    <td>
-     <code>zh</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Chinese (Traditional)
-    </td>
-    <td>
-     <code>zh-TW</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Chuvash
-    </td>
-    <td>
-     <code>cv</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Croatian
-    </td>
-    <td>
-     <code>hr</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Czech
-    </td>
-    <td>
-     <code>cs</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Danish
-    </td>
-    <td>
-     <code>da</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Dutch
-    </td>
-    <td>
-     <code>nl</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     English
-    </td>
-    <td>
-     <code>en</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Esperanto
-    </td>
-    <td>
-     <code>eo</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Estonian
-    </td>
-    <td>
-     <code>et</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Finnish
-    </td>
-    <td>
-     <code>fi</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     French
-    </td>
-    <td>
-     <code>fr</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Georgian
-    </td>
-    <td>
-     <code>ka</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     German
-    </td>
-    <td>
-     <code>de</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Greek
-    </td>
-    <td>
-     <code>el</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Gujarati
-    </td>
-    <td>
-     <code>gu</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Haitian
-    </td>
-    <td>
-     <code>ht</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Hebrew
-    </td>
-    <td>
-     <code>he</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Hindi
-    </td>
-    <td>
-     <code>hi</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Hungarian
-    </td>
-    <td>
-     <code>hu</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Icelandic
-    </td>
-    <td>
-     <code>is</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Irish
-    </td>
-    <td>
-     <code>ga</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Italian
-    </td>
-    <td>
-     <code>it</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Japanese
-    </td>
-    <td>
-     <code>ja</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Kazakh
-    </td>
-    <td>
-     <code>kk</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Kirghiz
-    </td>
-    <td>
-     <code>ky</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Korean
-    </td>
-    <td>
-     <code>ko</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Kurdish
-    </td>
-    <td>
-     <code>ku</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Lao
-    </td>
-    <td>
-     <code>lo</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Latvian
-    </td>
-    <td>
-     <code>lv</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Lithuanian
-    </td>
-    <td>
-     <code>lt</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Malay
-    </td>
-    <td>
-     <code>ms</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Malayalam
-    </td>
-    <td>
-     <code>ml</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Maltese
-    </td>
-    <td>
-     <code>mt</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Marathi
-    </td>
-    <td>
-     <code>mr</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Mongolian
-    </td>
-    <td>
-     <code>mn</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Nepali
-    </td>
-    <td>
-     <code>ne</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Norwegian Bokmal
-    </td>
-    <td>
-     <code>nb</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Norwegian Nynorsk
-    </td>
-    <td>
-     <code>nn</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Punjabi
-    </td>
-    <td>
-     <code>pa</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Punjabi (Shahmukhi script, Pakistan)
-    </td>
-    <td>
-     <code>pa-PK</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Persian
-    </td>
-    <td>
-     <code>fa</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Polish
-    </td>
-    <td>
-     <code>pl</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Portuguese
-    </td>
-    <td>
-     <code>pt</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Pushto
-    </td>
-    <td>
-     <code>ps</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Romanian
-    </td>
-    <td>
-     <code>ro</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Russian
-    </td>
-    <td>
-     <code>ru</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Serbian
-    </td>
-    <td>
-     <code>sr</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Sinhala
-    </td>
-    <td>
-     <code>si</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Slovakian
-    </td>
-    <td>
-     <code>sk</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Slovenian
-    </td>
-    <td>
-     <code>sl</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Somali
-    </td>
-    <td>
-     <code>so</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Spanish
-    </td>
-    <td>
-     <code>es</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Swedish
-    </td>
-    <td>
-     <code>sv</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Tagalog
-    </td>
-    <td>
-     <code>tl</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Tamil
-    </td>
-    <td>
-     <code>ta</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Telugu
-    </td>
-    <td>
-     <code>te</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Thai
-    </td>
-    <td>
-     <code>th</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Turkish
-    </td>
-    <td>
-     <code>tr</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Ukrainian
-    </td>
-    <td>
-     <code>uk</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Urdu
-    </td>
-    <td>
-     <code>ur</code>
-    </td>
-   </tr>
-   <tr>
-    <td>
-     Vietnamese
-    </td>
-    <td>
-     <code>vi</code>
-    </td>
-   </tr>
-  </tbody>
- </thead>
-</table>
+| Name                                 | Language code |
+|--------------------------------------|---------------|
+| Afrikaans                            | `af`          |
+| Albanian                             | `sq`          |
+| Arabic                               | `ar`          |
+| Armenian                             | `hy`          |
+| Azerbaijani                          | `az`          |
+| Bashkir                              | `ba`          |
+| Basque                               | `eu`          |
+| Belarusian                           | `be`          |
+| Bengali                              | `bn`          |
+| Bulgarian                            | `bg`          |
+| Burmese                              | `my`          |
+| Catalan                              | `ca`          |
+| Central Khmer                        | `km`          |
+| Chinese (Simplified)                 | `zh`          |
+| Chinese (Traditional)                | `zh-TW`       |
+| Chuvash                              | `cv`          |
+| Croatian                             | `hr`          |
+| Czech                                | `cs`          |
+| Danish                               | `da`          |
+| Dutch                                | `nl`          |
+| English                              | `en`          |
+| Esperanto                            | `eo`          |
+| Estonian                             | `et`          |
+| Finnish                              | `fi`          |
+| French                               | `fr`          |
+| Georgian                             | `ka`          |
+| German                               | `de`          |
+| Greek                                | `el`          |
+| Gujarati                             | `gu`          |
+| Haitian                              | `ht`          |
+| Hebrew                               | `he`          |
+| Hindi                                | `hi`          |
+| Hungarian                            | `hu`          |
+| Icelandic                            | `is`          |
+| Irish                                | `ga`          |
+| Italian                              | `it`          |
+| Japanese                             | `ja`          |
+| Kazakh                               | `kk`          |
+| Kirghiz                              | `ky`          |
+| Korean                               | `ko`          |
+| Kurdish                              | `ku`          |
+| Lao                                  | `lo`          |
+| Latvian                              | `lv`          |
+| Lithuanian                           | `lt`          |
+| Malay                                | `ms`          |
+| Malayalam                            | `ml`          |
+| Maltese                              | `mt`          |
+| Marathi                              | `mr`          |
+| Mongolian                            | `mn`          |
+| Nepali                               | `ne`          |
+| Norwegian Bokmal                     | `nb`          |
+| Norwegian Nynorsk                    | `nn`          |
+| Punjabi                              | `pa`          |
+| Punjabi (Shahmukhi script, Pakistan) | `pa-PK`       |
+| Persian                              | `fa`          |
+| Polish                               | `pl`          |
+| Portuguese                           | `pt`          |
+| Pushto                               | `ps`          |
+| Romanian                             | `ro`          |
+| Russian                              | `ru`          |
+| Serbian                              | `sr`          |
+| Sinhala                              | `si`          |
+| Slovakian                            | `sk`          |
+| Slovenian                            | `sl`          |
+| Somali                               | `so`          |
+| Spanish                              | `es`          |
+| Swedish                              | `sv`          |
+| Tagalog                              | `tl`          |
+| Tamil                                | `ta`          |
+| Telugu                               | `te`          |
+| Thai                                 | `th`          |
+| Turkish                              | `tr`          |
+| Ukrainian                            | `uk`          |
+| Urdu                                 | `ur`          |
+| Vietnamese                           | `vi`          |
