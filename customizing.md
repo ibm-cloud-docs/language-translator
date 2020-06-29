@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-27"
 
 keywords: customize,custom models
 
@@ -59,7 +59,9 @@ The following example request uses a forced glossary file, _glossary.tmx_, to cu
 Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
 
 ```sh
-curl -X POST --user "apikey:{apikey}" --form forced_glossary=@glossary.tmx "{url}/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
+curl -X POST --user "apikey:{apikey}" \
+--form forced_glossary=@glossary.tmx \
+"{url}/v3/models?version=2018-05-01&base_model_id=en-es&name=custom-english-to-spanish"
 ```
 {: pre}
 
@@ -109,7 +111,8 @@ When the model status is `available`, your model is ready to use with your servi
 The following example gets information for the model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```sh
-curl --user "apikey:{apikey}" "{url}/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
+curl -X GET --user "apikey:{apikey}" \
+"{url}/v3/models/96221b69-8e46-42e4-a3c1-808e17c787ca?version=2018-05-01"
 ```
 {: pre}
 
@@ -124,7 +127,10 @@ To use your custom model, specify the text that you want to translate and the cu
 The following example translates text with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`.
 
 ```sh
-curl -X POST --user "apikey:{apikey}" --header "Content-Type: application/json" --data "{\"text\":\"Hello\",\"model_id\":\"96221b69-8e46-42e4-a3c1-808e17c787ca\"}" "{url}/v3/translate?version=2018-05-01"
+curl -X POST --user "apikey:{apikey}" \
+--header "Content-Type: application/json" \
+--data "{\"text\":\"Hello\",\"model_id\":\"96221b69-8e46-42e4-a3c1-808e17c787ca\"}" \
+"{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
 
@@ -336,6 +342,7 @@ To delete a custom translation model, use the [Delete model](https://cloud.ibm.c
 The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 
 ```sh
-curl -X DELETE --user "apikey:{apikey}" "{url}/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
+curl -X DELETE --user "apikey:{apikey}" \
+"{url}/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
 {: codeblock}
