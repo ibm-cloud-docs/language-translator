@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-27"
 
 subcollection: language-translator
 
@@ -226,7 +226,7 @@ New [translation models](/docs/language-translator?topic=language-translator-tra
   - Swedish
     - Swedish to English (sv-en)
     - English to Swedish (en-sv)
-  
+
 
 ## 15 June 2018
 {: #15-june-2018}
@@ -254,7 +254,7 @@ New service instances that you create in Germany and US South will not be compat
 - Mandatory version date for all API endpoints: API v3 requests require a version date query parameter of the form `version=YYYY-MM-DD`. The latest API version is `version=2018-05-01`.
 - Simplified API:
   - The **Translate** and **Identify** methods do not offer the option to return plain text responses in v3. The methods return only JSON responses.
-  - `GET /translate` and `GET /identify` methods are not supported in v3. Use the `POST /translate` and `POST /identify` methods instead. 
+  - `GET /translate` and `GET /identify` methods are not supported in v3. Use the `POST /translate` and `POST /identify` methods instead.
 - Monolingual corpus customization is not supported in v3.
 - Creating custom models with both a parallel corpus and forced glossary now needs to be done in two API calls. First, customize the model with a parallel corpus. After the custom model has finished training, customize it again with the forced glossary. This change allows you to use a custom model trained with a parallel corpus as a base for forced glossary customization.
 - Specialized patent and conversation domain models are not available in the v3 API. The translation quality provided by the NMT models in the patent and conversation domains is generally improved compared to the older specialized models.
@@ -267,7 +267,7 @@ As of 12 June 2018, new service instances created in the Sydney and US East regi
 ## 12 January 2018
 {: #12-january-2018}
 
-New Neural Machine Translation (NMT) models are available to preview. You can try NMT models for the following language pairs. 
+New Neural Machine Translation (NMT) models are available to preview. You can try NMT models for the following language pairs.
 
 - English to and from: Arabic, Chinese, Dutch, French, German, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Russian, Spanish, and Turkish
 - French to and from: German, Spanish
@@ -278,8 +278,7 @@ New Neural Machine Translation (NMT) models are available to preview. You can tr
 To use an NMT preview model to translate, specify the header `X-Watson-Technology-Preview:2017-07-01` along with the character codes for the source and target languages of the model you want to use. The following example shows how to translate English to Spanish with an NMT preview model.
 
 ```bash
-curl -u username:password \
--X POST \
+curl -X POST --user {username}:{password} \
 -H "Accept: application/json" \
 -H "X-Watson-Technology-Preview:2017-07-01" \
 -d '{"text":"Hello!","source":"en","target":"es"}' \
@@ -297,7 +296,7 @@ Additional News translation models were added: English to and from Japanese
 ## 15 November 2016
 {: #15-november-2016}
 
-The tooling that was previously available for the {{site.data.keyword.languagetranslatorshort}} service is no longer available or supported. 
+The tooling that was previously available for the {{site.data.keyword.languagetranslatorshort}} service is no longer available or supported.
 
 Contact your sales representative or customer support for information about how to use the {{site.data.keyword.languagetranslatorshort}} API to accomplish the tasks supported by the {{site.data.keyword.languagetranslatorshort}} tool.
 

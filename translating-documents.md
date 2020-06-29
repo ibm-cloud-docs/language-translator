@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-27"
 
 subcollection: language-translator
 
@@ -46,8 +46,7 @@ The following example request submits an example file *curriculum.pdf* to the se
 
 Example request:
 ```sh
-curl -X POST \
---user "apikey:{apikey}" \
+curl -X POST --user "apikey:{apikey}" \
 --form "file=@curriculum.pdf" \
 --form "source=en" \
 --form "target=fr" \
@@ -62,8 +61,7 @@ To translate a document with a [custom model](/docs/language-translator?topic=la
 
 Example request:
 ```sh
-curl -X POST \
---user "apikey:{apikey}" \
+curl -X POST --user "apikey:{apikey}" \
 --form "file=@curriculum.pdf" \
 --form "model_id=96221b69-8e46-42e4-a3c1-808e17c787ca" \
 "{url}/v3/documents?version=2018-05-01"
@@ -93,8 +91,7 @@ After you have submitted a document for translation, you can check the translati
 
 Example request:
 ```sh
-curl -X GET \
---user "apikey:{apikey}" \
+curl -X GET --user "apikey:{apikey}" \
 "{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01"
 ```
 {: pre}
@@ -123,8 +120,7 @@ The following example request saves the translated document with document ID `ba
 
 Example request:
 ```sh
-curl -X GET \
---user "apikey:{apikey}" \
+curl -X GET --user "apikey:{apikey}" \
 --output "curriculum-fr.pdf" \
 "{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62/translated_document?version=2018-05-01"
 ```
@@ -137,8 +133,7 @@ The following example request references the original English *curriculum.pdf* f
 
 Example request:
 ```sh
-curl -X POST \
---user "apikey:{apikey}" \
+curl -X POST --user "apikey:{apikey}" \
 --form "document_id=bae02796-0d28-435c-9115-888359fdde62" \
 --form "source=en" \
 --form "target=pt" \
@@ -165,17 +160,17 @@ Original documents and any associated translated documents are deleted automatic
 To delete documents manually, use the **Delete document** method. In this tutorial, the English *curriculum.pdf* file was involved with two translations, so two requests are required to delete all copies of the original document.
 
 Delete the original submission of *curriculum.pdf* and the French translation:
+
 ```sh
-curl -X DELETE \
---user "apikey:{apikey}" \
+curl -X DELETE --user "apikey:{apikey}" \
 "{url}/v3/documents/bae02796-0d28-435c-9115-888359fdde62?version=2018-05-01"
 ```
 {: pre}
 
 Delete the duplicate of the original *curriculum.pdf* file and the Portuguese translation:
+
 ```sh
-curl -X DELETE \
---user "apikey:{apikey}" \
+curl -X DELETE --user "apikey:{apikey}" \
 "{url}/v3/documents/a0ge2746-ad38-7d5c-7025-4cd3g9f451ab?version=2018-05-01"
 ```
 {: pre}

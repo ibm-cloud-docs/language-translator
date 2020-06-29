@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-27"
 
 keywords: translation models,list translation models,customizable models
 
@@ -88,7 +88,8 @@ The following sections list the customizable translation models for each languag
 You can also use the [List models](https://cloud.ibm.com/apidocs/language-translator#list-models){: external} API method to view the available translation models and custom models that you created. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate English to Spanish.
 
 ```sh
-curl --user "apikey:{apikey}" "https://{url}/v3/models?source=en&target=es&version=2018-05-01"
+curl -X GET --user "apikey:{apikey}" \
+"{url}/v3/models?source=en&target=es&version=2018-05-01"
 ```
 {: pre}
 

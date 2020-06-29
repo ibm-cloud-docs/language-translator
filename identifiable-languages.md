@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-06-27"
 
 keywords: identify language,identifiable languages
 
@@ -30,7 +30,8 @@ The following languages can be identified by the service with the **Identify lan
 You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
 
 ```sh
-curl --user "apikey:{apikey}" "{url}/v3/identifiable_languages?version=2018-05-01"
+curl -X GET --user "apikey:{apikey}" \
+"{url}/v3/identifiable_languages?version=2018-05-01"
 ```
 {: pre}
 
