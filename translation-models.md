@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-27"
+lastupdated: "2020-07-14"
 
 keywords: translation models,list translation models,customizable models
 
@@ -77,6 +77,7 @@ subcollection: language-translator
 |[Ukrainian](#ukrainian)|`uk`|
 |[Urdu](#urdu)|`ur`|
 |[Vietnamese](#Vietnamese)|`vi`|
+|[Welsh](#welsh)|`cy`|
 
 \* Catalan is supported only for translation to and from Spanish.
 
@@ -575,3 +576,12 @@ The following Vietnamese translation models can be customized.
 | Model ID | Source            | Target         | Domain  | Customizable |
 |----------|-------------------|----------------|---------|--------------|
 | `vi-en`  | Vietnamese (`vi`) | English (`en`) | general | true         |
+
+### Welsh
+{: #welsh}
+
+The following Welsh translation models can be customized.
+
+| Model ID | Source            | Target         | Domain  | Customizable |
+|----------|-------------------|----------------|---------|--------------|
+| `cy-en`  | Welsh (`cy`)      | English (`en`) | general | true         |

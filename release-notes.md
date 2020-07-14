@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-27"
+lastupdated: "2020-07-14"
 
 subcollection: language-translator
 
@@ -37,6 +37,12 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 14 July 2020
+{: #14-June-2020}
+
+- Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
+- Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
 ## 11 June 2020
 {: #11-june-2020}

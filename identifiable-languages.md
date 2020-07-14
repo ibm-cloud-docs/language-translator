@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-27"
+lastupdated: "2020-07-14"
 
 keywords: identify language,identifiable languages
 
@@ -112,3 +112,4 @@ curl -X GET --user "apikey:{apikey}" \
 | Ukrainian                            | `uk`          |
 | Urdu                                 | `ur`          |
 | Vietnamese                           | `vi`          |
+| Welsh                                | `cy`          |
