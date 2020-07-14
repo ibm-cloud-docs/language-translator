@@ -44,7 +44,7 @@ The service generally supports two types of customization requests. You can eith
 - Use a [forced glossary](#forced-glossary-customization) to force certain terms and phrases to be translated in a specific way.
 - Use a [parallel corpus](#parallel-corpus-customization) when you want your custom model to learn from general translation patterns in your samples. What your model learns from a parallel corpus can improve translation results for input text that the model hasn't been trained on.
 
-The service supports the following document formats to provide your training data. For details on each format please see section [Supported document formats for training data](#supported-document-formats-for-training-data).
+The service supports the following document formats to provide your training data. For more information about each format, see [Supported document formats for training data](#supported-document-formats-for-training-data).
 
 | Format | Extension | Description |
 |---|---|---|
@@ -55,7 +55,7 @@ The service supports the following document formats to provide your training dat
 | JSON | `.json` | Custom JSON format for specifying aligned sentences/phrases.  |
 | Microsoft Excel  | `.xls`, `.xlsx` | Excel file with first 2 columns for aligned sentences/phrases, first row containing the language code. |
 
-After you have created your training data documents, you're ready to train your model.
+After you create your training data documents, you're ready to train your model.
 
 ## Step 2: Train your model
 {: #train-your-model}
@@ -65,7 +65,7 @@ Use the [Create model](https://{DomainName}/apidocs/language-translator#create-m
 ### Example request
 {: #train-model-example-request}
 
-The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. See the [Forced glossary customization](#forced-glossary) section for an example forced glossary TMX file.
+The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. For an example of the forced glossary TMX file, see [Forced glossary customization](#forced-glossary).
 
 Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
 
@@ -355,7 +355,7 @@ The service supports [XLIFF v1.2](http://docs.oasis-open.org/xliff/v1.2/os/xliff
 
 The service only interprets the part of XLIFF that can be used to encode aligned text segments. Make sure your data has a structure similar to:
 
-```
+```xml
 <xliff version='1.2' xmlns='urn:oasis:names:tc:xliff:document:1.2'>
     <file original='original.txt' source-language='en' target-language='es' datatype='plaintext'>
         <body>
@@ -405,7 +405,7 @@ The service supports TSV files which should be submitted to the service either w
 
 The service supports a simple JSON format for submitting aligned text segments. It expects files to be uploaded either with **file extension**: `.json` or **content-type** `application/json`. The JSON file must be structured as follows:
 
-```
+```json
 {
     "sentences": [
         [
@@ -423,6 +423,7 @@ The service supports a simple JSON format for submitting aligned text segments. 
     ]
 }
 ```
+{: codeblock}
 
 ### Excel
 {: #excel}
@@ -444,4 +445,4 @@ The following command deletes the translation model with model ID `3e7dfdbe-f757
 curl -X DELETE --user "apikey:{apikey}" \
 "{url}/v3/models/3e7dfdbe-f757-4150-afee-458e71eb93fb?version=2018-05-01"
 ```
-{: codeblock}
+{: pre}
