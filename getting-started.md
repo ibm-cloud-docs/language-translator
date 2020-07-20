@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-27"
+lastupdated: "2020-07-20"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -51,14 +51,18 @@ This tutorial walks you through the commands to translate text from English to S
     1.  On the **Manage** page, click **Show Credentials**.
     1.  Copy the `API Key` and `URL` values.
 - Make sure that you have the `curl` command.
-    - Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
+    -   Test whether `curl` is installed. Run the following command on the command line. If the output lists the `curl` version with SSL support, you are set for the tutorial.
 
         ```sh
         curl -V
         ```
         {: pre}
 
-    - If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command-line location.
+    -   If necessary, install a version with SSL enabled from [curl.haxx.se](https://curl.haxx.se/){: external}. Add the location of the file to your PATH environment variables if you want to run `curl` from any command-line location.
+    -   To disable certificate verification by `curl`, include the `-k` (or `--insecure`) option with the command. You need to disable SSL verification if you use a self-signed certificate.
+
+        Enabling SSL verification is highly recommended. Disable SSL only if necessary, and take steps to enable SSL as soon as possible.
+        {: note}
 
 This tutorial uses an API key to authenticate. In production, use an IAM token. For more information see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 {: tip}
@@ -66,12 +70,12 @@ This tutorial uses an API key to authenticate. In production, use an IAM token. 
 ## Step 1: Translate text
 {: #translate-text}
 
-Use the following example to translate two phrases, "Hello, world!" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
+Use the following example to translate two phrases, "Hello, world" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span> In the command, `model_id` identifies the model to be used for translation, in this case `en-es`.
 
 ```sh
 curl -X POST --user "apikey:{apikey}"{: apikey} \
 --header "Content-Type: application/json" \
---data "{\"text\": [\"Hello, world! \", \"How are you?\"], \"model_id\":\"en-es\"}" \
+--data '{"text": ["Hello, world.", "How are you?"], "model_id":"en-es"}' \
 "{url}/v3/translate?version=2018-05-01"{: url}
 ```
 {: pre}
@@ -92,7 +96,7 @@ curl -X POST --user "apikey:{apikey}"{: apikey} \
 ## Step 3: Translate a document (Beta)
 {: #translate-a-document}
 
-{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as PDFs and Microsoft Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial).
+{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as markup files that use XML or HTML, or Microsoft Office and Open Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial).
 
 ## Next steps
 {: #next-steps}
