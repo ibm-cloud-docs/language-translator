@@ -31,43 +31,39 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 {: #before-you-begin}
 
 1.  Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
-    - Copy the `API Key` and `URL` values for that instance. For details about how to find the values, see the [Before you begin](/docs/language-translator?topic=language-translator-gettingstarted) section of "Getting started with {{site.data.keyword.languagetranslatorshort}}."
-1.  Find a customizable base model for your language pair. You will need the model ID of the base model in order to train your custom model.
-    - Search the customizable models listed on the [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
-    - Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
+1.  Copy the `API Key` and `URL` values for your service instance. For more information about finding the values, see [Before you begin](/docs/language-translator?topic=language-translator-gettingstarted).
+1.  Find a customizable base model for your language pair. You need the model ID of the base model in order to train your custom model.
+    -   Search the customizable models listed on the [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
+    -   Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
 
 ## Step 1: Create your training data
 {: #create-your-training-data}
 
 The service supports two types of customization:
 
-- Use a [forced glossary](#forced-glossary-customization) to force certain terms and phrases to be translated in a specific way.
-- Use a [parallel corpus](#parallel-corpus-customization) when you want your custom model to learn from general translation patterns in your samples. What your model learns from a parallel corpus can improve translation results for input text that the model hasn't been trained on.
+-   Use a [forced glossary](#forced-glossary-customization) to force certain terms and phrases to be translated in a specific way.
+-   Use a [parallel corpus](#parallel-corpus-customization) when you want your custom model to learn from general translation patterns from parallel sentences in your samples. What your model learns from a parallel corpus can improve translation results for input text that the model hasn't been trained on.
 
-You can customize a model with a forced glossary or with a corpus that contains parallel sentences. You can store a maximum of 10 customizations regardless of type for each language pair in a service instance.
+To create a model that is customized with both parallel corpora and a forced glossary, proceed in two steps:
 
-You can provide your training data in the following document formats. For more information about each format, see [Supported document formats for training data](#supported-document-formats-for-training-data).
+1.  Customize with at least one parallel corpus file. You can upload multiple parallel corpora files with a single request. To successfully train with parallel corpora, the corpora must contain at least 5000 parallel sentences.
+1.  Customize the resulting model with a forced glossary. You can upload a single forced glossary file, which cannot exceed 10 MB.
 
-| Format | Extension | Description |
-|---|---|---|
-| TMX | `.tmx` | Translation Memory eXchange (TMX) is an XML specification for the exchange of translation memories. |
-| XLIFF | `.xliff` | XML Localization Interchange File Format (XLIFF) is an XML specification for the exchange of translation memories. |
-| CSV  | `.csv` | Comma-separated values (CSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
-| TSV  | `.tsv`, `.tab`  | Tab-separated values (TSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
-| JSON | `.json` | Custom JSON format for specifying aligned sentences and phrases.  |
-| Microsoft Excel  | `.xls`, `.xlsx` | Excel file with the first two columns for aligned sentences and phrases. The first row contains the language code. |
+The cumulative size of all uploaded files for a custom model is limited to 250 MB. You can store a maximum of 10 custom models for each language pair in a service instance.
+
+The service supports multiple document formats for uploading training data. The following examples use Translation Memory eXchange (TMX), an XML-based specification for the exchange of translation memories. For more information about all supported formats, see [Supported document formats for training data](#supported-document-formats-for-training-data).
 
 After you create your training data documents, you're ready to train your model.
 
 ## Step 2: Train your model
 {: #train-your-model}
 
-Use the [Create model](https://{DomainName}/apidocs/language-translator#create-model){: external} method to train your model. In your request, specify the model ID of a customizable base model, and training data in either the `forced_glossary` or `parallel_corpus` parameters.
+Use the [Create model](https://{DomainName}/apidocs/language-translator#create-model){: external} method to train your model. In your request, specify the model ID of a customizable base model and the training data in either the `forced_glossary` or `parallel_corpus` parameters.
 
 ### Example request
 {: #train-model-example-request}
 
-The following example request uses a forced glossary file, _glossary.tmx_, to customize the `en-es` base model. For an example of the forced glossary TMX file, see [Forced glossary customization](#forced-glossary).
+The following example request uses a forced glossary file, **glossary.tmx**, to customize the `en-es` base model. For an example of the forced glossary TMX file, see [Forced glossary customization](#forced-glossary-customization).
 
 Replace `{apikey}` and `{url}` with the service credentials you copied in the first step.
 
@@ -78,7 +74,7 @@ curl -X POST --user "apikey:{apikey}" \
 ```
 {: pre}
 
-The API response will contain details about your custom model, including its model ID. Use the model ID to check the status of your model, and to translate sentences once the status of the model becomes "available".
+The API response contains details about your custom model, including its model ID. Use the model ID to check the status of your model and to translate sentences once the status of the model becomes `available`.
 
 ```json
 {
@@ -150,14 +146,14 @@ curl -X POST --user "apikey:{apikey}" \
 ## Forced glossary customization
 {: #forced-glossary-customization}
 
-Use a **forced glossary** to set mandatory translations for specific terms and phrases. If you want specific control over translation behavior, use a forced glossary.
+Use a forced glossary to set mandatory translations for specific terms and phrases. If you want specific control over translation behavior, use a forced glossary.
 
 - Encoding: UTF-8
 - Maximum file size: 10 MB
-- You can apply a forced glossary to a base model, or to a model that has been customized with a parallel corpus
+- You can apply a forced glossary to a base model or to a model that has been customized with a parallel corpus
 - Limit one forced glossary per model
 
-Forced glossary examples are sensitive to capitalization, so make sure that your training data reflects the capitalization of content that your application will encounter.
+Forced glossary examples are case-sensitive. Make sure that your training data reflects the capitalization of content that your application will encounter.
 {: tip}
 
 ### Forced glossary example
@@ -196,14 +192,14 @@ The following example shows a TMX file with two translation pairs. The first pai
 ## Parallel corpus customization
 {: #parallel-corpus-customization}
 
-Use a **parallel corpus** to provide additional translations for the base model to learn from. This helps to adapt the base model to a specific domain. How the resulting custom model translates text depends on the model's combined understanding of the parallel corpus and the base model.
+Use a parallel corpus to provide additional translations for the base model to learn from. This helps to adapt the base model to a specific domain. How the resulting custom model translates text depends on the model's combined understanding of the parallel corpus and the base model.
 
 - Encoding: UTF-8
-- Maximum length of translation pairs: 80 source words (longer inputs will be ignored)
-- Minimum number of translation pairs: 5,000
+- Maximum length of translation pairs: 80 source words (longer input is ignored)
+- Minimum number of translation pairs: 5000
 - Maximum number of translation pairs: 500,000
 - Maximum (cumulative) file size: 250 MB
-- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of the files doesn't exceed 250 MB.
+- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of all files does not exceed 250 MB.
 
 ### Parallel corpus example
 {: #parallel-corpus-example}
@@ -263,12 +259,21 @@ When the same input sentence is translated by a custom model trained with the ex
 - The custom model translates "the full enjoyment" to "le plein exercice" instead of "la pleine jouissance". The likely explanation for this deviation from the base model behavior is that there are many examples in the corpus where "enjoyment" is translated to "exercice".
 - The custom model translates "of all human rights" to "de tous les droits de l'homme" instead of reproducing the result from the translation unit, "des droits de l'homme". This behavior reflects the trained model's cohesive understanding of the base model, and all of the translation samples that are related "of all human rights" from the parallel corpus.
 
-In some cases it might seem that a custom model trained with a parallel corpus is ignoring a specific example that you provided. In these cases, try searching your training data for other sentences that might be influencing the translation behavior, or consider using a forced glossary if you want to control a specific translation.
+In some cases, it might seem that a custom model trained with a parallel corpus is ignoring a specific example that you provided. In these cases, try searching your training data for other sentences that might be influencing the translation behavior, or consider using a forced glossary if you want to control a specific translation.
 
 ## Supported document formats for training data
 {: #supported-document-formats-for-training-data}
 
-The service supports multiple formats for your training data. For more information about the supported formats, see [Step 1: Create your training data](#create-your-training-data).
+You can provide your training data for customization in the following document formats.
+
+| Format | Extension | Description |
+|---|---|---|
+| [TMX](#tmx) | `.tmx` | Translation Memory eXchange (TMX) is an XML specification for the exchange of translation memories. |
+| [XLIFF](#xliff) | `.xliff` | XML Localization Interchange File Format (XLIFF) is an XML specification for the exchange of translation memories. |
+| [CSV](#csv)  | `.csv` | Comma-separated values (CSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
+| [TSV](#tsv)  | `.tsv`, `.tab`  | Tab-separated values (TSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
+| [JSON](#json) | `.json` | Custom JSON format for specifying aligned sentences and phrases.  |
+| [Microsoft Excel](#excel) | `.xls`, `.xlsx` | Excel file with the first two columns for aligned sentences and phrases. The first row contains the language code. |
 
 All formats have in common that they specify an alignment of translated text segments (sentences or phrases). You must encode all text data in UTF-8 format. For an example of how to convert a TMX file to UTF-8 format, see [Changing a TMX file to UTF-8 encoding](#changing-tmx-file-to-utf-8).
 
@@ -429,7 +434,7 @@ The service supports a simple JSON format for submitting aligned text segments. 
 ```
 {: codeblock}
 
-### Excel
+### Microsoft Excel
 {: #excel}
 
 The service supports Microsoft Excel files. Submit files to the service either with the file extension `.xlsx` or `.xls` or with a `Content-Type` of `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`. Like CSV, a file must be structured as follows:
