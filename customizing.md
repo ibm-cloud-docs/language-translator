@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-07-21"
 
 keywords: customize,custom models
 
@@ -39,21 +39,23 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 ## Step 1: Create your training data
 {: #create-your-training-data}
 
-The service generally supports two types of customization requests. You can either customize a model with a forced glossary or with a corpus that contains parallel sentences. You can store up to 10 customizations for each language pair in a service instance.
+The service supports two types of customization:
 
 - Use a [forced glossary](#forced-glossary-customization) to force certain terms and phrases to be translated in a specific way.
 - Use a [parallel corpus](#parallel-corpus-customization) when you want your custom model to learn from general translation patterns in your samples. What your model learns from a parallel corpus can improve translation results for input text that the model hasn't been trained on.
 
-The service supports the following document formats to provide your training data. For more information about each format, see [Supported document formats for training data](#supported-document-formats-for-training-data).
+You can customize a model with a forced glossary or with a corpus that contains parallel sentences. You can store a maximum of 10 customizations regardless of type for each language pair in a service instance.
+
+You can provide your training data in the following document formats. For more information about each format, see [Supported document formats for training data](#supported-document-formats-for-training-data).
 
 | Format | Extension | Description |
 |---|---|---|
 | TMX | `.tmx` | Translation Memory eXchange (TMX) is an XML specification for the exchange of translation memories. |
 | XLIFF | `.xliff` | XML Localization Interchange File Format (XLIFF) is an XML specification for the exchange of translation memories. |
-| CSV  | `.csv` | Comma-separated file whith two columns for aligned sentences/phrases, first row containing the language code.  |
-| TSV  | `.tsv`, `.tab`  | Tabulator separated file whith two columns for aligned sentences/phrases, first row containing the language code.  |
-| JSON | `.json` | Custom JSON format for specifying aligned sentences/phrases.  |
-| Microsoft Excel  | `.xls`, `.xlsx` | Excel file with first 2 columns for aligned sentences/phrases, first row containing the language code. |
+| CSV  | `.csv` | Comma-separated values (CSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
+| TSV  | `.tsv`, `.tab`  | Tab-separated values (TSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
+| JSON | `.json` | Custom JSON format for specifying aligned sentences and phrases.  |
+| Microsoft Excel  | `.xls`, `.xlsx` | Excel file with the first two columns for aligned sentences and phrases. The first row contains the language code. |
 
 After you create your training data documents, you're ready to train your model.
 
@@ -206,19 +208,19 @@ Use a **parallel corpus** to provide additional translations for the base model 
 ### Parallel corpus example
 {: #parallel-corpus-example}
 
-The following is a small piece of an English to French parallel corpus that was downloaded from the [MultiUN collection](http://opus.nlpl.eu/MultiUN.php){: external} available on the OPUS open parallel corpus website. You can download a compressed version of the entire TMX file [here](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz){: external}.
+The following is a small piece of an English to French parallel corpus that was downloaded from the [MultiUN collection](http://opus.nlpl.eu/MultiUN.php){: external} available on the OPUS open parallel corpus website. You can download a compressed version of the entire TMX file: [en-fr.tmx.gz](http://opus.nlpl.eu/download.php?f=MultiUN/en-fr.tmx.gz){: external}.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <tmx version="1.4">
-<header creationdate="Tue Jan 29 12:49:40 2013"
-          srclang="en"
-          adminlang="en"
-          o-tmf="unknown"
-          segtype="sentence"
-          creationtool="Uplug"
-          creationtoolversion="unknown"
-          datatype="PlainText" />
+  <header creationdate="Tue Jan 29 12:49:40 2013"
+    srclang="en"
+    adminlang="en"
+    o-tmf="unknown"
+    segtype="sentence"
+    creationtool="Uplug"
+    creationtoolversion="unknown"
+    datatype="PlainText" />
   <body>
     <tu>
       <tuv xml:lang="en"><seg>RESOLUTION 55/100</seg></tuv>
@@ -228,7 +230,9 @@ The following is a small piece of an English to French parallel corpus that was 
       <tuv xml:lang="en"><seg>Adopted at the 81st plenary meeting, on 4 December 2000, on the recommendation of the Committee (A/55/602/Add.2 and Corr.1, para. 94),The draft resolution recommended in the report was sponsored in the Committee by: Bolivia, Cuba, El Salvador, Ghana and Honduras. by a recorded vote of 106 to 1, with 67 abstentions, as follows:</seg></tuv>
       <tuv xml:lang="fr"><seg>Adoptée à la 81e séance plénière, le 4 décembre 2000, sur la recommandation de la Commission (A/55/602/Add.2, par. 94)Le projet de résolution recommandé dans le rapport de la Commission avait pour auteurs les pays suivants: Bolivie, Cuba, El Salvador, Ghana et Honduras., par 106 voix contre une, avec 67 abstentions, à la suite d'un vote enregistré, les voix s'étant réparties comme suit:</seg></tuv>
     </tu>
-    ...
+    . . .
+  </body>
+</tmx>
 ```
 {: codeblock}
 
@@ -264,12 +268,16 @@ In some cases it might seem that a custom model trained with a parallel corpus i
 ## Supported document formats for training data
 {: #supported-document-formats-for-training-data}
 
-The service supports multiple formats for your training data. All have in common that they specify an alignment of translated text segments (sentences or phrases). The service expects all text data to be encoded in UTF-8 (please see [here](#changing-tmx-file-to-utf-8) for an example on how to convert a TMX file to UTF-8 encoding). All training data files are uploaded to the service as part of a `multipart/form-data` request. To indicate the type of format (e.g. TMX, CSV, etc.) make sure to either use the correct file extension (e.g. `.tmx`, `.csv`, ...) in the file name or explicitly set the `Content-Type` field for the respective part of the `multipart/form-data` request (e.g. to `text/csv` in the case of a CSV file).
+The service supports multiple formats for your training data. For more information about the supported formats, see [Step 1: Create your training data](#create-your-training-data).
+
+All formats have in common that they specify an alignment of translated text segments (sentences or phrases). You must encode all text data in UTF-8 format. For an example of how to convert a TMX file to UTF-8 format, see [Changing a TMX file to UTF-8 encoding](#changing-tmx-file-to-utf-8).
+
+You upload all training data files to the service as part of a `multipart/form-data` request. To indicate the type of the format (for example, TMX or CSV), either use the correct file extension (for example, `.tmx` or `.csv`) in the file name or set the `Content-Type` header for the respective part of the `multipart/form-data` request (for example, to `text/csv` in the case of a CSV file).
 
 ### TMX
 {: #tmx}
 
-One option to provide a glossary or corpus of aligned text segments for training the {{site.data.keyword.languagetranslatorshort}} service is to create a valid UTF-8 encoded document that conforms to the Translation Memory Exchange (TMX) [version 1.4](http://www.ttt.org/oscarStandards/tmx/){: external} specification. TMX is an XML specification that is designed for machine-translation tools. Submit files to the service either with **file extension**: `.tmx` or **content-type** `application/x-tmx+xml`. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
+One option to provide a glossary or corpus of aligned text segments for training the {{site.data.keyword.languagetranslatorshort}} service is to create a valid UTF-8 encoded document that conforms to the [Translation Memory Exchange (TMX) version 1.4 specification](http://www.ttt.org/oscarStandards/tmx/){: external}. TMX is an XML specification that is designed for machine-translation tools. Submit files to the service either with the file extension `.tmx` or a `Content-Type` of `application/x-tmx+xml`. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -299,7 +307,7 @@ One option to provide a glossary or corpus of aligned text segments for training
 ```
 {: codeblock}
 
-Each term and translation pair must be enclosed in `<tu>` tags:
+Each term and translation pair must be enclosed in `<tu>` tags. The `xml:lang` attribute in the `<tuv>` tag identifies the language in which a term is expressed. The `<seg>` tag contains the term or the translation.
 
 ```xml
 <tu>
@@ -312,8 +320,6 @@ Each term and translation pair must be enclosed in `<tu>` tags:
 </tu>
 ```
 {: codeblock}
-
-The`xml:lang` attribute in the `<tuv>` tag identifies the language in which a term is expressed, while the `<seg>` tag contains the term or the translation.
 
 The {{site.data.keyword.languagetranslatorshort}} service uses only the `<tu>`, `<tuv>`, and `<seg>` elements. All other elements in the example are required to make a valid TMX file, or are informational, but are not used by the service.
 
@@ -351,76 +357,74 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ### XLIFF
 {: #xliff}
 
-The service supports [XLIFF v1.2](http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html). Submit files to the service either with **file extension**: `.xliff` or **content-type** `application/xliff+xml`.
-
-The service only interprets the part of XLIFF that can be used to encode aligned text segments. Make sure your data has a structure similar to:
+The service supports [XLIFF version 1.2](http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html). Submit files to the service either with the file extension `.xliff` or a `Content-Type` of `application/xliff+xml`. The service interprets only the part of XLIFF that can be used to encode aligned text segments. You must ensure that your data has a structure like the following example:
 
 ```xml
 <xliff version='1.2' xmlns='urn:oasis:names:tc:xliff:document:1.2'>
-    <file original='original.txt' source-language='en' target-language='es' datatype='plaintext'>
-        <body>
-            <group>
-                <trans-unit id='sentence1'>
-                    <source>Hello World</source>
-                    <target>Hola mundo</target>
-                </trans-unit>
-                ...
-            </group>
-        </body>
-    </file>
+  <file original='original.txt' source-language='en' target-language='es' datatype='plaintext'>
+    <body>
+      <group>
+        <trans-unit id='sentence1'>
+          <source>Hello World</source>
+          <target>Hola mundo</target>
+        </trans-unit>
+        . . .
+      </group>
+    </body>
+  </file>
 </xliff>
 ```
+{: codeblock}
 
 ### CSV
 {: #csv}
 
-The service supports CSV files following the [RFC4180](https://tools.ietf.org/html/rfc4180) specification. Submit files to the service either with **file extension**: `.csv` or **content-type** `text/csv`. The CSV file must be structured as follows:
+The service supports comma-separated values (CSV) files that follow the [RFC 4180 specification](https://tools.ietf.org/html/rfc4180). Submit files to the service with either the file extension `.csv` or a `Content-Type` of `text/csv`. You must structure the CSV file as follows:
 
-- Each row must have 2 columns. One column for the source sentence. Another column for the translated sentence.
-- The first row must have 2 language codes. One colum for the source language code. Another column for the target language code.
-- All subsequent rows must have translation pairs.
-- Spaces are considered part of a field and should not be ignored.  The last field in the record must not be followed by a comma.
-- Fields containing line breaks (CRLF), double quotes, and commas should be enclosed in double-quotes.
-- If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote, e.g. `"Hello, following is an escaped double quote ""."`
+- The first row must have two language codes. The first column is for the source language code, and the second column is for the target language code.
+- All subsequent rows must have translation pairs, and each row must have two columns. The first column is for the source sentence, and the second column is for the translated sentence. The value in the second column must not be followed by a comma.
+- Spaces are considered part of a field and are not ignored.
+- Fields that contain line breaks (CRLF), double-quotes, and commas must be enclosed in double-quotes.
+- If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote. For example, `"Hello, following is an escaped double quote ""."`
 
 #### Example
 {: #csv-example}
 
-Simple example showing alignment between English and Spanish text segments. The second line shows how to escape a comma that appears in the text segment using double quotes.
+The following simple example shows alignment between English and Spanish text segments. The second line shows how to escape a comma that appears in the text segment by using double-quotes.
 
 ```
 en,es
 Hello World,Hola mundo
 "Hello, World!","Hola, mundo!"
-
 ```
+{: codeblock}
 
 ### TSV
 {: #tsv}
 
-The service supports TSV files which should be submitted to the service either with **file extension**: `.tsv, .tab` or **content-type** `text/tsv`. The TSV files must be structured like the CSV files, except for using a tabulator character as the separator instead of a comma.
+The service supports tab-separated values (TSV) files. Submit files to the service with either the file extension `.tsv, .tab` or a `Content-type` of `text/tsv`. You must structure the TSV file like a CSV file, except for using a tab character as the separator instead of a comma.
 
 ### JSON
 {: #json}
 
-The service supports a simple JSON format for submitting aligned text segments. It expects files to be uploaded either with **file extension**: `.json` or **content-type** `application/json`. The JSON file must be structured as follows:
+The service supports a simple JSON format for submitting aligned text segments. Submit files to the service with either the file extension `.json` or a `Content-Type` of `application/json`. You must structure the JSON file as follows:
 
 ```json
 {
-    "sentences": [
-        [
-            {
-                "language": "en",
-                "sentence": "Hello"
-            },
-            {
-                "language": "es",
-                "sentence": "Hola"
-            },
-            ...
-        ],
-        ...
-    ]
+  "sentences": [
+    [
+      {
+        "language": "en",
+        "sentence": "Hello"
+      },
+      {
+        "language": "es",
+        "sentence": "Hola"
+      },
+      . . .
+    ],
+    . . .
+  ]
 }
 ```
 {: codeblock}
@@ -428,18 +432,15 @@ The service supports a simple JSON format for submitting aligned text segments. 
 ### Excel
 {: #excel}
 
-The service supports Microsoft Excel files, submitted to the service either with **file extension**: `.xlsx, .xls` or **content-type** `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`. Similar to CSV, a file must be structured as follows:
+The service supports Microsoft Excel files. Submit files to the service either with the file extension `.xlsx` or `.xls` or with a `Content-Type` of `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`. Like CSV, a file must be structured as follows:
 
-- Each row must have 2 columns. One column for the source sentence. Another column for the translated sentence.
-- The first row must have 2 language codes. One colum for the source language code. Another column for the target language code.
-- All subsequent rows must have translation pairs.
+- The first row must have language codes in two columns. The first column is for the source language code. The second column is for the target language code.
+- All subsequent rows must have translation pairs. Each row must have two columns. The first column is for the source sentence. The second column is for the translated sentence.
 
 ## Deleting a custom translation model
 {: #deleting-a-custom-model}
 
-To delete a custom translation model, use the [Delete model](https://cloud.ibm.com/language-translator#delete-model){: external} method.
-
-The following command deletes the translation model with model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
+To delete a custom translation model, use the [Delete model](https://cloud.ibm.com/language-translator#delete-model){: external} method. The following example deletes the translation model with the model ID `3e7dfdbe-f757-4150-afee-458e71eb93fb`.
 
 ```sh
 curl -X DELETE --user "apikey:{apikey}" \
