@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-21"
+lastupdated: "2020-07-22"
 
 keywords: customize,custom models
 
@@ -277,12 +277,12 @@ You can provide your training data for customization in the following document f
 
 All formats have in common that they specify an alignment of translated text segments (sentences or phrases). You must encode all text data in UTF-8 format. For an example of how to convert a TMX file to UTF-8 format, see [Changing a TMX file to UTF-8 encoding](#changing-tmx-file-to-utf-8).
 
-You upload all training data files to the service as part of a `multipart/form-data` request. To indicate the type of the format (for example, TMX or CSV), either use the correct file extension (for example, `.tmx` or `.csv`) in the file name or set the `Content-Type` header for the respective part of the `multipart/form-data` request (for example, to `text/csv` in the case of a CSV file).
+You upload all training data files to the service as part of a `multipart/form-data` request. To indicate the type of the format (for example, TMX or CSV), either use the correct file extension (for example, `.tmx` or `.csv`) in the file name or set the `content-type` parameter for the respective part of the `multipart/form-data` request (for example, to `--form "forced_glossary=@glossary;type=text/csv` for a CSV file).
 
 ### TMX
 {: #tmx}
 
-One option to provide a glossary or corpus of aligned text segments for training the {{site.data.keyword.languagetranslatorshort}} service is to create a valid UTF-8 encoded document that conforms to the [Translation Memory Exchange (TMX) version 1.4 specification](http://www.ttt.org/oscarStandards/tmx/){: external}. TMX is an XML specification that is designed for machine-translation tools. Submit files to the service either with the file extension `.tmx` or a `Content-Type` of `application/x-tmx+xml`. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
+One option to provide a glossary or corpus of aligned text segments for training the {{site.data.keyword.languagetranslatorshort}} service is to create a valid UTF-8 encoded document that conforms to the [Translation Memory Exchange (TMX) version 1.4 specification](http://www.ttt.org/oscarStandards/tmx/){: external}. TMX is an XML specification that is designed for machine-translation tools. Submit files to the service either with the file extension `.tmx` or a `content-type` of `application/x-tmx+xml`. The following example is a TMX-formatted glossary file with two translation units (`<tu>` elements):
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -362,7 +362,7 @@ iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
 ### XLIFF
 {: #xliff}
 
-The service supports [XLIFF version 1.2](http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html). Submit files to the service either with the file extension `.xliff` or a `Content-Type` of `application/xliff+xml`. The service interprets only the part of XLIFF that can be used to encode aligned text segments. You must ensure that your data has a structure like the following example:
+The service supports [XLIFF version 1.2](http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html). Submit files to the service either with the file extension `.xliff` or a `content-type` of `application/xliff+xml`. The service interprets only the part of XLIFF that can be used to encode aligned text segments. You must ensure that your data has a structure like the following example:
 
 ```xml
 <xliff version='1.2' xmlns='urn:oasis:names:tc:xliff:document:1.2'>
@@ -384,7 +384,7 @@ The service supports [XLIFF version 1.2](http://docs.oasis-open.org/xliff/v1.2/o
 ### CSV
 {: #csv}
 
-The service supports comma-separated values (CSV) files that follow the [RFC 4180 specification](https://tools.ietf.org/html/rfc4180). Submit files to the service with either the file extension `.csv` or a `Content-Type` of `text/csv`. You must structure the CSV file as follows:
+The service supports comma-separated values (CSV) files that follow the [RFC 4180 specification](https://tools.ietf.org/html/rfc4180). Submit files to the service with either the file extension `.csv` or a `content-type` of `text/csv`. You must structure the CSV file as follows:
 
 - The first row must have two language codes. The first column is for the source language code, and the second column is for the target language code.
 - All subsequent rows must have translation pairs, and each row must have two columns. The first column is for the source sentence, and the second column is for the translated sentence. The value in the second column must not be followed by a comma.
@@ -407,12 +407,12 @@ Hello World,Hola mundo
 ### TSV
 {: #tsv}
 
-The service supports tab-separated values (TSV) files. Submit files to the service with either the file extension `.tsv, .tab` or a `Content-type` of `text/tsv`. You must structure the TSV file like a CSV file, except for using a tab character as the separator instead of a comma.
+The service supports tab-separated values (TSV) files. Submit files to the service with either the file extension `.tsv, .tab` or a `content-type` of `text/tsv`. You must structure the TSV file like a CSV file, except for using a tab character as the separator instead of a comma.
 
 ### JSON
 {: #json}
 
-The service supports a simple JSON format for submitting aligned text segments. Submit files to the service with either the file extension `.json` or a `Content-Type` of `application/json`. You must structure the JSON file as follows:
+The service supports a simple JSON format for submitting aligned text segments. Submit files to the service with either the file extension `.json` or a `content-type` of `application/json`. You must structure the JSON file as follows:
 
 ```json
 {
@@ -437,7 +437,7 @@ The service supports a simple JSON format for submitting aligned text segments. 
 ### Microsoft Excel
 {: #excel}
 
-The service supports Microsoft Excel files. Submit files to the service either with the file extension `.xlsx` or `.xls` or with a `Content-Type` of `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`. Like CSV, a file must be structured as follows:
+The service supports Microsoft Excel files. Submit files to the service either with the file extension `.xlsx` or `.xls` or with a `content-type` of `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`. Like CSV, a file must be structured as follows:
 
 - The first row must have language codes in two columns. The first column is for the source language code. The second column is for the target language code.
 - All subsequent rows must have translation pairs. Each row must have two columns. The first column is for the source sentence. The second column is for the translated sentence.
