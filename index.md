@@ -42,4 +42,3 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 - View language support information:
   - [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models)
   - [Identifiable languages](/docs/language-translator?topic=language-translator-identifiable-languages)
-
