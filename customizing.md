@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-07-23"
 
 keywords: customize,custom models
 
@@ -31,7 +31,7 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 {: #before-you-begin}
 
 1.  Make sure that your {{site.data.keyword.languagetranslatorshort}} service instance is on an Advanced or Premium pricing plan. The Lite and Standard plans do not support customization.
-1.  Copy the `API Key` and `URL` values for your service instance. For more information about finding the values, see [Before you begin](/docs/language-translator?topic=language-translator-gettingstarted).
+1.  Copy the `API Key` and `URL` values for your service instance. For more information about finding the values, see [Getting started with {{site.data.keyword.languagetranslatorshort}}](/docs/language-translator?topic=language-translator-gettingstarted).
 1.  Find a customizable base model for your language pair. You need the model ID of the base model in order to train your custom model.
     -   Search the customizable models listed on the [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
     -   Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
@@ -46,7 +46,7 @@ The service supports two types of customization:
 
 To create a model that is customized with both parallel corpora and a forced glossary, proceed in two steps:
 
-1.  Customize with at least one parallel corpus file. You can upload multiple parallel corpora files with a single request. To successfully train with parallel corpora, the corpora must contain at least 5000 parallel sentences.
+1.  Customize with at least one parallel corpus file. You can upload multiple parallel corpus files with a single request. To successfully train with parallel corpora, all corpus files combined must contain at least 5000 parallel sentences.
 1.  Customize the resulting model with a forced glossary. You can upload a single forced glossary file, which cannot exceed 10 MB.
 
 The cumulative size of all uploaded files for a custom model is limited to 250 MB. You can store a maximum of 10 custom models for each language pair in a service instance.
@@ -196,10 +196,10 @@ Use a parallel corpus to provide additional translations for the base model to l
 
 - Encoding: UTF-8
 - Maximum length of translation pairs: 80 source words (longer input is ignored)
-- Minimum number of translation pairs: 5000
-- Maximum number of translation pairs: 500,000
+- Minimum number of translation pairs: 5000 for all corpora combined
+- Maximum number of translation pairs: 500,000 for all corpora combined
 - Maximum (cumulative) file size: 250 MB
-- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of all files does not exceed 250 MB.
+- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of all files does not exceed the 250 MB limit.
 
 ### Parallel corpus example
 {: #parallel-corpus-example}
@@ -277,7 +277,7 @@ You can provide your training data for customization in the following document f
 
 All formats have in common that they specify an alignment of translated text segments (sentences or phrases). You must encode all text data in UTF-8 format. For an example of how to convert a TMX file to UTF-8 format, see [Changing a TMX file to UTF-8 encoding](#changing-tmx-file-to-utf-8).
 
-You upload all training data files to the service as part of a `multipart/form-data` request. To indicate the type of the format (for example, TMX or CSV), either use the correct file extension (for example, `.tmx` or `.csv`) in the file name or set the `content-type` parameter for the respective part of the `multipart/form-data` request (for example, to `--form "forced_glossary=@glossary;type=text/csv` for a CSV file).
+You upload all training data files to the service as part of a `multipart/form-data` request. To indicate the type of the format (for example, TMX or CSV), either use the correct file extension (for example, `.tmx` or `.csv`) in the file name or set the `content-type` parameter for the respective part of the `multipart/form-data` request (for example, to `--form "forced_glossary=@glossary;type=text/csv"` for a CSV file).
 
 ### TMX
 {: #tmx}
@@ -352,7 +352,7 @@ You can use a number of tools to create or generate TMX files. Often, generated 
 
 1. Save the file with a new name and with UTF-8 encoding output.
 
-Mac users can also change file encoding by updating the XML header of the document as described in step 2, and then running the following command in the Terminal:
+Mac users can also change file encoding by updating the XML header of the document as described in step 2, and then running the `iconv` command as shown in the following example:
 
 ```sh
 iconv -f utf-16 -t utf-8 <utf-16_file_name.tmx> <new_utf-8_file_name.tmx>
