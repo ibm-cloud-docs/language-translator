@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-23"
+lastupdated: "2020-07-24"
 
 keywords: customize,custom models
 
@@ -46,10 +46,10 @@ The service supports two types of customization:
 
 To create a model that is customized with both parallel corpora and a forced glossary, proceed in two steps:
 
-1.  Customize with at least one parallel corpus file. You can upload multiple parallel corpus files with a single request. To successfully train with parallel corpora, all corpus files combined must contain at least 5000 parallel sentences.
-1.  Customize the resulting model with a forced glossary. You can upload a single forced glossary file, which cannot exceed 10 MB.
+1.  Customize with at least one parallel corpus file. You can upload multiple parallel corpus files with a single request. To successfully train with parallel corpora, all corpus files combined must contain at least 5000 parallel sentences. The cumulative size of all uploaded corpus files for a custom model is limited to 250 MB.
+1.  Customize the resulting model with a forced glossary. You can upload a single forced glossary file for a custom model. The size of a forced glossary for a custom model is limited to 10 MB.
 
-The cumulative size of all uploaded files for a custom model is limited to 250 MB. You can store a maximum of 10 custom models for each language pair in a service instance.
+You can store a maximum of 10 custom models for each language pair in a service instance.
 
 The service supports multiple document formats for uploading training data. The following examples use Translation Memory eXchange (TMX), an XML-based specification for the exchange of translation memories. For more information about all supported formats, see [Supported document formats for training data](#supported-document-formats-for-training-data).
 
@@ -148,12 +148,13 @@ curl -X POST --user "apikey:{apikey}" \
 
 Use a forced glossary to set mandatory translations for specific terms and phrases. If you want specific control over translation behavior, use a forced glossary.
 
-- Encoding: UTF-8
-- Maximum file size: 10 MB
-- You can apply a forced glossary to a base model or to a model that has been customized with a parallel corpus
-- Limit one forced glossary per model
+- Encoding: UTF-8.
+- Maximum file size: 10 MB.
+- You can apply a forced glossary to a base model or to a model that has been customized with parallel corpora.
+- You are limited to one forced glossary per custom model.
+- You can submit a single forced glossary by using the `forced_glossary` multipart form parameter.
 
-Forced glossary examples are case-sensitive. Make sure that your training data reflects the capitalization of content that your application will encounter.
+Forced glossary translations are case-sensitive. Make sure that your training data reflects the capitalization of the content that your application will encounter.
 {: tip}
 
 ### Forced glossary example
@@ -194,12 +195,12 @@ The following example shows a TMX file with two translation pairs. The first pai
 
 Use a parallel corpus to provide additional translations for the base model to learn from. This helps to adapt the base model to a specific domain. How the resulting custom model translates text depends on the model's combined understanding of the parallel corpus and the base model.
 
-- Encoding: UTF-8
-- Maximum length of translation pairs: 80 source words (longer input is ignored)
-- Minimum number of translation pairs: 5000 for all corpora combined
-- Maximum number of translation pairs: 500,000 for all corpora combined
-- Maximum (cumulative) file size: 250 MB
-- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter as long as the cumulative size of all files does not exceed the 250 MB limit.
+- Encoding: UTF-8.
+- Maximum length of translation pairs: 80 source words (longer input is ignored).
+- Minimum number of translation pairs: 5000 for all corpora combined.
+- Maximum number of translation pairs: 500,000 for all corpora combined.
+- Maximum (cumulative) file size: 250 MB for all corpora combined.
+- You can submit multiple parallel corpus files by repeating the `parallel_corpus` multipart form parameter.
 
 ### Parallel corpus example
 {: #parallel-corpus-example}
@@ -328,6 +329,17 @@ Each term and translation pair must be enclosed in `<tu>` tags. The `xml:lang` a
 
 The {{site.data.keyword.languagetranslatorshort}} service uses only the `<tu>`, `<tuv>`, and `<seg>` elements. All other elements in the example are required to make a valid TMX file, or are informational, but are not used by the service.
 
+#### Escaping XML control characters
+{: #tmx-xml-characters}
+
+The following characters are reserved as control characters in XML. You must escape these reserved characters by replacing them with equivalent XML entities.
+
+-   `&` must be replaced with `&amp;`.
+-   `<` must be replaced with `&lt;`.
+-   `>` must be replaced with `&gt;`.
+
+For example, the `<seg>` element can contain an inline `<subtag>` element. You need to escape the characters in this inline element by specifying it as `&lt;subtag&gt;`.
+
 #### Using the example as a template
 {: #using-the-example-template}
 
@@ -381,6 +393,8 @@ The service supports [XLIFF version 1.2](http://docs.oasis-open.org/xliff/v1.2/o
 ```
 {: codeblock}
 
+You must escape the reserved XML control characters `&`, `<`, and `>` with equivalent XML entities. For more information, see [Escaping XML control characters](#tmx-xml-characters).
+
 ### CSV
 {: #csv}
 
@@ -407,7 +421,7 @@ Hello World,Hola mundo
 ### TSV
 {: #tsv}
 
-The service supports tab-separated values (TSV) files. Submit files to the service with either the file extension `.tsv, .tab` or a `content-type` of `text/tsv`. You must structure the TSV file like a CSV file, except for using a tab character as the separator instead of a comma.
+The service supports tab-separated values (TSV) files. Submit files to the service with either the file extension `.tsv, .tab` or a `content-type` of `text/tab-separated-values`. You must structure the TSV file like a CSV file, except for using a tab character as the separator instead of a comma.
 
 ### JSON
 {: #json}
