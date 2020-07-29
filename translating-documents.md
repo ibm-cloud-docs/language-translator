@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-07-29"
 
 subcollection: language-translator
 
@@ -197,3 +197,5 @@ Translation of the following file formats is Beta functionality:
 Translation of the following file format is Experimental functionality:
 
 - PDF: `.pdf`
+
+The quality of PDF translation is still largely an Alpha release. The translation works best for single-column PDF documents that do not include many tables or images. Quality is expected to evolve and improve with future releases.
