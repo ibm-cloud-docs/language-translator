@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-23"
+lastupdated: "2020-07-30"
 
 subcollection: language-translator
 
@@ -32,6 +32,9 @@ In addition to using the provided translation models, you can build upon the bas
 {: beta}
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
+
+This documentation describes managed instances of {{site.data.keyword.languagetranslatorfull}} that are offered in {{site.data.keyword.cloud_notm}} or in {{site.data.keyword.icp4dfull_notm}} as a Service. If you are interested in on-premises or installed deployments of the service, see [About {{site.data.keyword.languagetranslatorshort}} for {{site.data.keyword.icp4dfull_notm}}](https://{DomainName}/docs/language-translator-data?topic=language-translator-data-about#about){: external}.
+{: note}
 
 ## Quick links
 {: #quick-links}
