@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-03"
 
 subcollection: language-translator
 
@@ -38,8 +38,13 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 31 July 2020
+{: #31-July-2020}
+
+- Added the the [List languages](https://cloud.ibm.com/apidocs/language-translator#list-languages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
+
 ## 14 July 2020
-{: #14-June-2020}
+{: #14-July-2020}
 
 - Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
 - Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
