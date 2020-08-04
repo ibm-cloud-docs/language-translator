@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-03"
+lastupdated: "2020-08-04"
 
 keywords: translation models,list translation models,customizable models
 
@@ -30,7 +30,7 @@ subcollection: language-translator
 ## Listing supported languages for translation
 {: #list-languages}
 
-You can use the [List languages](https://cloud.ibm.com/apidocs/language-translator#list-languages){: external} method to retrieve the list of supported languages for translation. The following example calls the method.
+You can use the [List supported languages](https://cloud.ibm.com/apidocs/language-translator#list-supported-languages){: external} method to retrieve the list of supported languages for translation. The following example calls the method.
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \
