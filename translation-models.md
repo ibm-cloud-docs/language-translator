@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-04"
+lastupdated: "2020-08-14"
 
 keywords: translation models,list translation models,customizable models
 
@@ -78,8 +78,9 @@ Not all language combinations that are supported for translation are also custom
 
 |Language                                     | Language code |Language                             | Language code |
 |---------------------------------------------|:-------------:|-------------------------------------|:-------------:|
-|[Arabic](#arabic)                            |`ar`         |[Latvian](#latvian)                  |`lv`|
-|[Bengali](#bengali)                          |`bn`         |[Lithuanian](#lithuanian)            |`lt`|
+|[Arabic](#arabic)                            |`ar`         |[Korean](#korean)                    |`ko`|
+|[Bengali](#bengali)                          |`bn`         |[Latvian](#latvian)                  |`lv`|
+|[Bosnian](#bosnian)                          |`bs`         |[Lithuanian](#lithuanian)            |`lt`|
 |[Bulgarian](#bulgarian)                      |`bg`         |[Malay](#malay)                      |`ms`|
 |[Catalan](#catalan) **[1]**                  |`ca`         |[Malayalam](#malayalam)              |`ml`|
 |[Chinese (Simplified)](#chinese-simplified)  |`zh`         |[Maltese](#maltese)                  |`mt`|
@@ -89,9 +90,10 @@ Not all language combinations that are supported for translation are also custom
 |[Danish](#danish)                            |`da`         |[Portuguese](#portuguese)            |`pt`|
 |[Dutch](#dutch)                              |`nl`         |[Romanian](#romanian)                |`ro`|
 |[English](#english)                          |`en`         |[Russian](#russian)                  |`ru`|
-|[Estonian](#estonian)                        |`et`         |[Sinhala](#sinhala)                  |`si`|
-|[Finnish](#finnish)                          |`fi`         |[Slovak](#slovak)                    |`sk`|
-|[French](#french)                            |`fr`         |[Slovenian](#slovenian)              |`sl`|
+|[Estonian](#estonian)                        |`et`         |[Serbian](#serbian) **[2]**          |`sr`|
+|[Finnish](#finnish)                          |`fi`         |[Sinhala](#sinhala)                  |`si`|
+|[French](#french)                            |`fr`         |[Slovak](#slovak)                    |`sk`|
+|[French (Canadian)](#french-canadian)        |`fr`         |[Slovenian](#slovenian)              |`sl`|
 |[German](#german)                            |`de`         |[Spanish](#spanish)                  |`es`|
 |[Greek](#greek)                              |`el`         |[Swedish](#swedish)                  |`sv`|
 |[Gujarati](#gujarati)                        |`gu`         |[Tamil](#tamil)                      |`ta`|
@@ -100,11 +102,14 @@ Not all language combinations that are supported for translation are also custom
 |[Hungarian](#hungarian)                      |`hu`         |[Turkish](#turkish)                  |`tr`|
 |[Irish](#irish)                              |`ga`         |[Ukrainian](#ukrainian)              |`uk`|
 |[Indonesian](#indonesian)                    |`id`         |[Urdu](#urdu)                        |`ur`|
-|[Italian](#italian)                          |`it`         |[Vietnamese](#Vietnamese)            |`vi`|
+|[Italian](#italian)                          |`it`         |[Vietnamese](#vietnamese)            |`vi`|
 |[Japanese](#japanese)                        |`ja`         |[Welsh](#welsh)                      |`cy`|
-|[Korean](#korean)                            |`ko`         | | |
 
-**[1]** Catalan is supported only for translation to and from Spanish.
+
+Notes:
+
+1.  Catalan is supported only for translation to and from Spanish.
+2.  Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
 
 ## Listing supported translation models for customization
 {: #customizable-models}
@@ -160,6 +165,14 @@ The following Bengali translation models can be customized.
 |----------|----------------|----------------|---------|
 | `bn-en`  | Bengali (`bn`) | English (`en`) | general |
 
+### Bosnian
+{: #bosnian}
+
+The following Bosnian translation models can be customized.
+
+| Model ID | Source         | Target         | Domain  |
+|----------|----------------|----------------|---------|
+| `bs-en`  | Bosnian (`bs`) | English (`en`) | general |
 
 ### Bulgarian
 {: #bulgarian}
@@ -243,7 +256,9 @@ The following English translation models can be customized.
 | `en-ar`    | English (`en`) | Arabic (`ar`)                 | general |
 | `en-bg`    | English (`en`) | Bulgarian (`bg`)              | general |
 | `en-bn`    | English (`en`) | Bengali (`bn`)                | general |
+| `en-bs`    | English (`en`) | Bosnian (`bs`)                | general |
 | `en-cs`    | English (`en`) | Czech (`cs`)                  | general |
+| `en-cy`    | English (`en`) | Welsh (`cy`)                  | general |
 | `en-da`    | English (`en`) | Danish (`da`)                 | general |
 | `en-de`    | English (`en`) | German (`de`)                 | general |
 | `en-el`    | English (`en`) | Greek (`el`)                  | general |
@@ -251,6 +266,7 @@ The following English translation models can be customized.
 | `en-et`    | English (`en`) | Estonian (`et`)               | general |
 | `en-fi`    | English (`en`) | Finnish (`fi`)                | general |
 | `en-fr`    | English (`en`) | French (`fr`)                 | general |
+| `en-fr-CA` | English (`en`) | Canadian French (`fr-CA`)     | general |
 | `en-ga`    | English (`en`) | Irish (`ga`)                  | general |
 | `en-gu`    | English (`en`) | Gujarati (`gu`)               | general |
 | `en-he`    | English (`en`) | Hebrew (`he`)                 | general |
@@ -276,6 +292,7 @@ The following English translation models can be customized.
 | `en-si`    | English (`en`) | Sinhala (`si`)                | general |
 | `en-sk`    | English (`en`) | Slovak (`sk`)                 | general |
 | `en-sl`    | English (`en`) | Slovenian (`sl`)              | general |
+| `en-sr`    | English (`en`) | Serbian (`sr`)                | general |
 | `en-sv`    | English (`en`) | Swedish (`sv`)                | general |
 | `en-ta`    | English (`en`) | Tamil (`ta`)                  | general |
 | `en-te`    | English (`en`) | Telugu (`te`)                 | general |
@@ -310,9 +327,18 @@ The following Finnish translation models can be customized.
 
 The following French translation models can be customized.
 
-| Model ID | Source        | Target         | Domain  |
-|----------|---------------|----------------|---------|
-| `fr-en`  | French (`fr`) | English (`en`) | general |
+| Model ID | Source           | Target         | Domain  |
+|----------|---------------------------|----------------|---------|
+| `fr-en`  | French (`fr`)    | English (`en`) | general |
+
+### French (Canadian)
+{: #french-canadian}
+
+The following French (Canadian) translation models can be customized.
+
+| Model ID   | Source                    | Target         | Domain  |
+|------------|---------------------------|----------------|---------|
+| `fr-CA-en` | Canadian French (`fr-CA`) | English (`en`) | general |
 
 ### German
 {: #german}
@@ -514,6 +540,15 @@ The following Russian translation models can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `ru-en`  | Russian (`ru`) | English (`en`) | general |
+
+### Serbian
+{: #serbian}
+
+The following Serbian translation models can be customized. The service supports translation for Serbian based on the Cyrillic alphabet, not the Latin alphabet.
+
+| Model ID | Source         | Target         | Domain  |
+|----------|----------------|----------------|---------|
+| `sr-en`  | Serbian (`sr`) | English (`en`) | general |
 
 ### Sinhala
 {: #sinhala}
