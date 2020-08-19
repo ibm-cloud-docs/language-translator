@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-19"
 
 keywords: translation models,list translation models,customizable models
 
@@ -30,7 +30,7 @@ subcollection: language-translator
 ## Listing supported languages for translation
 {: #list-languages}
 
-You can use the [List supported languages](https://cloud.ibm.com/apidocs/language-translator#list-supported-languages){: external} method to retrieve the list of supported languages for translation. The following example calls the method.
+You can use the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} method to retrieve the list of supported languages for translation. The following example calls the method.
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \
@@ -114,7 +114,7 @@ Notes:
 ## Listing supported translation models for customization
 {: #customizable-models}
 
-You can use the [List models](https://cloud.ibm.com/apidocs/language-translator#list-models){: external} method to view the available translation models and any custom models that you created. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate from English to Spanish.
+You can use the [List models](https://{DomainName}/apidocs/language-translator#listmodels){: external} method to view the available translation models and any custom models that you created. You can filter results by language with the `source` and `target` parameters. The following example lists models that can translate from English to Spanish.
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \

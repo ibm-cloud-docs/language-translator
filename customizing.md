@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-24"
+lastupdated: "2020-08-19"
 
 keywords: customize,custom models
 
@@ -34,7 +34,7 @@ Most of the provided translation models in {{site.data.keyword.languagetranslato
 1.  Copy the `API Key` and `URL` values for your service instance. For more information about finding the values, see [Getting started with {{site.data.keyword.languagetranslatorshort}}](/docs/language-translator?topic=language-translator-gettingstarted).
 1.  Find a customizable base model for your language pair. You need the model ID of the base model in order to train your custom model.
     -   Search the customizable models listed on the [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) page. Look for the value "**true**" in the **Customizable** column, and make sure the **Source** and **Target** languages of the model match your language pair.
-    -   Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#list-models){: external} API method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
+    -   Alternatively, you can use the [List models](https://{DomainName}/apidocs/language-translator#listmodels){: external} method to search models programmatically. You can filter results by language with the `source` and `target` parameters.
 
 ## Step 1: Create your training data
 {: #create-your-training-data}
@@ -58,7 +58,7 @@ After you create your training data documents, you're ready to train your model.
 ## Step 2: Train your model
 {: #train-your-model}
 
-Use the [Create model](https://{DomainName}/apidocs/language-translator#create-model){: external} method to train your model. In your request, specify the model ID of a customizable base model and the training data in either the `forced_glossary` or `parallel_corpus` parameters.
+Use the [Create model](https://{DomainName}/apidocs/language-translator#createmodel){: external} method to train your model. In your request, specify the model ID of a customizable base model and the training data in either the `forced_glossary` or `parallel_corpus` parameters.
 
 ### Example request
 {: #train-model-example-request}
@@ -96,7 +96,7 @@ The API response contains details about your custom model, including its model I
 ## Step 3: Check the status of your model
 {: #check-model-status}
 
-Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model details](https://{DomainName}/apidocs/language-translator/language-translator#get-model-details){: external} method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models](https://{DomainName}/apidocs/language-translator/language-translator#list-models){: external} method.
+Model training might take anywhere from a couple of minutes (for forced glossaries) to several hours (for large parallel corpora) depending on how much training data is involved. To see if your model is available, use the [Get model details](https://{DomainName}/apidocs/language-translator/language-translator#getmodel){: external} method and specify the model ID that you received in the service response in Step 2. Also, you can check the status of all of your models with the [List models](https://{DomainName}/apidocs/language-translator/language-translator#listmodels){: external} method.
 
 The `status` response attribute describes the state of the model in the training process:
 
