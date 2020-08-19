@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-18"
+lastupdated: "2020-08-19"
 
 keywords: identify language,identifiable languages
 
@@ -30,7 +30,7 @@ subcollection: language-translator
 ## Listing identifiable languages
 {: #list-identifiable}
 
-You can use the [List identifiable languages](https://cloud.ibm.com/apidocs/language-translator#list-identifiable-languages) method to retrieve the list of identifiable languages. The following example calls the method.
+You can use the [List identifiable languages](https://{DomainName}/apidocs/language-translator#listidentifiablelanguages) method to retrieve the list of identifiable languages. The following example calls the method.
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \

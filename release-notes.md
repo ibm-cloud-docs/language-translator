@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-14"
+lastupdated: "2020-08-19"
 
 subcollection: language-translator
 
@@ -52,7 +52,7 @@ The current version is `2018-05-01`.
 ## 31 July 2020
 {: #31-July-2020}
 
-- Added the the [List supported languages](https://cloud.ibm.com/apidocs/language-translator#list-supported-languages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
+- Added the the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
 ## 14 July 2020
 {: #14-July-2020}
@@ -157,7 +157,7 @@ Added automatic source language detection in **Translate** requests. When you sp
 
         The previous public endpoint domain was `watsonplatform.net`.
 
-        For more information about the URLs, see the [API reference](https://cloud.ibm.com/apidocs/language-translator/language-translator#service-endpoint){: external}.
+        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/language-translator/language-translator#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
     - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
@@ -405,7 +405,7 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 
 - For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://cloud.ibm.com/apidocs/language-translator#authentication){: external} in the API reference.
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/apidocs/language-translator#authentication){: external} in the API reference.
 - For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
 
 To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.
