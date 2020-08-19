@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-14"
+lastupdated: "2020-08-18"
 
 keywords: identify language,identifiable languages
 
@@ -25,9 +25,12 @@ subcollection: language-translator
 # Identifiable languages
 {: #identifiable-languages}
 
-The following languages can be identified by the service with the **Identify language** API method.
+{{site.data.keyword.languagetranslatorfull}} can identify a variety of languages.
 
-You can also use the **List identifiable languages** API method to get the identifiable languages programmatically:
+## Listing identifiable languages
+{: #list-identifiable}
+
+You can use the [List identifiable languages](https://cloud.ibm.com/apidocs/language-translator#list-identifiable-languages) method to retrieve the list of identifiable languages. The following example calls the method.
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \
@@ -35,81 +38,75 @@ curl -X GET --user "apikey:{apikey}" \
 ```
 {: pre}
 
-| Name                                 | Language code |
-|--------------------------------------|---------------|
-| Afrikaans                            | `af`          |
-| Albanian                             | `sq`          |
-| Arabic                               | `ar`          |
-| Armenian                             | `hy`          |
-| Azerbaijani                          | `az`          |
-| Bashkir                              | `ba`          |
-| Basque                               | `eu`          |
-| Belarusian                           | `be`          |
-| Bengali                              | `bn`          |
-| Bulgarian                            | `bg`          |
-| Burmese                              | `my`          |
-| Catalan                              | `ca`          |
-| Central Khmer                        | `km`          |
-| Chinese (Simplified)                 | `zh`          |
-| Chinese (Traditional)                | `zh-TW`       |
-| Chuvash                              | `cv`          |
-| Croatian                             | `hr`          |
-| Czech                                | `cs`          |
-| Danish                               | `da`          |
-| Dutch                                | `nl`          |
-| English                              | `en`          |
-| Esperanto                            | `eo`          |
-| Estonian                             | `et`          |
-| Finnish                              | `fi`          |
-| French                               | `fr`          |
-| Georgian                             | `ka`          |
-| German                               | `de`          |
-| Greek                                | `el`          |
-| Gujarati                             | `gu`          |
-| Haitian                              | `ht`          |
-| Hebrew                               | `he`          |
-| Hindi                                | `hi`          |
-| Hungarian                            | `hu`          |
-| Icelandic                            | `is`          |
-| Irish                                | `ga`          |
-| Italian                              | `it`          |
-| Japanese                             | `ja`          |
-| Kazakh                               | `kk`          |
-| Kirghiz                              | `ky`          |
-| Korean                               | `ko`          |
-| Kurdish                              | `ku`          |
-| Lao                                  | `lo`          |
-| Latvian                              | `lv`          |
-| Lithuanian                           | `lt`          |
-| Malay                                | `ms`          |
-| Malayalam                            | `ml`          |
-| Maltese                              | `mt`          |
-| Marathi                              | `mr`          |
-| Mongolian                            | `mn`          |
-| Nepali                               | `ne`          |
-| Norwegian Bokmal                     | `nb`          |
-| Norwegian Nynorsk                    | `nn`          |
-| Punjabi                              | `pa`          |
-| Punjabi (Shahmukhi script, Pakistan) | `pa-PK`       |
-| Persian                              | `fa`          |
-| Polish                               | `pl`          |
-| Portuguese                           | `pt`          |
-| Pushto                               | `ps`          |
-| Romanian                             | `ro`          |
-| Russian                              | `ru`          |
-| Serbian                              | `sr`          |
-| Sinhala                              | `si`          |
-| Slovakian                            | `sk`          |
-| Slovenian                            | `sl`          |
-| Somali                               | `so`          |
-| Spanish                              | `es`          |
-| Swedish                              | `sv`          |
-| Tagalog                              | `tl`          |
-| Tamil                                | `ta`          |
-| Telugu                               | `te`          |
-| Thai                                 | `th`          |
-| Turkish                              | `tr`          |
-| Ukrainian                            | `uk`          |
-| Urdu                                 | `ur`          |
-| Vietnamese                           | `vi`          |
-| Welsh                                | `cy`          |
+The method returns a complete list of all identifiable languages, sorted by `language` code (for example, `af`, `ar`). The output includes the `name` of the language.
+
+```json
+{
+  "languages": [
+    {
+      "language": "af",
+      "name": "Afrikaans"
+    },
+    {
+      "language": "ar",
+      "name": "Arabic"
+    },
+    {
+      "language": "az",
+      "name": "Azerbaijani"
+    },
+    {
+      "language": "ba",
+      "name": "Bashkir"
+    }
+    . . .
+  ]
+}
+```
+{: codeblock}
+
+## List of identifiable languages
+{: #list-languages-identifiable}
+
+The following table list the identifiable languages. The table is sorted by language name and provides the language code for each language.
+
+| Language name                        | Language code | Language name                        | Language code |
+|--------------------------------------|:-------------:|--------------------------------------|:-------------:|
+| Afrikaans                            | `af`          | Kirghiz                              | `ky`          |
+| Albanian                             | `sq`          | Korean                               | `ko`          |
+| Arabic                               | `ar`          | Kurdish                              | `ku`          |
+| Armenian                             | `hy`          | Lao                                  | `lo`          |
+| Azerbaijani                          | `az`          | Latvian                              | `lv`          |
+| Bashkir                              | `ba`          | Lithuanian                           | `lt`          |
+| Basque                               | `eu`          | Malay                                | `ms`          |
+| Belarusian                           | `be`          | Malayalam                            | `ml`          |
+| Bengali                              | `bn`          | Maltese                              | `mt`          |
+| Bulgarian                            | `bg`          | Marathi                              | `mr`          |
+| Burmese                              | `my`          | Mongolian                            | `mn`          |
+| Catalan                              | `ca`          | Nepali                               | `ne`          |
+| Central Khmer                        | `km`          | Norwegian Bokmal                     | `nb`          |
+| Chinese (Simplified)                 | `zh`          | Norwegian Nynorsk                    | `nn`          |
+| Chinese (Traditional)                | `zh-TW`       | Punjabi                              | `pa`          |
+| Chuvash                              | `cv`          | Punjabi<br/>(Shahmukhi script, Pakistan) | `pa-PK`       |
+| Croatian                             | `hr`          | Persian                              | `fa`          |
+| Czech                                | `cs`          | Polish                               | `pl`          |
+| Danish                               | `da`          | Portuguese                           | `pt`          |
+| Dutch                                | `nl`          | Pushto                               | `ps`          |
+| English                              | `en`          | Romanian                             | `ro`          |
+| Esperanto                            | `eo`          | Russian                              | `ru`          |
+| Estonian                             | `et`          | Serbian                              | `sr`          |
+| Finnish                              | `fi`          | Sinhala                              | `si`          |
+| French                               | `fr`          | Slovakian                            | `sk`          |
+| Georgian                             | `ka`          | Slovenian                            | `sl`          |
+| German                               | `de`          | Somali                               | `so`          |
+| Greek                                | `el`          | Spanish                              | `es`          |
+| Gujarati                             | `gu`          | Swedish                              | `sv`          |
+| Haitian                              | `ht`          | Tagalog                              | `tl`          |
+| Hebrew                               | `he`          | Tamil                                | `ta`          |
+| Hindi                                | `hi`          | Telugu                               | `te`          |
+| Hungarian                            | `hu`          | Thai                                 | `th`          |
+| Icelandic                            | `is`          | Turkish                              | `tr`          |
+| Irish                                | `ga`          | Ukrainian                            | `uk`          |
+| Italian                              | `it`          | Urdu                                 | `ur`          |
+| Japanese                             | `ja`          | Vietnamese                           | `vi`          |
+| Kazakh                               | `kk`          | Welsh                                | `cy`          |

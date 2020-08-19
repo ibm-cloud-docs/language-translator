@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-04"
+lastupdated: "2020-08-14"
 
 subcollection: language-translator
 
@@ -37,6 +37,17 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 14 August 2020
+{: #14-August-2020}
+
+-   Added the following translation models:
+    -   Bosnian to English (`bs-en`) and English to Bosnian (`en-bs`),
+    -   Canadian French to English (`fr-CA-en`) and English to Canadian French (`en-fr-CA`).
+    -   English to Welsh (`en-cy`). (The `cy-en` model was already available.)
+    -   Serbian to English (`sr-en`) and English to Serbian (`en-sr`). Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
+
+    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
 ## 31 July 2020
 {: #31-July-2020}
@@ -76,24 +87,10 @@ The current version is `2018-05-01`.
     - Chinese (Simplified) (`zh`)
 - For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
 
-## 22 April 2020
-{: #22-april-2020}
-
-- **Expanded language support.**
-  - The languages listed in [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) can be translated to any other language in the list, with the exception of Catalan.
-  - Support for translating the following languages is now available:
-    - Bengali (`bn`)
-    - Gujarati (`gu`)
-    - Malayalam (`ml`)
-    - Maltese (`mt`)
-    - Tamil (`ta`)
-    - Telugu (`te`)
-- Improved translation quality for translation between English and Hindi.
-- Improved document translation performance for Word, PowerPoint, and Excel documents.
-
 ## Older releases
 {: #older}
 
+-   [22 April 2020](#22-april-2020)
 -   [28 February 2020](#28-february-2020)
 -   [30 January 2020](#30-january-2020)
 -   [12 December 2019](#12-december-2019)
@@ -118,6 +115,21 @@ The current version is `2018-05-01`.
 -   [3 December 2015](#3-december-2015)
 -   [6 November 2015](#6-november-2015)
 -   [1 December 2014](#1-december-2014)
+
+### 22 April 2020
+{: #22-april-2020}
+
+- **Expanded language support.**
+  - The languages listed in [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) can be translated to any other language in the list, with the exception of Catalan.
+  - Support for translating the following languages is now available:
+    - Bengali (`bn`)
+    - Gujarati (`gu`)
+    - Malayalam (`ml`)
+    - Maltese (`mt`)
+    - Tamil (`ta`)
+    - Telugu (`te`)
+- Improved translation quality for translation between English and Hindi.
+- Improved document translation performance for Word, PowerPoint, and Excel documents.
 
 ### 28 February 2020
 {: #28-february-2020}
