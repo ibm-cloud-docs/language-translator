@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-20"
+lastupdated: "2020-08-24"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -79,6 +79,9 @@ curl -X POST --user "apikey:{apikey}"{: apikey} \
 "{url}/v3/translate?version=2018-05-01"{: url}
 ```
 {: pre}
+
+The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in UTF-8 format for translation.
+{: note}
 
 ## Step 2: Identify language
 {: #identify-language}

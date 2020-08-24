@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-19"
+lastupdated: "2020-08-24"
 
 keywords: customize,custom models
 
@@ -12,6 +12,7 @@ subcollection: language-translator
 
 {:shortdesc: .shortdesc}
 {:external: target="_blank" .external}
+{:note: .note}
 {:tip: .tip}
 {:pre: .pre}
 {:codeblock: .codeblock}
@@ -142,6 +143,9 @@ curl -X POST --user "apikey:{apikey}" \
 "{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
+
+The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in UTF-8 format for translation.
+{: note}
 
 ## Forced glossary customization
 {: #forced-glossary-customization}
