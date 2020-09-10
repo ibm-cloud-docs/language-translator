@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-06-15"
+lastupdated: "2020-09-09"
 
 subcollection: language-translator
 
@@ -43,7 +43,6 @@ This chatbot that is built with {{site.data.keyword.conversationshort}} and {{si
 
 - [View on GitHub](https://github.com/with-watson/multilingual-chatbot){: external}
 - [Try the demo](https://multilingual-chatbot.mybluemix.net/){: external}
-- [YouTube video](https://www.youtube.com/watch?v=d7DXydORTME){: external}
 - [Read more](https://medium.com/ibm-watson/build-multilingual-chatbots-with-watson-language-translator-watson-assistant-8c38247e8af1){: external}
 
 ## Real-time translation (Node.js)
@@ -60,4 +59,3 @@ By using Node.js and React components, you can create a web app that can be your
 This mobile application uses TensorFlow and {{site.data.keyword.languagetranslatorshort}} to recognize and translate handwritten Korean characters.
 
 - [View on GitHub](https://github.com/IBM/tensorflow-hangul-recognition){: external}
-- [Video walkthrough](https://www.youtube.com/watch?v=Ynusw4RcyRY){: external}
