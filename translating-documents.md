@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-29"
+lastupdated: "2020-08-28"
 
 subcollection: language-translator
 
@@ -21,15 +21,14 @@ subcollection: language-translator
 {:java: .ph data-hd-programlang='java'}
 {:python: .ph data-hd-programlang='python'}
 {:swift: .ph data-hd-programlang='swift'}
-{:download: .download}
 
 # Translating documents (Beta)
 {: #document-translator-tutorial}
 
-You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of a dozen different file formats, including Microsoft Office and Open Office formats.
+You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft Office, Open Office, subtitles, PDF, and other formats such as HTML, XML, and JSON.
 {:shortdesc}
 
-Document translation is currently a Beta feature.
+Document translation is currently a Beta feature. Translation of PDF documents is Experimental.
 {: beta}
 
 ## Before you begin
@@ -190,6 +189,29 @@ Translation of the following file formats is Beta functionality:
     - XML: `.xml`
     - JSON: `.json` (values with type `string` or `string array` are translated)
     - Text: `.txt`
+
+### Subtitle formats (Beta)
+{: #supported-file-formats-subtitles}
+
+Translation of the following subtitle (or caption) formats is Beta functionality:
+
+-   SubRip: `.srt`
+-   SubViewer: `.sbv`
+-   DirectVobSub or VSFilter: `.sub`
+-   MicroDVD: `.sub`
+-   WebVTT: `.vtt`
+
+These textual formats contain the transcript of a sound track or video source. The formats provide plain text that is intuitively comprehensible with minimal syntax. They include a list of cues that contain synchronization information for the media source. They can also include metadata that is not intended for display.
+
+The following information qualifies some of the nuances of subtitle translation:
+
+-   *Character encoding* - Subtitles can be presented in different character sets. The service supports only UTF-8 input and produces only UTF-8 output. The results maintain the line separation and optional Byte Order Mark (BOM) from the original source.
+-   *Markup* - The service attempts to preserve markup in the translated document, but preservation is not guaranteed. The service can silently remove markup from a particular cue.
+-   *Names* - By convention, speaker names can be marked with `-..:`, parentheses, or both. The service extracts and translates speaker names separately to guarantee consistent translation.
+-   *Paragraphs* - The text to be translated is grouped into paragraphs. Each paragraph can span multiple cues, but it always consists of a full set of cue lines. In other words, each paragraph consists of one or more cues in their entirety, with each cue contained fully in a single paragraph.
+
+    A single cue can contain one or more lines of text (for example, two short sentences). The service creates paragraph breaks only at cue line boundaries to preserve the count of lines in the cue. For languages with punctuation, a paragraph generally maps to a complete sentence. For languages without punctuation, a paragraph can contain multiple sentences, which can adversely affect the distribution of lines into cues in the translated document.
+-   *Comments, notes, and titles* - For formats that permit these elements, the service preserves the original text and adds translation that is prefixed by language code. Because this information is intended for use by the author, the service maintains the text in both its original and translated forms.
 
 ## Supported file formats (Experimental)
 {: #supported-file-formats-experimental}
