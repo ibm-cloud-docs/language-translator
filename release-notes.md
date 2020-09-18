@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-19"
+lastupdated: "2020-09-18"
 
 subcollection: language-translator
 
@@ -38,6 +38,18 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 16 September 2020
+{: #16-September-2020}
+
+-   Added beta support for translation of the following subtitle (caption) formats:
+    -   SubRip: `.srt`
+    -   SubViewer: `.sbv`
+    -   DirectVobSub or VSFilter: `.sub`
+    -   MicroDVD: `.sub`
+    -   WebVTT: `.vtt`
+
+    These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Subtitle formats (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
+
 ## 14 August 2020
 {: #14-August-2020}
 
@@ -67,29 +79,10 @@ The current version is `2018-05-01`.
 - Improved results translating to and from Spanish (`es`).
 - Improved table handling with document translation for PowerPoint.
 
-## 28 May 2020
-{: #28-may-2020}
-
-- **Expanded language support.**
-  - Support for translating the following languages is now available:
-    - Nepali (`ne`)
-    - Sinhala (`si`)
-  - Support for identifying the following languages is now available:
-    - Burmese (`my`)
-    - Lao (`lo`)
-    - Marathi (`mr`)
-    - Nepali (`ne`)
-    - Punjabi (Shahmukhi script, Pakistan) (`pa-PK`)
-    - Sinhala (`si`)
-    - Tagalog (`tl`)
-- Improved results when translating to and from the following languages:
-    - Catalan (`ca`)
-    - Chinese (Simplified) (`zh`)
-- For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
-
 ## Older releases
 {: #older}
 
+-   [28 May 2020](#28-may-2020)
 -   [22 April 2020](#22-april-2020)
 -   [28 February 2020](#28-february-2020)
 -   [30 January 2020](#30-january-2020)
@@ -115,6 +108,26 @@ The current version is `2018-05-01`.
 -   [3 December 2015](#3-december-2015)
 -   [6 November 2015](#6-november-2015)
 -   [1 December 2014](#1-december-2014)
+
+### 28 May 2020
+{: #28-may-2020}
+
+- **Expanded language support.**
+  - Support for translating the following languages is now available:
+    - Nepali (`ne`)
+    - Sinhala (`si`)
+  - Support for identifying the following languages is now available:
+    - Burmese (`my`)
+    - Lao (`lo`)
+    - Marathi (`mr`)
+    - Nepali (`ne`)
+    - Punjabi (Shahmukhi script, Pakistan) (`pa-PK`)
+    - Sinhala (`si`)
+    - Tagalog (`tl`)
+- Improved results when translating to and from the following languages:
+    - Catalan (`ca`)
+    - Chinese (Simplified) (`zh`)
+- For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
 
 ### 22 April 2020
 {: #22-april-2020}
@@ -335,8 +348,6 @@ curl -X POST --user {username}:{password} \
 ```
 {: codeblock}
 
-You can watch a [video walkthrough on YouTube](https://youtu.be/L6ZC0QaUZ2k) that explains how to set up {{site.data.keyword.languagetranslatorshort}} with the NMT preview.
-
 ### 15 December 2016
 {: #15-december-2016}
 
@@ -406,6 +417,6 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 - For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
     When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/apidocs/language-translator#authentication){: external} in the API reference.
-- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Cloud Foundry service instances to a resource group](/docs/resources?topic=resources-migrate#migrate).
+- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Watson services from Cloud Foundry](/docs/language-translator?topic=watson-migrate).
 
 To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.

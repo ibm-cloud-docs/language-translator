@@ -16,7 +16,6 @@ subcollection: language-translator
 {:note: .note}
 {:important: .important}
 {:tip: .tip}
-{:download: .download}
 {:table: .aria-labeledby="caption"}
 
 # Activity Tracker events for Language Translator

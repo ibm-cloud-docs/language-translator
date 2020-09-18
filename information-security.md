@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-02-06"
+lastupdated: "2020-09-18"
 
 subcollection: language-translator
 
@@ -54,8 +54,6 @@ The {{site.data.keyword.languagetranslatorshort}} service temporarily caches tra
 
 ### Translation data and documents
 {: #translation-data-and-documents}
-
-When you send text to {{site.data.keyword.languagetranslatorshort}} in the **Translate** method, the service caches the source text and the translation result to improve performance when it receives the same text in subsequent **Translate** requests. Cached translation text is deleted only after it is not used for a period of 15 days.
 
 Documents that are submitted to the service for translation through the **Translate document** method are stored internally to provide the translated file, and to support additional **Translate document** requests by reference to the original uploaded document. The original document and any associated translated documents are deleted only after they are not used in subsequent **Translate document** requests for a period of 15 days. The **Delete document** method can be used to delete documents before the deletion deadline.
 
