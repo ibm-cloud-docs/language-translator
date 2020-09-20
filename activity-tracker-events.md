@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2020
-lastupdated: "2020-09-02"
+lastupdated: "2020-09-20"
 
 subcollection: language-translator
 
@@ -31,9 +31,9 @@ You can use the {{site.data.keyword.cloudaccesstrailfull}} service to track how 
 
 | Action | Description |
 |:-----------------|:-----------------|
-| `language-translator.model.create` | Create a model |
-| `language-translator.model.delete` | Delete a model |
-{: caption="Table 1. Actions that generate events" caption-side="top"}
+| `language-translator.model.create` | Create a model (`POST /v3/models`) |
+| `language-translator.model.delete` | Delete a model (`DELETE /v3/models/{model_id}`) |
+{: caption="Table 1. Actions that generate events"}
 
 ## Viewing events
 {: #viewing-events}

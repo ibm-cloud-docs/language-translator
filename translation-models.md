@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-19"
+lastupdated: "2020-09-20"
 
 keywords: translation models,list translation models,customizable models
 
@@ -104,7 +104,7 @@ Not all language combinations that are supported for translation are also custom
 |[Indonesian](#indonesian)                    |`id`         |[Urdu](#urdu)                        |`ur`|
 |[Italian](#italian)                          |`it`         |[Vietnamese](#vietnamese)            |`vi`|
 |[Japanese](#japanese)                        |`ja`         |[Welsh](#welsh)                      |`cy`|
-
+{: caption="Table 1. Translatable languages"}
 
 Notes:
 
@@ -150,101 +150,112 @@ The following sections list the customizable translation models for each languag
 ### Arabic
 {: #arabic}
 
-The following Arabic translation models can be customized.
+The following Arabic translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `ar-en`  | Arabic (`ar`) | English (`en`) | general |
+{: caption="Table 2. Arabic translation model"}
 
 ### Bengali
 {: #bengali}
 
-The following Bengali translation models can be customized.
+The following Bengali translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `bn-en`  | Bengali (`bn`) | English (`en`) | general |
+{: caption="Table 3. Bengali translation model"}
 
 ### Bosnian
 {: #bosnian}
 
-The following Bosnian translation models can be customized.
+The following Bosnian translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `bs-en`  | Bosnian (`bs`) | English (`en`) | general |
+{: caption="Table 4. Bosnian translation model"}
 
 ### Bulgarian
 {: #bulgarian}
 
-The following Bulgarian translation models can be customized.
+The following Bulgarian translation model can be customized.
 
-| Model ID | Source        | Target         | Domain  |
-|----------|---------------|----------------|---------|
-| `ar-en`  | Arabic (`ar`) | English (`en`) | general |
+| Model ID | Source           | Target         | Domain  |
+|----------|------------------|----------------|---------|
+| `bg-en`  | Bulgarian (`bg`) | English (`en`) | general |
+{: caption="Table 5. Bulgarian translation model"}
 
 ### Catalan
 {: #catalan}
 
-The following Catalan translation models can be customized.
+The following Catalan translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `ca-es`  | Catalan (`ca`) | Spanish (`es`) | general |
+{: caption="Table 6. Catalan translation model"}
 
 ### Chinese (Simplified)
 {: #chinese-simplified}
 
-The following Chinese (Simplified) translation models can be customized.
+The following Chinese (Simplified) translation model can be customized.
 
 | Model ID | Source                    | Target         | Domain  |
 |----------|---------------------------|----------------|---------|
 | `zh-en`  | Simplified Chinese (`zh`) | English (`en`) | general |
+{: caption="Table 7. Simplified Chinese translation model"}
 
 ### Chinese (Traditional)
 {: #chinese-traditional}
 
-The following Chinese (Traditional) translation models can be customized.
+The following Chinese (Traditional) translation model can be customized.
 
 | Model ID   | Source                       | Target         | Domain  |
 |------------|------------------------------|----------------|---------|
 | `zh-TW-en` | Simplified Chinese (`zh-TW`) | English (`en`) | general |
+{: caption="Table 8. Traditional Chinese translation model"}
 
 ### Croatian
 {: #croatian}
 
-The following Croatian translation models can be customized.
+The following Croatian translation model can be customized.
 
 | Model ID | Source          | Target         | Domain  |
 |----------|-----------------|----------------|---------|
 | `hr-en`  | Croatian (`hr`) | English (`en`) | general |
+{: caption="Table 9. Croatian translation model"}
 
 ### Czech
 {: #czech}
 
-The following Czech translation models can be customized.
+The following Czech translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `cs-en`  | Czech (`cs`) | English (`en`) | general |
+{: caption="Table 10. Czech translation model"}
 
 ### Danish
 {: #danish}
 
-The following Danish translation models can be customized.
+The following Danish translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `da-en`  | Danish (`da`) | English (`en`) | general |
+{: caption="Table 11. Danish translation model"}
 
 ### Dutch
 {: #dutch}
 
-The following Dutch translation models can be customized.
+The following Dutch translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `nl-en`  | Dutch (`nl`) | English (`en`) | general |
+{: caption="Table 12. Dutch translation model"}
 
 ### English
 {: #english}
@@ -283,7 +294,7 @@ The following English translation models can be customized.
 | `en-ms`    | English (`en`) | Malay (`ms`)                  | general |
 | `en-mt`    | English (`en`) | Maltese (`mt`)                | general |
 | `en-ne`    | English (`en`) | Nepali (`ne`)                 | general |
-| `en-nb`    | English (`en`) | Norwegian Bokmal (`nb`)       | general |
+| `en-nb`    | English (`en`) | Norwegian Bokmål (`nb`)       | general |
 | `en-nl`    | English (`en`) | Dutch (`nl`)                  | general |
 | `en-pl`    | English (`en`) | Polish (`pl`)                 | general |
 | `en-pt`    | English (`en`) | Portuguese (`pt`)             | general |
@@ -303,42 +314,47 @@ The following English translation models can be customized.
 | `en-vi`    | English (`en`) | Vietnamese (`vi`)             | general |
 | `en-zh`    | English (`en`) | Simplified Chinese (`zh`)     | general |
 | `en-zh-TW` | English (`en`) | Traditional Chinese (`zh-TW`) | general |
+{: caption="Table 13. English translation models"}
 
 ### Estonian
 {: #estonian}
 
-The following Estonian translation models can be customized.
+The following Estonian translation model can be customized.
 
 | Model ID | Source          | Target         | Domain  |
 |----------|-----------------|----------------|---------|
 | `et-en`  | Estonian (`et`) | English (`en`) | general |
+{: caption="Table 14. Estonian translation model"}
 
 ### Finnish
 {: #finnish}
 
-The following Finnish translation models can be customized.
+The following Finnish translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `fi-en`  | Finnish (`fi`) | English (`en`) | general |
+{: caption="Table 15. Finnish translation model"}
 
 ### French
 {: #french}
 
-The following French translation models can be customized.
+The following French translation model can be customized.
 
 | Model ID | Source           | Target         | Domain  |
 |----------|---------------------------|----------------|---------|
 | `fr-en`  | French (`fr`)    | English (`en`) | general |
+{: caption="Table 16. French translation model"}
 
 ### French (Canadian)
 {: #french-canadian}
 
-The following French (Canadian) translation models can be customized.
+The following French (Canadian) translation model can be customized.
 
 | Model ID   | Source                    | Target         | Domain  |
 |------------|---------------------------|----------------|---------|
 | `fr-CA-en` | Canadian French (`fr-CA`) | English (`en`) | general |
+{: caption="Table 17. Canadian French translation model"}
 
 ### German
 {: #german}
@@ -350,69 +366,77 @@ The following German translation models can be customized.
 | `de-en`  | German (`de`) | English (`en`) | general |
 | `de-fr`  | German (`de`) | French (`fr`)  | general |
 | `de-it`  | German (`de`) | Italian (`it`) | general |
+{: caption="Table 18. German translation models"}
 
 ### Greek
 {: #greek}
 
-The following Greek translation models can be customized.
+The following Greek translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `el-en`  | Greek (`el`) | English (`en`) | general |
+{: caption="Table 19. Greek translation model"}
 
 ### Gujarati
 {: #gujarati}
 
-The following Gujarati translation models can be customized.
+The following Gujarati translation model can be customized.
 
 | Model ID | Source          | Target         | Domain  |
 |----------|-----------------|----------------|---------|
 | `gu-en`  | Gujarati (`gu`) | English (`en`) | general |
+{: caption="Table 20. Gujarati translation model"}
 
 ### Hebrew
 {: #hebrew}
 
-The following Hebrew translation models can be customized.
+The following Hebrew translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `he-en`  | Hebrew (`he`) | English (`en`) | general |
+{: caption="Table 21. Hebrew translation model"}
 
 ### Hindi
 {: #hindi}
 
-The following Hindi translation models can be customized.
+The following Hindi translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `hi-en`  | Hindi (`hi`) | English (`en`) | general |
+{: caption="Table 22. Hindi translation model"}
 
 ### Hungarian
 {: #hungarian}
 
-The following Hungarian translation models can be customized.
+The following Hungarian translation model can be customized.
 
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `hu-en`  | Hungarian (`hu`) | English (`en`) | general |
+{: caption="Table 23. Hungarian translation model"}
 
 ### Indonesian
 {: #indonesian}
 
-The following Indonesian translation models can be customized.
+The following Indonesian translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `id-en`  | Indonesian (`id`) | English (`en`) | general |
+{: caption="Table 24. Indonesian translation model"}
 
 ### Irish
 {: #irish}
 
-The following Irish translation models can be customized.
+The following Irish translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `ga-en`  | Irish (`ga`) | English (`en`) | general |
+{: caption="Table 25. Irish translation model"}
 
 ### Italian
 {: #italian}
@@ -423,159 +447,177 @@ The following Italian translation models can be customized.
 |----------|----------------|----------------|---------|
 | `it-de`  | Italian (`it`) | German (`de`)  | general |
 | `it-en`  | Italian (`it`) | English (`en`) | general |
+{: caption="Table 26. Italian translation models"}
 
 ### Japanese
 {: #japanese}
 
-The following Japanese translation models can be customized.
+The following Japanese translation model can be customized.
 
 | Model ID | Source          | Target         | Domain  |
 |----------|-----------------|----------------|---------|
 | `ja-en`  | Japanese (`ja`) | English (`en`) | general |
+{: caption="Table 27. Japanese translation model"}
 
 ### Korean
 {: #korean}
 
-The following Korean translation models can be customized.
+The following Korean translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `ko-en`  | Korean (`ko`) | English (`en`) | general |
+{: caption="Table 28. Korean translation model"}
 
 ### Latvian
 {: #latvian}
 
-The following Latvian translation models can be customized.
+The following Latvian translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `lv-en`  | Latvian (`lv`) | English (`en`) | general |
+{: caption="Table 29. Latvian translation model"}
 
 ### Lithuanian
 {: #lithuanian}
 
-The following Lithuanian translation models can be customized.
+The following Lithuanian translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `lt-en`  | Lithuanian (`lt`) | English (`en`) | general |
+{: caption="Table 30. Lithuanian translation model"}
 
 ### Malay
 {: #malay}
 
-The following Malay translation models can be customized.
+The following Malay translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `ms-en`  | Malay (`ms`) | English (`en`) | general |
+{: caption="Table 31. Malay translation model"}
 
 ### Malayalam
 {: #malayalam}
 
-The following Malayalam translation models can be customized.
+The following Malayalam translation model can be customized.
 
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `ml-en`  | Malayalam (`ml`) | English (`en`) | general |
+{: caption="Table 32. Malayalam translation model"}
 
 ### Maltese
 {: #maltese}
 
-The following Maltese translation models can be customized.
+The following Maltese translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `mt-en`  | Maltese (`mt`) | English (`en`) | general |
+{: caption="Table 33. Maltese translation model"}
 
 ### Nepali
 {: #nepali}
 
-The following Nepali translation models can be customized.
+The following Nepali translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `ne-en`  | Nepali (`ne`) | English (`en`) | general |
+{: caption="Table 34. Nepali translation model"}
 
 ### Norwegian Bokmål
 {: #norwegian-bokmal}
 
-The following Norwegian Bokmål translation models can be customized.
+The following Norwegian Bokmål translation model can be customized.
 
 | Model ID | Source                  | Target         | Domain  |
 |----------|-------------------------|----------------|---------|
-| `nb-en`  | Norwegian Bokmal (`nb`) | English (`en`) | general |
+| `nb-en`  | Norwegian Bokmål (`nb`) | English (`en`) | general |
+{: caption="Table 35. Norwegian Bokmål translation model"}
 
 ### Polish
 {: #polish}
 
-The following Polish translation models can be customized.
+The following Polish translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `pl-en`  | Polish (`pl`) | English (`en`) | general |
+{: caption="Table 36. Polish translation model"}
 
 ### Portuguese
 {: #portuguese}
 
-The following Portuguese translation models can be customized.
+The following Portuguese translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `pt-en`  | Portuguese (`pt`) | English (`en`) | general |
+{: caption="Table 37. Portuguese translation model"}
 
 ### Romanian
 {: #romanian}
 
-The following Romanian translation models can be customized.
+The following Romanian translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `ro-en`  | Romanian (`ro`)   | English (`en`) | general |
+{: caption="Table 38. Romanian translation model"}
 
 ### Russian
 {: #russian}
 
-The following Russian translation models can be customized.
+The following Russian translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `ru-en`  | Russian (`ru`) | English (`en`) | general |
+{: caption="Table 39. Russian translation model"}
 
 ### Serbian
 {: #serbian}
 
-The following Serbian translation models can be customized. The service supports translation for Serbian based on the Cyrillic alphabet, not the Latin alphabet.
+The following Serbian translation model can be customized. The service supports translation for Serbian based on the Cyrillic alphabet, not the Latin alphabet.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `sr-en`  | Serbian (`sr`) | English (`en`) | general |
+{: caption="Table 40. Serbian translation model"}
 
 ### Sinhala
 {: #sinhala}
 
-The following Sinhala translation models can be customized.
+The following Sinhala translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `si-en`  | Sinhala (`si`) | English (`en`) | general |
+{: caption="Table 41. Sinhala translation model"}
 
 ### Slovak
 {: #slovak}
 
-The following Slovak translation models can be customized.
+The following Slovak translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `sk-en`  | Slovak (`sk`) | English (`en`) | general |
+{: caption="Table 42. Slovak translation model"}
 
 ### Slovenian
 {: #slovenian}
 
-The following Slovenian translation models can be customized.
+The following Slovenian translation model can be customized.
 
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `sl-en`  | Slovenian (`sl`) | English (`en`) | general |
+{: caption="Table 43. Slovenian translation model"}
 
 ### Spanish
 {: #spanish}
@@ -587,84 +629,94 @@ The following Spanish translation models can be customized.
 | `es-ca`  | Spanish (`es`) | Catalan (`ca`) | general |
 | `es-en`  | Spanish (`es`) | English (`en`) | general |
 | `es-fr`  | Spanish (`es`) | French (`fr`)  | general |
+{: caption="Table 44. Spanish translation models"}
 
 ### Swedish
 {: #swedish}
 
-The following Swedish translation models can be customized.
+The following Swedish translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `sv-en`  | Swedish (`sv`) | English (`en`) | general |
+{: caption="Table 45. Swedish translation model"}
 
 ### Tamil
 {: #tamil}
 
-The following Tamil translation models can be customized.
+The following Tamil translation model can be customized.
 
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `ta-en`  | Tamil (`ta`) | English (`en`) | general |
+{: caption="Table 46. Tamil translation model"}
 
 ### Telugu
 {: #telugu}
 
-The following Telugu translation models can be customized.
+The following Telugu translation model can be customized.
 
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `te-en`  | Telugu (`te`) | English (`en`) | general |
+{: caption="Table 47. Telugu translation model"}
 
 ### Thai
 {: #thai}
 
-The following Thai translation models can be customized.
+The following Thai translation model can be customized.
 
 | Model ID | Source      | Target         | Domain  |
 |----------|-------------|----------------|---------|
 | `th-en`  | Thai (`th`) | English (`en`) | general |
+{: caption="Table 48. Thai translation model"}
 
 ### Turkish
 {: #turkish}
 
-The following Turkish translation models can be customized.
+The following Turkish translation model can be customized.
 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `tr-en`  | Turkish (`tr`) | English (`en`) | general |
+{: caption="Table 49. Turkish translation model"}
 
 ### Ukrainian
 {: #ukrainian}
 
-The following Ukrainian translation models can be customized.
+The following Ukrainian translation model can be customized.
 
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `uk-en`  | Ukrainian (`uk`) | English (`en`) | general |
+{: caption="Table 50. Ukrainian translation model"}
 
 ### Urdu
 {: #urdu}
 
-The following Urdu translation models can be customized.
+The following Urdu translation model can be customized.
 
 | Model ID | Source      | Target         | Domain  |
 |----------|-------------|----------------|---------|
 | `ur-en`  | Urdu (`ur`) | English (`en`) | general |
+{: caption="Table 51. Urdu translation model"}
 
 ### Vietnamese
 {: #vietnamese}
 
-The following Vietnamese translation models can be customized.
+The following Vietnamese translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `vi-en`  | Vietnamese (`vi`) | English (`en`) | general |
+{: caption="Table 52. Vietnamese translation model"}
 
 ### Welsh
 {: #welsh}
 
-The following Welsh translation models can be customized.
+The following Welsh translation model can be customized.
 
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `cy-en`  | Welsh (`cy`)      | English (`en`) | general |
+{: caption="Table 53. Welsh translation model"}
