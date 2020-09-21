@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-19"
+lastupdated: "2020-09-20"
 
 keywords: identify language,identifiable languages
 
@@ -84,7 +84,7 @@ The following table list the identifiable languages. The table is sorted by lang
 | Bulgarian                            | `bg`          | Marathi                              | `mr`          |
 | Burmese                              | `my`          | Mongolian                            | `mn`          |
 | Catalan                              | `ca`          | Nepali                               | `ne`          |
-| Central Khmer                        | `km`          | Norwegian Bokmal                     | `nb`          |
+| Central Khmer                        | `km`          | Norwegian Bokmål                     | `nb`          |
 | Chinese (Simplified)                 | `zh`          | Norwegian Nynorsk                    | `nn`          |
 | Chinese (Traditional)                | `zh-TW`       | Punjabi                              | `pa`          |
 | Chuvash                              | `cv`          | Punjabi<br/>(Shahmukhi script, Pakistan) | `pa-PK`       |
@@ -110,3 +110,4 @@ The following table list the identifiable languages. The table is sorted by lang
 | Italian                              | `it`          | Urdu                                 | `ur`          |
 | Japanese                             | `ja`          | Vietnamese                           | `vi`          |
 | Kazakh                               | `kk`          | Welsh                                | `cy`          |
+{: caption="Table 1. Identifiable languages"}

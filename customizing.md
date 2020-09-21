@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-08-24"
+lastupdated: "2020-09-20"
 
 keywords: customize,custom models
 
@@ -279,6 +279,7 @@ You can provide your training data for customization in the following document f
 | [TSV](#tsv)  | `.tsv`, `.tab`  | Tab-separated values (TSV) file with two columns for aligned sentences and phrases. The first row contains the language code.  |
 | [JSON](#json) | `.json` | Custom JSON format for specifying aligned sentences and phrases.  |
 | [Microsoft Excel](#excel) | `.xls`, `.xlsx` | Excel file with the first two columns for aligned sentences and phrases. The first row contains the language code. |
+{: caption="Table 1. Document formats for training data"}
 
 All formats have in common that they specify an alignment of translated text segments (sentences or phrases). You must encode all text data in UTF-8 format. For an example of how to convert a TMX file to UTF-8 format, see [Changing a TMX file to UTF-8 encoding](#changing-tmx-file-to-utf-8).
 
