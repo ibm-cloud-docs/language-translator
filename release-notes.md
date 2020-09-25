@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-18"
+lastupdated: "2020-09-25"
 
 subcollection: language-translator
 
@@ -38,6 +38,17 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 25 September 2020
+{: #25-September-2020}
+
+-   Added the following translation models for Montenegrin:
+    -   Montenegrin to English (`cnr-en`)
+    -   English to Montenegrin (`en-cnr`)
+
+    Montenegrin cannot be identified by the service's language identification feature. (Bosnian, Croatian, and Montenegrin translation support is based on the Latin alphabet. Of the three very similar languages, only Croatian is identifiable.) In addition, the `cnr-en` and `en-cnr` translation models are not customizable at this time.
+
+    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+
 ## 16 September 2020
 {: #16-September-2020}
 
@@ -54,8 +65,8 @@ The current version is `2018-05-01`.
 {: #14-August-2020}
 
 -   Added the following translation models:
-    -   Bosnian to English (`bs-en`) and English to Bosnian (`en-bs`),
-    -   Canadian French to English (`fr-CA-en`) and English to Canadian French (`en-fr-CA`).
+    -   Bosnian to English (`bs-en`) and English to Bosnian (`en-bs`). Bosnian cannot be identified by the service's language identification feature.
+    -   Canadian French to English (`fr-CA-en`) and English to Canadian French (`en-fr-CA`). Canadian French cannot be identified by the service's language identification feature.
     -   English to Welsh (`en-cy`). (The `cy-en` model was already available.)
     -   Serbian to English (`sr-en`) and English to Serbian (`en-sr`). Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
 
@@ -64,24 +75,18 @@ The current version is `2018-05-01`.
 ## 31 July 2020
 {: #31-July-2020}
 
-- Added the the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
+-   Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
 ## 14 July 2020
 {: #14-July-2020}
 
-- Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
-- Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
-
-## 11 June 2020
-{: #11-june-2020}
-
-- Support for translating to and from Ukrainian (`uk`).
-- Improved results translating to and from Spanish (`es`).
-- Improved table handling with document translation for PowerPoint.
+-   Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
+-   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
 ## Older releases
 {: #older}
 
+-   [11 June 2020](#11-june-2020)
 -   [28 May 2020](#28-may-2020)
 -   [22 April 2020](#22-april-2020)
 -   [28 February 2020](#28-february-2020)
@@ -108,6 +113,13 @@ The current version is `2018-05-01`.
 -   [3 December 2015](#3-december-2015)
 -   [6 November 2015](#6-november-2015)
 -   [1 December 2014](#1-december-2014)
+
+### 11 June 2020
+{: #11-june-202}0
+
+- Support for translating to and from Ukrainian (`uk`).
+- Improved results translating to and from Spanish (`es`).
+- Improved table handling with document translation for PowerPoint.
 
 ### 28 May 2020
 {: #28-may-2020}
@@ -196,6 +208,8 @@ Added automatic source language detection in **Translate** requests. When you sp
   - English to and from Lithuanian (`en-lt` and `lt-en`)
   - English to and from Malay (`en-ms` and `ms-en`)
   - English to and from Thai (`en-th` and `th-en`)
+
+  Indonesian cannot be identified by the service's language identification feature.
 
 ### 21 August 2019
 {: #21-august-2019}
