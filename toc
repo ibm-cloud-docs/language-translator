@@ -13,14 +13,12 @@ Language Translator
     Additional resources
         [Blog](https://developer.ibm.com/watson/blog/)
         [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
-
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     customizing.md
     translating-documents.md
     ha-dr.md
-    /watson/watson-migrate
     /watson/watson-keyservice
     /watson/watson-public-private-endpoints
     {: .navgroup-end}
