@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-07-30"
+lastupdated: "2020-10-16"
 
 subcollection: language-translator
 
@@ -41,7 +41,7 @@ This documentation describes managed instances of {{site.data.keyword.languagetr
 
 - [Get started](/docs/language-translator?topic=language-translator-gettingstarted).
 - Try the live [demo](https://www.ibm.com/demos/live/watson-language-translator){: external}.
-- View the [API reference](https://{DomainName}/apidocs/language-translator){: external}.
+- View the [API & SDK reference](https://{DomainName}/apidocs/language-translator){: external}.
 - View language support information:
   - [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models)
   - [Identifiable languages](/docs/language-translator?topic=language-translator-identifiable-languages)

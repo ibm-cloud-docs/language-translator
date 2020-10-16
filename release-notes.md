@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-25"
+lastupdated: "2020-10-16"
 
 subcollection: language-translator
 
@@ -37,6 +37,15 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 16 October 2020
+{: #16-October-2020}
+
+-   Added the following customizable translation models for Basque:
+    -   Basque to Spanish (`eu-es`)
+    -   Spanish to Basque (`es-eu`)
+
+    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
 ## 25 September 2020
 {: #25-September-2020}
@@ -77,15 +86,10 @@ The current version is `2018-05-01`.
 
 -   Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
-## 14 July 2020
-{: #14-July-2020}
-
--   Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
--   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
-
 ## Older releases
 {: #older}
 
+-   [14 July 2020](#14-July-2020)
 -   [11 June 2020](#11-june-2020)
 -   [28 May 2020](#28-may-2020)
 -   [22 April 2020](#22-april-2020)
@@ -114,8 +118,14 @@ The current version is `2018-05-01`.
 -   [6 November 2015](#6-november-2015)
 -   [1 December 2014](#1-december-2014)
 
+### 14 July 2020
+{: #14-July-2020}
+
+-   Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
+-   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+
 ### 11 June 2020
-{: #11-june-202}0
+{: #11-june-2020}
 
 - Support for translating to and from Ukrainian (`uk`).
 - Improved results translating to and from Spanish (`es`).
@@ -182,7 +192,7 @@ Added automatic source language detection in **Translate** requests. When you sp
 
         The previous public endpoint domain was `watsonplatform.net`.
 
-        For more information about the URLs, see the [API reference](https://{DomainName}/apidocs/language-translator/language-translator#service-endpoint){: external}.
+        For more information about the URLs, see the [API & SDK reference](https://{DomainName}/apidocs/language-translator/language-translator#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
     - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
@@ -430,7 +440,7 @@ The {{site.data.keyword.languagetranslatorshort}} service has a new API authenti
 
 - For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
-    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/apidocs/language-translator#authentication){: external} in the API reference.
+    When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/apidocs/language-translator#authentication){: external} in the API & SDK reference.
 - For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Watson services from Cloud Foundry](/docs/language-translator?topic=watson-migrate).
 
 To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.
