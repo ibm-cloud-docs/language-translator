@@ -24,7 +24,7 @@ Language Translator
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API reference](https://cloud.ibm.com/apidocs/language-translator/)
+    [API & SDK reference](https://cloud.ibm.com/apidocs/language-translator/)
     activity-tracker-events.md
 
     {: .topicgroup}
