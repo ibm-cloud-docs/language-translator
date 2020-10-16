@@ -104,8 +104,8 @@ curl -X POST --user "apikey:{apikey}"{: apikey} \
 ## Next steps
 {: #next-steps}
 
-- View the [API & SDK reference](https://{DomainName}/apidocs/language-translator)
 - Learn how to [customize](/docs/language-translator?topic=language-translator-customizing) {{site.data.keyword.languagetranslatorshort}} to work for your use case
+- View the [API & SDK reference](https://{DomainName}/apidocs/language-translator)
 - Explore [sample applications](/docs/language-translator?topic=language-translator-sample-apps)
 - View language support information:
     - [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models)
