@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-23"
 
 keywords: translation models,list translation models,customizable models
 
@@ -30,7 +30,7 @@ subcollection: language-translator
 ## Listing supported languages for translation
 {: #list-languages}
 
-You can use the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} method to retrieve the list of supported languages for translation. The following example calls the method.
+You can use the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} method to retrieve the list of supported languages for translation. The following example calls the method:
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \
@@ -38,7 +38,7 @@ curl -X GET --user "apikey:{apikey}" \
 ```
 {: pre}
 
-The method returns a complete list of all supported languages, sorted by `language` code (for example, `af`, `ar`). In addition to basic information about each language, the response indicates whether the language is `supported_as_source` for translation and `supported_as_target` for translation.
+The method returns a complete list of all supported languages, sorted by `language` code (for example, `af`, `ar`). In addition to basic information about each language, the response indicates whether the language is `supported_as_source` for translation and `supported_as_target` for translation. It also lists whether the language is `identifiable`.
 
 ```json
 "languages": [
@@ -68,6 +68,8 @@ The method returns a complete list of all supported languages, sorted by `langua
 ]
 ```
 {: codeblock}
+
+The list of support languages is long, reporting more than 75 languages.
 
 ## List of supported languages
 {: #list-languages-supported}

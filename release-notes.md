@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-23"
 
 subcollection: language-translator
 
@@ -37,6 +37,15 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 23 October 2020
+{: #23-October-2020}
+
+-   Added improved versions of the following customizable translation models for Korean:
+    -   English to Korean (`en-ko`)
+    -   Korean to English (`ko-en`)
+
+    The models are improved to preserve markup in the translation if present in source.
 
 ## 16 October 2020
 {: #16-October-2020}
@@ -81,14 +90,10 @@ The current version is `2018-05-01`.
 
     For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
-## 31 July 2020
-{: #31-July-2020}
-
--   Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
-
 ## Older releases
 {: #older}
 
+-   [31 July 2020](#31-July-2020)
 -   [14 July 2020](#14-July-2020)
 -   [11 June 2020](#11-june-2020)
 -   [28 May 2020](#28-may-2020)
@@ -117,6 +122,13 @@ The current version is `2018-05-01`.
 -   [3 December 2015](#3-december-2015)
 -   [6 November 2015](#6-november-2015)
 -   [1 December 2014](#1-december-2014)
+
+### 31 July 2020
+{: #31-July-2020}
+
+-   Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. The method returns a complete list of all supported languages, sorted by `language` code (for example, `af`, `ar`). In addition to basic information about each language, the response indicates whether the language is `supported_as_source` for translation and `supported_as_target` for translation. It also lists whether the language is `identifiable`.
+
+    For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
 ### 14 July 2020
 {: #14-July-2020}
