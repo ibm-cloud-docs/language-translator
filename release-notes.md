@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-28"
+lastupdated: "2020-10-30"
 
 subcollection: language-translator
 
@@ -54,7 +54,7 @@ The current version is `2018-05-01`.
     -   Basque to Spanish (`eu-es`)
     -   Spanish to Basque (`es-eu`)
 
-    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 25 September 2020
 {: #25-September-2020}
@@ -65,7 +65,7 @@ The current version is `2018-05-01`.
 
     Montenegrin cannot be identified by the service's language identification feature. (Bosnian, Croatian, and Montenegrin translation support is based on the Latin alphabet. Of the three very similar languages, only Croatian is identifiable.) In addition, the `cnr-en` and `en-cnr` translation models are not customizable at this time.
 
-    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 16 September 2020
 {: #16-September-2020}
@@ -88,7 +88,7 @@ The current version is `2018-05-01`.
     -   English to Welsh (`en-cy`). (The `cy-en` model was already available.)
     -   Serbian to English (`sr-en`) and English to Serbian (`en-sr`). Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
 
-    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## Older releases
 {: #older}
@@ -134,7 +134,7 @@ The current version is `2018-05-01`.
 {: #14-July-2020}
 
 -   Added support for new file types for customization: CSV, TSV, XLSX (Microsoft Excel), XLIFF, and JSON. For more information, see [Supported document formats for training data](/docs/language-translator?topic=language-translator-customizing#supported-document-formats-for-training-data).
--   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+-   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ### 11 June 2020
 {: #11-june-2020}
@@ -143,7 +143,7 @@ The current version is `2018-05-01`.
     -   Ukrainian to English (`uk-en`)
     -   English to Ukrainian (`en-uk`)
 
-    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 -   Improved results translating to and from Spanish (`es`).
 -   Improved table handling with document translation for Microsoft PowerPoint.
 
@@ -170,15 +170,14 @@ The current version is `2018-05-01`.
 ### 22 April 2020
 {: #22-april-2020}
 
-- **Expanded language support.**
-  - The languages listed in [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models) can be translated to any other language in the list, with the exception of Catalan.
-  - Support for translating the following languages is now available:
-    - Bengali (`bn`)
-    - Gujarati (`gu`)
-    - Malayalam (`ml`)
-    - Maltese (`mt`)
-    - Tamil (`ta`)
-    - Telugu (`te`)
+- The languages listed in [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported) can be translated to any other language in the list, with the exception of Catalan.
+- Support for translating the following languages is now available:
+  - Bengali (`bn`)
+  - Gujarati (`gu`)
+  - Malayalam (`ml`)
+  - Maltese (`mt`)
+  - Tamil (`ta`)
+  - Telugu (`te`)
 - Improved translation quality for translation between English and Hindi.
 - Improved document translation performance for Word, PowerPoint, and Excel documents.
 
@@ -190,11 +189,13 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 30 January 2020
 {: #30-january-2020}
 
-- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
-  - English to and from Latvian (`en-lv` and `lv-en`)
-  - English to and from Urdu (`en-ur` and `ur-en`)
-  - English to and from Vietnamese (`en-vi` and `vi-en`)
-- General improvements for translating PowerPoint and Word documents.
+-   New translation models are now available:
+    -   English to and from Latvian (`en-lv` and `lv-en`)
+    -   English to and from Urdu (`en-ur` and `ur-en`)
+    -   English to and from Vietnamese (`en-vi` and `vi-en`)
+
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
+-   General improvements for translating PowerPoint and Word documents.
 
 ### 12 December 2019
 {: #12-december-2019}
@@ -226,28 +227,28 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 11 November 2019
 {: #11-november-2019}
 
-- Improved custom model training time.
-- Improved language identification accuracy for English text and for text with more than 100 words.
-- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
-  - English to and from Indonesian (`en-id` and `id-en`)
-  - English to and from Irish (`en-ga` and `ga-en`)
-  - English to and from Lithuanian (`en-lt` and `lt-en`)
-  - English to and from Malay (`en-ms` and `ms-en`)
-  - English to and from Thai (`en-th` and `th-en`)
+-   Improved custom model training time.
+-   Improved language identification accuracy for English text and for text with more than 100 words.
+-   New translation models are now available.
+    -   English to and from Indonesian (`en-id` and `id-en`)
+    -   English to and from Irish (`en-ga` and `ga-en`)
+    -   English to and from Lithuanian (`en-lt` and `lt-en`)
+    -   English to and from Malay (`en-ms` and `ms-en`)
+    -   English to and from Thai (`en-th` and `th-en`)
 
-  Indonesian cannot be identified by the service's language identification feature.
+    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported). Note that Indonesian cannot be identified by the service's language identification feature.
 
 ### 21 August 2019
 {: #21-august-2019}
 
-- New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available.
+- New translation models are now available:
   - English to and from Bulgarian (`en-bg` and `bg-en`)
   - English to and from Croatian (`en-hr` and `hr-en`)
   - English to and from Estonian (`en-et` and `et-en`)
   - English to and from Romanian (`en-ro` and `ro-en`)
   - English to and from Slovak (`en-sk` and `sk-en`)
   - English to and from Slovenian (`en-sl` and `sl-en`)
-- The following languages can now be identified by the service.
+- The following languages can now be identified by the service:
   - Catalan (`ca`)
   - Croatian (`hr`)
   - Irish (`ga`)
@@ -260,14 +261,14 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 14 June 2019
 {: #14-june-2019}
 
-New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available for English and Greek.
+New translation models are now available for English and Greek:
 - English to Greek (en-el)
 - Greek to English (el-en)
 
 ### 13 June 2019
 {: #13-june-2019}
 
-New [translation models](/docs/language-translator?topic=language-translator-translation-models) are now available for English and Hebrew.
+New translation models are now available for English and Hebrew:
 - English to Hebrew (en-he)
 - Hebrew to English (he-en)
 
@@ -290,8 +291,7 @@ For more information about service keys and user roles, see [Authenticating to W
 
 - [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
   - [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
-
-- New [translation models](/docs/language-translator?topic=language-translator-translation-models) for Hungarian are now available:
+- New translation models for Hungarian are now available:
   - Hungarian to English (hu-en)
   - English to Hungarian (en-hu)
 
@@ -303,14 +303,14 @@ For more information about service keys and user roles, see [Authenticating to W
 ### 9 August 2018
 {: #9-august-2018}
 
-New [translation models](/docs/language-translator?topic=language-translator-translation-models) for Norwegian Bokmål are now available:
+New translation models for Norwegian Bokmål are now available:
   - Norwegian Bokmål to English (nb-en)
   - English to Norwegian Bokmål (en-nb)
 
 ### 27 June 2018
 {: #27-june-2018}
 
-New [translation models](/docs/language-translator?topic=language-translator-translation-models) that feature six new languages are now available:
+New translation models that feature six new languages are now available:
   - Catalan
     - Catalan to Spanish (ca-es)
     - Spanish to Catalan (es-ca)
