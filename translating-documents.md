@@ -41,7 +41,7 @@ Make sure that you have the following information and meet the following require
     -   **20 MB** for service instances on the Standard, Advanced, and Premium plans
     -   **2 MB** for service instances on the Lite plan
 -   The document must be in one of the [Supported file formats (Beta)](#supported-file-formats) or [Supported file formats (Experimental)](#supported-file-formats-experimental).
--   The source and target languages must be among the [Supported translation models](/docs/language-translator?topic=language-translator-translation-models).
+-   The source and target languages must be among the [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 This tutorial walks you through translating documents from the command line with `curl`. You can also use the {{site.data.keyword.watson}} SDKs to translate documents with a number of programming languages. For more information, see the methods in the [API & SDK reference](https://{DomainName}/apidocs/language-translator){: external}.
 
