@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-09-20"
+lastupdated: "2020-10-30"
 
 keywords: identify language,identifiable languages
 
@@ -26,11 +26,12 @@ subcollection: language-translator
 {: #identifiable-languages}
 
 {{site.data.keyword.languagetranslatorfull}} can identify a variety of languages.
+{: shortdesc}
 
 ## Listing identifiable languages
 {: #list-identifiable}
 
-You can use the [List identifiable languages](https://{DomainName}/apidocs/language-translator#listidentifiablelanguages) method to retrieve the list of identifiable languages. The following example calls the method.
+You can use the [List identifiable languages](https://{DomainName}/apidocs/language-translator#listidentifiablelanguages) method to retrieve the list of identifiable languages. The following example calls the method:
 
 ```sh
 curl -X GET --user "apikey:{apikey}" \
