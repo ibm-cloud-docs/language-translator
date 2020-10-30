@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-23"
+lastupdated: "2020-10-30"
 
 keywords: translation models,list translation models,customizable models
 
@@ -26,6 +26,7 @@ subcollection: language-translator
 {: #translation-models}
 
 {{site.data.keyword.languagetranslatorfull}} supports a wide array of translatable languages. It also supports customization of many translation models.
+{: shortdesc}
 
 ## Listing supported languages for translation
 {: #list-languages}
@@ -74,7 +75,7 @@ The list of support languages is long, reporting more than 75 languages.
 ## List of supported languages
 {: #list-languages-supported}
 
-The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Catalan).
+The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Basque and Catalan).
 
 Not all language combinations that are supported for translation are also customizable. Usually, only the combinations with English as source or target language are customizable. Click the name of a language to see the customizable translation models for that language.
 

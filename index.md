@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-30"
 
 subcollection: language-translator
 
@@ -35,6 +35,11 @@ US Health Insurance Portability and Accountability Act (HIPAA) support is availa
 
 This documentation describes managed instances of {{site.data.keyword.languagetranslatorfull}} that are offered in {{site.data.keyword.cloud_notm}} or in {{site.data.keyword.icp4dfull_notm}} as a Service. If you are interested in on-premises or installed deployments of the service, see [About {{site.data.keyword.languagetranslatorshort}} for {{site.data.keyword.icp4dfull_notm}}](https://{DomainName}/docs/language-translator-data?topic=language-translator-data-about#about){: external}.
 {: note}
+
+## Pricing
+{: #about-pricing}
+
+The service offers multiple pricing plans to suit your usage and application needs. For more information about the pricing plans or to purchase a plan, see the {{site.data.keyword.languagetranslatorshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/language-translator){: external}.
 
 ## Quick links
 {: #quick-links}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-23"
+lastupdated: "2020-10-28"
 
 subcollection: language-translator
 
@@ -45,7 +45,7 @@ The current version is `2018-05-01`.
     -   English to Korean (`en-ko`)
     -   Korean to English (`ko-en`)
 
-    The models are improved to preserve markup in the translation if present in source.
+    The models are improved to preserve markup in the translation if present in the source.
 
 ## 16 October 2020
 {: #16-October-2020}
@@ -139,9 +139,13 @@ The current version is `2018-05-01`.
 ### 11 June 2020
 {: #11-june-2020}
 
-- Support for translating to and from Ukrainian (`uk`).
-- Improved results translating to and from Spanish (`es`).
-- Improved table handling with document translation for PowerPoint.
+-   Added the following customizable translation models for Ukrainian:
+    -   Ukrainian to English (`uk-en`)
+    -   English to Ukrainian (`en-uk`)
+
+    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+-   Improved results translating to and from Spanish (`es`).
+-   Improved table handling with document translation for Microsoft PowerPoint.
 
 ### 28 May 2020
 {: #28-may-2020}

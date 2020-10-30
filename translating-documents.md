@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-16"
+lastupdated: "2020-10-30"
 
 subcollection: language-translator
 
@@ -28,7 +28,7 @@ subcollection: language-translator
 You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft Office, Open Office, subtitles, PDF, and other formats such as HTML, XML, and JSON.
 {:shortdesc}
 
-Document translation is currently a Beta feature. Translation of PDF documents is Experimental.
+Document translation is currently a beta feature. Translation of PDF documents is experimental.
 {: beta}
 
 ## Before you begin
@@ -173,7 +173,7 @@ curl -X DELETE --user "apikey:{apikey}" \
 ## Supported file formats (Beta)
 {: #supported-file-formats}
 
-Translation of the following file formats is Beta functionality:
+Translation of the following file formats is beta functionality:
 
 -   Microsoft Office formats:
     - Word: `.doc`, `.docx`
@@ -193,7 +193,7 @@ Translation of the following file formats is Beta functionality:
 ### Subtitle formats (Beta)
 {: #supported-file-formats-subtitles}
 
-Translation of the following subtitle (or caption) formats is Beta functionality:
+Translation of the following subtitle (or caption) formats is beta functionality:
 
 -   SubRip: `.srt`
 -   SubViewer: `.sbv`
@@ -216,7 +216,7 @@ The following information qualifies some of the nuances of subtitle translation:
 ## Supported file formats (Experimental)
 {: #supported-file-formats-experimental}
 
-Translation of the following file format is Experimental functionality:
+Translation of the following file format is experimental functionality:
 
 - PDF: `.pdf`
 
