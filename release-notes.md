@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-30"
+lastupdated: "2020-11-05"
 
 subcollection: language-translator
 
@@ -70,7 +70,7 @@ The current version is `2018-05-01`.
 ## 16 September 2020
 {: #16-September-2020}
 
--   Added beta support for translation of the following subtitle (caption) formats:
+-   Added beta support for translation of the following subtitle (caption) document formats:
     -   SubRip: `.srt`
     -   SubViewer: `.sbv`
     -   DirectVobSub or VSFilter: `.sub`
@@ -144,7 +144,9 @@ The current version is `2018-05-01`.
     -   English to Ukrainian (`en-uk`)
 
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
--   Improved results translating to and from Spanish (`es`).
+-   Improved results for the translation models between Spanish and English:
+    -   Spanish to English (`es-en`)
+    -   English to Spanish (`en-es`)
 -   Improved table handling with document translation for Microsoft PowerPoint.
 
 ### 28 May 2020
