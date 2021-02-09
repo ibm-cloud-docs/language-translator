@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2020
-lastupdated: "2020-08-04"
+  years: 2019, 2021
+lastupdated: "2021-02-09"
 
 subcollection: language-translator
 
@@ -16,13 +16,13 @@ subcollection: language-translator
 {:codeblock: .codeblock}
 {:tip: .tip}
 
-# High availability and disaster recovery
+# Understanding high availability and disaster recovery for {{site.data.keyword.languagetranslatorshort}}
 {: #ha-dr}
 
 {{site.data.keyword.languagetranslatorfull}} is highly available within multiple {{site.data.keyword.cloud_notm}} locations (for example, Dallas and Washington, DC). However, recovering from potential disasters that affect an entire location requires planning and preparation.
 {: shortdesc}
 
-You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. Fore more information, see [How IBM Cloud ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime){: external}.
+You are responsible for understanding your configuration, customization, and usage of the service. You are also responsible for being ready to re-create an instance of the service in a new location and to restore your data in any location. For more information, see [How {{site.data.keyword.cloud_notm}} ensures high availability and disaster recovery](/docs/overview?topic=overview-zero-downtime).
 
 ## High availability
 {: #high-availability}
