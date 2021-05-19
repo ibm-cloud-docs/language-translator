@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-11-05"
+  years: 2015, 2021
+lastupdated: "2021-05-19"
 
 subcollection: language-translator
 
@@ -29,8 +29,13 @@ subcollection: language-translator
 The following new features and changes to the service are available.
 {: shortdesc}
 
+## Beta features
+{: beta-features}
+
+IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They can be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
+
 ## Service API Versioning
-{: shortdesc}
+{: versioning}
 
 API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a version parameter that takes a date in the format `version=YYYY-MM-DD`. Whenever we change the API in a backwards-incompatible way, we release a new minor version of the API.
 
@@ -41,54 +46,57 @@ The current version is `2018-05-01`.
 ## 23 October 2020
 {: #23-October-2020}
 
--   Added improved versions of the following customizable translation models for Korean:
-    -   English to Korean (`en-ko`)
-    -   Korean to English (`ko-en`)
+Added improved versions of the following customizable translation models for Korean:
 
-    The models are improved to preserve markup in the translation if present in the source.
+-   English to Korean (`en-ko`)
+-   Korean to English (`ko-en`)
+
+The models are improved to preserve markup in the translation if present in the source.
 
 ## 16 October 2020
 {: #16-October-2020}
 
--   Added the following customizable translation models for Basque:
-    -   Basque to Spanish (`eu-es`)
-    -   Spanish to Basque (`es-eu`)
+Added the following customizable translation models for Basque:
 
-    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
+-   Basque to Spanish (`eu-es`)
+-   Spanish to Basque (`es-eu`)
+
+For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 25 September 2020
 {: #25-September-2020}
 
--   Added the following translation models for Montenegrin:
-    -   Montenegrin to English (`cnr-en`)
-    -   English to Montenegrin (`en-cnr`)
+Added the following translation models for Montenegrin:
 
-    Montenegrin cannot be identified by the service's language identification feature. (Bosnian, Croatian, and Montenegrin translation support is based on the Latin alphabet. Of the three very similar languages, only Croatian is identifiable.) In addition, the `cnr-en` and `en-cnr` translation models are not customizable at this time.
+-   Montenegrin to English (`cnr-en`)
+-   English to Montenegrin (`en-cnr`)
 
-    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
+Montenegrin cannot be identified by the service's language identification feature. (Bosnian, Croatian, and Montenegrin translation support is based on the Latin alphabet. Of the three very similar languages, only Croatian is identifiable.) In addition, the `cnr-en` and `en-cnr` translation models are not customizable at this time. For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 16 September 2020
 {: #16-September-2020}
 
--   Added beta support for translation of the following subtitle (caption) document formats:
-    -   SubRip: `.srt`
-    -   SubViewer: `.sbv`
-    -   DirectVobSub or VSFilter: `.sub`
-    -   MicroDVD: `.sub`
-    -   WebVTT: `.vtt`
+Added beta support for translation of the following subtitle (caption) document formats:
 
-    These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Subtitle formats (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
+-   SubRip: `.srt`
+-   SubViewer: `.sbv`
+-   DirectVobSub or VSFilter: `.sub`
+-   MicroDVD: `.sub`
+-   WebVTT: `.vtt`
+
+These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Subtitle formats (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
 
 ## 14 August 2020
 {: #14-August-2020}
 
--   Added the following translation models:
-    -   Bosnian to English (`bs-en`) and English to Bosnian (`en-bs`). Bosnian cannot be identified by the service's language identification feature.
-    -   Canadian French to English (`fr-CA-en`) and English to Canadian French (`en-fr-CA`). Canadian French cannot be identified by the service's language identification feature.
-    -   English to Welsh (`en-cy`). (The `cy-en` model was already available.)
-    -   Serbian to English (`sr-en`) and English to Serbian (`en-sr`). Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
+Added the following translation models:
 
-    For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
+-   Bosnian to English (`bs-en`) and English to Bosnian (`en-bs`). Bosnian cannot be identified by the service's language identification feature.
+-   Canadian French to English (`fr-CA-en`) and English to Canadian French (`en-fr-CA`). Canadian French cannot be identified by the service's language identification feature.
+-   English to Welsh (`en-cy`). (The `cy-en` model was already available.)
+-   Serbian to English (`sr-en`) and English to Serbian (`en-sr`). Serbian translation support is based on the Cyrillic alphabet. (Bosnian and Croatian translation support is based on the Latin alphabet.)
+
+For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## Older releases
 {: #older}
@@ -126,9 +134,9 @@ The current version is `2018-05-01`.
 ### 31 July 2020
 {: #31-July-2020}
 
--   Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. The method returns a complete list of all supported languages, sorted by `language` code (for example, `af`, `ar`). In addition to basic information about each language, the response indicates whether the language is `supported_as_source` for translation and `supported_as_target` for translation. It also lists whether the language is `identifiable`.
+Added the [List supported languages](https://{DomainName}/apidocs/language-translator#listlanguages){: external} (`GET /v3/languages`) method to retrieve the list of supported languages for translation. The method returns a complete list of all supported languages, sorted by `language` code (for example, `af`, `ar`). In addition to basic information about each language, the response indicates whether the language is `supported_as_source` for translation and `supported_as_target` for translation. It also lists whether the language is `identifiable`.
 
-    For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
+For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
 ### 14 July 2020
 {: #14-July-2020}
@@ -172,16 +180,16 @@ The current version is `2018-05-01`.
 ### 22 April 2020
 {: #22-april-2020}
 
-- The languages listed in [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported) can be translated to any other language in the list, with the exception of Catalan.
-- Support for translating the following languages is now available:
-  - Bengali (`bn`)
-  - Gujarati (`gu`)
-  - Malayalam (`ml`)
-  - Maltese (`mt`)
-  - Tamil (`ta`)
-  - Telugu (`te`)
-- Improved translation quality for translation between English and Hindi.
-- Improved document translation performance for Word, PowerPoint, and Excel documents.
+-   The languages listed in [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported) can be translated to any other language in the list, with the exception of Catalan.
+-   Support for translating the following languages is now available:
+    -   Bengali (`bn`)
+    -   Gujarati (`gu`)
+    -   Malayalam (`ml`)
+    -   Maltese (`mt`)
+    -   Tamil (`ta`)
+    -   Telugu (`te`)
+-   Improved translation quality for translation between English and Hindi.
+-   Improved document translation performance for Word, PowerPoint, and Excel documents.
 
 ### 28 February 2020
 {: #28-february-2020}
@@ -197,7 +205,7 @@ Added automatic source language detection in **Translate** requests. When you sp
     -   English to and from Vietnamese (`en-vi` and `vi-en`)
 
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
--   General improvements for translating PowerPoint and Word documents.
+-   Made general improvements for translating PowerPoint and Word documents.
 
 ### 12 December 2019
 {: #12-december-2019}
@@ -224,7 +232,7 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 13 November 2019
 {: #13-november-2019}
 
-- **New South Korea location**: You can now create {{site.data.keyword.languagetranslatorshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
+**New South Korea location**: You can now create {{site.data.keyword.languagetranslatorshort}} instances in the Seoul location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
 
 ### 11 November 2019
 {: #11-november-2019}
@@ -264,15 +272,17 @@ Added automatic source language detection in **Translate** requests. When you sp
 {: #14-june-2019}
 
 New translation models are now available for English and Greek:
-- English to Greek (en-el)
-- Greek to English (el-en)
+
+-   English to Greek (en-el)
+-   Greek to English (el-en)
 
 ### 13 June 2019
 {: #13-june-2019}
 
 New translation models are now available for English and Hebrew:
-- English to Hebrew (en-he)
-- Hebrew to English (he-en)
+
+-   English to Hebrew (en-he)
+-   Hebrew to English (he-en)
 
 ### 21 March 2019
 {: #21-march-2019}
@@ -286,7 +296,7 @@ For more information about service keys and user roles, see [Authenticating to W
 ### 14 December 2018
 {: #14-december-2018}
 
-- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} London location.
+You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} London location.
 
 ### 16 November 2018
 {: #16-november-2018}
@@ -300,19 +310,21 @@ For more information about service keys and user roles, see [Authenticating to W
 ### 8 November 2018
 {: #8-november-2018}
 
-- You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} Tokyo location.
+You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} Tokyo location.
 
 ### 9 August 2018
 {: #9-august-2018}
 
 New translation models for Norwegian Bokmål are now available:
-  - Norwegian Bokmål to English (nb-en)
-  - English to Norwegian Bokmål (en-nb)
+
+-   Norwegian Bokmål to English (nb-en)
+-   English to Norwegian Bokmål (en-nb)
 
 ### 27 June 2018
 {: #27-june-2018}
 
 New translation models that feature six new languages are now available:
+
   - Catalan
     - Catalan to Spanish (ca-es)
     - Spanish to Catalan (es-ca)
