@@ -11,6 +11,7 @@ Language Translator
 
     {: .topicgroup}
     Additional resources
+        [Pricing](https://www.ibm.com/cloud/watson-language-translator/pricing)
         [Blog](https://developer.ibm.com/watson/blog/)
         [Webinars](http://www.ibm.com/watson/building-with-watson-webinar.html)
     {: .navgroup-end}
