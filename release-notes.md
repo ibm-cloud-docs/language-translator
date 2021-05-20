@@ -32,7 +32,7 @@ The following new features and changes to the service are available.
 ## Beta features
 {: beta-features}
 
-IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice.
+IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
 
 ## Service API Versioning
 {: versioning}
