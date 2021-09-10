@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2020
-lastupdated: "2020-10-30"
+lastupdated: "2020-08-18"
 
 subcollection: language-translator
 
@@ -26,7 +26,7 @@ subcollection: language-translator
 {: #document-translator-tutorial}
 
 You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft Office, Open Office, subtitles, PDF, and other formats such as HTML, XML, and JSON.
-{:shortdesc}
+{: shortdesc}
 
 Document translation is currently a beta feature. Translation of PDF documents is experimental.
 {: beta}

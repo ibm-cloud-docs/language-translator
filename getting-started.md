@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-24"
+  years: 2015, 2021
+lastupdated: "2021-09-10"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -31,7 +31,7 @@ completion-time: 10m
 {:ruby: .ph data-hd-programlang='ruby'}
 {:swift: .ph data-hd-programlang='swift'}
 {:apikey: data-credential-placeholder='apikey'}
-{:url: data-credential-placeholder='url'}
+{:url: data-credential-url-placeholder='url'}
 {:hide-dashboard: .hide-dashboard}
 {:hide-in-docs: .hide-in-docs}
 {:step: data-tutorial-type='step'}
@@ -42,7 +42,7 @@ completion-time: 10m
 {: toc-completion-time="10m"}
 
 {{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language.
-{:shortdesc}
+{: shortdesc}
 {: hide-dashboard}
 
 This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
@@ -50,11 +50,11 @@ This tutorial walks you through the commands to translate text from English to S
 ## Before you begin
 {: #prerequisites}
 
-- {: hide-dashboard} Create an instance of the service:
+- Create an instance of the service: {: hide-dashboard}
     1.  Go to the [{{site.data.keyword.languagetranslatorshort}}](https://{DomainName}/catalog/language-translator){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
     1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
     1.  Click **Create**.
-- {: hide-dashboard} Copy the credentials to authenticate to your service instance:
+- Copy the credentials to authenticate to your service instance: {: hide-dashboard}
     1.  On the **Manage** page, click **Show Credentials**.
     1.  Copy the `API Key` and `URL` values.
 
@@ -85,12 +85,14 @@ Omit the braces (`{ }`) from the examples. They indicate variable values.
 Use the following example to translate two phrases, "Hello, world" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span> In the command, `model_id` identifies the model to be used for translation, in this case `en-es`.
 
 ```sh
-curl -X POST --user "apikey:{apikey}"{: apikey} \
+curl -X POST --user "apikey:{apikey}" \
 --header "Content-Type: application/json" \
 --data '{"text": ["Hello, world.", "How are you?"], "model_id":"en-es"}' \
-"{url}/v3/translate?version=2018-05-01"{: url}
+"{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
+{: apikey}
+{: url}
 
 The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in UTF-8 format for translation.
 {: note}
@@ -102,12 +104,14 @@ The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in U
 Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
 
 ```sh
-curl -X POST --user "apikey:{apikey}"{: apikey} \
+curl -X POST --user "apikey:{apikey}" \
 --header "Content-Type: text/plain" \
 --data "Language Translator translates text from one language to another" \
-"{url}/v3/identify?version=2018-05-01"{: url}
+"{url}/v3/identify?version=2018-05-01"
 ```
 {: pre}
+{: apikey}
+{: url}
 
 ## Translate a document (Beta)
 {: #translate-a-document}

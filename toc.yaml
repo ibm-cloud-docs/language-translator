@@ -1,0 +1,77 @@
+toc:
+  properties:
+    subcollection: language-translator
+    version: 2
+    category: ai
+    audience: service
+    href: /docs/language-translator
+    product-page: https://www.ibm.com/cloud/watson-language-translator
+    path: language-translator
+    label: Language Translator
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - index.md
+      - link:
+          label: Demo - Translate text
+          href: https://www.ibm.com/demos/live/watson-language-translator
+      - topicgroup:
+          label: Additional resources
+          links:
+          - link:
+              label: Pricing
+              href: https://www.ibm.com/cloud/watson-language-translator/pricing
+          - link:
+              label: Blog
+              href: https://developer.ibm.com/blogs/
+          - link:
+              label: Webinars
+              href: https://www.ibm.com/watson/
+
+  - navgroup:
+      id: howto
+      topics:
+      - customizing.md
+      - translating-documents.md
+      - /watson/watson-keyservice
+      - /watson/watson-public-private-endpoints
+
+  - navgroup:
+      id: reference
+      topics:
+      - link:
+          label: API & SDK reference
+          href: https://{DomainName}/apidocs/language-translator
+      - ha-dr.md
+      - information-security.md
+      - activity-tracker-events.md
+      - topicgroup:
+          label: Language support
+          topics:
+          - translation-models.md
+          - identifiable-languages.md
+      - sample-applications.md
+      - /watson/watson-using-sdks
+      - link:
+          label: Watson GitHub repos
+          href: https://github.com/watson-developer-cloud/
+
+  - navgroup:
+      id: help
+      topics:
+      - release-notes.md
+      - topicgroup:
+          label: Developer community
+          links:
+          - link:
+              label: StackOverflow
+              href: http://stackoverflow.com/questions/tagged/language-translation+watson
+          - link:
+              label: WDC Slack channel
+              href: http://wdc-slack-inviter.mybluemix.net/
+      - link:
+        label: Accessibility
+        href: /overview/overview-accessibility-platform

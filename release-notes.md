@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-05-20"
+lastupdated: "2021-08-18"
 
 subcollection: language-translator
 
@@ -161,21 +161,21 @@ For more information, see [Listing supported languages for translation](/docs/la
 {: #28-may-2020}
 
 - **Expanded language support.**
-  - Support for translating the following languages is now available:
-    - Nepali (`ne`)
-    - Sinhala (`si`)
-  - Support for identifying the following languages is now available:
-    - Burmese (`my`)
-    - Lao (`lo`)
-    - Marathi (`mr`)
-    - Nepali (`ne`)
-    - Punjabi (Shahmukhi script, Pakistan) (`pa-PK`)
-    - Sinhala (`si`)
-    - Tagalog (`tl`)
-- Improved results when translating to and from the following languages:
-    - Catalan (`ca`)
-    - Chinese (Simplified) (`zh`)
-- For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
+    -   Support for translating the following languages is now available:
+        -   Nepali (`ne`)
+        -   Sinhala (`si`)
+    -   Support for identifying the following languages is now available:
+        -   Burmese (`my`)
+        -   Lao (`lo`)
+        -   Marathi (`mr`)
+        -   Nepali (`ne`)
+        -   Punjabi (Shahmukhi script, Pakistan) (`pa-PK`)
+        -   Sinhala (`si`)
+        -   Tagalog (`tl`)
+-   Improved results when translating to and from the following languages:
+    -   Catalan (`ca`)
+    -   Chinese (Simplified) (`zh`)
+-   For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
 
 ### 22 April 2020
 {: #22-april-2020}
@@ -210,10 +210,10 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 12 December 2019
 {: #12-december-2019}
 
-- **Full support for IBM Cloud IAM**
+-   **Full support for IBM Cloud IAM**
 
-    - {{site.data.keyword.languagetranslatorshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
-    - To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
+    -   {{site.data.keyword.languagetranslatorshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
+    -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
 
         Example URL for an instance hosted in the Dallas location: `api.us-south.language-translator.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
 
@@ -222,12 +222,12 @@ Added automatic source language detection in **Translate** requests. When you sp
         For more information about the URLs, see the [API & SDK reference](https://{DomainName}/apidocs/language-translator/language-translator#service-endpoint){: external}.
 
         These URLs do not introduce a breaking change. The new URLs work both for your existing service instances and for new instances. The original URLs continue to work on your existing service instances for at least one year (until December 2020).
-    - For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
-- **New network and data security features**
-    - **Support for data encryption with customer-managed keys**
-        - Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
-    - **Support for private network endpoints**
-        - Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
+    -   For more information about IAM, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+-   **New network and data security features**
+    -   **Support for data encryption with customer-managed keys**
+        -   Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+    -   **Support for private network endpoints**
+        -   Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
 
 ### 13 November 2019
 {: #13-november-2019}
@@ -251,22 +251,22 @@ Added automatic source language detection in **Translate** requests. When you sp
 ### 21 August 2019
 {: #21-august-2019}
 
-- New translation models are now available:
-  - English to and from Bulgarian (`en-bg` and `bg-en`)
-  - English to and from Croatian (`en-hr` and `hr-en`)
-  - English to and from Estonian (`en-et` and `et-en`)
-  - English to and from Romanian (`en-ro` and `ro-en`)
-  - English to and from Slovak (`en-sk` and `sk-en`)
-  - English to and from Slovenian (`en-sl` and `sl-en`)
-- The following languages can now be identified by the service:
-  - Catalan (`ca`)
-  - Croatian (`hr`)
-  - Irish (`ga`)
-  - Malay (`ms`)
-  - Maltese (`mt`)
-  - Serbian (`sr`)
-  - Slovenian (`sl`)
-  - Thai (`th`)
+-   New translation models are now available:
+    -   English to and from Bulgarian (`en-bg` and `bg-en`)
+    -   English to and from Croatian (`en-hr` and `hr-en`)
+    -   English to and from Estonian (`en-et` and `et-en`)
+    -   English to and from Romanian (`en-ro` and `ro-en`)
+    -   English to and from Slovak (`en-sk` and `sk-en`)
+    -   English to and from Slovenian (`en-sl` and `sl-en`)
+-   The following languages can now be identified by the service:
+    -   Catalan (`ca`)
+    -   Croatian (`hr`)
+    -   Irish (`ga`)
+    -   Malay (`ms`)
+    -   Maltese (`mt`)
+    -   Serbian (`sr`)
+    -   Slovenian (`sl`)
+    -   Thai (`th`)
 
 ### 14 June 2019
 {: #14-june-2019}
@@ -301,11 +301,11 @@ You can now create {{site.data.keyword.languagetranslatorshort}} service instanc
 ### 16 November 2018
 {: #16-november-2018}
 
-- [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
-  - [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
-- New translation models for Hungarian are now available:
-  - Hungarian to English (hu-en)
-  - English to Hungarian (en-hu)
+-   [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
+    -   [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
+-   New translation models for Hungarian are now available:
+    -   Hungarian to English (hu-en)
+    -   English to Hungarian (en-hu)
 
 ### 8 November 2018
 {: #8-november-2018}
@@ -325,24 +325,24 @@ New translation models for Norwegian Bokmål are now available:
 
 New translation models that feature six new languages are now available:
 
-  - Catalan
-    - Catalan to Spanish (ca-es)
-    - Spanish to Catalan (es-ca)
-  - Czech
-    - Czech to English (cs-en)
-    - English to Czech (en-cs)
-  - Danish
-    - Danish to English (da-en)
-    - English to Danish (en-da)
-  - Finnish
-    - Finnish to English (fi-en)
-    - English to Finnish (en-fi)
-  - Hindi
-    - Hindi to English (hi-en)
-    - English to Hindi (en-hi)
-  - Swedish
-    - Swedish to English (sv-en)
-    - English to Swedish (en-sv)
+-   Catalan
+    -   Catalan to Spanish (ca-es)
+    -   Spanish to Catalan (es-ca)
+-   Czech
+    -   Czech to English (cs-en)
+    -   English to Czech (en-cs)
+-   Danish
+    -   Danish to English (da-en)
+    -   English to Danish (en-da)
+-   Finnish
+    -   Finnish to English (fi-en)
+    -   English to Finnish (en-fi)
+-   Hindi
+    -   Hindi to English (hi-en)
+    -   English to Hindi (en-hi)
+-   Swedish
+    -   Swedish to English (sv-en)
+    -   English to Swedish (en-sv)
 
 ### 15 June 2018
 {: #15-june-2018}
@@ -359,22 +359,22 @@ New service instances that you create in Germany and US South will not be compat
 #### What's new in v3
 {: #whats-new}
 
--  {{site.data.keyword.languagetranslatorshort}} API v3 comes with **Neural Machine Translation** (NMT) models that offer significantly improved translation results. All NMT models are now available for customization.
--  Use custom models as base models for forced glossary customization.
--  API v3 is a simplified, all-JSON subset of the retired API v2.
--  Introduces API version dates to give developers the freedom to adopt future API changes at their own pace.
+-   {{site.data.keyword.languagetranslatorshort}} API v3 comes with **Neural Machine Translation** (NMT) models that offer significantly improved translation results. All NMT models are now available for customization.
+-   Use custom models as base models for forced glossary customization.
+-   API v3 is a simplified, all-JSON subset of the retired API v2.
+-   Introduces API version dates to give developers the freedom to adopt future API changes at their own pace.
 
 #### Breaking changes
 {: #breaking-changes}
 
-- Mandatory version date for all API endpoints: API v3 requests require a version date query parameter of the form `version=YYYY-MM-DD`. The latest API version is `version=2018-05-01`.
-- Simplified API:
-  - The **Translate** and **Identify** methods do not offer the option to return plain text responses in v3. The methods return only JSON responses.
-  - `GET /translate` and `GET /identify` methods are not supported in v3. Use the `POST /translate` and `POST /identify` methods instead.
-- Monolingual corpus customization is not supported in v3.
-- Creating custom models with both a parallel corpus and forced glossary now needs to be done in two API calls. First, customize the model with a parallel corpus. After the custom model has finished training, customize it again with the forced glossary. This change allows you to use a custom model trained with a parallel corpus as a base for forced glossary customization.
-- Specialized patent and conversation domain models are not available in the v3 API. The translation quality provided by the NMT models in the patent and conversation domains is generally improved compared to the older specialized models.
-- Error object keys have been renamed so that they are consistent with other Watson APIs. `error_code` has been renamed to `code`, and `error_message` has been renamed to `error`.
+-   Mandatory version date for all API endpoints: API v3 requests require a version date query parameter of the form `version=YYYY-MM-DD`. The latest API version is `version=2018-05-01`.
+-   Simplified API:
+    -   The **Translate** and **Identify** methods do not offer the option to return plain text responses in v3. The methods return only JSON responses.
+    -   `GET /translate` and `GET /identify` methods are not supported in v3. Use the `POST /translate` and `POST /identify` methods instead.
+-   Monolingual corpus customization is not supported in v3.
+-   Creating custom models with both a parallel corpus and forced glossary now needs to be done in two API calls. First, customize the model with a parallel corpus. After the custom model has finished training, customize it again with the forced glossary. This change allows you to use a custom model trained with a parallel corpus as a base for forced glossary customization.
+-   Specialized patent and conversation domain models are not available in the v3 API. The translation quality provided by the NMT models in the patent and conversation domains is generally improved compared to the older specialized models.
+-   Error object keys have been renamed so that they are consistent with other Watson APIs. `error_code` has been renamed to `code`, and `error_message` has been renamed to `error`.
 
 #### IAM authentication
 
@@ -385,9 +385,9 @@ As of 12 June 2018, new service instances created in the Sydney and US East regi
 
 New Neural Machine Translation (NMT) models are available to preview. You can try NMT models for the following language pairs.
 
-- English to and from: Arabic, Chinese, Dutch, French, German, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Russian, Spanish, and Turkish
-- French to and from: German, Spanish
-- German to and from: Italian
+-   English to and from: Arabic, Chinese, Dutch, French, German, Italian, Japanese, Korean, Polish, Portuguese (Brazilian), Russian, Spanish, and Turkish
+-   French to and from: German, Spanish
+-   German to and from: Italian
 
 *The NMT models and the syntax for using them are subject to change during the preview period. Currently, NMT models do not support corpus customization. Only forced glossary customization is supported.*
 
@@ -446,31 +446,31 @@ The {{site.data.keyword.languagetranslatorshort}} tool beta is released. The too
 
 The beta Machine Translator and beta Language Identification APIs have been upgraded and combined into the {{site.data.keyword.languagetranslatorshort}} API. To immediately start using the new service, understand and update your code to reflect these changes:
 
-- **New model\_id parameter**: In the beta API, you defined the `sid` parameter to select the model to use for translation. In this version, the `sid` parameter is renamed to `model_id` parameter. To retrieve the `model_id` allowed values, use the `GET/language  translator/api/v2/models` operation. This returns a list of all models and their corresponding `model_id` values.
-- **Language pair support**: Instead of selecting a `model_id`, you can now specify a source and target language instead, and the model will default to the one that's trained on the general news domain.
-- **JSON request body support**: When making a POST translation request, you can now make the request as a JSON submission. The JSON formatting allows you to submit multiple paragraphs for translation, instead of just a single piece of text in the form submission format.
-- **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
-- **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
-- **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
+-   **New model\_id parameter**: In the beta API, you defined the `sid` parameter to select the model to use for translation. In this version, the `sid` parameter is renamed to `model_id` parameter. To retrieve the `model_id` allowed values, use the `GET/language  translator/api/v2/models` operation. This returns a list of all models and their corresponding `model_id` values.
+-   **Language pair support**: Instead of selecting a `model_id`, you can now specify a source and target language instead, and the model will default to the one that's trained on the general news domain.
+-   **JSON request body support**: When making a POST translation request, you can now make the request as a JSON submission. The JSON formatting allows you to submit multiple paragraphs for translation, instead of just a single piece of text in the form submission format.
+-   **JSON response body support**: The translation request returns support JSON formatting as well as plain text formatting. The JSON format allows support for the translated words to be returned in multiple paragraphs instead of a single piece of text.
+-   **Accept header support**: The accept header can now be used to define the format of the response in all of the operations (text/plain or application/json).
+-   **Language Identification support**: Language identification methods have been added to this API. This allows you to identify the language of the input texts, and lists all supported languages that can be detected by the API.
 
 #### New API authentication process
 {: #iam-auth-process }
 
 The {{site.data.keyword.languagetranslatorshort}} service has a new API authentication process for service instances that are hosted in the following locations:
 
-- Dallas as of June 15, 2018
-- Frankfurt as of June 15, 2018
-- London
-- Seoul
-- Sydney as of June 12, 2018
-- Tokyo
-- Washington, DC as of June 12, 2018
+-   Dallas as of June 15, 2018
+-   Frankfurt as of June 15, 2018
+-   London
+-   Seoul
+-   Sydney as of June 12, 2018
+-   Tokyo
+-   Washington, DC as of June 12, 2018
 
 {{site.data.keyword.cloud_notm}} is migrating to token-based Identity and Access Management (IAM) authentication. With some service instances, you authenticate to the API by using IAM.
 
-- For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
+-   For _new_ service instances created in the locations indicated previously, you use IAM for authentication. You can pass either a bearer token or an API key. Tokens support authenticated requests without embedding service credentials in every call. API keys use basic authentication.
 
     When you use any of the Watson SDKs, you can pass the API key and let the SDK manage the lifecycle of the tokens. For more information and examples, see [Authentication](https://{DomainName}/apidocs/language-translator#authentication){: external} in the API & SDK reference.
-- For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Watson services from Cloud Foundry](/docs/language-translator?topic=watson-migrate).
+-   For _existing_ service instances that you created before the indicated date, you continue to authenticate by providing the username and password for the service instance. Eventually, you will need to migrate these service instances to IAM authentication. Updates will be provided about migration process and dates. For more information about migration, see [Migrating Watson services from Cloud Foundry](/docs/language-translator?topic=watson-migrate).
 
 To find out which authentication to use, view the service credentials by clicking the service instance on the [{{site.data.keyword.cloud_notm}} resources page](https://cloud.ibm.com/resources){: external}.
