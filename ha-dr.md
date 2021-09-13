@@ -8,13 +8,7 @@ subcollection: language-translator
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
-{:codeblock: .codeblock}
-{:tip: .tip}
+{{site.data.keyword.attribute-definition-list}}
 
 # High availability and disaster recovery
 {: #ha-dr}

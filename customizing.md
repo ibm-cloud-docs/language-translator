@@ -10,17 +10,7 @@ subcollection: language-translator
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:note: .note}
-{:tip: .tip}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Customizing your model
 {: #customizing}

@@ -8,19 +8,7 @@ subcollection: language-translator
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:note: .note}
-{:pre: .pre}
-{:beta: .beta}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:curl: .ph data-hd-programlang='curl'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Translating documents (Beta)
 {: #document-translator-tutorial}

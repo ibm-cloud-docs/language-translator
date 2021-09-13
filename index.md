@@ -8,17 +8,7 @@ subcollection: language-translator
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:beta: .beta}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
+{{site.data.keyword.attribute-definition-list}}
 
 # About Language Translator
 {: #about}
