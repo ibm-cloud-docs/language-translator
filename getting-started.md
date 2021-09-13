@@ -14,27 +14,7 @@ completion-time: 10m
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:curl: .ph data-hd-programlang='curl'}
-{:go: .ph data-hd-programlang='go'}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:swift: .ph data-hd-programlang='swift'}
-{:apikey: data-credential-placeholder='apikey'}
-{:url: data-credential-url-placeholder='url'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:step: data-tutorial-type='step'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Getting started with {{site.data.keyword.languagetranslatorshort}}
 {: #gettingstarted}

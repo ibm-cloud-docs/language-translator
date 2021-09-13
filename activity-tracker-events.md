@@ -10,15 +10,7 @@ subcollection: language-translator
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:codeblock: .codeblock}
-{:pre: .pre}
-{:screen: .screen}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:table: .aria-labeledby="caption"}
+{{site.data.keyword.attribute-definition-list}}
 
 # Activity Tracker events for Language Translator
 {: #at_events}

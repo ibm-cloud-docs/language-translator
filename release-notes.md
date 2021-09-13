@@ -8,23 +8,10 @@ subcollection: language-translator
 
 ---
 
-{:shortdesc: .shortdesc}
-{:external: target="_blank" .external}
-{:deprecated: .deprecated}
-{:important: .important}
-{:note: .note}
-{:tip: .tip}
-{:preview: .preview}
-{:beta: .beta}
-{:pre: .pre}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:java: .ph data-hd-programlang='java'}
-{:python: .ph data-hd-programlang='python'}
-{:swift: .ph data-hd-programlang='swift'}
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes
+{: #release-notes}
 
 The following new features and changes to the service are available.
 {: shortdesc}
