@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-09-10"
+lastupdated: "2021-09-22"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -62,7 +62,10 @@ Omit the braces (`{ }`) from the examples. They indicate variable values.
 {: #translate-text}
 {: step}
 
-Use the following example to translate two phrases, "Hello, world" and "How are you?" from English to Spanish. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span> In the command, `model_id` identifies the model to be used for translation, in this case `en-es`.
+Use the following example to translate two phrases, "Hello, world" and "How are you?" from English to Spanish.
+
+-   In the command, `model_id` identifies the model to be used for translation, in this case `en-es`.
+-   Replace `{apikey}` and `{url}` with your service credentials. {: hide-dashboard}
 
 ```sh
 curl -X POST --user "apikey:{apikey}" \
@@ -71,8 +74,6 @@ curl -X POST --user "apikey:{apikey}" \
 "{url}/v3/translate?version=2018-05-01"
 ```
 {: pre}
-{: apikey}
-{: url}
 
 The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in UTF-8 format for translation.
 {: note}
@@ -81,7 +82,9 @@ The `/v3/translate` method accepts a maximum of 50 KB of input text encoded in U
 {: #identify-language}
 {: step}
 
-Use the following example to identify the language of text. <span class="hide-dashboard">Replace `{apikey}` and `{url}` with your service credentials.</span>
+Use the following example to identify the language of text.
+
+-   Replace `{apikey}` and `{url}` with your service credentials. {: hide-dashboard}
 
 ```sh
 curl -X POST --user "apikey:{apikey}" \
@@ -90,8 +93,6 @@ curl -X POST --user "apikey:{apikey}" \
 "{url}/v3/identify?version=2018-05-01"
 ```
 {: pre}
-{: apikey}
-{: url}
 
 ## Translate a document (Beta)
 {: #translate-a-document}

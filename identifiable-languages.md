@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-30"
+  years: 2015, 2021
+lastupdated: "2021-09-22"
 
 keywords: identify language,identifiable languages
 
@@ -78,7 +78,7 @@ The following table list the identifiable languages. The table is sorted by lang
 | Central Khmer                        | `km`          | Norwegian Bokmål                     | `nb`          |
 | Chinese (Simplified)                 | `zh`          | Norwegian Nynorsk                    | `nn`          |
 | Chinese (Traditional)                | `zh-TW`       | Punjabi                              | `pa`          |
-| Chuvash                              | `cv`          | Punjabi<br/>(Shahmukhi script, Pakistan) | `pa-PK`       |
+| Chuvash                              | `cv`          | Punjabi  \n (Shahmukhi script, Pakistan) | `pa-PK`       |
 | Croatian                             | `hr`          | Persian                              | `fa`          |
 | Czech                                | `cs`          | Polish                               | `pl`          |
 | Danish                               | `da`          | Portuguese                           | `pt`          |

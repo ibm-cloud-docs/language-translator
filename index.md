@@ -29,7 +29,7 @@ This documentation describes managed instances of {{site.data.keyword.languagetr
 ## Pricing
 {: #about-pricing}
 
-The service offers multiple pricing plans to suit your usage and application needs. For more information about the pricing plans or to purchase a plan, see the {{site.data.keyword.languagetranslatorshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/language-translator){: external}.
+The service offers multiple pricing plans to suit your usage and application needs.  For more information about the pricing plans or to purchase a plan, see the {{site.data.keyword.languagetranslatorshort}} service in the [{{site.data.keyword.cloud}} Catalog](https://{DomainName}/catalog/language-translator){: external}.
 
 ## Quick links
 {: #quick-links}
