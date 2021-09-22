@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-09-20"
+  years: 2015, 2021
+lastupdated: "2021-09-22"
 
 keywords: customize,custom models
 
@@ -239,14 +239,14 @@ The general improvements from parallel corpus customization are less predictable
 
 If you translate "55/102. Globalization and its impact on the full enjoyment of all human rights" with the base `en-fr` model, the service responds with the following translation.
 
-```
+```text
 55/102. La mondialisation et ses effets sur la pleine jouissance de tous les droits de l'homme
 ```
 {: codeblock}
 
 When the same input sentence is translated by a custom model trained with the example corpus, the service responds with a different translation that is not identical to the sample translation provided in the training data.
 
-```
+```text
 55/102. La mondialisation et ses effets sur le plein exercice de tous les droits de l'homme
 ```
 {: codeblock}
@@ -406,7 +406,7 @@ The service supports comma-separated values (CSV) files that follow the [RFC 418
 
 The following simple example shows alignment between English and Spanish text segments. The second line shows how to escape a comma that appears in the text segment by using double-quotes.
 
-```
+```text
 en,es
 Hello World,Hola mundo
 "Hello, World!","Hola, mundo!"
