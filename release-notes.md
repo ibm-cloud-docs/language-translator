@@ -129,7 +129,7 @@ New customizable translation models
 
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
-Improved results for translation between Spanish and English
+Improved translation between Spanish and English
 :   Improved results for the translation models between Spanish and English:
     -   Spanish to English (`es-en`)
     -   English to Spanish (`en-es`)
