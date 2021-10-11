@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-10"
+lastupdated: "2021-10-11"
 
 keywords: language translator release notes
 
@@ -35,7 +35,7 @@ Send the version parameter with every API request. The service uses the API vers
 The current version is `2018-05-01`.
 
 ## 23 October 2020
-{: #23october2020}
+{: #language-translator-23october2020}
 {: release-note}
 
 New customizable translation models
@@ -47,7 +47,7 @@ New customizable translation models
     The models are improved to preserve markup in the translation if present in the source.
 
 ## 16 October 2020
-{: #16october2020}
+{: #language-translator-16october2020}
 {: release-note}
 
 New customizable translation models
@@ -59,7 +59,7 @@ New customizable translation models
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 25 September 2020
-{: #25september2020}
+{: #language-translator-25september2020}
 {: release-note}
 
 New translation models
@@ -71,7 +71,7 @@ New translation models
     Montenegrin cannot be identified by the service's language identification feature. (Bosnian, Croatian, and Montenegrin translation support is based on the Latin alphabet. Of the three very similar languages, only Croatian is identifiable.) The `cnr-en` and `en-cnr` translation models are not customizable at this time. For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 16 September 2020
-{: #16september2020}
+{: #language-translator-16september2020}
 {: release-note}
 
 Beta support for subtitle (caption) documents
@@ -86,7 +86,7 @@ Beta support for subtitle (caption) documents
     These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Subtitle formats (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
 
 ## 14 August 2020
-{: #14august2020}
+{: #language-translator-14august2020}
 {: release-note}
 
 New translation models
@@ -100,7 +100,7 @@ New translation models
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 31 July 2020
-{: #31july2020}
+{: #language-translator-31july2020}
 {: release-note}
 
 New method for listing supported languages
@@ -109,7 +109,7 @@ New method for listing supported languages
     For more information, see [Listing supported languages for translation](/docs/language-translator?topic=language-translator-translation-models#list-languages).
 
 ## 14 July 2020
-{: #14july2020}
+{: #language-translator-14july2020}
 {: release-note}
 
 New supported file types for customization
@@ -119,7 +119,7 @@ New translation models
 :   Added Welsh-to-English (`cy-en`) support in translation, and added support for Welsh (`cy`) in language detection. For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 ## 11 June 2020
-{: #11june2020}
+{: #language-translator-11june2020}
 {: release-note}
 
 New customizable translation models
@@ -138,7 +138,7 @@ Improved document translation for Microsoft PowerPoint
 :   Improved table handling with document translation for Microsoft PowerPoint.
 
 ## 28 May 2020
-{: #28may2020}
+{: #language-translator-28may2020}
 {: release-note}
 
 Expanded language support for translation and identification
@@ -164,7 +164,7 @@ New translation limits for Lite plan
 :   For service instances on the Lite plan, the **Translate document** method now has a document size limit of **2 MB**. The document size limit for Standard, Advanced, and Premium plans remains **20 MB**.
 
 ## 22 April 2020
-{: #22april2020}
+{: #language-translator-22april2020}
 {: release-note}
 
 Expanded language translation
@@ -186,14 +186,14 @@ Improved translation for Microsoft document types
 :   Improved document translation performance for Microsoft Word, PowerPoint, and Excel documents.
 
 ## 28 February 2020
-{: #28february2020}
+{: #language-translator-28february2020}
 {: release-note}
 
 Automatic source language detection in translation requests
 :   Added automatic source language detection in **Translate** requests. When you specify a target language without specifying a source language or translation model, the service attempts to identify the source language and continues with the translation. In the results, the service returns the identified language and a score indicating the confidence in the identification.
 
 ## 30 January 2020
-{: #30january2020}
+{: #language-translator-30january2020}
 {: release-note}
 
 New translation models
@@ -208,7 +208,7 @@ Improved translation for Microsoft document types
 :   Made general improvements for translating Microsoft Word and PowerPoint documents.
 
 ## 12 December 2019
-{: #12december2019}
+{: #language-translator-12december2019}
 {: release-note}
 
 Full support for {{site.data.keyword.cloud_notm}} IAM
@@ -234,14 +234,14 @@ New network and data security features
         -   Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
 
 ## 13 November 2019
-{: #13november2019}
+{: #language-translator-13november2019}
 {: release-note}
 
 New Seoul location
 :   You can now create {{site.data.keyword.languagetranslatorshort}} instances in the Seoul, South Korea, location. As with other locations, the {{site.data.keyword.cloud_notm}} Seoul location uses token-based Identity and Access Management (IAM) authentication.
 
 ## 11 November 2019
-{: #11november2019}
+{: #language-translator-11november2019}
 {: release-note}
 
 Customization and identification improvements
@@ -258,7 +258,7 @@ New translation models
     For more information, see [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported). Note that Indonesian cannot be identified by the service's language identification feature.
 
 ## 21 August 2019
-{: #21august2019}
+{: #language-translator-21august2019}
 {: release-note}
 
 New translation models
@@ -282,7 +282,7 @@ New identifiable languages
     -   Thai (`th`)
 
 ## 14 June 2019
-{: #14june2019}
+{: #language-translator-14june2019}
 {: release-note}
 
 New translation models
@@ -292,7 +292,7 @@ New translation models
     -   Greek to English (`el-en`)
 
 ## 13 June 2019
-{: #13june2019}
+{: #language-translator-13june2019}
 {: release-note}
 
 New translation models
@@ -302,7 +302,7 @@ New translation models
     -   Hebrew to English (`he-en`)
 
 ## 21 March 2019
-{: #21march2019}
+{: #language-translator-21march2019}
 {: release-note}
 
 Changes to service credential information
@@ -313,14 +313,14 @@ Changes to service credential information
     For more information about service keys and user roles, see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
 
 ## 14 December 2018
-{: #14december2018}
+{: #language-translator-14december2018}
 {: release-note}
 
 New London location
 :   You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} London location.
 
 ## 16 November 2018
-{: #16november2018}
+{: #language-translator-16november2018}
 {: release-note}
 
 New beta support for document translation
@@ -332,14 +332,14 @@ New translation models
     -   English to Hungarian (`en-hu`)
 
 ## 8 November 2018
-{: #8november2018}
+{: #language-translator-8november2018}
 {: release-note}
 
 New Tokyo location
 :   You can now create {{site.data.keyword.languagetranslatorshort}} service instances in the {{site.data.keyword.cloud_notm}} Tokyo location.
 
 ## 9 August 2018
-{: #9august2018}
+{: #language-translator-9august2018}
 {: release-note}
 
 New translation models
@@ -349,7 +349,7 @@ New translation models
     -   English to Norwegian Bokmål (`en-nb`)
 
 ## 27 June 2018
-{: #27june2018}
+{: #language-translator-27june2018}
 {: release-note}
 
 New translation models
@@ -375,7 +375,7 @@ New translation models
         -   English to Swedish (`en-sv`)
 
 ## 15 June 2018
-{: #15june2018}
+{: #language-translator-15june2018}
 {: release-note}
 
 New support for {{site.data.keyword.cloud_notm}} IAM
@@ -384,7 +384,7 @@ New support for {{site.data.keyword.cloud_notm}} IAM
     New service instances that you create in Germany and US South will not be compatible with Language Translator v2. If you use Language Translator v2 and are planning to use new service instances in your application, migrate to the v3 API.
 
 ## 12 June 2018
-{: #12june2018}
+{: #language-translator-12june2018}
 {: release-note}
 
 Version 3 of the service is now available
@@ -414,7 +414,7 @@ New support for {{site.data.keyword.cloud_notm}} IAM
 :   As of 12 June 2018, new service instances created in the Sydney and US East regions use [Identity and Access Management (IAM) authentication](#iam-auth-process).
 
 ## 12 January 2018
-{: #12january2018}
+{: #language-translator-12january2018}
 {: release-note}
 
 New Neural Machine Translation Models
@@ -438,35 +438,35 @@ New Neural Machine Translation Models
     {: codeblock}
 
 ## 15 December 2016
-{: #15december2016}
+{: #language-translator-15december2016}
 {: release-note}
 
 New translation models
 :   New translation models were added: English to and from Japanese
 
 ## 15 November 2016
-{: #15november2016}
+{: #language-translator-15november2016}
 {: release-note}
 
 Beta tooling no longer available or supported
 :   The beta tooling that was previously available for the {{site.data.keyword.languagetranslatorshort}} service is no longer available or supported. Contact your sales representative or customer support for information about how to use the {{site.data.keyword.languagetranslatorshort}} API to accomplish the tasks supported by the {{site.data.keyword.languagetranslatorshort}} tool.
 
 ## 1 September 2016
-{: #1september2016}
+{: #language-translator-1september2016}
 {: release-note}
 
 Service rebranding
 :   The IBM Watson&trade; Language Translation service was rebranded as the {{site.data.keyword.languagetranslatorshort}} service.
 
 ## 22 March 2016
-{: #22march2016}
+{: #language-translator-22march2016}
 {: release-note}
 
 New language support
 :   Support for additional languages was added: English to and from Italian, and Spanish to and from French.
 
 ## 3 December 2015
-{: #3december2015}
+{: #language-translator-3december2015}
 {: release-note}
 
 Customization no longer available with Standard plan
@@ -480,14 +480,14 @@ Customization no longer available with Standard plan
     6.  Unbind the earlier service from your app in {{site.data.keyword.cloud_notm}}, and then delete it.
 
 ## 6 November 2015
-{: #6november2015}
+{: #language-translator-6november2015}
 {: release-note}
 
 Beta tooling available
 :   The beta {{site.data.keyword.languagetranslatorshort}} tool is released. The tool is a web application that provides a graphical user interface to manage and train models for more accurate machine translation. You can create projects, upload training data, train custom models, and translate text.
 
 ## 1 December 2014
-{: #1december2014}
+{: #language-translator-1december2014}
 {: release-note}
 
 Beta machine translation and language identification APIs upgraded
