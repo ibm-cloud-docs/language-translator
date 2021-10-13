@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2021
-lastupdated: "2021-10-11"
+lastupdated: "2021-10-13"
 
 keywords: language translator release notes
 
@@ -212,9 +212,7 @@ Improved translation for Microsoft document types
 {: release-note}
 
 Full support for {{site.data.keyword.cloud_notm}} IAM
-:   Full support for {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM).
-
-    -   {{site.data.keyword.languagetranslatorshort}} now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
+:   The {{site.data.keyword.languagetranslatorshort}} service now supports the full implementation of {{site.data.keyword.cloud_notm}} Identity and Access Management (IAM). API keys for Watson services are no longer limited to a single service instance. You can create access policies and API keys that apply to more than one service, and you can grant access between services.
     -   To support this change, the API service endpoints use a different domain and include the service instance ID. The pattern is `api.{location}.{offering}.watson.cloud.ibm.com/instances/{instance_id}`.
 
         Example URL for an instance hosted in the Dallas location: `api.us-south.language-translator.watson.cloud.ibm.com/instances/6bbda3b3-d572-45e1-8c54-22d6ed9e52c2`
@@ -231,7 +229,7 @@ New network and data security features
     -   *Support for private network endpoints*
         -   Users of Premium plans can create private network endpoints to connect to {{site.data.keyword.languagetranslatorshort}} over a private network. Connections to private network endpoints do not require public internet access. For more information, see [Public and private network endpoints](/docs/watson?topic=watson-public-private-endpoints).
     -   *Support for data encryption with customer-managed keys*
-        -   Users of new premium and dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
+        -   Users of new Premium and Dedicated instances can integrate {{site.data.keyword.keymanagementservicefull}} with {{site.data.keyword.languagetranslatorshort}} to encrypt their data and manage encryption keys. For more information, see [Protecting sensitive information in your Watson service](/docs/watson?topic=watson-keyservice).
 
 ## 13 November 2019
 {: #language-translator-13november2019}
