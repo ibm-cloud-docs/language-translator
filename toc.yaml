@@ -1,6 +1,7 @@
 toc:
   properties:
     subcollection: language-translator
+    service-name: language-translator
     version: 2
     category: ai
     audience: service
