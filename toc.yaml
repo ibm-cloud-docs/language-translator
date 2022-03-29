@@ -71,9 +71,6 @@ toc:
           - link:
               label: StackOverflow
               href: http://stackoverflow.com/questions/tagged/language-translation+watson
-          - link:
-              label: Watson Developer Community Slack channel
-              href: http://wdc-slack-inviter.mybluemix.net/
       - link:
         label: Accessibility
         href: /overview/overview-accessibility-platform
