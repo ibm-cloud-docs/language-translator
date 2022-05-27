@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-09-22"
+  years: 2015, 2022
+lastupdated: "2022-05-27"
 
 keywords: identify language,identifiable languages
 
@@ -60,6 +60,9 @@ The method returns a complete list of all identifiable languages, sorted by `lan
 {: #list-languages-identifiable}
 
 The following table list the identifiable languages. The table is sorted by language name and provides the language code for each language.
+
+The service uses ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan, and `pa-PK` for Punjabi spoken in Pakistan.
+
 
 | Language name                        | Language code | Language name                        | Language code |
 |--------------------------------------|:-------------:|--------------------------------------|:-------------:|

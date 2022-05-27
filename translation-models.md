@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-10-30"
+  years: 2015, 2022
+lastupdated: "2022-05-27"
 
 keywords: translation models,list translation models,customizable models
 
@@ -66,6 +66,8 @@ The list of support languages is long, reporting more than 75 languages.
 {: #list-languages-supported}
 
 The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Basque and Catalan).
+
+The service use ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan.
 
 Not all language combinations that are supported for translation are also customizable. Usually, only the combinations with English as source or target language are customizable. Click the name of a language to see the customizable translation models for that language.
 
