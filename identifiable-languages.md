@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-27"
+lastupdated: "2022-06-16"
 
 keywords: identify language,identifiable languages
 
@@ -61,8 +61,7 @@ The method returns a complete list of all identifiable languages, sorted by `lan
 
 The following table list the identifiable languages. The table is sorted by language name and provides the language code for each language.
 
-The service uses ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan, and `pa-PK` for Punjabi spoken in Pakistan.
-
+The service uses ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `pa-PK` for Punjabi spoken in Pakistan and `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan.
 
 | Language name                        | Language code | Language name                        | Language code |
 |--------------------------------------|:-------------:|--------------------------------------|:-------------:|
@@ -80,11 +79,11 @@ The service uses ISO two-character codes for most languages. It uses an ISO thre
 | Catalan                              | `ca`          | Nepali                               | `ne`          |
 | Central Khmer                        | `km`          | Norwegian Bokmål                     | `nb`          |
 | Chinese (Simplified)                 | `zh`          | Norwegian Nynorsk                    | `nn`          |
-| Chinese (Traditional)                | `zh-TW`       | Punjabi                              | `pa`          |
-| Chuvash                              | `cv`          | Punjabi  \n (Shahmukhi script, Pakistan) | `pa-PK`       |
-| Croatian                             | `hr`          | Persian                              | `fa`          |
-| Czech                                | `cs`          | Polish                               | `pl`          |
-| Danish                               | `da`          | Portuguese                           | `pt`          |
+| Chinese (Traditional)                | `zh-TW`       | Persian                              | `fa`          |
+| Chuvash                              | `cv`          | Polish                               | `pl`          |
+| Croatian                             | `hr`          | Portuguese                           | `pt`          |
+| Czech                                | `cs`          | Punjabi (Indian)                     | `pa`          |
+| Danish                               | `da`          | Punjabi (Pakistani)  \n (Shahmukhi script) | `pa-PK` |
 | Dutch                                | `nl`          | Pushto                               | `ps`          |
 | English                              | `en`          | Romanian                             | `ro`          |
 | Esperanto                            | `eo`          | Russian                              | `ru`          |

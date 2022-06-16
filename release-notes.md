@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-10-13"
+  years: 2015, 2022
+lastupdated: "2022-06-16"
 
 keywords: language translator release notes
 
@@ -33,6 +33,37 @@ API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a versi
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 15 June 2022
+{: #language-translator-15june2022}
+{: release-note}
+
+The following changes were made available on 1 November 2021. They are now documented.
+{: note}
+
+New customizable translation models
+:   Added new customizable translation models for the following languages:
+
+    -   English to Kannada (`en-kn`)
+    -   English to Marathi (`en-mr`)
+    -   English to Punjabi (Indian) (`en-pa`)
+    -   English to Punjabi (Pakistani) (`en-pa-PK`)
+    -   Kannada to English (`kn-en`)
+    -   Marathi to English (`mr-en`)
+    -   Punjabi (Indian) to English (`pa-en`)
+    -   Punjabi (Pakistani) to English (`pa-PK-en`)
+
+    The Kannada language is new; it is not identifiable. All of the languages except for Kannada already existed and are identifiable. For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
+
+Improved customizable translation models
+:   Updated the existing customizable translation models for the following languages for improved translation:
+
+    -   Bengali to English (`bn-en`)
+    -   Malayalam to English (`ml-en`)
+    -   Tamil to English (`ta-en`)
+    -   Telugu to English (`te-en`)
+
+    For more information, see [Supported languages for translation](/docs/language-translator?topic=language-translator-translation-models).
 
 ## 23 October 2020
 {: #language-translator-23october2020}
