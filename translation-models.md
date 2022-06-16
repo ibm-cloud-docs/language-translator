@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-05-27"
+lastupdated: "2022-06-16"
 
 keywords: translation models,list translation models,customizable models
 
@@ -67,39 +67,41 @@ The list of support languages is long, reporting more than 75 languages.
 
 The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Basque and Catalan).
 
-The service use ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan.
+The service use ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `fr-CA` for French Canadian, `pa-PK` for Punjabi spoken in Pakistan, and `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan.
 
 Not all language combinations that are supported for translation are also customizable. Usually, only the combinations with English as source or target language are customizable. Click the name of a language to see the customizable translation models for that language.
 
 |Language                                     | Language code |Language                             | Language code |
 |---------------------------------------------|:-------------:|-------------------------------------|:-------------:|
-|[Arabic](#arabic)                            |`ar`         |[Korean](#korean)                    |`ko`   |
-|[Basque](#basque)  **[1]**                   |`eu`         |[Latvian](#latvian)                  |`lv`   |
-|[Bengali](#bengali)                          |`bn`         |[Lithuanian](#lithuanian)            |`lt`   |
-|[Bosnian](#bosnian)                          |`bs`         |[Malay](#malay)                      |`ms`   |
-|[Bulgarian](#bulgarian)                      |`bg`         |[Malayalam](#malayalam)              |`ml`   |
-|[Catalan](#catalan) **[1]**                  |`ca`         |[Maltese](#maltese)                  |`mt`   |
+|[Arabic](#arabic)                            |`ar`         |[Latvian](#latvian)                  |`lv`   |
+|[Basque](#basque)  **[1]**                   |`eu`         |[Lithuanian](#lithuanian)            |`lt`   |
+|[Bengali](#bengali)                          |`bn`         |[Malay](#malay)                      |`ms`   |
+|[Bosnian](#bosnian)                          |`bs`         |[Malayalam](#malayalam)              |`ml`   |
+|[Bulgarian](#bulgarian)                      |`bg`         |[Maltese](#maltese)                  |`mt`   |
+|[Catalan](#catalan) **[1]**                  |`ca`         |[Marathi](#marathi)                  |`mr`   |
 |[Chinese (Simplified)](#chinese-simplified)  |`zh`         |[Montenegrin](#montenegrin) **[2]**  |`cnr`  |
 |[Chinese (Traditional)](#chinese-traditional)|`zh-TW`      |[Nepali](#nepali)                    |`ne`   |
 |[Croatian](#croatian)                        |`hr`         |[Norwegian Bokmål](#norwegian-bokmal)|`nb`   |
 |[Czech](#czech)                              |`cs`         |[Polish](#polish)                    |`pl`   |
 |[Danish](#danish)                            |`da`         |[Portuguese](#portuguese)            |`pt`   |
-|[Dutch](#dutch)                              |`nl`         |[Romanian](#romanian)                |`ro`   |
-|[English](#english)                          |`en`         |[Russian](#russian)                  |`ru`   |
-|[Estonian](#estonian)                        |`et`         |[Serbian](#serbian) **[3]**          |`sr`   |
-|[Finnish](#finnish)                          |`fi`         |[Sinhala](#sinhala)                  |`si`   |
-|[French](#french)                            |`fr`         |[Slovak](#slovak)                    |`sk`   |
-|[French (Canadian)](#french-canadian)        |`fr`         |[Slovenian](#slovenian)              |`sl`   |
-|[German](#german)                            |`de`         |[Spanish](#spanish)                  |`es`   |
-|[Greek](#greek)                              |`el`         |[Swedish](#swedish)                  |`sv`   |
-|[Gujarati](#gujarati)                        |`gu`         |[Tamil](#tamil)                      |`ta`   |
-|[Hebrew](#hebrew)                            |`he`         |[Telugu](#telugu)                    |`te`   |
-|[Hindi](#hindi)                              |`hi`         |[Thai](#thai)                        |`th`   |
-|[Hungarian](#hungarian)                      |`hu`         |[Turkish](#turkish)                  |`tr`   |
-|[Irish](#irish)                              |`ga`         |[Ukrainian](#ukrainian)              |`uk`   |
-|[Indonesian](#indonesian)                    |`id`         |[Urdu](#urdu)                        |`ur`   |
-|[Italian](#italian)                          |`it`         |[Vietnamese](#vietnamese)            |`vi`   |
-|[Japanese](#japanese)                        |`ja`         |[Welsh](#welsh)                      |`cy`   |
+|[Dutch](#dutch)                              |`nl`         |[Punjabi (Indian)](#punjabi-india)  |`pa`   |
+|[English](#english)                          |`en`         |[Punjabi (Pakistani)](#punjabi-pakistan)  |`pa-PK` |
+|[Estonian](#estonian)                        |`et`         |[Romanian](#romanian)                |`ro`   |
+|[Finnish](#finnish)                          |`fi`         |[Russian](#russian)                  |`ru`   |
+|[French](#french)                            |`fr`         |[Serbian](#serbian) **[3]**          |`sr`   |
+|[French (Canadian)](#french-canadian)        |`fr`         |[Sinhala](#sinhala)                  |`si`   |
+|[German](#german)                            |`de`         |[Slovak](#slovak)                    |`sk`   |
+|[Greek](#greek)                              |`el`         |[Slovenian](#slovenian)              |`sl`   |
+|[Gujarati](#gujarati)                        |`gu`         |[Spanish](#spanish)                  |`es`   |
+|[Hebrew](#hebrew)                            |`he`         |[Swedish](#swedish)                  |`sv`   |
+|[Hindi](#hindi)                              |`hi`         |[Tamil](#tamil)                      |`ta`   |
+|[Hungarian](#hungarian)                      |`hu`         |[Telugu](#telugu)                    |`te`   |
+|[Irish](#irish)                              |`ga`         |[Thai](#thai)                        |`th`   |
+|[Indonesian](#indonesian)                    |`id`         |[Turkish](#turkish)                  |`tr`   |
+|[Italian](#italian)                          |`it`         |[Ukrainian](#ukrainian)              |`uk`   |
+|[Japanese](#japanese)                        |`ja`         |[Urdu](#urdu)                        |`ur`   |
+|[Kannada](#kannada)                          |`kn`         |[Vietnamese](#vietnamese)            |`vi`   |
+|[Korean](#korean)                            |`ko`         |[Welsh](#welsh)                      |`cy`   |
 {: caption="Table 1. Translatable languages"}
 
 Notes:
@@ -298,15 +300,19 @@ The English-to-Montenegrin translation model (`en-cnr`) is not customizable at t
 | `en-id`    | English (`en`) | Indonesian (`id`)             | general |
 | `en-it`    | English (`en`) | Italian (`it`)                | general |
 | `en-ja`    | English (`en`) | Japanese (`ja`)               | general |
+| `en-kn`    | English (`en`) | Kannada (`kn`)                | general |
 | `en-ko`    | English (`en`) | Korean (`ko`)                 | general |
 | `en-lt`    | English (`en`) | Lithuanian (`lt`)             | general |
 | `en-lv`    | English (`en`) | Latvian (`lv`)                | general |
 | `en-ml`    | English (`en`) | Malayalam (`ml`)              | general |
+| `en-mr`    | English (`en`) | Marathi (`mr`)                | general |
 | `en-ms`    | English (`en`) | Malay (`ms`)                  | general |
 | `en-mt`    | English (`en`) | Maltese (`mt`)                | general |
 | `en-ne`    | English (`en`) | Nepali (`ne`)                 | general |
 | `en-nb`    | English (`en`) | Norwegian Bokmål (`nb`)       | general |
 | `en-nl`    | English (`en`) | Dutch (`nl`)                  | general |
+| `en-pa`    | English (`en`) | Indian Punjabi (`pa`)         | general |
+| `en-pa-PK` | English (`en`) | Pakistani Punjabi (`pa-PK`)   | general |
 | `en-pl`    | English (`en`) | Polish (`pl`)                 | general |
 | `en-pt`    | English (`en`) | Portuguese (`pt`)             | general |
 | `en-ro`    | English (`en`) | Romanian (`ro`)               | general |
@@ -470,6 +476,16 @@ The following Japanese translation model can be customized.
 | `ja-en`  | Japanese (`ja`) | English (`en`) | general |
 {: caption="Table 28. Japanese translation model"}
 
+### Kannada
+{: #kannada}
+
+The following Kannada translation model can be customized.
+
+| Model ID | Source         | Target         | Domain  |
+|----------|----------------|----------------|---------|
+| `kn-en`  | Kannada (`kn`) | English (`en`) | general |
+{: caption="Table 29. Kannada translation model"}
+
 ### Korean
 {: #korean}
 
@@ -478,7 +494,7 @@ The following Korean translation model can be customized.
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `ko-en`  | Korean (`ko`) | English (`en`) | general |
-{: caption="Table 29. Korean translation model"}
+{: caption="Table 30. Korean translation model"}
 
 ### Latvian
 {: #latvian}
@@ -488,7 +504,7 @@ The following Latvian translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `lv-en`  | Latvian (`lv`) | English (`en`) | general |
-{: caption="Table 30. Latvian translation model"}
+{: caption="Table 31. Latvian translation model"}
 
 ### Lithuanian
 {: #lithuanian}
@@ -498,7 +514,7 @@ The following Lithuanian translation model can be customized.
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `lt-en`  | Lithuanian (`lt`) | English (`en`) | general |
-{: caption="Table 31. Lithuanian translation model"}
+{: caption="Table 32. Lithuanian translation model"}
 
 ### Malay
 {: #malay}
@@ -508,7 +524,7 @@ The following Malay translation model can be customized.
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `ms-en`  | Malay (`ms`) | English (`en`) | general |
-{: caption="Table 32. Malay translation model"}
+{: caption="Table 33. Malay translation model"}
 
 ### Malayalam
 {: #malayalam}
@@ -518,7 +534,7 @@ The following Malayalam translation model can be customized.
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `ml-en`  | Malayalam (`ml`) | English (`en`) | general |
-{: caption="Table 33. Malayalam translation model"}
+{: caption="Table 34. Malayalam translation model"}
 
 ### Maltese
 {: #maltese}
@@ -528,7 +544,17 @@ The following Maltese translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `mt-en`  | Maltese (`mt`) | English (`en`) | general |
-{: caption="Table 34. Maltese translation model"}
+{: caption="Table 35. Maltese translation model"}
+
+### Marathi
+{: #marathi}
+
+The following Marathi translation model can be customized.
+
+| Model ID | Source         | Target         | Domain  |
+|----------|----------------|----------------|---------|
+| `mr-en`  | Marathi (`mr`) | English (`en`) | general |
+{: caption="Table 36. Marathi translation model"}
 
 ### Montenegrin
 {: #montenegrin}
@@ -538,7 +564,7 @@ The following Montenegrin translation model cannot be customized.
 | Model ID | Source              | Target         | Domain  |
 |----------|---------------------|----------------|---------|
 | `cnr-en` | Montenegrin (`cnr`) | English (`en`) | general |
-{: caption="Table 35. Montenegrin translation model"}
+{: caption="Table 37. Montenegrin translation model"}
 
 The Montenegrin-to-English translation model (`cnr-en`) is not customizable at this time. It can be used for translation but **cannot** be customized.
 {: note}
@@ -551,7 +577,7 @@ The following Nepali translation model can be customized.
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `ne-en`  | Nepali (`ne`) | English (`en`) | general |
-{: caption="Table 36. Nepali translation model"}
+{: caption="Table 38. Nepali translation model"}
 
 ### Norwegian Bokmål
 {: #norwegian-bokmal}
@@ -561,7 +587,7 @@ The following Norwegian Bokmål translation model can be customized.
 | Model ID | Source                  | Target         | Domain  |
 |----------|-------------------------|----------------|---------|
 | `nb-en`  | Norwegian Bokmål (`nb`) | English (`en`) | general |
-{: caption="Table 37. Norwegian Bokmål translation model"}
+{: caption="Table 39. Norwegian Bokmål translation model"}
 
 ### Polish
 {: #polish}
@@ -571,7 +597,7 @@ The following Polish translation model can be customized.
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `pl-en`  | Polish (`pl`) | English (`en`) | general |
-{: caption="Table 38. Polish translation model"}
+{: caption="Table 40. Polish translation model"}
 
 ### Portuguese
 {: #portuguese}
@@ -581,7 +607,27 @@ The following Portuguese translation model can be customized.
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `pt-en`  | Portuguese (`pt`) | English (`en`) | general |
-{: caption="Table 39. Portuguese translation model"}
+{: caption="Table 41. Portuguese translation model"}
+
+### Punjabi (Indian)
+{: #punjabi-india}
+
+The following Indian Punjabi translation model can be customized.
+
+| Model ID | Source                | Target         | Domain  |
+|----------|-----------------------|----------------|---------|
+| `pa-en`  | Indian Punjabi (`pa`) | English (`en`) | general |
+{: caption="Table 42. Indian Punjabi translation model"}
+
+### Punjabi (Pakistani)
+{: #punjabi-pakistan}
+
+The following Pakistani Punjabi (Shahmukhi script) translation model can be customized.
+
+| Model ID    | Source                      | Target         | Domain  |
+|-------------|-----------------------------|----------------|---------|
+| `pa-PK-en`  | Pakistani Punjabi (`pa-PK`) | English (`en`) | general |
+{: caption="Table 43. Pakistani Punjabi translation model"}
 
 ### Romanian
 {: #romanian}
@@ -591,7 +637,7 @@ The following Romanian translation model can be customized.
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `ro-en`  | Romanian (`ro`)   | English (`en`) | general |
-{: caption="Table 40. Romanian translation model"}
+{: caption="Table 44. Romanian translation model"}
 
 ### Russian
 {: #russian}
@@ -601,7 +647,7 @@ The following Russian translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `ru-en`  | Russian (`ru`) | English (`en`) | general |
-{: caption="Table 41. Russian translation model"}
+{: caption="Table 45. Russian translation model"}
 
 ### Serbian
 {: #serbian}
@@ -611,7 +657,7 @@ The following Serbian translation model can be customized. The service supports 
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `sr-en`  | Serbian (`sr`) | English (`en`) | general |
-{: caption="Table 42. Serbian translation model"}
+{: caption="Table 46. Serbian translation model"}
 
 ### Sinhala
 {: #sinhala}
@@ -621,7 +667,7 @@ The following Sinhala translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `si-en`  | Sinhala (`si`) | English (`en`) | general |
-{: caption="Table 43. Sinhala translation model"}
+{: caption="Table 47. Sinhala translation model"}
 
 ### Slovak
 {: #slovak}
@@ -631,7 +677,7 @@ The following Slovak translation model can be customized.
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `sk-en`  | Slovak (`sk`) | English (`en`) | general |
-{: caption="Table 44. Slovak translation model"}
+{: caption="Table 48. Slovak translation model"}
 
 ### Slovenian
 {: #slovenian}
@@ -641,7 +687,7 @@ The following Slovenian translation model can be customized.
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `sl-en`  | Slovenian (`sl`) | English (`en`) | general |
-{: caption="Table 45. Slovenian translation model"}
+{: caption="Table 49. Slovenian translation model"}
 
 ### Spanish
 {: #spanish}
@@ -654,7 +700,7 @@ The following Spanish translation models can be customized.
 | `es-en`  | Spanish (`es`) | English (`en`) | general |
 | `es-fr`  | Spanish (`es`) | French (`fr`)  | general |
 | `es-eu`  | Spanish (`es`) | Basque (`eu`)  | general |
-{: caption="Table 46. Spanish translation models"}
+{: caption="Table 50. Spanish translation models"}
 
 ### Swedish
 {: #swedish}
@@ -664,7 +710,7 @@ The following Swedish translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `sv-en`  | Swedish (`sv`) | English (`en`) | general |
-{: caption="Table 47. Swedish translation model"}
+{: caption="Table 51. Swedish translation model"}
 
 ### Tamil
 {: #tamil}
@@ -674,7 +720,7 @@ The following Tamil translation model can be customized.
 | Model ID | Source       | Target         | Domain  |
 |----------|--------------|----------------|---------|
 | `ta-en`  | Tamil (`ta`) | English (`en`) | general |
-{: caption="Table 48. Tamil translation model"}
+{: caption="Table 52. Tamil translation model"}
 
 ### Telugu
 {: #telugu}
@@ -684,7 +730,7 @@ The following Telugu translation model can be customized.
 | Model ID | Source        | Target         | Domain  |
 |----------|---------------|----------------|---------|
 | `te-en`  | Telugu (`te`) | English (`en`) | general |
-{: caption="Table 49. Telugu translation model"}
+{: caption="Table 53. Telugu translation model"}
 
 ### Thai
 {: #thai}
@@ -694,7 +740,7 @@ The following Thai translation model can be customized.
 | Model ID | Source      | Target         | Domain  |
 |----------|-------------|----------------|---------|
 | `th-en`  | Thai (`th`) | English (`en`) | general |
-{: caption="Table 50. Thai translation model"}
+{: caption="Table 54. Thai translation model"}
 
 ### Turkish
 {: #turkish}
@@ -704,7 +750,7 @@ The following Turkish translation model can be customized.
 | Model ID | Source         | Target         | Domain  |
 |----------|----------------|----------------|---------|
 | `tr-en`  | Turkish (`tr`) | English (`en`) | general |
-{: caption="Table 51. Turkish translation model"}
+{: caption="Table 55. Turkish translation model"}
 
 ### Ukrainian
 {: #ukrainian}
@@ -714,7 +760,7 @@ The following Ukrainian translation model can be customized.
 | Model ID | Source           | Target         | Domain  |
 |----------|------------------|----------------|---------|
 | `uk-en`  | Ukrainian (`uk`) | English (`en`) | general |
-{: caption="Table 52. Ukrainian translation model"}
+{: caption="Table 56. Ukrainian translation model"}
 
 ### Urdu
 {: #urdu}
@@ -724,7 +770,7 @@ The following Urdu translation model can be customized.
 | Model ID | Source      | Target         | Domain  |
 |----------|-------------|----------------|---------|
 | `ur-en`  | Urdu (`ur`) | English (`en`) | general |
-{: caption="Table 53. Urdu translation model"}
+{: caption="Table 57. Urdu translation model"}
 
 ### Vietnamese
 {: #vietnamese}
@@ -734,7 +780,7 @@ The following Vietnamese translation model can be customized.
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `vi-en`  | Vietnamese (`vi`) | English (`en`) | general |
-{: caption="Table 54. Vietnamese translation model"}
+{: caption="Table 58. Vietnamese translation model"}
 
 ### Welsh
 {: #welsh}
@@ -744,4 +790,4 @@ The following Welsh translation model can be customized.
 | Model ID | Source            | Target         | Domain  |
 |----------|-------------------|----------------|---------|
 | `cy-en`  | Welsh (`cy`)      | English (`en`) | general |
-{: caption="Table 55. Welsh translation model"}
+{: caption="Table 59. Welsh translation model"}
