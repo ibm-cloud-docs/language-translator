@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-08-05"
 
 keywords: language translator release notes
 
@@ -21,18 +21,32 @@ The following new features and changes to the service are available.
 {: shortdesc}
 
 ## Beta features
-{: beta-features}
+{: #beta-features}
 
 IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
 
 ## Service API Versioning
-{: versioning}
+{: #versioning}
 
 API requests in {{site.data.keyword.languagetranslatorshort}} v3 require a version parameter that takes a date in the format `version=YYYY-MM-DD`. Whenever we change the API in a backwards-incompatible way, we release a new minor version of the API.
 
 Send the version parameter with every API request. The service uses the API version for the date you specify, or the most recent version before that date. Don't default to the current date. Instead, specify a date that matches a version that is compatible with your app, and don't change it until your app is ready for a later version.
 
 The current version is `2018-05-01`.
+
+## 5 August 2022
+{: #language-translator-5august2022}
+{: release-note}
+
+The following changes were made available on 1 August 2021. They are now documented.
+{: note}
+
+Most document formats for translation are now generally available
+:   Most supported file formats for document translation are now generally available (GA). In addition, subtitle formats for documentation translation are also GA. The PDF format remains experimental. For more information, see
+
+    -   [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats)
+    -   [Supported subtitle formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles)
+    -   [Supported file formats (experimental)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-experimental)
 
 ## 15 June 2022
 {: #language-translator-15june2022}
@@ -114,7 +128,7 @@ Beta support for subtitle (caption) documents
     -   MicroDVD: `.sub`
     -   WebVTT: `.vtt`
 
-    These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Subtitle formats (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
+    These textual formats contain the transcript of a sound track or video source. For more information about the formats and the characteristics of subtitle translation, see [Supported subtitle formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles).
 
 ## 14 August 2020
 {: #language-translator-14august2020}
@@ -353,7 +367,7 @@ New London location
 {: release-note}
 
 New beta support for document translation
-:   [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting. [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
+:   [Translating documents](/docs/language-translator?topic=language-translator-document-translator-tutorial) is now available through new API endpoints. Submit a Microsoft Office document, PDF, or other document with a supported file format, and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting. [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats) include `.doc`, `.ppt`, `.pdf`, and more.
 
 New translation models
 :   New translation models for Hungarian are now available:

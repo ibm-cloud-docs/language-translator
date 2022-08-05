@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2020
-lastupdated: "2020-08-18"
+  years: 2015, 2022
+lastupdated: "2022-08-05"
 
 subcollection: language-translator
 
@@ -10,14 +10,14 @@ subcollection: language-translator
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Translating documents (Beta)
+# Translating documents
 {: #document-translator-tutorial}
 
 You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft Office, Open Office, subtitles, PDF, and other formats such as HTML, XML, and JSON.
 {: shortdesc}
 
-Document translation is currently a beta feature. Translation of PDF documents is experimental.
-{: beta}
+Translation of PDF documents is experimental.
+{: note}
 
 ## Before you begin
 {: #translate-prerequisites}
@@ -28,7 +28,7 @@ Make sure that you have the following information and meet the following require
 -   The document that you want to translate must not exceed the following size limits:
     -   **20 MB** for service instances on the Standard, Advanced, and Premium plans
     -   **2 MB** for service instances on the Lite plan
--   The document must be in one of the [Supported file formats (Beta)](#supported-file-formats) or [Supported file formats (Experimental)](#supported-file-formats-experimental).
+-   The document must be in one of the [Supported file formats](#supported-file-formats) or [Supported file formats (experimental)](#supported-file-formats-experimental).
 -   The source and target languages must be among the [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
 
 This tutorial walks you through translating documents from the command line with `curl`. You can also use the {{site.data.keyword.watson}} SDKs to translate documents with a number of programming languages. For more information, see the methods in the [API & SDK reference](https://{DomainName}/apidocs/language-translator){: external}.
@@ -135,6 +135,9 @@ curl -X POST --user "apikey:{apikey}" \
 
 The response contains a new document ID. Repeat step two with the new document ID to check the status of the translation. When the status becomes `available`, use the new document ID to download the translated file as shown in step three.
 
+When translating a previously submitted document, the target language must be different from the target language of the original request when the document was initially submitted.
+{: note}
+
 ## Step 5: Delete documents
 {: #delete-documents}
 
@@ -158,10 +161,10 @@ curl -X DELETE --user "apikey:{apikey}" \
 ```
 {: pre}
 
-## Supported file formats (Beta)
+## Supported file formats
 {: #supported-file-formats}
 
-Translation of the following file formats is beta functionality:
+Translation of the following file formats is generally available functionality:
 
 -   Microsoft Office formats:
     - Word: `.doc`, `.docx`
@@ -178,10 +181,10 @@ Translation of the following file formats is beta functionality:
     - JSON: `.json` (values with type `string` or `string array` are translated)
     - Text: `.txt`
 
-### Subtitle formats (Beta)
+### Supported subtitle formats
 {: #supported-file-formats-subtitles}
 
-Translation of the following subtitle (or caption) formats is beta functionality:
+Translation of the following subtitle (or caption) formats is generally available functionality:
 
 -   SubRip: `.srt`
 -   SubViewer: `.sbv`
@@ -201,11 +204,11 @@ The following information qualifies some of the nuances of subtitle translation:
     A single cue can contain one or more lines of text (for example, two short sentences). The service creates paragraph breaks only at cue line boundaries to preserve the count of lines in the cue. For languages with punctuation, a paragraph generally maps to a complete sentence. For languages without punctuation, a paragraph can contain multiple sentences, which can adversely affect the distribution of lines into cues in the translated document.
 -   *Comments, notes, and titles* - For formats that permit these elements, the service preserves the original text and adds translation that is prefixed by language code. Because this information is intended for use by the author, the service maintains the text in both its original and translated forms.
 
-## Supported file formats (Experimental)
+## Supported file formats (experimental)
 {: #supported-file-formats-experimental}
 
 Translation of the following file format is experimental functionality:
 
 - PDF: `.pdf`
 
-The quality of PDF translation is still largely an Alpha release. The translation works best for single-column PDF documents that do not include many tables or images. Quality is expected to evolve and improve with future releases.
+The quality of PDF translation is still largely an alpha release. The translation works best for single-column PDF documents that do not include many tables or images. Quality is expected to evolve and improve with future releases.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2021
-lastupdated: "2021-09-22"
+  years: 2015, 2022
+lastupdated: "2022-08-05"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -94,11 +94,11 @@ curl -X POST --user "apikey:{apikey}" \
 ```
 {: pre}
 
-## Translate a document (Beta)
+## Translate a document
 {: #translate-a-document}
 {: step}
 
-{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as markup files that use XML or HTML, or Microsoft Office and Open Office files, while retaining the original formatting. For a tutorial, check out [Translating documents (Beta)](/docs/language-translator?topic=language-translator-document-translator-tutorial).
+{{site.data.keyword.languagetranslatorshort}} allows you to translate documents, such as markup files that use XML or HTML, or Microsoft Office and Open Office files, while retaining the original formatting. For a tutorial, check out [Translating documents](/docs/language-translator?topic=language-translator-document-translator-tutorial).
 
 ## Next steps
 {: #next-steps}
