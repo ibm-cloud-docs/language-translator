@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-10-18"
 
 keywords: translation models,list translation models,customizable models
 
@@ -65,13 +65,13 @@ The list of support languages is long, reporting more than 75 languages.
 ## List of supported languages
 {: #list-languages-supported}
 
-The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Basque and Catalan).
+The following table list the translatable languages. The service can translate from the following languages to any other language in the list (with the exception of Basque and Catalan). The service correctly translates from and to bidirectional languages that are written left-to-right and right-to-left (for example, Arabic, Hebrew, and Urdu).
 
 The service use ISO two-character codes for most languages. It uses an ISO three-character code (`cnr`) for Montenegrin. In some cases, it uses a two-character language code and a two-character country code separated by a hyphen, such as `fr-CA` for French Canadian, `pa-PK` for Punjabi spoken in Pakistan, and `zh-TW` for traditional (Mandarin) Chinese spoken in Taiwan.
 
 Not all language combinations that are supported for translation are also customizable. Usually, only the combinations with English as source or target language are customizable. Click the name of a language to see the customizable translation models for that language.
 
-|Language                                     | Language code |Language                             | Language code |
+| Language                                    | Language code |Language                             | Language code |
 |---------------------------------------------|:-------------:|-------------------------------------|:-------------:|
 |[Arabic](#arabic)                            |`ar`         |[Latvian](#latvian)                  |`lv`   |
 |[Basque](#basque)  **[1]**                   |`eu`         |[Lithuanian](#lithuanian)            |`lt`   |

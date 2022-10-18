@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-10-18"
 
 keywords: language translator release notes
 
@@ -20,11 +20,6 @@ content-type: release-note
 The following new features and changes to the service are available.
 {: shortdesc}
 
-## Beta features
-{: #beta-features}
-
-IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
-
 ## Service API Versioning
 {: #versioning}
 
@@ -34,6 +29,37 @@ Send the version parameter with every API request. The service uses the API vers
 
 The current version is `2018-05-01`.
 
+## 18 October 2022
+{: #language-translator-18october2022}
+{: release-note}
+
+Most of the following changes were made available earlier. They are now documented.
+{: note}
+
+New translation limits for Advanced and Premium plans
+:   The translation limits for service instances on the Advanced and Premium plans have increased. The **Translate document** method now enforces a document size limit of **50 MB** for instances on the Advanced Plan, and **150 MB** for instances on the Premium plan. The size limits for the Lite and Standard plans remain **2 MB** and **20 MB** respectively. For more information, see [Before you begin](/docs/language-translator?topic=language-translator-document-translator-tutorial#translate-prerequisites) in the topic *Translating documents*.
+
+New support for additional subtitle file formats
+:   The service now supports additional subtitle formats:
+    -   Apple® iTunes® Timed Text (`.itt` files)
+    -   Distribution Format Exchange Profile (`.dxfp` and `.xml` files)
+    -   Source Code Control (`.scc` files)
+    -   Synchronized Accessible Media Interchange (`.sami` and `.smi` files)
+    -   SubStation Alpha (`.ssa` files)
+    -   Time Text Markup Language (`.ttml` files)
+
+    For more information about all supported file formats, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
+
+Identifying file formats for translation
+:   The service accepts two forms of identification for most file formats. You can identify the format of a file that you send for translation in one of two ways:
+    -   By specifying the appropriate file extension for the format.
+    -   By specifying the content type (MIME type) of the format as the `type` of the `file` parameter.
+
+    The documentation lists the valid file extensions and content types for each supported format. In most cases, specifying the correct file extension is preferred because it can eliminate ambiguity and is simpler. For subtitles, the documentation makes clear where either the file extension or the content type is needed. For more information about all file formats, their file extensions and content types, and how and when to specify the file extension or content type, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
+
+Documentation updates for bidirectional translation
+:   The documentation now states that the service correctly translates from and to bidirectional languages that are written left-to-right and right-to-left (for example, Arabic, Hebrew, and Urdu). This is not new functionality, but the documentation had failed to emphasize the information.
+
 ## 5 August 2022
 {: #language-translator-5august2022}
 {: release-note}
@@ -42,11 +68,7 @@ The following changes were made available on 1 August 2021. They are now documen
 {: note}
 
 Most document formats for translation are now generally available
-:   Most supported file formats for document translation are now generally available (GA). In addition, subtitle formats for documentation translation are also GA. The PDF format remains experimental. For more information, see
-
-    -   [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats)
-    -   [Supported subtitle formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-subtitles)
-    -   [Supported file formats (experimental)](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats-experimental)
+:   Most supported file formats for document translation are now generally available (GA). In addition, subtitle formats for documentation translation are also GA. The PDF format remains experimental. For more information, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
 
 ## 15 June 2022
 {: #language-translator-15june2022}
