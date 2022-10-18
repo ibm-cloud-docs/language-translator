@@ -29,7 +29,7 @@ Make sure that you have the following information and meet the following require
     -   **150 MB** for service instances on the Premium plan
 -   The document must be in one of the supported file formats. Use the correct file extension for the format of the document or specify the content type (MIME type) of the format with the request. For more information, see [Supported file formats](#supported-file-formats).
 -   The source and target languages must be among the [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
--   The service correctly translates from and to bidirectional languages that are written left-to-write and right-to-left (for example, Arabic, Hebrew, and Urdu).
+-   The service correctly translates from and to bidirectional languages that are written left-to-right and right-to-left (for example, Arabic, Hebrew, and Urdu).
 
 This tutorial walks you through translating documents from the command line with `curl`. You can also use the {{site.data.keyword.watson}} SDKs to translate documents with a number of programming languages. For more information, see the methods in the [API & SDK reference](https://{DomainName}/apidocs/language-translator){: external}.
 

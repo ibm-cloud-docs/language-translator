@@ -58,7 +58,7 @@ Identifying file formats for translation
     The documentation lists the valid file extensions and content types for each supported format. In most cases, specifying the correct file extension is preferred because it can eliminate ambiguity and is simpler. For subtitles, the documentation makes clear where either the file extension or the content type is needed. For more information about all file formats, their file extensions and content types, and how and when to specify the file extension or content type, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
 
 Documentation updates for bidirectional translation
-:   The documentation now states that the service correctly translates from and to bidirectional languages that are written left-to-write and right-to-left (for example, Arabic, Hebrew, and Urdu). This is not new functionality, but the documentation had failed to emphasize the information.
+:   The documentation now states that the service correctly translates from and to bidirectional languages that are written left-to-right and right-to-left (for example, Arabic, Hebrew, and Urdu). This is not new functionality, but the documentation had failed to emphasize the information.
 
 ## 5 August 2022
 {: #language-translator-5august2022}
