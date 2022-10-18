@@ -48,7 +48,7 @@ New support for additional subtitle file formats
     -   SubStation Alpha (`.ssa` files)
     -   Time Text Markup Language (`.ttml` files)
 
-    For more information about all support file formats, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
+    For more information about all supported file formats, see [Supported file formats](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats).
 
 Identifying file formats for translation
 :   The service accepts two forms of identification for most file formats. You can identify the format of a file that you send for translation in one of two ways:
