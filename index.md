@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-10-18"
 
 subcollection: language-translator
 
@@ -22,6 +22,11 @@ subcollection: language-translator
 {: #hipaa-support}
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
+
+## Beta features
+{: #beta-features}
+
+IBM occasionally releases features and language support that are classified as beta. Such features are provided so that you can evaluate their functionality. They might not provide the same level of performance or compatibility that generally available (GA) features provide. They might be unstable and are subject to change or removal with short notice. They are not intended for use in a production environment.
 
 ## Pricing
 {: #about-pricing}

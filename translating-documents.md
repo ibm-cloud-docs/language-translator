@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-10-18"
 
 subcollection: language-translator
 
@@ -13,11 +13,8 @@ subcollection: language-translator
 # Translating documents
 {: #document-translator-tutorial}
 
-You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft Office, Open Office, subtitles, PDF, and other formats such as HTML, XML, and JSON.
+You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft® Office®, Open Office, subtitles, and many other common formats such as HTML, JSON, XML, and Adobe® PDF.
 {: shortdesc}
-
-Translation of PDF documents is experimental.
-{: note}
 
 ## Before you begin
 {: #translate-prerequisites}
@@ -26,10 +23,13 @@ Make sure that you have the following information and meet the following require
 
 -   You need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`). For more information, see [Getting started with {{site.data.keyword.languagetranslatorshort}}](/docs/language-translator?topic=language-translator-gettingstarted).
 -   The document that you want to translate must not exceed the following size limits:
-    -   **20 MB** for service instances on the Standard, Advanced, and Premium plans
     -   **2 MB** for service instances on the Lite plan
--   The document must be in one of the [Supported file formats](#supported-file-formats) or [Supported file formats (experimental)](#supported-file-formats-experimental).
+    -   **20 MB** for service instances on the Standard plan
+    -   **50 MB** for service instances on the Advanced plan
+    -   **150 MB** for service instances on the Premium plan
+-   The document must be in one of the supported file formats. Use the correct file extension for the format of the document or specify the content type (MIME type) of the format with the request. For more information, see [Supported file formats](#supported-file-formats).
 -   The source and target languages must be among the [List of supported languages](/docs/language-translator?topic=language-translator-translation-models#list-languages-supported).
+-   The service correctly translates from and to bidirectional languages that are written left-to-write and right-to-left (for example, Arabic, Hebrew, and Urdu).
 
 This tutorial walks you through translating documents from the command line with `curl`. You can also use the {{site.data.keyword.watson}} SDKs to translate documents with a number of programming languages. For more information, see the methods in the [API & SDK reference](https://{DomainName}/apidocs/language-translator){: external}.
 
@@ -46,9 +46,6 @@ curl -X POST --user "apikey:{apikey}" \
 "{url}/v3/documents?version=2018-05-01"
 ```
 {: pre}
-
-Microsoft Windows users, replace the backslash (`\`) at the end of each line with a caret (`^`). Make sure there are no trailing spaces after the caret.
-{: tip}
 
 To translate a document with a [custom model](/docs/language-translator?topic=language-translator-customizing), use the `model_id` parameter. The following request translates the document with the custom model identified by the model ID `96221b69-8e46-42e4-a3c1-808e17c787ca`. The custom model is defined for `en-fr` translation, so the `source` and `target` parameters are not needed.
 
@@ -164,35 +161,89 @@ curl -X DELETE --user "apikey:{apikey}" \
 ## Supported file formats
 {: #supported-file-formats}
 
-Translation of the following file formats is generally available functionality:
+The service supports translation of Microsoft Office, Open Office, subtitle, and many other common formats. To translate a file, you must identify the format of the file in one of the following ways:
 
--   Microsoft Office formats:
-    - Word: `.doc`, `.docx`
-    - PowerPoint: `.ppt`, `.pptx`
-    - Excel: `.xls`, `.xlsx`
-    - Rich Text Format: `.rtf`
--   Open Office formats:
-    - Writer: `.odt`
-    - Impress: `.odp`
-    - Calc: `.ods`
--   Other formats:
-    - HTML: `.htm`, `.html`
-    - XML: `.xml`
-    - JSON: `.json` (values with type `string` or `string array` are translated)
-    - Text: `.txt`
+-   By specifying the appropriate file extension for the format. For example, to translate an HTML file named `example.html` from English to French, you would use the following command:
 
-### Supported subtitle formats
+    ```sh
+    curl -X POST --user "apikey:{apikey}" \
+    --form "file=@example.html" \
+    --form "source=en" \
+    --form "target=fr" \
+    "{url}/v3/documents?version=2018-05-01"
+    ```
+    {: pre}
+
+-   By specifying the content type (MIME type) of the format as the `type` of the `file` parameter. For example, to translate an HTML file named just `example` from English to French, you would use the following request:
+
+    ```sh
+    curl -X POST --user "apikey:{apikey}" \
+    --form "file=@example;type=text/html" \
+    --form "source=en" \
+    --form "target=fr" \
+    "{url}/v3/documents?version=2018-05-01"
+    ```
+    {: pre}
+
+The tables in the following sections list the valid file extensions and content types for each supported format. In most cases, specifying the correct file extension is preferred because it can eliminate ambiguity and is simpler. For subtitles, the table makes clear where the file extension or the content type is needed.
+
+All file formats other than Adobe® PDF (Portable Document Format) are generally available. PDF is currently experimental functionality.
+{: note}
+
+### Microsoft Office file formats
+{: #supported-file-formats-microsoft-office}
+
+Table 1 lists the Microsoft Office file formats that the service supports for translation.
+
+| File format | File extension | Content type |
+|-------------|----------------|--------------|
+| Microsoft Excel | `.xls` | `application/vnd.ms-excel` |
+|                 | `.xlsx` | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` |
+| Microsoft PowerPoint | `.ppt` | `application/vnd.ms-powerpoint` |
+|                      | `.pptx` | `application/vnd.openxmlformats-officedocument.presentationml.presentation` |
+| Microsoft Word | `.doc` | `application/msword` |
+|                | `.docx` | `application/vnd.openxmlformats-officedocument.wordprocessingml.document` |
+{: caption="Table 1. Microsoft Office file formats"}
+
+Microsoft, Microsoft Excel, Microsoft Office, Microsoft PowerPoint, and Microsoft Word are trademarks of the Microsoft group of companies.
+{: note}
+
+### Open Office file formats
+{: #supported-file-formats-open-office}
+
+Table 2 lists the Open Office file formats that the service supports for translation.
+
+| File format | File extension | Content type |
+|-------------|----------------|--------------|
+| Open Office Calc | `.ods` | `application/vnd.oasis.opendocument.spreadsheet` |
+| Open Office Impress | `.odp` | `application/vnd.oasis.opendocument.presentation` |
+| Open Office Writer | `.odt` | `application/vnd.oasis.opendocument.text` |
+{: caption="Table 2. Open Office file formats"}
+
+### Subtitle file formats
 {: #supported-file-formats-subtitles}
 
-Translation of the following subtitle (or caption) formats is generally available functionality:
+Table 3 lists the subtitle (or caption) formats that service supports for translation. These textual formats contain the transcript of a sound track or video source. The formats provide plain text that is intuitively comprehensible with minimal syntax. They include a list of cues that contain synchronization information for the media source. They can also include metadata that is not intended for display.
 
--   SubRip: `.srt`
--   SubViewer: `.sbv`
--   DirectVobSub or VSFilter: `.sub`
--   MicroDVD: `.sub`
--   WebVTT: `.vtt`
+The table shows both the file extension and the content type for all subtitle formats. However, in some cases you must specify one or the other. The table makes clear where the file extension or the content type is needed. Also, for the `.sub` file extension, which is used for multiple formats, the service parses the file to determine the exact subtitle format of the file.
 
-These textual formats contain the transcript of a sound track or video source. The formats provide plain text that is intuitively comprehensible with minimal syntax. They include a list of cues that contain synchronization information for the media source. They can also include metadata that is not intended for display.
+| File format | File extension | Content type |
+|-------------|----------------|--------------|
+| Apple® iTunes® Timed Text | `.itt`  \n The file extension is required | `application/xml` |
+| DirectVobSub | `.sub`  \n The file extension is required | `text/plain` |
+| Distribution Format Exchange Profile | `.dxfp`  \n The file extension is sufficient | `application/ttaf+xml` |
+| | `.xml` | `application/ttaf+xml`  \n The content type is required |
+| MicroDVD | `.sub`  \n The file extension is required | `text/plain` |
+| Source Code Control | `.scc`  \n The file extension is required | `application/octet-stream` |
+| SubRip | `.srt` | `text/srt` |
+| SubStation Alpha | `.ssa`  \n The file extension is required | `text/plain` |
+| SubViewer | `.sbv` | `text/sbv` |
+| Synchronized Accessible Media Interchange | `.sami`  \n The file extension is required | `application/xml` |
+|  | `.smi`  \n The file extension is required | `application/xml` |
+| Time Text Markup Language | `.ttml` | `application/ttml+xml` |
+| VSFilter | `.sub`  \n The file extension is required | `text/plain` |
+| WebVTT | `.vtt` | `text/vtt` |
+{: caption="Table 3. Subtitle file formats"}
 
 The following information qualifies some of the nuances of subtitle translation:
 
@@ -204,11 +255,24 @@ The following information qualifies some of the nuances of subtitle translation:
     A single cue can contain one or more lines of text (for example, two short sentences). The service creates paragraph breaks only at cue line boundaries to preserve the count of lines in the cue. For languages with punctuation, a paragraph generally maps to a complete sentence. For languages without punctuation, a paragraph can contain multiple sentences, which can adversely affect the distribution of lines into cues in the translated document.
 -   *Comments, notes, and titles* - For formats that permit these elements, the service preserves the original text and adds translation that is prefixed by language code. Because this information is intended for use by the author, the service maintains the text in both its original and translated forms.
 
-## Supported file formats (experimental)
-{: #supported-file-formats-experimental}
+### Other file formats
+{: #supported-file-formats-other}
 
-Translation of the following file format is experimental functionality:
+Table 4 lists all other file formats that the service supports for translation.
 
-- PDF: `.pdf`
+| File format | File extension | Content type |
+|-------------|----------------|--------------|
+| Adobe® Portable Document Format [**1**] | `pdf` | `application/pdf` |
+| Extensible Markup Language | `.xml` | `text/xml` |
+| HyperText Markup Language | `.htm` | `text/html` |
+| | `.html` | `text/html` |
+| | `.xhtml` | `text/html` |
+| JavaScript Object Notation [**2**] | `.json` | `text/json` |
+| Plain text | `.txt` | `text/plain` |
+| Rich Text Format | `.rtf` | `application/rtf` |
+{: caption="Table 4. Other file formats"}
 
-The quality of PDF translation is still largely an alpha release. The translation works best for single-column PDF documents that do not include many tables or images. Quality is expected to evolve and improve with future releases.
+**Notes:**
+
+1.  For PDF files, translation is experimental functionality. The quality of PDF translation is still largely an alpha release. The translation works best for single-column PDF documents that do not include many tables or images.
+2.  For JSON files, values with type `string` or `string array` are translated.
