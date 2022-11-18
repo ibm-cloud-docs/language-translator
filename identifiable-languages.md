@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-06-16"
+lastupdated: "2022-11-18"
 
 keywords: identify language,identifiable languages
 

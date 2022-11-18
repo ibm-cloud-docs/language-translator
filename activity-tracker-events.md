@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2016, 2021
-lastupdated: "2021-04-08"
+  years: 2016, 2022
+lastupdated: "2022-11-18"
 
 keywords: IBM,activity tracker,event,security,language translator
 

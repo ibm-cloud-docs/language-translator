@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2020-08-18"
+  years: 2019, 2022
+lastupdated: "2022-11-18"
 
 subcollection: language-translator
 
