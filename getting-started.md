@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-08-05"
+lastupdated: "2022-11-18"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-10-18"
+lastupdated: "2022-11-18"
 
 keywords: language translator release notes
 
