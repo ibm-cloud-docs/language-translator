@@ -71,7 +71,5 @@ toc:
           - link:
               label: StackOverflow
               href: http://stackoverflow.com/questions/tagged/language-translation+watson
-      - link:
-          label: Accessibility
-          - include: ../overview/accessibility/accessibility_features.md
-            navtitle: Accessibility
+      - include: ../overview/accessibility/accessibility_features.md
+        navtitle: Accessibility
