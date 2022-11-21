@@ -57,7 +57,7 @@ toc:
           - translation-models.md
           - identifiable-languages.md
       - sample-applications.md
-      - include: ..//watson/getting-started-sdks.md
+      - include: ../watson/getting-started-sdks.md
       - link:
           label: Watson GitHub repos
           href: https://github.com/watson-developer-cloud/
