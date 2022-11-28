@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-28"
 
 subcollection: language-translator
 
@@ -13,7 +13,7 @@ subcollection: language-translator
 # About Language Translator
 {: #about}
 
-{{site.data.keyword.languagetranslatorfull}} can identify the language of text and translate it into different languages programmatically. In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](/docs/language-translator?topic=language-translator-customizing) for your use case.
+{{site.data.keyword.languagetranslatorfull}} can identify the language of text and translate it into different languages programmatically.  In addition to using the provided translation models, you can build upon the base translation models to create your own [custom models](/docs/language-translator?topic=language-translator-customizing) for your use case.
 {: shortdesc}
 
 [Translating documents](/docs/language-translator?topic=language-translator-document-translator-tutorial). Submit a Microsoft Office document, PDF, or other document with a [supported file format](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
