@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-12-05"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -33,12 +33,18 @@ This tutorial walks you through the commands to translate text from English to S
 - Create an instance of the service: {: hide-dashboard}
     1.  Go to the [{{site.data.keyword.languagetranslatorshort}}](https://{DomainName}/catalog/language-translator){: external} page in the {{site.data.keyword.cloud_notm}} catalog.
     1.  Sign up for a free {{site.data.keyword.cloud_notm}} account or log in.
+    1.  Read and agree to the terms of the license agreement.
     1.  Click **Create**.
 - Copy the credentials to authenticate to your service instance: {: hide-dashboard}
-    1.  On the **Manage** page, click **Show Credentials**.
-    1.  Copy the `API Key` and `URL` values.
+    1.  View the **Manage** page for the service instance:
 
-This tutorial uses an API key to authenticate. In production, use an IAM token. For more information see [Authenticating to Watson services](/docs/watson?topic=watson-iam).
+        -   If you are on the **Getting started** page for your service instance, click the **Manage** entry in the list of topics.
+        -   If you are on the **Resource list** page, expand the **AI / Machine Learning** grouping in the **Name** column, and click the name of your service instance.
+
+    1.  On the **Manage** page, click **Show Credentials** in the **Credentials** box.
+    1.  Copy the `API Key` and `URL` values for the service instance.
+
+This tutorial uses an API key to authenticate. In production, use an IAM token. For more information see [Authenticating to IBM Cloud](/docs/watson?topic=watson-iam#gs-credential-cloud).
 {: tip}
 
 ### Using the curl examples
