@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2022
-lastupdated: "2022-12-05"
+lastupdated: "2022-12-09"
 
 keywords: language translator,getting started,translate,identify language,translate document,translation
 
@@ -21,11 +21,11 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-{{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language.
+{{site.data.keyword.languagetranslatorfull}} allows you to translate text programmatically from one language into another language.  This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
 {: shortdesc}
-{: hide-dashboard}
 
-This tutorial walks you through the commands to translate text from English to Spanish, and to identify the language of a text sample.
+The tutorial uses the `curl` command-line utility to demonstrate REST API calls. For more information about `curl`, see [Using curl with Watson examples](/docs/watson?topic=watson-using-curl).
+{: note}
 
 ## Before you begin
 {: #prerequisites}
@@ -45,23 +45,6 @@ This tutorial walks you through the commands to translate text from English to S
     1.  Copy the `API Key` and `URL` values for the service instance.
 
 This tutorial uses an API key to authenticate. In production, use an IAM token. For more information see [Authenticating to IBM Cloud](/docs/watson?topic=watson-iam#gs-credential-cloud).
-{: tip}
-
-### Using the curl examples
-{: #getting-started-curl}
-
-This tutorial uses the `curl` command to call methods of the service's HTTP interface. Make sure that you have the `curl` command installed on your system.
-
-1.  To test whether `curl` is installed, run the following command on the command line. If the output lists the `curl` version that supports Secure Sockets Layer (SSL), you are set for the tutorial.
-
-    ```bash
-    curl -V
-    ```
-    {: pre}
-
-1.  If necessary, install the version of `curl` with SSL enabled for your operating system from [curl.haxx.se](https://curl.haxx.se/){: external}.
-
-Omit the braces (`{ }`) from the examples. They indicate variable values.
 {: tip}
 
 ## Translate text
