@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-28"
+  years: 2015, 2023
+lastupdated: "2023-01-13"
 
 subcollection: language-translator
 
@@ -18,10 +18,21 @@ subcollection: language-translator
 
 [Translating documents](/docs/language-translator?topic=language-translator-document-translator-tutorial). Submit a Microsoft Office document, PDF, or other document with a [supported file format](/docs/language-translator?topic=language-translator-document-translator-tutorial#supported-file-formats), and {{site.data.keyword.languagetranslatorshort}} will provide a translated copy that preserves the original formatting.
 
+## Service updates
+{: #service-updates}
+
+-   For information about all service updates, see the [Release notes for {{site.data.keyword.languagetranslatorshort}}](/docs/language-translator?topic=language-translator-release-notes).
+-   For information about the latest service update, see the [13 January 2023](/docs/language-translator?topic=language-translator-release-notes#language-translator-13january2023) update in the release notes.
+
 ## HIPAA support
 {: #hipaa-support}
 
 US Health Insurance Portability and Accountability Act (HIPAA) support is available for Premium plans in the Washington, DC location created on or after 1 April 2019. See [Enabling EU and HIPAA supported settings](/docs/account?topic=account-eu-hipaa-supported#eu-hipaa-supported){: external} for more information.
+
+## Request logging
+{: #request-logging}
+
+The {{site.data.keyword.languagetranslatorshort}} service does not log any request data. You cannot opt in to request logging at the request level or at the account level.
 
 ## Beta features
 {: #beta-features}
