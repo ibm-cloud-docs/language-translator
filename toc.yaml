@@ -2,19 +2,19 @@ toc:
   properties:
     subcollection: language-translator
     service-name: language-translator
-    version: 2
+    version: 3
     category: ai
     audience: service
     href: /docs/language-translator
     product-page: https://www.ibm.com/cloud/watson-language-translator
     path: language-translator
     label: Language Translator
+    release-level: deprecated
 
   entries:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
       - index.md
       - topic: release-notes.md
         navtitle: Release notes
