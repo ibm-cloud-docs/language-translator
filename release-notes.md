@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2023
-lastupdated: "2023-01-13"
+lastupdated: "2023-05-03"
 
 keywords: language translator release notes
 
@@ -16,6 +16,9 @@ content-type: release-note
 
 # Release notes for Language Translator
 {: #release-notes}
+
+IBM is announcing the deprecation of the {{site.data.keyword.languagetranslatorfull}} service for {{site.data.keyword.cloud}} in all regions. As of 10 June 2023, the {{site.data.keyword.languagetranslatorshort}} tile will be removed from the {{site.data.keyword.cloud_notm}} Platform for new customers; only existing customers will be able to access the product. As of 10 June 2024, the service will reach its End of Support date. As of 10 December 2024, the service will be withdrawn entirely and will no longer be available to any customers.
+{: deprecated}
 
 The following new features and changes to the service are available.
 {: shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-18"
+  years: 2015, 2023
+lastupdated: "2023-05-03"
 
 subcollection: language-translator
 
@@ -13,6 +13,9 @@ subcollection: language-translator
 # Translating documents
 {: #document-translator-tutorial}
 
+IBM is announcing the deprecation of the {{site.data.keyword.languagetranslatorfull}} service for {{site.data.keyword.cloud}} in all regions. As of 10 June 2023, the {{site.data.keyword.languagetranslatorshort}} tile will be removed from the {{site.data.keyword.cloud_notm}} Platform for new customers; only existing customers will be able to access the product. As of 10 June 2024, the service will reach its End of Support date. As of 10 December 2024, the service will be withdrawn entirely and will no longer be available to any customers.
+{: deprecated}
+
 You can use the {{site.data.keyword.languagetranslatorfull}} service to translate files from one language to another while preserving the original document format. The service supports translation of many file formats, including Microsoft® Office®, Open Office, subtitles, and many other common formats such as HTML, JSON, XML, and Adobe® PDF.
 {: shortdesc}
 
@@ -21,7 +24,7 @@ You can use the {{site.data.keyword.languagetranslatorfull}} service to translat
 
 Make sure that you have the following information and meet the following requirements:
 
--   You need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`). For more information, see [Getting started with {{site.data.keyword.languagetranslatorshort}}](/docs/language-translator?topic=language-translator-gettingstarted).
+-   You need your {{site.data.keyword.languagetranslatorshort}} service credentials (`apikey` and `url`).
 -   The document that you want to translate must not exceed the following size limits:
     -   **2 MB** for service instances on the Lite plan
     -   **20 MB** for service instances on the Standard plan

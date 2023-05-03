@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2022
-lastupdated: "2022-11-18"
+  years: 2015, 2023
+lastupdated: "2023-05-03"
 
 subcollection: language-translator
 
@@ -12,6 +12,9 @@ subcollection: language-translator
 
 # Sample apps
 {: #sample-apps}
+
+IBM is announcing the deprecation of the {{site.data.keyword.languagetranslatorfull}} service for {{site.data.keyword.cloud}} in all regions. As of 10 June 2023, the {{site.data.keyword.languagetranslatorshort}} tile will be removed from the {{site.data.keyword.cloud_notm}} Platform for new customers; only existing customers will be able to access the product. As of 10 June 2024, the service will reach its End of Support date. As of 10 December 2024, the service will be withdrawn entirely and will no longer be available to any customers.
+{: deprecated}
 
 Check out the following sample applications to see what you can build with {{site.data.keyword.languagetranslatorshort}}.
 {: shortdesc}
