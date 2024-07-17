@@ -10,7 +10,6 @@ toc:
     path: language-translator
     label: Language Translator
     release-level: deprecated
-
   entries:
   - navgroup:
       id: learn
@@ -33,7 +32,6 @@ toc:
           - link:
               label: Webinars
               href: https://www.ibm.com/watson/
-
   - navgroup:
       id: howto
       topics:
@@ -41,7 +39,6 @@ toc:
       - translating-documents.md
       - include: ../watson/getting-started-keyservice.md
       - include: ../watson/service-endpoints.md
-
   - navgroup:
       id: reference
       topics:
@@ -61,7 +58,6 @@ toc:
       - link:
           label: Watson GitHub repos
           href: https://github.com/watson-developer-cloud/
-
   - navgroup:
       id: help
       topics:
